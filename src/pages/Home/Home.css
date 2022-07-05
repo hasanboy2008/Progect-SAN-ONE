@@ -1,0 +1,402 @@
+.home {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* ------- home section 1===== */
+.home_section1 {
+  width: 100%;
+  height: auto;
+  background-image: url(../../asest//home/section1/YANGI\ KO‘RINISH.png);
+  background-repeat: no-repeat;
+  background-position-x: -130px;
+  background-position-y: center;
+  position: relative;
+  padding: 360px 156px 300px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(74deg, #de821d 13.95%, #a18b7f 83.15%);
+}
+
+/* -----------home_text------- */
+
+.home_text {
+  width: 487px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text_semmer p {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+
+  color: #f3f3f3;
+  padding-bottom: 40px;
+}
+.text_semmer > p > span {
+  color: #dcbb45;
+}
+
+.text_semmer > span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  /* 04 */
+
+  color: #d2d2d2;
+  padding-top: 30px;
+}
+
+/* ======btn===== */
+.see_btn {
+  padding-top: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.see_btn :nth-child(1) {
+  width: 143px;
+  height: 46px;
+
+  background: #ffffff;
+  border-radius: 8px;
+  border: none;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+  /* identical to box height */
+
+  color: #de821d;
+  margin-right: 40px;
+}
+.see_btn :nth-child(2) {
+  width: 240px;
+  height: 46px;
+  background: none;
+
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+/* ======position=====all=== */
+
+.position_1 {
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+
+.position_2 {
+  position: absolute;
+  top: 343px;
+  right: 788px;
+}
+.position_3 {
+  position: absolute;
+  right: -200px;
+  top: -160px;
+  bottom: 0px;
+  z-index: 1;
+  /* background-color: red; */
+  overflow: hidden;
+}
+.position_4 {
+  position: absolute;
+  right: 250px;
+  bottom: 70px;
+}
+.position_5 {
+  position: absolute;
+  left: 531px;
+  bottom: 147px;
+}
+.position_6 {
+  position: absolute;
+  top: 305px;
+  right: 180px;
+}
+.position_7 {
+  position: absolute;
+  bottom: 132px;
+  left: 0;
+  right: 0;
+}
+
+/* +++++++++++++++++++ */
+
+/* -------------------home section2----------- */
+
+.home_section_2 {
+  width: 100%;
+  height: auto;
+}
+
+.sec_2_text {
+  width: 100%;
+  height: auto;
+  padding: 106px 42px;
+}
+.sec_2_text > p {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+  /* identical to box height */
+
+  color: #9f6233;
+}
+.sec_2_text > span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  /* 04 */
+
+  color: #7c7c7c;
+  padding-top: 10px;
+}
+
+/* -------.new_products ------- */
+
+.new_products {
+  width: 100%;
+  padding: 0 41px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.new_Produc_1 {
+  width: 441px;
+  height: 483px;
+  background: #ffffff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 19px;
+  /* background-color: rebeccapurple; */
+  margin: 5px;
+}
+hr {
+  width: 80%;
+
+  border: 1px solid #d3d3d3;
+}
+
+.price_share {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+.discount_pricw > p {
+  font-weight: 700;
+  font-size: 31.1px;
+  line-height: 38px;
+  /* identical to box height */
+
+  text-align: right;
+
+  /* brandcolor */
+
+  color: #c9a95c;
+}
+.discount_pricw > span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: right;
+  text-decoration-line: line-through;
+
+  color: #ff3f3f;
+}
+.sell_basket {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.sell_basket :nth-child(1) {
+  width: 143px;
+  height: 46px;
+  background: #dcbb45;
+  border-radius: 8px;
+  border: none;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+  /* identical to box height */
+  color: #000000;
+}
+.sell_basket :nth-child(2) {
+  width: 143px;
+  height: 46px;
+  border: 1px solid #dcbb45;
+  border-radius: 8px;
+  background: none;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+  /* identical to box height */
+  color: #000000;
+}
+
+/* -------section 4 -------- */
+
+.section_4_text {
+  width: 100%;
+  height: auto;
+  padding: 106px 42px;
+}
+
+.section_4_text > p {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+  /* identical to box height */
+
+  color: #9f6233;
+}
+.section_4_text > span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  /* 04 */
+
+  color: #7c7c7c;
+  padding-top: 10px;
+}
+
+/* ----------section 5------- */
+
+.sectio_5 {
+  width: 100%;
+  height: auto;
+}
+
+/* --------- section 6 ---- */
+
+.section_6_futter {
+  width: 100%;
+  height: 909px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../asest//home/section6/bacround_img.png);
+  background-repeat: no-repeat;
+
+}
+
+.section_f_text{
+width: 827px;
+height: auto;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+
+}
+
+.section_f_text :nth-child(1){
+  font-weight: 700;
+font-size: 47px;
+line-height: 61px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF;
+padding-top:187px ;
+}
+
+.section_f_text :nth-child(2){
+font-weight: 400;
+font-size: 21px;
+line-height: 26px;
+text-align: center;
+
+/* 04 */
+
+color: #D2D2D2;
+padding-top: 58px;
+}
+.section_f_text :nth-child(3){
+  font-weight: 400;
+font-size: 21px;
+line-height: 26px;
+/* identical to box height */
+
+text-align: center;
+
+/* 04 */
+
+color: #D2D2D2;
+padding-top: 57px;
+
+}
+.section_f_text :nth-child(4){
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+/* identical to box height */
+
+
+/* 04 */
+
+color: #D2D2D2;
+
+}
+.section_f_text :nth-child(5){
+font-weight: 400;
+font-size: 21px;
+line-height: 26px;
+/* identical to box height */
+
+text-align: center;
+
+/* 04 */
+
+color: #D2D2D2;
+padding-top: 57px ;
+
+}
+
+
+
+.contac_i_f_t > a{
+  margin: 0 46px;
+}
+
+.section_f_text > button{
+  width: 301px;
+height: 46px;
+left: 810px;
+top: 5919px;
+
+/* 06 */
+
+background: #DCBB45;
+border-radius: 8px;
+border: none;
+}
