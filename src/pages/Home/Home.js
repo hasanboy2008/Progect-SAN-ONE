@@ -15,6 +15,9 @@ import sec_3 from "../../asest/home/section3/sec_3.png";
 import Slider from "react-slick";
 
 export function Home() {
+
+
+  
   const new_product = [
     {
       img: new_p_1,

@@ -1,0 +1,92 @@
+.futter{
+    width: 100%;
+    height: auto;
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 71px 151px;
+}
+
+.futer_sanone{
+    display: flex;
+    flex-direction: column;
+    align-items:inherit;
+    
+}
+.futer_sanone > p{
+    font-weight: 400;
+font-size: 26px;
+line-height: 32px;
+/* identical to box height */
+
+
+/* 04 */
+
+color: #D2D2D2;
+padding-top: 22px;
+}
+
+
+
+
+/* futter_i_f_t */
+
+
+.futter_i_f_t{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.futter_i_f_t > a{
+    margin:  0 12px;
+}
+
+
+
+/* futter_about */
+
+.futter_about{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.futter_about > a{
+    margin: 12px 0;
+    font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+
+/* 04 */
+
+color: #D2D2D2;
+text-decoration: none;
+}
+
+
+/* futter_info */
+
+
+.futter_info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.futter_info > a{
+text-decoration: none;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+
+/* 04 */
+
+color: #D2D2D2;
+margin: 12px 0;
+}

@@ -5,6 +5,7 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import "./main.css"    
 import { Singnin } from "../../pages/Register/Singnin";
 import { Signup } from "../../pages/Register/Singnup";
+import { Futter } from "../Futter/Futer";
 
 
 
@@ -23,6 +24,7 @@ export function Main(){
           
      
         </Routes>
+        <Futter/>
       </div>
     );
 }
