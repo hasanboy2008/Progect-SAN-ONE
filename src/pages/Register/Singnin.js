@@ -103,6 +103,7 @@ const navigate = useNavigate();
           </div>
           <button>Kirish</button>
         </form>
+        <p>malumot</p>
       </div>
     );
 }
