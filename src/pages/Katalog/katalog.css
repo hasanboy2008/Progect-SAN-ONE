@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*
+{
+    transition: all 0.5s;
+}
+.katalog
+{   
+    position: relative;
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    background: #F5F5F5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-family: 'Montserrat', sans-serif;
+}
+.katalog-main
+{   
+    padding: 90px 14vw;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    position: absolute;
+    top: 2%;
+}
+.katalog-main .top p
+{
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    color: #9F6233;
+}
+.katalog-main .top span
+{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #7C7C7C;
+}
+.katalog-main .container
+{
+    margin-top: 25px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.katalog-main .container .box-container
+{
+    margin-top: 65px;
+    width: 568px;
+    height: auto;
+}
+.katalog-main .container .box-container:hover .img img
+{
+    transform: scale(1.1);
+}
+.katalog-main .container .box-container .img
+{
+    width: 568px;
+    height: 559px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.katalog-main .container .box-container .img img
+{
+    width: 100%;
+    height: 100%;
+}
+.katalog-main .container .box-container p
+{
+    margin-top: 46px;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 38px;
+    text-align: center;
+    color: #7C7C7C;
+}
+.katalog .bcgImage
+{
+    padding-top: 12%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.katalog .bcgImage .bcgImage1,
+.katalog .bcgImage .bcgImage2,
+.katalog .bcgImage .bcgImage3
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.katalog .bcgImage .bcgImage1
+{
+    justify-content: center;
+}
+.katalog .bcgImage .bcgImage2
+{
+    justify-content: flex-end;
+}
+.katalog .bcgImage .bcgImage3
+{
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1600px) {
+    .katalog-main
+        {   
+            padding: 90px 10vw;
+        }
+}
+
+@media (max-width: 1440px) {
+    .katalog-main
+        {   
+            padding: 90px 6vw;
+        }
+}
+@media (max-width: 1320px) {
+    .katalog-main
+        {   
+            padding: 90px 4vw;
+        }
+}
+@media (max-width: 1240px) {
+    .katalog-main
+        {   
+            padding: 90px auto;
+            
+        }
+    .katalog-main .container
+        {
+            margin-top: 25px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+}
+
