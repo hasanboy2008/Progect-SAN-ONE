@@ -26,6 +26,11 @@ backdrop-filter: blur(50px);
 
 /* ====.catalog_pages_nav ===== */
 
+.logo_nav > button{
+  border: none;
+  background: none;
+}
+
 .catalog_pages_nav {
   display: flex;
   align-items: center;

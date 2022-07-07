@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Home.css";
 import position_1 from "../../asest/home/position/Group 48.png";
 import position_2 from "../../asest/home/position/p_2.png";
@@ -7,53 +7,49 @@ import position_4 from "../../asest/home/position/p_4.png";
 import position_5 from "../../asest/home/position/p_5.png";
 import position_6 from "../../asest/home/position/p_6.png";
 import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
-
-import new_p_1 from "../../asest/home/section2/new_P_1.jpg";
-import share from "../../asest/home/section2/share.png";
-
+// import new_p_1 from "../../asest/home/section2/new_P_1.jpg";
+// import share from "../../asest/home/section2/share.png";
 import sec_3 from "../../asest/home/section3/sec_3.png";
 import Slider from "react-slick";
-import axios from "axios";
+
+import { useSelector } from "react-redux";
 
 export function Home() {
-  const [produc, setProduc] = useState([]);
+ 
+  const products = useSelector((state) => state.reProducts);
 
-  useEffect(() => {
-    axios.get("https://sanone.uz/view/products").then((res) => {
-      setProduc(res.data);
-    });
-  });
+  
 
-  const best_seller = [
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-  ];
+  // const best_seller = [
+  //   {
+  //     img: new_p_1,
+  //     name: "Lorem ipsum",
+  //     price: 399000,
+  //     discount: 499000,
+  //     share: share,
+  //   },
+  //   {
+  //     img: new_p_1,
+  //     name: "Lorem ipsum",
+  //     price: 399000,
+  //     discount: 499000,
+  //     share: share,
+  //   },
+  //   {
+  //     img: new_p_1,
+  //     name: "Lorem ipsum",
+  //     price: 399000,
+  //     discount: 499000,
+  //     share: share,
+  //   },
+  //   {
+  //     img: new_p_1,
+  //     name: "Lorem ipsum",
+  //     price: 399000,
+  //     discount: 499000,
+  //     share: share,
+  //   },
+  // ];
   //  ------------------- corusel
 
   return (
@@ -62,7 +58,8 @@ export function Home() {
         <div className="home_text">
           <div className="text_semmer">
             <p>
-              Yozgi mavsum uchun<span>yangi ko‘rinish</span>
+              Yozgi mavsum uchun <br></br>
+              <span>yangi ko‘rinish</span>
             </p>
             <span>
               Yangicha uslub va ko’rinishda ishlab chiqilgan, yangi
@@ -106,8 +103,11 @@ export function Home() {
           <span>Eng so‘nggi mahsulotlarimizni ko‘rib chiqing va tanlang</span>
         </div>
         <div className="new_products">
-          {produc.map((item) => (
+          {products.map((item) => (
             <div className="new_Produc_1">
+              <figure>
+                <img src={item.images[0]} alt="" />
+              </figure>
               <p>{item.name}</p>
               <hr />
               <div className="price_share">
@@ -137,9 +137,11 @@ export function Home() {
         </div>
         <div className="best_seller">
           <div className="new_products">
-            {best_seller.map((item) => (
+            {products.slice(0, 4).map((item) => (
               <div className="new_Produc_1">
-                <img src={item.img} alt="" />
+                <figure>
+                  <img src={item.images[0]} alt="" />
+                </figure>
                 <p>{item.name}</p>
                 <hr />
                 <div className="price_share">
@@ -234,13 +236,9 @@ export function Home() {
               </svg>
             </a>
           </div>
-          <button>
-            RO‘YXATDAN O‘TISH
-            
-          </button>
+          <button>RO‘YXATDAN O‘TISH</button>
         </div>
       </div>
-    
     </div>
   );
 }

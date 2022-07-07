@@ -5,9 +5,10 @@ import click from "../../asest/Futter/cilik.png"
 import humo from "../../asest/Futter/humo.png"
 import payme from "../../asest/Futter/payme_1 1.png"
 import uzcard from "../../asest/Futter/uzcart.png"
+import { useNavigate } from "react-router-dom";
 
 export function Futter(){
-
+   const navigate= useNavigate();
 
     return (
       <div className="futter">
@@ -78,33 +79,35 @@ export function Futter(){
         </div>
 
         <div className="futter_about">
-          <a href="{biz haqimizda}">BIZ HAQIMIZDA</a>
-          <a href="{biz haqimizda}">KATALOG</a>
+          <button>BIZ HAQIMIZDA</button>
+          <button
+            onClick={() => {
+              navigate("/katalog");
+            }}
+          >
+            KATALOG
+          </button>
         </div>
         <div className="futter_info">
           <a href="{info}">ENG KO’P SOTILGAN</a>
           <a href="{info}">ENG KO’P KORILGAN</a>
           <a href="{info}">YANGILIKLAR</a>
-         
         </div>
         <div className="futter_click">
           <div className="futer_c_top">
             <button>
               <img src={click} alt="" />
-            
             </button>
             <button>
-             <img src={payme} alt="" />
+              <img src={payme} alt="" />
             </button>
           </div>
           <div className="futer_c_bootom">
             <button>
               <img src={humo} alt="" />
-             
             </button>
             <button>
               <img src={uzcard} alt="" />
-            
             </button>
           </div>
         </div>

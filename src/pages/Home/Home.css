@@ -174,12 +174,30 @@
 
 .new_products {
   width: 100%;
-  padding: 0 41px;
+  height: 991px;
+  /* padding: 0 41px; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
+  overflow: hidden;
 }
+
+.new_Produc_1 >figure{
+  width: 405px;
+  height: 263px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new_Produc_1 >figure>img{
+  width: 100%;
+}
+
+
+
+
 .new_Produc_1 {
   width: 441px;
   height: 483px;
