@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import position_1 from "../../asest/home/position/Group 48.png";
 import position_2 from "../../asest/home/position/p_2.png";
@@ -13,11 +13,17 @@ import share from "../../asest/home/section2/share.png";
 
 import sec_3 from "../../asest/home/section3/sec_3.png";
 import Slider from "react-slick";
+import axios from "axios";
 
 export function Home() {
+  const [produc, setProduc] = useState([]);
 
+  useEffect(() => {
+    axios.get("https://sanone.uz/view/products").then((res) => {
+      setProduc(res.data);
+    });
+  });
 
-  
   const new_product = [
     {
       img: new_p_1,
@@ -159,9 +165,10 @@ export function Home() {
           <span>Eng so‘nggi mahsulotlarimizni ko‘rib chiqing va tanlang</span>
         </div>
         <div className="new_products">
-          {new_product.map((item) => (
+       
+          {produc.map((item) => (
+            
             <div className="new_Produc_1">
-              <img src={item.img} alt="" />
               <p>{item.name}</p>
               <hr />
               <div className="price_share">
