@@ -31,7 +31,7 @@ backdrop-filter: blur(50px);
   align-items: center;
   justify-content: space-around;
 }
-.catalog_pages_nav > p {
+.catalog_pages_nav > button {
   margin: 0 45px;
   font-weight: 400;
 font-size: 21px;
@@ -40,6 +40,8 @@ line-height: 26px;
 
 
 color: #FFFFFF;
+background: none;
+border: none;
 
 
 }
