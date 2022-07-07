@@ -5,7 +5,7 @@ export function DetailInfo() {
     return(
         <div className="info">
             <div className="product-name">
-                <p className="names">Nomi</p> <p className="answers">Birnarsa birnasa yana nimadir deyish mumkin</p>
+                <p className="names">Nomi</p> <p className="answers"> mumkin</p>
             </div>
             <hr />
             <div className="product-price">
@@ -27,6 +27,7 @@ export function DetailInfo() {
             <div className="product-period">
                 <p className="names">Mavsum</p> <p className="answers">Mavsum</p>
             </div>
+            <hr />  
         </div>
     );
 }
