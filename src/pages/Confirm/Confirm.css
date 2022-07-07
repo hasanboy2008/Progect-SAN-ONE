@@ -67,6 +67,7 @@
     font-weight: 400;
     font-size: 24px;
     color: #9F6233;
+    padding-left: 45px;
 }
 
 .payment-input-top input::placeholder{
@@ -74,7 +75,6 @@
     font-size: 24px;
     line-height: 29px;
     color: #D2D2D2;
-    padding-left: 45px;
 }
 
 .payment-input-top .button-click{
@@ -110,12 +110,15 @@
     padding-bottom: 6px;
 }
 
+input{
+    outline: none;
+}
+
 .payment-labels input::placeholder{
     font-weight: 400;
     font-size: 21px;
     line-height: 26px;
     color: #D2D2D2;
-    text-align: center;
 }
 
 .payment-labels .card-number{
@@ -126,6 +129,7 @@
     font-weight: 400;
     font-size: 21px;
     color: #9F6233;
+    padding-left: 60px;
 }
 
 .payment-labels .card-code{
@@ -136,6 +140,18 @@
     font-weight: 400;
     font-size: 21px;
     color: #9F6233;
+    padding-left: 25px;
+}
+
+.payment-labels .card-code-2{
+    width: 119px;
+    height: 60px;
+    border: 2px solid #BEBEBE;
+    border-radius: 8px; 
+    font-weight: 400;
+    font-size: 21px;
+    color: #9F6233;
+    padding-left: 40px;
 }
 
 .payment-buttons{

@@ -38,7 +38,7 @@ export function Confirm() {
                         
                         <div className="payment-labels">
                             <label htmlFor="">Kod</label>
-                            <input className="card-code" type="number" placeholder="123" max="9" min={0}/> 
+                            <input className="card-code-2" type="number" placeholder="123" max="9" min={0}/> 
                         </div>
                         
                     </div>
