@@ -8,6 +8,7 @@ import "./main.css"
 import { Futter } from "../Futter/Futer";
 import { Confirm } from "../../pages/Confirm/Confirm";
 import { Detail } from "../../pages/Detail/Detail";
+import { Katalog } from "../../pages/Katalog/Katalog";
 
 
 
@@ -26,6 +27,7 @@ export function Main(){
            */}
           <Route path="/Confirm" element={<Confirm />} />
           <Route path="/Detail" element={<Detail />} />
+          <Route path="/Katalog" element={<Katalog/>} />
         </Routes>
         <Futter />
       </div>
