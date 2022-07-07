@@ -1,0 +1,39 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin-top: 60px;
+}
+
+.info .product-name,
+.product-price,
+.product-size,
+.product-material,
+.product-color,
+.product-period {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 41px 0 10px 0;
+}
+
+.info .names {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #7C7C7C;
+}
+
+.info .answers {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: right;
+    color: #DE821D;
+
+}

@@ -1,0 +1,162 @@
+.comments {
+  margin-top: 20px;
+}
+
+/* .comments-title {
+  font-size: 30px;
+  margin-bottom: 200px;
+} */
+
+.comments-container {
+  margin-top: 40px;
+}
+
+/* .comment-form-title {
+  font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+.comment-form-textarea {
+  width: 90%;
+  height: 40px;
+  margin-top: 50px;
+  border: none;
+  outline: none;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #D3D3D3;
+
+
+}
+
+.comment-form-button {
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  
+}
+
+.textArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comment-form-button:hover:enabled {
+  cursor: pointer;
+}
+
+
+.comment-form-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.comment-form-cancel-button {
+  margin-left: 10px;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.comment-image-container {
+  margin-right: 12px;
+}
+
+.comment-image-container img {
+  border-radius: 50px;
+}
+
+.comment-right-part {
+  width: 95%;
+}
+
+.comment-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comment-author {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 16px;
+  color: #DCBB45;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.comment-data {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 17px;
+  color: #A4A4A4;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.comment-text {
+  width: 1016px;
+  height: 87px;
+  left: 447px;
+  top: 1268px;
+  background: #ECECEC;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #5A5A5A;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.comment-actions {
+  display: flex;
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  margin-top: 8px;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comment-action {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  color: #A4A4A4;
+  margin: 10px;
+  display: flex;  
+  align-items: center;
+}
+
+.comment-action:hover {
+  text-decoration: underline;
+}
+
+.replies {
+  margin-top: 20px;
+}

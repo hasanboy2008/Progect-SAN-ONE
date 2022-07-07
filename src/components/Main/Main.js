@@ -7,6 +7,7 @@ import "./main.css"
 // import { Signup } from "../../pages/Register/Singnup";
 import { Futter } from "../Futter/Futer";
 import { Confirm } from "../../pages/Confirm/Confirm";
+import { Detail } from "../../pages/Detail/Detail";
 
 
 
@@ -16,16 +17,17 @@ export function Main(){
     return (
       <div className="main">
         <Navbar />
-{/* // barcha pageslar */}
+        {/* // barcha pageslar */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Home />} />
           {/* <Route path="/signin" element={<Singnin/>} />
           <Route path="signup" element={<Signup/>} />
            */}
-        <Route path="/Confirm" element={  <Confirm/> }/>
+          <Route path="/Confirm" element={<Confirm />} />
+          <Route path="/Detail" element={<Detail />} />
         </Routes>
-        <Futter/>
+        <Futter />
       </div>
     );
 }
