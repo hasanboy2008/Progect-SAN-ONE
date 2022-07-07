@@ -312,6 +312,7 @@ export function Home() {
           </button>
         </div>
       </div>
+      <p>sakhjgjsa</p>
     </div>
   );
 }
