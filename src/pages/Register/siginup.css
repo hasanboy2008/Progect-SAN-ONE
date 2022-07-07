@@ -20,29 +20,26 @@
   padding: 30px 108px;
 }
 
-
-
 /* ===sign_name========== */
 
-
-.sign_name{
+.sign_name {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.sing_i_1{
+.sing_i_1 {
   width: 293px;
-height: 60px;
-display: flex;
-align-items: center;
-justify-content: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-border: 2px solid rgba(124, 124, 124, 0.5);
-border-radius: 8px;
-margin: 0 8px;
+  border: 2px solid rgba(124, 124, 124, 0.5);
+  border-radius: 8px;
+  margin: 0 8px;
 }
-.sign_name >.sing_i_1> input{
+.sign_name > .sing_i_1 > input {
   width: 70%;
   height: 100%;
   border: none;
@@ -52,67 +49,55 @@ margin: 0 8px;
   display: flex;
   justify-content: center;
   padding-left: 10px;
-
 }
-::placeholder{
-color: #AFB4BB;
+::placeholder {
+  color: #afb4bb;
   padding-left: 50px;
 }
 
-
-
-
 /* =====select sing up === */
 
-
-
-.sign_province{
+.sign_province {
   width: 605px;
-height: 60px;
+  height: 60px;
 
-
-border: 2px solid #BEBEBE;
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
+  border: 2px solid #bebebe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.sign_province > select{
+.sign_province > select {
   width: 80%;
   margin-left: 50px;
   border: none;
   outline: none;
 }
-.sign_province > select>option{
-
+.sign_province > select > option {
   width: 70%;
   height: 40px;
   /* margin: 10px 0; */
   border: none;
   margin-left: 40px;
 }
-.siginup >form  >button{
+.siginup > form > button {
   width: 143px;
-height: 46px;
+  height: 46px;
 
+  background: #dcbb45;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+  /* identical to box height */
 
-background: #DCBB45;
-border-radius: 8px;
-font-weight: 400;
-font-size: 21px;
-line-height: 26px;
-/* identical to box height */
-
-
-color: #000000;
-border: none;
+  color: #000000;
+  border: none;
 }
-
 
 /* ########################## singn in ############# */
 
-
-.singnin{
+.singnin {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -120,66 +105,153 @@ border: none;
   justify-content: center;
 }
 
-.singnin > form{
+.singnin > form {
   width: 430px;
-height: 478px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
+  height: 478px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 
-background: #FFFFFF;
-box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.12);
-border-radius: 16px;
-/* padding: 78px 68px  76px 68px; */
+  background: #ffffff;
+  box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  /* padding: 78px 68px  76px 68px; */
 }
-.singin_login{
+.singin_login {
   width: 293px;
-height: 60px;
+  height: 60px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-border: 2px solid #BEBEBE;
-border-radius: 8px;
+  border: 2px solid #bebebe;
+  border-radius: 8px;
 }
 
-.singin_login > svg{
+.singin_login > svg {
   padding-left: 34px;
 }
 
-.singin_login > input{
+.singin_login > input {
   width: 80%;
   height: 100%;
   border: none;
   outline: none;
   background: none;
   padding-left: 10px;
-
 }
 
-.singnin > form >button{
+.singnin > form > button {
   width: 143px;
-height: 46px;
- border: none;
+  height: 46px;
+  border: none;
 
-background: #DCBB45;
-border-radius: 8px;
-font-weight: 400;
-font-size: 21px;
-line-height: 26px;
-/* identical to box height */
-
-
-color: #000000;
-}
-::placeholder{
+  background: #dcbb45;
+  border-radius: 8px;
   font-weight: 400;
-font-size: 15px;
-line-height: 18px;
-/* identical to box height */
+  font-size: 21px;
+  line-height: 26px;
+  /* identical to box height */
 
-/* text-align: center; */
+  color: #000000;
+}
+::placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
 
-color: #AFB4BB;
+  /* text-align: center; */
+
+  color: #afb4bb;
+}
+
+/* ******************* myacount************* */
+
+.myacount {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 109px 0;
+}
+
+.myimg {
+  width: 400px;
+  height: auto;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.myimg > img {
+  border-radius: 50%;
+}
+.myimg > button {
+  width: 190px;
+  height: 46px;
+
+  background: #dcbb45;
+  border-radius: 8px;
+  border: none;
+  margin-top: 36px;
+}
+
+/* ************ form ********** */
+
+.myacount > form {
+  width: 900px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 77px;
+  /* justify-content: center; */
+  /* background-color: rebeccapurple; */
+}
+.myacount > form > button {
+  width: 190px;
+  height: 46px;
+  margin-top: 62px;
+  background: #dcbb45;
+  border: none;
+  border-radius: 8px;
+}
+.formname {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form_name {
+  display: flex;
+  align-items: center;
+  width: 435px;
+  height: 59px;
+
+  background: #ffffff;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.form_name > input {
+  width: 100%;
+  height: 100%;
+
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  background: none;
+}
+
+.form_name > svg {
+  width: 40px;
+  /* margin-right: 10px; */
 }
