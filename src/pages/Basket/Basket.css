@@ -7,6 +7,10 @@
     padding: 85px 156px 190px 156px;
 }
 
+.basket-all{
+    display: flex;
+}
+
 .basket-text p{
     font-weight: 700;
     font-size: 37.8515px;
@@ -21,6 +25,7 @@
 .basket-home{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .basket-json{

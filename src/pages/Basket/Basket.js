@@ -14,6 +14,41 @@ export function Basket(){
         artikul: "12345",
         price: "399 000"
     },
+    {
+        id: 1,
+        image: shoesBlack,
+        text: "lorem ipsum lorem ipsum",
+        artikul: "12345",
+        price: "399 000"
+    },
+    {
+        id: 1,
+        image: shoesBlack,
+        text: "lorem ipsum lorem ipsum",
+        artikul: "12345",
+        price: "399 000"
+    },
+    {
+        id: 1,
+        image: shoesBlack,
+        text: "lorem ipsum lorem ipsum",
+        artikul: "12345",
+        price: "399 000"
+    },
+    {
+        id: 1,
+        image: shoesBlack,
+        text: "lorem ipsum lorem ipsum",
+        artikul: "12345",
+        price: "399 000"
+    },
+    {
+        id: 1,
+        image: shoesBlack,
+        text: "lorem ipsum lorem ipsum",
+        artikul: "12345",
+        price: "399 000"
+    },
 
     // Domla json kopiya qilganda eniga qarab ketyabt, column qilish kerak
 ]
@@ -24,7 +59,7 @@ export function Basket(){
             <div className="basket-text">
                 <p>Savatda 5 ta tovar bor</p>
             </div>
-
+            <div className="basket-all"></div>
             <div className="basket-home">
                 
                 {basketData.map((parse, index) => {
