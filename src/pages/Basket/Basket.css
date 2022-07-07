@@ -1,0 +1,139 @@
+.basket{
+    width: 100%;
+    height: auto;
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    padding: 85px 156px 190px 156px;
+}
+
+.basket-text p{
+    font-weight: 700;
+    font-size: 37.8515px;
+    line-height: 46px;
+    padding-bottom: 76px;
+
+    /* 03 */
+
+    color: #9F6233;
+}
+
+.basket-home{
+    display: flex;
+    justify-content: space-between;
+}
+
+.basket-data{
+    display: flex;
+    flex-direction: row ;
+}
+
+.basket-hr hr{
+    width: 915px;
+    height: 0px;
+    border: 0.684385px solid #9A9A9A;
+}
+
+.basket-data img{
+    width: 221px;
+    height: 150.12px;
+    padding-top: 20px;
+}
+
+.basket-data p{
+    font-weight: 400;
+    font-size: 19.6296px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.basket-data span{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.basket-data .basket-price{
+    font-weight: 700;
+    font-size: 23.8058px;
+    line-height: 29px;
+    text-align: right;
+    color: #C9A95C;
+    padding: 60px 0 0 70px;
+}
+
+.basket-data .basket-close{
+    margin: 60px 0 0 70px;
+}
+
+.basket-texts-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    padding-left: 11px;
+}
+
+.basket-order{
+    background: #FFFFFF;
+    box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    width: 568px;
+    height: 542px;
+    padding: 46px 40px 47px 40px;
+}
+
+
+.basket-order img{
+    align-items: center;
+    padding: 0 139px 40px 139px;
+}
+.basket-order .basket-order-texts{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+
+.basket-order .basket-order-texts .basket-order-texts-1{
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.basket-order hr{
+    border: 0.684385px solid #0D0D0D;
+    width: 488px;
+    margin-top: 74px;
+}
+
+.basket-order-texts-2{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+
+    text-align: right;
+
+    /* brandcolor */
+
+    color: #C9A95C;
+}
+
+.basket-order button{
+    font-weight: 400;
+    font-size: 21.92px;
+    line-height: 114.8%;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    background: #DCBB45;
+    border-radius: 8px;
+    padding: 10px 54px;
+    margin-top: 45px;
+    margin-left: 54px;
+    border: none;
+}
