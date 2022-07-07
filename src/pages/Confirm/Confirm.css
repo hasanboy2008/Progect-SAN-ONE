@@ -1,0 +1,186 @@
+
+.payment{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Confirm - to'lov bo'limi uchun ajratilganligi sababli
+ barcha classlarni Payment (To'lov) nomi bilan nomladim! */
+
+.payment .payment-page{
+    width: 800px;
+    height: 531px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 78px 0;
+    padding: 64px 108px 48px 87px;
+    box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.payment-texts-top{
+    padding-bottom: 23px;
+}
+
+.payment-texts-top, .payment-texts-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 23px;
+}
+
+.payment-white-text{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    /* 04 */
+
+    color: #7C7C7C;
+}
+
+.payment-cost{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    /* 03 */
+
+    color: #9F6233;
+}
+
+.payment-input-top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.payment-input-top input{
+    width: 308px;
+    height: 80px;
+    border: 2px solid #DCBB45;
+    border-radius: 8px;
+    padding: 15px 0 16px 0;
+    font-weight: 400;
+    font-size: 24px;
+    color: #9F6233;
+}
+
+.payment-input-top input::placeholder{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #D2D2D2;
+    padding-left: 45px;
+}
+
+.payment-input-top .button-click{
+    border: 2px solid #D2D2D2;
+    border-radius: 8px;
+    padding: 0 17px;
+    cursor: pointer;
+}
+
+.payment-input-top .button-payme{
+    border: 2px solid #D2D2D2;
+    border-radius: 8px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.payment-input-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-labels{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment-labels label{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #D2D2D2;
+    padding-bottom: 6px;
+}
+
+.payment-labels input::placeholder{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    color: #D2D2D2;
+    text-align: center;
+}
+
+.payment-labels .card-number{
+    width: 345px;
+    height: 60px;
+    border: 2px solid #BEBEBE;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 21px;
+    color: #9F6233;
+}
+
+.payment-labels .card-code{
+    width: 119px;
+    height: 60px;
+    border: 2px solid #BEBEBE;
+    border-radius: 8px; 
+    font-weight: 400;
+    font-size: 21px;
+    color: #9F6233;
+}
+
+.payment-buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.button-back{
+    background: #FFFFFF;
+    box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border: 2px solid #DCBB45;
+    width: 143px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 14px;
+}
+
+.button-back p{
+    padding-left: 7px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.button-confirmation{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background: #DCBB45;
+    border-radius: 8px;
+    width: 143px;
+    height: 46px;
+    border: none;
+    cursor: pointer;
+    margin-left: 14px;
+}
