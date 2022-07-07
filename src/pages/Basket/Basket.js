@@ -15,6 +15,7 @@ export function Basket(){
         price: "399 000"
     },
 
+    // Domla json kopiya qilganda eniga qarab ketyabt, column qilish kerak
 ]
 
     
