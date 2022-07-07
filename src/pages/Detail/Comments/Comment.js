@@ -87,7 +87,7 @@ const Comment = ({
         </div>
         {isReplying && (
           <CommentForm
-            submitLabel="Reply"
+            // submitLabel="Reply"
             handleSubmit={(text) => addComment(text, replyId)}
           />
         )}

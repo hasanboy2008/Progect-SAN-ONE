@@ -17,7 +17,9 @@
     justify-content: space-between;
     margin: 41px 0 10px 0;
 }
-
+hr{
+    width: 100%;
+}
 .info .names {
     font-family: 'Raleway';
     font-style: normal;

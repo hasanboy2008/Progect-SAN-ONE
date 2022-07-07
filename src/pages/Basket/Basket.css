@@ -23,9 +23,13 @@
     justify-content: space-between;
 }
 
+.basket-json{
+    display: flex;
+    flex-direction: column;
+}
+
 .basket-data{
     display: flex;
-    flex-direction: row ;
 }
 
 .basket-hr hr{

@@ -2,6 +2,7 @@ import React from "react";
 import "../Basket/Basket.css"
 import Logo from"../../asest/Basket/san-one-logo.png"
 import shoesBlack from "../../asest/Basket/shoes-black.png"
+// import shoesMoccasin from "../../asest/Basket/shoes-moccasin.png"
 
 
 export function Basket(){
@@ -12,7 +13,8 @@ export function Basket(){
         text: "lorem ipsum lorem ipsum",
         artikul: "12345",
         price: "399 000"
-    }
+    },
+
 ]
 
     
