@@ -24,64 +24,7 @@ export function Home() {
     });
   });
 
-  const new_product = [
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-    {
-      img: new_p_1,
-      name: "Lorem ipsum",
-      price: 399000,
-      discount: 499000,
-      share: share,
-    },
-  ];
+ 
 
   const best_seller = [
     {

@@ -82,6 +82,7 @@ export function Futter(){
           <a href="{info}">ENG KO’P SOTILGAN</a>
           <a href="{info}">ENG KO’P KORILGAN</a>
           <a href="{info}">YANGILIKLAR</a>
+         
         </div>
         <div className="futter_click">
           <div className="futer_c_top">
