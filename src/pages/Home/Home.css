@@ -8,10 +8,10 @@
 .home_section1 {
   width: 100%;
   height: auto;
-  background-image: url(../../asest//home/section1/YANGI\ KO‘RINISH.png);
+  background-image: url(../../asest//home/section1/yangi.png);
   background-repeat: no-repeat;
-  background-position-x: -130px;
-  background-position-y: center;
+  /* background-position-x: -130px; */
+  /* background-position-y: center; */
   position: relative;
   padding: 360px 156px 300px;
   display: flex;

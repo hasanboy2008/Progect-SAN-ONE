@@ -8,6 +8,7 @@ import "./main.css"
 import { Futter } from "../Futter/Futer";
 import { Confirm } from "../../pages/Confirm/Confirm";
 import { Detail } from "../../pages/Detail/Detail";
+import { Basket } from "../../pages/Basket/Basket";
 import { Katalog } from "../../pages/Katalog/Katalog";
 import { Config } from "../../Config/Config";
 
@@ -28,6 +29,7 @@ export function Main(){
            */}
           <Route path="/Confirm" element={<Confirm />} />
           <Route path="/Detail" element={<Detail />} />
+          <Route path="/Basket" element={<Basket />} />
           <Route path="/katalog" element={<Katalog/>} />
         </Routes>
         <Config/>

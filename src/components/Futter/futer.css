@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 71px 151px;
+    padding: 37px 151px ;
     background: linear-gradient(201.36deg, #A18C80 -58.09%, #4C3B31 121.52%);
 }
 
@@ -140,4 +140,4 @@ margin:  11px;
 display: flex;
 align-items: center;
 justify-content: center;
-}
+} 
