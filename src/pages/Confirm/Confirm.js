@@ -33,7 +33,7 @@ export function Confirm() {
                         
                         <div className="payment-labels">
                             <label htmlFor="">Amal qilish muddati</label>
-                            <input className="card-code" type="number" placeholder="12 / 22" max="9" min={0}/>
+                            <input className="card-code" type="text" placeholder="12 / 22" max="9" min={0}/>
                         </div>
                         
                         <div className="payment-labels">
