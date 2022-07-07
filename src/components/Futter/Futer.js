@@ -1,7 +1,10 @@
 import React from "react";
 import futer_img from "../../asest/navbar/Vector (2).png"
 import "./futer.css"
-
+import click from "../../asest/Futter/cilik.png"
+import humo from "../../asest/Futter/humo.png"
+import payme from "../../asest/Futter/payme_1 1.png"
+import uzcard from "../../asest/Futter/uzcart.png"
 
 export function Futter(){
 
@@ -87,17 +90,20 @@ export function Futter(){
         <div className="futter_click">
           <div className="futer_c_top">
             <button>
+              <img src={click} alt="" />
             
             </button>
             <button>
-             
+             <img src={payme} alt="" />
             </button>
           </div>
           <div className="futer_c_bootom">
             <button>
+              <img src={humo} alt="" />
              
             </button>
             <button>
+              <img src={uzcard} alt="" />
             
             </button>
           </div>

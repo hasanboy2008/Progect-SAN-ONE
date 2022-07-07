@@ -24,8 +24,8 @@ export function Navbar() {
           <img src={logo_nav} alt="" />
         </div>
         <div className="catalog_pages_nav">
-          <p>KATALOG</p>
-          <p>BIZ HAQIMIZDA</p>
+          <button>KATALOG</button>
+          <button>BIZ HAQIMIZDA</button>
         </div>
         <div className="basket_nav">
           <div className="search_nav">
