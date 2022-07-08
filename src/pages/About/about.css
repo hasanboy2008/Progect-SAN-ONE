@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.aboutDiv
+{   
+    margin: 0 auto;
+    padding-top: 117px;
+
+    width: 1920px;
+    height: auto;
+    background: #F5F5F5;
+    
+}
+
+/* section 1 start */
+
+.aboutDiv .section1
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutDiv .section1 p
+{
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    color: #9F6233;
+}
+.aboutDiv .section1 span
+{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #7C7C7C;
+}
+
+/* section 1 end */
+
+/* section 2 start */
+.aboutDiv .section2
+{
+    padding: 112px 156px 150px 156px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutDiv .section2 .container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.aboutDiv .section2 .container .left1,
+.aboutDiv .section2 .container .right2
+{
+    padding: 0px 124px;
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aboutDiv .section2 .container .left1
+{
+    align-items: flex-end;
+    border-right: 2px solid #DCBB45;
+}
+.aboutDiv .section2 .container .right2
+{
+    align-items: flex-start;
+}
+
+
+.aboutDiv .section2 .container .left1 p,
+.aboutDiv .section2 .container .right2 p
+{
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 38px;
+    color: #9F6233;
+}
+.aboutDiv .section2 .container .left1 span,
+.aboutDiv .section2 .container .right2 span
+{
+    padding-top: 22px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    color: #7C7C7C;
+}
+.aboutDiv .section2 .container .left1 span
+{
+    text-align: right;
+}
+.aboutDiv .section2 .container .right2 span
+{
+    text-align: left;
+}
+
+.aboutDiv .section2 .container .right1,
+.aboutDiv .section2 .container .left2
+{
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutDiv .section2 .container .left2
+{
+    border-right: 2px solid #DCBB45;
+}
+.aboutDiv .section2 .container .right1 .line,
+.aboutDiv .section2 .container .left2 .line
+{
+    width: 67px;
+    height: 2px;
+    background: #DCBB45;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.aboutDiv .section2 .container .right1 .line
+{
+    justify-content: flex-end;
+}
+.aboutDiv .section2 .container .left2 .line
+{
+    justify-content: flex-start;
+}
+.aboutDiv .section2 .container .right1 .line span,
+.aboutDiv .section2 .container .left2 .line span
+
+{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #DCBB45;
+}
+.aboutDiv .section2 .container .right1 .img,
+.aboutDiv .section2 .container .left2 .img
+{
+    width: 683px;
+    height: 350px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+/* section 2 end */
+
+/* section 3 start */
+
+.aboutDiv .section3
+{
+    width: 100%;
+    height: 242px;
+    background: #DCBB45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* section 3 end */
+
+/* section 4 start */
+
+.aboutDiv .section4
+{
+    width: 100%;
+    height: 303px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:  url(../../asest/about/bcimage2.png), url(../../asest/about/bcimage1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutDiv .section4 a
+{
+    padding: 10px 73px;
+    background: #DCBB45;
+    border-radius: 8px;
+
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+.aboutDiv .section4 a i
+{
+    margin-right: 7px;
+}
+
+/* section 4 end */
+
+
+
