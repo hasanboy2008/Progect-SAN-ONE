@@ -7,6 +7,10 @@
     padding: 85px 156px 190px 156px;
 }
 
+button{
+    cursor: pointer;
+}
+
 .basket-all{
     display: flex;
 }
@@ -20,6 +24,10 @@
     /* 03 */
 
     color: #9F6233;
+}
+
+.basket-all{
+    display: flex;
 }
 
 .basket-home{
@@ -91,6 +99,7 @@
     width: 568px;
     height: 542px;
     padding: 46px 40px 47px 40px;
+    margin-left: 125px;
 }
 
 

@@ -2,7 +2,10 @@ import React from "react";
 import "../Basket/Basket.css"
 import Logo from"../../asest/Basket/san-one-logo.png"
 import shoesBlack from "../../asest/Basket/shoes-black.png"
-// import shoesMoccasin from "../../asest/Basket/shoes-moccasin.png"
+import shoesMoccasin from "../../asest/Basket/shoes-moccasin.png"
+import shoesWhite from "../../asest/Basket/shoes-white.png"
+import shoesGrey from "../../asest/Basket/shoes-grey.png"
+import shoesBW from "../../asest/Basket/shoes-b-w.png"
 
 
 export function Basket(){
@@ -15,36 +18,29 @@ export function Basket(){
         price: "399 000"
     },
     {
-        id: 1,
-        image: shoesBlack,
+        id: 2,
+        image: shoesMoccasin,
         text: "lorem ipsum lorem ipsum",
         artikul: "12345",
         price: "399 000"
     },
     {
-        id: 1,
-        image: shoesBlack,
+        id: 3,
+        image: shoesWhite,
         text: "lorem ipsum lorem ipsum",
         artikul: "12345",
         price: "399 000"
     },
     {
-        id: 1,
-        image: shoesBlack,
+        id: 4,
+        image: shoesGrey,
         text: "lorem ipsum lorem ipsum",
         artikul: "12345",
         price: "399 000"
     },
     {
-        id: 1,
-        image: shoesBlack,
-        text: "lorem ipsum lorem ipsum",
-        artikul: "12345",
-        price: "399 000"
-    },
-    {
-        id: 1,
-        image: shoesBlack,
+        id: 5,
+        image: shoesBW,
         text: "lorem ipsum lorem ipsum",
         artikul: "12345",
         price: "399 000"
@@ -59,7 +55,8 @@ export function Basket(){
             <div className="basket-text">
                 <p>Savatda 5 ta tovar bor</p>
             </div>
-            <div className="basket-all"></div>
+
+            <div className="basket-all">
             <div className="basket-home">
                 
                 {basketData.map((parse, index) => {
@@ -86,7 +83,9 @@ export function Basket(){
                         
                     )
                 })}
-                <div className="basket-order">
+                
+            </div>
+            <div className="basket-order">
                     <img src={Logo} alt="" />
                     <div className="basket-order-texts">
                         <p>Narxi:</p>
@@ -109,9 +108,7 @@ export function Basket(){
                     BUYURTMANI TASDIQLASH
                     </button>
                 </div>
-            </div>
-            
-                
+            </div> 
             
             
         </div>
