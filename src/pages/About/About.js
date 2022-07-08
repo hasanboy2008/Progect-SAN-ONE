@@ -1,13 +1,13 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    NavLink
-} from "react-router-dom";
+// import {
+//     BrowserRouter as Router,
+//     NavLink
+// } from "react-router-dom";
 
 // React Icon import
-import 'primeicons/primeicons.css';
+// import 'primeicons/primeicons.css';
 // CSS style link
-import "../About/about.css";
+import "./about.css";
 // import Image 
 import logo from "../../asest/about/logotext.png";
 import image1 from "../../asest/about/image1.png";
@@ -16,7 +16,7 @@ import image3 from "../../asest/about/image3.png";
 
 export function About() {
     return (
-        <Router>
+        // <Router>
             <div className="aboutDiv">
 
                 <div className="section1">
@@ -81,10 +81,10 @@ export function About() {
                 </div>
 
                 <div className="section4">
-                    <NavLink to="#"><i className="pi pi-arrow-left"></i>Bosh sahifa</NavLink>
+                    {/* <NavLink to="#"><i className="pi pi-arrow-left"></i>Bosh sahifa</NavLink> */}
                 </div>
 
             </div>
-        </Router>
+        // </Router>
     )
 }

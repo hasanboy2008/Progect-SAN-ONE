@@ -11,6 +11,7 @@ import { Detail } from "../../pages/Detail/Detail";
 import { Basket } from "../../pages/Basket/Basket";
 import { Katalog } from "../../pages/Katalog/Katalog";
 import { Config } from "../../Config/Config";
+import { About } from "../../pages/About/About";
 
 
 
@@ -26,10 +27,11 @@ export function Main(){
           <Route path="*" element={<Home />} />
            <Route path="/signin" element={<Singnin/>} /> 
           <Route path="signup" element={<Signup/>} />
-          <Route path="/Confirm" element={<Confirm />} />
-          <Route path="/Detail" element={<Detail />} />
-          <Route path="/Basket" element={<Basket />} />
+          <Route path="/confirm" element={<Confirm />} />
+          <Route path="/detail" element={<Detail />} />
+          <Route path="/basket" element={<Basket />} />
           <Route path="/katalog" element={<Katalog/>} />
+          <Route path="/about" element={<About/>} />
         </Routes>
         <Config/>
         <Futter />

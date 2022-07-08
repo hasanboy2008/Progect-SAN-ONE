@@ -37,7 +37,13 @@ export function Navbar() {
           >
             KATALOG
           </button>
-          <button>BIZ HAQIMIZDA</button>
+          <button
+            onClick={() => {
+              navigate("/about");
+            }}
+          >
+            BIZ HAQIMIZDA
+          </button>
         </div>
         <div className="basket_nav">
           <div className="search_nav">
@@ -65,7 +71,11 @@ export function Navbar() {
               <option value="">RU</option>
               <option value="">EN</option>
             </select>
-            <button>
+            <button
+              onClick={() => {
+                navigate("/basket");
+              }}
+            >
               <svg
                 width="31"
                 height="29"
