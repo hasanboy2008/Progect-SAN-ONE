@@ -1,7 +1,7 @@
 .home {
   width: 100%;
   height: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* ------- home section 1===== */
@@ -106,10 +106,12 @@
   right: 788px;
 }
 .position_3 {
+  /* display: none; */
   position: absolute;
-  right: -200px;
+  right: 100px;
   top: -160px;
   bottom: 0px;
+  left: 400px;
   z-index: 1;
   /* background-color: red; */
   overflow: hidden;
@@ -143,12 +145,13 @@
 .home_section_2 {
   width: 100%;
   height: auto;
+  padding: 106px 42px;
+
 }
 
 .sec_2_text {
   width: 100%;
   height: auto;
-  padding: 106px 42px;
 }
 .sec_2_text > p {
   font-weight: 700;
@@ -175,12 +178,13 @@
 .new_products {
   width: 100%;
   height: 991px;
-  /* padding: 0 41px; */
+  padding: 0px 0px;
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
   flex-wrap: wrap;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* background-color: #9f6233; */
 }
 
 .new_Produc_1 >figure{
@@ -210,7 +214,7 @@
   justify-content: space-between;
   padding: 19px;
   /* background-color: rebeccapurple; */
-  margin: 5px;
+  margin: 7.7px;
 }
 hr {
   width: 80%;

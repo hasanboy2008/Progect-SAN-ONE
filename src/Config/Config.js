@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 export function Config() {
   const dispache=useDispatch();
   useEffect(() => {
-    axios("https://sanone.uz/view/products")
+    axios("https://api.sanone.uz/view/products")
       .then((res) => {
         console.log(res.data);
         dispache(acProducts(res.data));

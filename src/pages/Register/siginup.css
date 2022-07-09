@@ -190,10 +190,15 @@
 .myimg > img {
   border-radius: 50%;
 }
-.myimg > button {
+.myimg >label>input{
+  display: none;
+}
+.myimg > label {
   width: 190px;
   height: 46px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #dcbb45;
   border-radius: 8px;
   border: none;
@@ -254,4 +259,10 @@
 .form_name > svg {
   width: 40px;
   /* margin-right: 10px; */
+}
+
+
+/* history_all */
+.history_all{
+  padding-top: 96px;
 }

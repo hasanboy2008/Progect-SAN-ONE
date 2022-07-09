@@ -12,6 +12,7 @@ import { Basket } from "../../pages/Basket/Basket";
 import { Katalog } from "../../pages/Katalog/Katalog";
 import { Config } from "../../Config/Config";
 import { About } from "../../pages/About/About";
+import { Myacount } from "../../pages/Register/Myacount";
 
 
 
@@ -26,8 +27,9 @@ export function Main(){
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Home />} />
            <Route path="/signin" element={<Singnin/>} /> 
-          <Route path="signup" element={<Signup/>} />
-          <Route path="/confirm" element={<Confirm />} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/myacount" element={ <Myacount/> } />
+          <Route path="/confirm" element={<Confirm/>} />
           <Route path="/detail" element={<Detail />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/katalog" element={<Katalog/>} />
