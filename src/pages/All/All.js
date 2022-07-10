@@ -4,8 +4,10 @@ import "./all.css"
 export function All(){
     return (
       <div className="all">
-        <p>Krossovkalar</p>
-        <span>Barcha mahsulot turlarini ko’rib chiqing</span>
+        <div className="alltext">
+          <p>Krossovkalar</p>
+          <span>Barcha mahsulot turlarini ko’rib chiqing</span>
+        </div>
 
         <div className="all_filter">
           <div className="fiter_nav">
@@ -39,8 +41,132 @@ export function All(){
               </div>
             </form>
           </div>
+          <div className="filter_Types">
+            <button>Makasima</button>
+            <button>Krossovka</button>
+            <button>Klassik krossovka</button>
+            <button>Ishlov berilgan teri</button>
+            <button>Qochoq poyabzal</button>
+            <button>Shpallar</button>
+            <button>Ikki rangli</button>
+            <button>Klassik</button>
+          </div>
+          <div className="filter_color">
+            <span>Rangi:</span>
+            <span>
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  r="9.40864"
+                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
+                  fill="#A18B7F"
+                />
+              </svg>
+            </span>
+            <span>
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  r="9.40864"
+                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
+                  fill="#A18B7F"
+                />
+              </svg>
+            </span>
+            <span>
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  r="9.40864"
+                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
+                  fill="#A18B7F"
+                />
+              </svg>
+            </span>
+            <span>
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  r="9.40864"
+                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
+                  fill="#A18B7F"
+                />
+              </svg>
+            </span>
+            <span>
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  r="9.40864"
+                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
+                  fill="#A18B7F"
+                />
+              </svg>
+            </span>
+          </div>
+          <div className="filter_ratio">
+            <p>Razmeri:</p>
+            <div className="ratio">
+              <button>37</button>
+              <button>38</button>
+              <button>39</button>
+              <button>40</button>
+              <button>41</button>
+              <button>42</button>
+              <button>43</button>
+              <button>44</button>
+              <button>45</button>
+              <button>46</button>
+            </div>
+          </div>
+          <div className="filter_tosend">
+            <p>Qayerga yuborish</p>
+            <select name="" id="">
+              <option value=""></option>
+              <option value="">1</option>
+              <option value="">2</option>
+            </select>
+          </div>
+          <div className="filter_season">
+            <p>Mavsum:</p>
+            <div className="season">
+              <button>Kuzgi</button>
+              <button>Qishgi</button>
+              <button>Bahorgi</button>
+              <button>Yozgi</button>
+            </div>
+          </div>
 
-          
+          <div className="filter_best">
+            <button>Eng ko‘p sotilyotganlari</button>
+            <button>Eng ko‘p ko‘rilyotganlari</button>
+            <button>Eng ohirgilari</button>
+          </div>
         </div>
 
         <div className="allrezalut"></div>
