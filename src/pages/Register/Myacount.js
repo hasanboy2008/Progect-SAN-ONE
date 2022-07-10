@@ -1,23 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import "./siginup.css";
-import myimg from "../../asest/Myacount/acount.png";
+// import myimg from "../../asest/Myacount/acount.png";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 export function Myacount() {
+  const user = useSelector((state) => state.reUser);
+  const [data, setData] = useState(user);
+  const [img, setImg] = useState(false);
+  console.log(data);
+  function updateUser(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("img", img);
+    formData.append("data", JSON.stringify(data));
+
+    axios("https://api.sanone.uz/update/customer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "multipart/form-data",
+        "Access-Control-Allow-Origin": "*",
+      },
+      data: formData,
+    })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   return (
     <div className="myacount">
       <div className="myimg">
-        <img src={myimg} alt="" />
+        <div className="my_img">
+          <img src={img ? URL.createObjectURL(img) : data.img} alt="" />
+        </div>
         <label>
           <input
             type="file"
             name=""
             id=""
             accept="image/png, image/jpeg, image/jpg"
+            onChange={(e) => {
+              setImg(e.target.files[0]);
+            }}
           />
           <span>Rasm yuklash</span>
         </label>
       </div>
-      <form action="">
+      <form onSubmit={updateUser}>
         <div className="formname">
           <div className="form_name">
             <svg
@@ -33,7 +66,13 @@ export function Myacount() {
               />
             </svg>
 
-            <input type="text" value={"Azizbek"} />
+            <input
+              type="text"
+              value={data.name}
+              onChange={(e) => {
+                setData({ ...data, name: e.target.value });
+              }}
+            />
           </div>
           <div className="form_name">
             <svg
@@ -48,7 +87,13 @@ export function Myacount() {
                 fill="#7C7C7C"
               />
             </svg>
-            <input type="text" value={"Yokubjanov"} />
+            <input
+              type="text"
+              value={data.surname}
+              onChange={(e) => {
+                setData({ ...data, surname: e.target.value });
+              }}
+            />
           </div>
         </div>
         <div className="formname">
@@ -63,14 +108,20 @@ export function Myacount() {
               <path
                 d="M7.70409 4.98525L5.05287 1.92613C4.747 1.5732 4.18693 1.57548 3.83177 1.93111L1.65153 4.11425C1.00266 4.76398 0.816926 5.72895 1.19187 6.50245C3.45019 11.1614 7.16752 14.8837 11.8203 17.145C12.5928 17.5204 13.5565 17.3344 14.2054 16.6847L16.4063 14.4808C16.7629 14.1238 16.7635 13.5604 16.4079 13.2551L13.3353 10.6179C13.0137 10.3419 12.5148 10.3781 12.1926 10.7008L11.1237 11.771C11.0048 11.8901 10.8262 11.9185 10.6903 11.8402C8.94008 10.8311 7.49743 9.38652 6.48963 7.63402C6.41137 7.49793 6.43983 7.31898 6.55867 7.19999L7.62423 6.133C7.9479 5.80892 7.98286 5.30688 7.70409 4.98525V4.98525Z"
                 stroke="#7C7C7C"
-                stroke-opacity="0.7"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeOpacity="0.7"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
 
-            <input type="text" value={"Telefon:+998 98 772 57 07 "} />
+            <input
+              type="text"
+              value={data.phone}
+              onChange={(e) => {
+                setData({ ...data, phone: e.target.value });
+              }}
+            />
           </div>
           <div className="form_name">
             <svg
@@ -81,15 +132,21 @@ export function Myacount() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M14.2694 0.284973C15.6602 0.284973 16.7876 1.41238 16.7876 2.80311V11.1969C16.7876 12.5876 15.6602 13.715 14.2694 13.715H2.51814C1.12741 13.715 0 12.5876 0 11.1969V2.80311C0 1.41238 1.12741 0.284973 2.51814 0.284973H14.2694ZM15.1088 3.07842L8.94652 8.47108C8.65642 8.72491 8.23519 8.74606 7.92324 8.53453L7.84105 8.47108L1.67876 3.07926V11.1969C1.67876 11.6605 2.05456 12.0363 2.51814 12.0363H14.2694C14.733 12.0363 15.1088 11.6605 15.1088 11.1969V3.07842ZM13.833 1.96373H2.95293L8.39378 6.72404L13.833 1.96373Z"
                 fill="#7C7C7C"
-                fill-opacity="0.7"
+                fillOpacity="0.7"
               />
             </svg>
 
-            <input type="text" value={"*********.@gmail.com"} />
+            <input
+              type="text"
+              value={data.email}
+              onChange={(e) => {
+                setData({ ...data, email: e.target.value });
+              }}
+            />
           </div>
         </div>
         <div className="formname">
@@ -102,20 +159,26 @@ export function Myacount() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M3.44289 8.04848C3.44289 5.64374 5.39232 3.69432 7.79706 3.69432C10.2018 3.69432 12.1512 5.64374 12.1512 8.04848C12.1512 10.4532 10.2018 12.4026 7.79706 12.4026C5.39232 12.4026 3.44289 10.4532 3.44289 8.04848ZM7.79706 5.06932C6.15171 5.06932 4.81789 6.40313 4.81789 8.04848C4.81789 9.69383 6.15171 11.0276 7.79706 11.0276C9.44241 11.0276 10.7762 9.69383 10.7762 8.04848C10.7762 6.40313 9.44241 5.06932 7.79706 5.06932Z"
                 fill="#A4A4A4"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M0.0277271 7.0006C0.352527 3.0602 3.64533 0.0276489 7.59909 0.0276489L7.99503 0.0276489C11.9488 0.0276489 15.2416 3.0602 15.5664 7.0006C15.7409 9.11731 15.087 11.2191 13.7426 12.8633L9.34896 18.2366C8.54687 19.2176 7.04725 19.2176 6.24517 18.2366L1.85153 12.8633C0.507091 11.2191 -0.14675 9.11731 0.0277271 7.0006ZM7.59909 1.40265C4.36093 1.40265 1.66409 3.88634 1.39808 7.11355C1.25287 8.87524 1.79704 10.6245 2.91598 11.993L7.30962 17.3663C7.56155 17.6744 8.03257 17.6744 8.2845 17.3663L12.6781 11.993C13.7971 10.6245 14.3413 8.87524 14.196 7.11355C13.93 3.88634 11.2332 1.40265 7.99503 1.40265H7.59909Z"
                 fill="#A4A4A4"
               />
             </svg>
 
-            <input type="text" value={"Namangan,"} />
+            <input
+              type="text"
+              value={data.region}
+              onChange={(e) => {
+                setData({ ...data, region: e.target.value });
+              }}
+            />
           </div>
           <div className="form_name">
             <svg
@@ -126,20 +189,26 @@ export function Myacount() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M3.44289 8.04848C3.44289 5.64374 5.39232 3.69432 7.79706 3.69432C10.2018 3.69432 12.1512 5.64374 12.1512 8.04848C12.1512 10.4532 10.2018 12.4026 7.79706 12.4026C5.39232 12.4026 3.44289 10.4532 3.44289 8.04848ZM7.79706 5.06932C6.15171 5.06932 4.81789 6.40313 4.81789 8.04848C4.81789 9.69383 6.15171 11.0276 7.79706 11.0276C9.44241 11.0276 10.7762 9.69383 10.7762 8.04848C10.7762 6.40313 9.44241 5.06932 7.79706 5.06932Z"
                 fill="#A4A4A4"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M0.0277271 7.0006C0.352527 3.0602 3.64533 0.0276489 7.59909 0.0276489L7.99503 0.0276489C11.9488 0.0276489 15.2416 3.0602 15.5664 7.0006C15.7409 9.11731 15.087 11.2191 13.7426 12.8633L9.34896 18.2366C8.54687 19.2176 7.04725 19.2176 6.24517 18.2366L1.85153 12.8633C0.507091 11.2191 -0.14675 9.11731 0.0277271 7.0006ZM7.59909 1.40265C4.36093 1.40265 1.66409 3.88634 1.39808 7.11355C1.25287 8.87524 1.79704 10.6245 2.91598 11.993L7.30962 17.3663C7.56155 17.6744 8.03257 17.6744 8.2845 17.3663L12.6781 11.993C13.7971 10.6245 14.3413 8.87524 14.196 7.11355C13.93 3.88634 11.2332 1.40265 7.99503 1.40265H7.59909Z"
                 fill="#A4A4A4"
               />
             </svg>
 
-            <input type="text" value={"Furqat MFY"} />
+            <input
+              type="text"
+              value={data.mfy}
+              onChange={(e) => {
+                setData({ ...data, mfy: e.target.value });
+              }}
+            />
           </div>
         </div>
         <button>Tahrirlash</button>
@@ -147,7 +216,30 @@ export function Myacount() {
       <div className="history_all">
         <p>Barcha haridlar tarixi</p>
 
-        <div className="history_crud"></div>
+        <div className="history_crud">
+          {/* <table>
+            <tr>
+              <td>
+                <img src={myimg} alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>lorem ipsum lorem ipsum </p>
+                <span>Atrikul: 12345</span>
+                <span>12.06.2022</span>
+              </td>
+            </tr>
+            <tr>
+              <td>399 000</td>
+            </tr>
+            <tr>
+              <td>
+                <span>x</span>
+              </td>
+            </tr>
+          </table> */}
+        </div>
       </div>
     </div>
   );

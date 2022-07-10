@@ -187,7 +187,14 @@
   flex-direction: column;
   align-items: center;
 }
-.myimg > img {
+.my_img{
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+
+}
+.my_img > img {
+  width: 100%;
   border-radius: 50%;
 }
 .myimg >label>input{
@@ -265,4 +272,26 @@
 /* history_all */
 .history_all{
   padding-top: 96px;
+}
+
+
+
+/* history_crud */
+
+.history_crud{
+  width: 100%;
+  display: flex;
+}
+
+.history_crud > table{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.history_crud > table :nth-child(2){
+  display: flex;
 }

@@ -8,6 +8,7 @@ import shoesGrey from "../../asest/Basket/shoes-grey.png"
 import shoesBW from "../../asest/Basket/shoes-b-w.png"
 
 
+
 export function Basket(){
     const basketData = [
         {
@@ -49,7 +50,7 @@ export function Basket(){
     // Domla json kopiya qilganda eniga qarab ketyabt, column qilish kerak
 ]
 
-    
+
     return(
         <div className="basket">
             <div className="basket-text">
@@ -104,7 +105,9 @@ export function Basket(){
                         <p className="basket-order-texts-1">Jami:</p>
                         <p className="basket-order-texts-2">1 795 515 so’m</p>
                     </div>
-                    <button>
+                    <button onClick={()=>{
+
+                    }}>
                     BUYURTMANI TASDIQLASH
                     </button>
                 </div>

@@ -79,7 +79,9 @@ export function Futter(){
         </div>
 
         <div className="futter_about">
-          <button>BIZ HAQIMIZDA</button>
+          <button onClick={()=>{
+            navigate('/about')
+          }}>BIZ HAQIMIZDA</button>
           <button
             onClick={() => {
               navigate("/katalog");

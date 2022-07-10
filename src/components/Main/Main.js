@@ -13,6 +13,7 @@ import { Katalog } from "../../pages/Katalog/Katalog";
 import { Config } from "../../Config/Config";
 import { About } from "../../pages/About/About";
 import { Myacount } from "../../pages/Register/Myacount";
+import { All } from "../../pages/All/All";
 
 
 
@@ -34,6 +35,7 @@ export function Main(){
           <Route path="/basket" element={<Basket />} />
           <Route path="/katalog" element={<Katalog/>} />
           <Route path="/about" element={<About/>} />
+          <Route path="/all" element={<All/>} />
         </Routes>
         <Config/>
         <Futter />
