@@ -6,7 +6,7 @@ export const acUser=(user)=>{
 }
 
 
-const user = JSON.parse(  localStorage.getItem('user')|| {} )
+const user = JSON.parse( localStorage.getItem('user')|| "{}" )
 
 export const reUser = (state = user, action) => {
   switch (action.type) {
