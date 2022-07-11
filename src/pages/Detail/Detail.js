@@ -27,7 +27,7 @@ export function Detail() {
                     <div className="imgContainer">
                         {Images.map((img, index) => (
                             <img
-                                style={{ border: selectedImg === img ? "3px solid black" : "" }}
+                                style={{ opacity: selectedImg === img ? "" : "50% " }}
                                 src={img}
                                 key={index}
                                 alt="shoe"
