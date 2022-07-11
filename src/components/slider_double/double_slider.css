@@ -34,6 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 .swiper-pagination-bullet{
   padding: 5px;
@@ -42,7 +43,4 @@
 .swiper-pagination-bullet-active {
   background-color: #facb21;
   padding: 8px;
-}
-.swiper-pagination-bullet:hover{
-  background-color: black !important;
 }
