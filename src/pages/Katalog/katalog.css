@@ -126,6 +126,11 @@
 {
     justify-content: flex-start;
 }
+.box-container > button{
+    border: none;
+    outline: none;
+    background: none;
+}
 
 
 

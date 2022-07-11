@@ -9,6 +9,7 @@ export function Navbar() {
   const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
 
+
   // console.log(user);
   useEffect(() => {
     if (user.id) {
@@ -16,6 +17,11 @@ export function Navbar() {
       // console.log(user);
     }
   }, [user]);
+
+
+  // navbar fixed qilingan joyi
+
+
 
   return (
     <div className="navbar">
@@ -66,11 +72,11 @@ export function Navbar() {
             </button>
           </div>
           <div id="basket_nav">
-            <select>
+            {/* <select>
               <option value="">UZ</option>
               <option value="">RU</option>
               <option value="">EN</option>
-            </select>
+            </select> */}
             <button
               onClick={() => {
                 navigate("/basket");

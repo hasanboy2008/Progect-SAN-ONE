@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // CSS import 
 
@@ -19,6 +20,7 @@ import bcImage3 from "../../asest/katalog/bcImage3.png";
 export function Katalog() {
 
     // database - malumotlar toplami
+const navigate = useNavigate();
 
     const data = [
         {
@@ -66,44 +68,42 @@ export function Katalog() {
 
 
     return (
-        <div className="katalog">
-
-            <div className="bcgImage">
-                <div className="bcgImage1">
-                    <img src={bcImage1} alt="" />
-                </div>
-                <div className="bcgImage2">
-                    <img src={bcImage2} alt="" />
-                </div>
-                <div className="bcgImage3">
-                    <img src={bcImage3} alt="" />
-                </div>
-            </div>
-
-            <div className="katalog-main">
-                <div className="top">
-                    <p>Katalog</p>
-                    <span>Mahsulot turlari bo'yicha ko'rib chiqing</span>
-                </div>
-
-                <div className="container">
-
-                    {
-                        data.map((item) => (
-                            <div key={item.id} className="box-container">
-                                <div className="img">
-                                    <img src={item.image} alt="" />
-                                </div>
-                                <p>{item.name}</p>
-                            </div>
-                        ))
-                    }
-
-                </div>
-            </div>
-
-
-
+      <div className="katalog">
+        <div className="bcgImage">
+          <div className="bcgImage1">
+            <img src={bcImage1} alt="" />
+          </div>
+          <div className="bcgImage2">
+            <img src={bcImage2} alt="" />
+          </div>
+          <div className="bcgImage3">
+            <img src={bcImage3} alt="" />
+          </div>
         </div>
-    )
+
+        <div className="katalog-main">
+          <div className="top">
+            <p>Katalog</p>
+            <span>Mahsulot turlari bo'yicha ko'rib chiqing</span>
+          </div>
+
+          <div className="container">
+            {data.map((item) => (
+            
+                <div key={item.id} className="box-container">
+                      <button onClick={()=>{
+                        navigate('/all')
+                      }} >
+                  <div className="img">
+                    <img src={item.image} alt="" />
+                  </div>
+                  <p>{item.name}</p>
+              </button>
+
+                </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
 }
