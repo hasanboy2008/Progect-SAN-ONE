@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 // import {
 //     BrowserRouter as Router,
 //     NavLink
@@ -15,6 +15,9 @@ import image2 from "../../asest/about/image2.png";
 import image3 from "../../asest/about/image3.png";
 
 export function About() {
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         // <Router>
             <div className="aboutDiv">

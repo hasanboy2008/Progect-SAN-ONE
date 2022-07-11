@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./Home.css";
 import position_1 from "../../asest/home/position/Group 48.png";
 import position_2 from "../../asest/home/position/p_2.png";
@@ -17,6 +17,9 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 export function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
  
   const products = useSelector((state) => state.reProducts);
 // const axios = require("axios");

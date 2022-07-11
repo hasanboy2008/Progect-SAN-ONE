@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Detail.css";
 import "./Comments/Comment.css";
 import Comments from "./Comments/Comments";
@@ -7,6 +7,10 @@ import { DetailInfo } from "./Info/Info";
 import {Images} from "./Images";
 
 export function Detail() {
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
     const [selectedImg, setSelectedImg] = useState(Images[0]);
 
