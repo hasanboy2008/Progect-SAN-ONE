@@ -3,7 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.section_scale{
+  margin-top: 450px;
+}
 .slider_scale{
   padding: 20px 40px;
   overflow: hidden;

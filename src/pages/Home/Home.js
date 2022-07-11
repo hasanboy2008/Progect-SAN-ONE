@@ -100,12 +100,12 @@ const navigate = useNavigate();
           <img src={position_6} alt="" />
         </div>
         <div className="position_7">
-          <img src={position_7} alt="" />
+          <marquee behavior="" direction=""><img src={position_7} alt="" /></marquee>
         </div>
       </div>
 
       <div className="home_section_2">
-        <div className="sec_2_text">
+        <div className="all_headerText">
           <p>Yangi mahsulotlar</p>
           <span>Eng so‘nggi mahsulotlarimizni ko‘rib chiqing va tanlang</span>
         </div>
@@ -123,6 +123,7 @@ const navigate = useNavigate();
                   <span>{item.discount}</span>
                 </div>
                 <img src={item.share} alt="" />
+                kdsb
               </div>
               <div className="sell_basket">
                 <button  onClick={()=>{
@@ -134,19 +135,17 @@ const navigate = useNavigate();
           ))}
         </div>
       </div>
-
-      <div className="section_3">
-        <img src={sec_3} alt="" />
-      </div>
       <div className="section_scale">
-          <h1>Eng ko‘p ko‘rilgan mahsulotlar</h1>
-          <p>Mijozlarimiz tanlovlariga eng loyiq bo‘lgan mahsulotlarimiz</p>
+          <div className="all_headerText">
+            <p>Eng ko‘p ko‘rilgan mahsulotlar</p>
+            <span>Mijozlarimiz tanlovlariga eng loyiq bo‘lgan mahsulotlarimiz</span>
+          </div>
           <div className="slider_box">
             <SliderScale />
           </div>
       </div>
       <div className="section_4">
-        <div className="section_4_text">
+        <div className="all_headerText">
           <p>Eng ko‘p sotilgan</p>
           <span>Eng haridorgir bo‘lgan mahsulotlarimizni ko‘rib chiqing</span>
         </div>

@@ -7,17 +7,10 @@ import "./slick-carousel/slick/slick.css";
 // import icons
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
 
-// import img
-import rasm1 from "./img/images1.jpg";
-import rasm2 from "./img/images2.jpg";
-import rasm3 from "./img/images3.jpg";
-import rasm4 from "./img/images4.jpg";
-import rasm5 from "./img/images5.jpg";
-import rasm6 from "./img/images6.jpg";
-import rasm7 from "./img/images7.jpg";
+import { useSelector } from "react-redux";
+
 
 function SampleNextArrow({ onClick }) {
-
   return (
     <div
       className="btn_Left btn_arrow"
@@ -27,7 +20,6 @@ function SampleNextArrow({ onClick }) {
     </div>
   );
 }
-
 function SamplePrevArrow({ onClick }) {
   return (
     <div
@@ -40,7 +32,6 @@ function SamplePrevArrow({ onClick }) {
 }
 
 const SliderScale = () => {
-  const images = [rasm1, rasm2, rasm3, rasm4, rasm5, rasm6, rasm7];
   const [sliderIndex, setSliderIndex] = useState(0)
   const settings = {
     dots: true,
@@ -54,13 +45,17 @@ const SliderScale = () => {
     autoplaySpeed: 2000,
     beforeChange: (current, next) => setSliderIndex(next)
   };
+  const images = useSelector((state) => state.reProducts);
   return (
     <div className="slider_scale">
       <Slider {...settings}>
         {
           images.map((item, index) => (
-            <div key={index} className={index === sliderIndex ? "rasm_slider slide_active" : "rasm_slider"} >
-              <img src={item} alt="" />
+            <div key={index}
+              className={index === sliderIndex ? 
+              "rasm_slider slide_active" : "rasm_slider"} 
+          >
+              <img src={item.images[0]} alt="" />
             </div>
           ))
         }
