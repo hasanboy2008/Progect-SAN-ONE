@@ -27,17 +27,17 @@ export function Main(){
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Home />} />
-           <Route path="/signin" element={<Singnin/>} /> 
-          <Route path="/signup" element={<Signup/>} />
-          <Route path="/myacount" element={ <Myacount/> } />
-          <Route path="/confirm" element={<Confirm/>} />
-          <Route path="/detail" element={<Detail />} />
+          <Route path="/signin" element={<Singnin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/myacount" element={<Myacount />} />
+          <Route path="/confirm" element={<Confirm />} />
+          <Route path="/view/product" element={<Detail />} />
           <Route path="/basket" element={<Basket />} />
-          <Route path="/katalog" element={<Katalog/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/all" element={<All/>} />
+          <Route path="/katalog" element={<Katalog />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/all" element={<All />} />
         </Routes>
-        <Config/>
+        <Config />
         <Futter />
       </div>
     );

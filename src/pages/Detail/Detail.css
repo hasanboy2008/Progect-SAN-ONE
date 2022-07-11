@@ -5,364 +5,372 @@
 } */
 
 .Detail {
-    padding-top: 200px;
+  padding-top: 200px;
 
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-
 img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .Detail-Card {
-    width: 1600px;
-    background: #FFFFFF;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
+  width: 1600px;
+  background: #ffffff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
 .container {
-    width: 52%;
-    height: 650px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-right: 60px;
+  width: 52%;
+  height: 650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 60px;
 }
 
 .container .selected {
-    width: 628px;
-    height: auto;
-    border-radius: 8px;
+  width: 628px;
+  height: auto;
+  border-radius: 8px;
 }
 
-.container .imgContainer {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.container > .imgContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.container .imgContainer img {
-    width: 137.48px;
-    height: 210px;
-    border-radius: 6px;
-    margin: 5px 0;
-    
+.container .imgContainer > figure {
+  width: 140px;
+  height: 140px;
+  border-radius: 6px;
+  margin: 5px 0;
+  position: relative;
+  overflow: hidden;
 }
 
+.container .imgContainer > figure > img {
+  width: 100%;
+}
+
+.container .imgContainer > figure > span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(4, 4, 43, 0.521);
+  cursor: pointer;
+}
 
 .card-about {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 76px 0 96px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 76px 0 96px 0;
 }
 
 .card-about .a-name p {
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 61px;
-    color: #A18B7F;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 61px;
+  color: #a18b7f;
 }
 
-
-.card-about .colors .color-groups {
-    display: flex;
-    flex-direction: row;
+.color-groups {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+}
+.color-groups > span {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  margin-right: 5px;
 }
 
 .card-about .colors p {
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
-    color: #D2D2D2;
-
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #d2d2d2;
 }
 
-
 .color {
-    width: 20px;
-    height: 20px;
-    background: none;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    margin-right: 26px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    margin-top: 10px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 26px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  margin-top: 10px;
 }
 
 .color-smoke {
-    background: #A18B7F;
+  background: #a18b7f;
 }
 
 .color-black {
-    background: #171717;
+  background: #171717;
 }
 
 .color-brown {
-    background: #9F6233;
+  background: #9f6233;
 }
 
 .color-grey {
-    background: #D2D2D2;
+  background: #d2d2d2;
 }
 
 .color:hover {
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 .active-color {
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-
 .card-about .price {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-about .price .price-name {
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
-    color: #D2D2D2;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #d2d2d2;
 }
 
 .card-about .price .price-coast {
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 33px;
-    line-height: 40px;
-    color: #000000;
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 40px;
+  color: #000000;
 }
 
 .card-about .price .old-coast {
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    text-decoration-line: line-through;
-    color: #FF3F3F;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration-line: line-through;
+  color: #ff3f3f;
 }
 
 .card-about .sizes {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.card-about .sizes>p {
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
-    color: #D2D2D2;
-
+.card-about .sizes > p {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #d2d2d2;
 }
 
 .card-about .sizes .size-group {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .card-about .sizes .size-group .size {
-    width: 40px;
-    height: 40px;
-    background: #FFFFFF;
-    border: 1px solid #D3D3D3;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #D3D3D3;
-    margin: 20px 10px 0 0;
-    cursor: pointer;
-
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #d3d3d3;
+  margin: 20px 10px 0 0;
+  cursor: pointer;
 }
 
 .card-about .sizes .size-group .size.active-size {
-    border: 1px solid #DCBB45 !important;
-    border-radius: 8px;
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #DCBB45;
-
+  border: 1px solid #dcbb45 !important;
+  border-radius: 8px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #dcbb45;
 }
 
 .size-group .size.active-size :hover {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #DCBB45;
-    color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dcbb45;
+  color: white;
 }
 
-
 .btns {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .card-about .btns .btn-purchase {
-    width: 190px;
-    height: 46px;
-    background: #DCBB45;
-    border-radius: 8px;
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 26px;
-    color: #FFFFFF;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 25px;
-    cursor: pointer;
+  width: 190px;
+  height: 46px;
+  background: #dcbb45;
+  border-radius: 8px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  cursor: pointer;
 }
 
 .card-about .btns .btn-purchase:hover {
-    background-color: #FFFFFF;
-    border: 1px solid #DCBB45;
-    color: #DCBB45;
-    transition: 0.5s ease-in;
-
+  background-color: #ffffff;
+  border: 1px solid #dcbb45;
+  color: #dcbb45;
+  transition: 0.5s ease-in;
 }
 
 .card-about .btns .btn-basket {
-    width: 190px;
-    height: 46px;
-    border: 1px solid #DCBB45;
-    border-radius: 8px;
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 26px;
-    color: #DCBB45;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  width: 190px;
+  height: 46px;
+  border: 1px solid #dcbb45;
+  border-radius: 8px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+  color: #dcbb45;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .card-about .btns .btn-basket:hover {
-    background: #DCBB45;
-    color: #FFFFFF;
-    transition: 0.5s ease-in;
+  background: #dcbb45;
+  color: #ffffff;
+  transition: 0.5s ease-in;
 }
-
 
 /* ======================Detail-Comment===================== */
 
 .Detail-Comment {
-    width: 1606px;
-    height: 1034px;
-    background: #FFFFFF;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    margin: 50px 0;
-    padding: 65px 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-
+  width: 1606px;
+  height: 1034px;
+  background: #ffffff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin: 50px 0;
+  padding: 65px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 
 .btn-comments {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 .info-btn {
-    width: 209px;
-    height: 50px;
-    background: #FFFFFF;
-    border: 1px solid #DCBB45;
-    border-radius: 16px;
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    color: #DCBB45;
-    margin-right: 25px;
+  width: 209px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #dcbb45;
+  border-radius: 16px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #dcbb45;
+  margin-right: 25px;
 }
 
 .comment-btn {
-    width: 208px;
-    height: 50px;
-    background: #FFFFFF;
-    border: 2px solid #DCBB45;
-    border-radius: 16px;
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    color: #DCBB45;
-
+  width: 208px;
+  height: 50px;
+  background: #ffffff;
+  border: 2px solid #dcbb45;
+  border-radius: 16px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #dcbb45;
 }
 
 .active {
-    background: #DCBB45;
-    color: #FFFFFF;
+  background: #dcbb45;
+  color: #ffffff;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
-
 /* ======================Responsive======================= */
-
-

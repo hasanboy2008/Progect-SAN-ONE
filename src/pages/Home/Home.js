@@ -148,7 +148,9 @@ const navigate = useNavigate();
                   <img src={item.share} alt="" />
                 </div>
                 <div className="sell_basket">
-                  <button  >Sotib olish</button>
+                  <button onClick={(()=>{
+                    alert(item.id)
+                  })} >Sotib olish</button>
                   <button>Savatga</button>
                 </div>
               </div>

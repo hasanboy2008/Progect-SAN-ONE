@@ -55,7 +55,7 @@ export default function App() {
                 </div>
                 <div className="sell_basket">
                   <button onClick={() => {
-                    navigate('/detail')
+                    navigate(`/view/product?id=${item.id}`)
                   }}  >Sotib olish</button>
                   <button>Savatga</button>
                 </div>
