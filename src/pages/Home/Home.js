@@ -73,7 +73,10 @@ axios(config)
 
           <div className="see_btn">
             <button>KO‘RISH</button>
-            <button>Ro’yhatdan o’tish</button>
+            <button  onClick={()=>{
+              navigate("/signup");  
+
+            }} >Ro’yhatdan o’tish</button>
           </div>
         </div>
 
