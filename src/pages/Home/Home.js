@@ -11,7 +11,7 @@ import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
 // import share from "../../asest/home/section2/share.png";
 import sec_3 from "../../asest/home/section3/sec_3.png";
 import Slider from "react-slick";
-import axios from "axios";
+// import axios from "axios";
 
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -19,38 +19,38 @@ import { useNavigate } from "react-router-dom";
 export function Home() {
  
   const products = useSelector((state) => state.reProducts);
-const axios = require("axios");
+// const axios = require("axios");
 const navigate = useNavigate();
-const data = JSON.stringify({
-  userId: "11",
-  id: "11",
-  name: "Tufli",
-  price: "19000",
-  discount: "2",
-  colors: "#171717",
-  sizes: "43",
-  for_whom: "Erkakler",
-  season: "1234",
-  country: "Uzbekistan",
-  manufacturer: "Dambog",
-  type: "Tufli",
-});
-var config = {
-  method: "post",
-  url: "http://localhost:5000/add_to_card",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  data: data,
-};
+// const data = JSON.stringify({
+//   userId: "11",
+//   id: "11",
+//   name: "Tufli",
+//   price: "19000",
+//   discount: "2",
+//   colors: "#171717",
+//   sizes: "43",
+//   for_whom: "Erkakler",
+//   season: "1234",
+//   country: "Uzbekistan",
+//   manufacturer: "Dambog",
+//   type: "Tufli",
+// });
+// var config = {
+//   method: "post",
+//   url: "http://localhost:5000/add_to_card",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   data: data,
+// };
 
-axios(config)
-  .then(function (response) {
-    console.log(JSON.stringify(response.data));
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+// axios(config)
+//   .then(function (response) {
+//     console.log(JSON.stringify(response.data));
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
   
 
   
