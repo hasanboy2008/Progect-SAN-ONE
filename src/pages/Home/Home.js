@@ -15,6 +15,7 @@ import Slider from "react-slick";
 
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import SliderScale from "../../components/slider/Slider";
 
 export function Home() {
  
@@ -137,7 +138,13 @@ const navigate = useNavigate();
       <div className="section_3">
         <img src={sec_3} alt="" />
       </div>
-
+      <div className="section_scale">
+          <h1>Eng ko‘p ko‘rilgan mahsulotlar</h1>
+          <p>Mijozlarimiz tanlovlariga eng loyiq bo‘lgan mahsulotlarimiz</p>
+          <div className="slider_box">
+            <SliderScale />
+          </div>
+      </div>
       <div className="section_4">
         <div className="section_4_text">
           <p>Eng ko‘p sotilgan</p>

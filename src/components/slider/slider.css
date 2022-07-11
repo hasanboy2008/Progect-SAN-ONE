@@ -8,9 +8,8 @@
   padding: 20px 40px;
   overflow: hidden;
   user-select: none;
-  min-height: 450px;
+  height: 550px;
   position: relative;
-
 }
 .rasm_slider{
   width: 250px;
