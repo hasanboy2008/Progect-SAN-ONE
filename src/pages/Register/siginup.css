@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
   /* flex-direction: column; */
 }
 .siginup > form {
@@ -58,7 +59,7 @@
 /* =====select sing up === */
 
 .sign_province {
-  width: 605px;
+  width: 570px;
   height: 60px;
 
   border: 2px solid #bebebe;
@@ -187,17 +188,16 @@
   flex-direction: column;
   align-items: center;
 }
-.my_img{
+.my_img {
   width: 200px;
   height: 200px;
   overflow: hidden;
-
 }
 .my_img > img {
   width: 100%;
   border-radius: 50%;
 }
-.myimg >label>input{
+.myimg > label > input {
   display: none;
 }
 .myimg > label {
@@ -268,30 +268,349 @@
   /* margin-right: 10px; */
 }
 
-
 /* history_all */
-.history_all{
+.history_all {
   padding-top: 96px;
 }
 
-
-
 /* history_crud */
 
-.history_crud{
+.history_crud {
   width: 100%;
   display: flex;
 }
 
-.history_crud > table{
+.history_crud > table {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  
 }
-.history_crud > table :nth-child(2){
+.history_crud > table :nth-child(2) {
   display: flex;
+}
+
+/* Responsive Sign up  */
+
+@media only screen and (max-width: 1020px) {
+  .siginup > form {
+    width: 700px;
+    height: 576px;
+  }
+
+  .sign_province {
+    width: 470px;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .siginup {
+    height: auto;
+  }
+  .siginup > form {
+    width: 650px;
+    height: 896px;
+  }
+
+  .sign_name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign_province {
+    width: 440px;
+    height: 60px;
+  }
+
+  .sing_i_1 {
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+  }
+  ::placeholder {
+    color: #afb4bb;
+    padding-left: 10px;
+  }
+  .sign_name > .sing_i_1 > input {
+    width: 80%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .siginup > form {
+    width: 600px;
+    height: 900px;
+    padding: 20px 70px;
+  }
+
+  .sign_name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign_province {
+    width: 460px;
+    height: 60px;
+  }
+
+  .sing_i_1 {
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+  }
+  ::placeholder {
+    color: #afb4bb;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  .siginup > form {
+    width: 550px;
+    height: 900px;
+    padding: 20px 70px;
+  }
+
+  .sign_name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign_province {
+    width: 400px;
+    height: 60px;
+  }
+
+  .sing_i_1 {
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+  }
+  ::placeholder {
+    color: #afb4bb;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .siginup > form {
+    width: 500px;
+    height: 900px;
+    padding: 20px 50px;
+  }
+
+  .sign_name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign_province {
+    width: 400px;
+    height: 60px;
+  }
+
+  .sing_i_1 {
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+  }
+  ::placeholder {
+    color: #afb4bb;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .siginup > form {
+    width: 450px;
+    height: 900px;
+    padding: 20px 50px;
+  }
+
+  .sign_name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign_province {
+    width: 350px;
+    height: 60px;
+  }
+
+  .sing_i_1 {
+    width: 100%;
+    height: 60px;
+    margin: 7px 0;
+  }
+  ::placeholder {
+    color: #afb4bb;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .siginup > form {
+    width: 400px;
+    height: 900px;
+    padding: 20px 50px;
+  }
+
+  .sign_name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign_province {
+    width: 300px;
+    height: 60px;
+  }
+
+  .sing_i_1 {
+    width: 100%;
+    height: 60px;
+    margin: 7px 0;
+  }
+  ::placeholder {
+    color: #afb4bb;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .siginup > form {
+    width: 300px;
+    height: 900px;
+    padding: 20px 20px;
+  }
+
+  .sign_name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign_province {
+    width: 260px;
+    height: 60px;
+  }
+
+  .sing_i_1 {
+    width: 100%;
+    height: 60px;
+    margin: 7px 0;
+  }
+  ::placeholder {
+    color: #afb4bb;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 315px) {
+  .siginup > form {
+    width: 250px;
+    height: 900px;
+    padding: 20px 20px;
+  }
+
+  .sign_name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign_province {
+    width: 210px;
+    height: 60px;
+  }
+
+  .sing_i_1 {
+    width: 100%;
+    height: 60px;
+    margin: 7px 0;
+  }
+  ::placeholder {
+    color: #afb4bb;
+    padding-left: 10px;
+  }
+}
+
+/* Responsive Sing In */
+
+@media only screen and (max-width: 730px) {
+  .singin_login > input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding-left: 55px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .singnin > form {
+    width: 370px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    background: #ffffff;
+    box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    /* padding: 78px 68px  76px 68px; */
+  }
+}
+@media only screen and (max-width: 520px) {
+  .singnin {
+    padding: 5%;
+  }
+  .singnin > form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5%;
+    background: #ffffff;
+    box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    /* padding: 78px 68px  76px 68px; */
+  }
+  .singin_login {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #bebebe;
+    border-radius: 8px;
+    margin-top: 10%;
+  }
+  .singnin > form > button {
+    margin-top: 10%;
+  }
+  .singin_login > input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding-left: 45px;
+  }
 }
