@@ -21,7 +21,14 @@ export function Navbar() {
 
   // navbar fixed qilingan joyi
 
+  function open(){
+    let nav_respons = document.querySelector(".nav_respons");
 
+    document.addEventListener('click',function(){
+      nav_respons.style.right='0px'
+    })
+
+  }
 
   return (
     <div className="navbar">
@@ -133,6 +140,17 @@ export function Navbar() {
             </button>
           </div>
         </div>
+
+        <div className="nav_respons">
+          <p>salom</p>
+          <p>salom</p>
+          <p>salom</p>
+          <p>salom</p>
+        </div>
+
+        <button onClick={open} id="menu">
+          xxx
+        </button>
       </nav>
     </div>
   );
