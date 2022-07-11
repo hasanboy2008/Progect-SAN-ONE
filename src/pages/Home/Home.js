@@ -16,6 +16,7 @@ import Slider from "react-slick";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
+import Slider_double from "../../components/slider_double/Slider_double";
 
 export function Home() {
  
@@ -110,29 +111,7 @@ const navigate = useNavigate();
           <span>Eng so‘nggi mahsulotlarimizni ko‘rib chiqing va tanlang</span>
         </div>
         <div className="new_products">
-          {products.map((item) => (
-            <div className="new_Produc_1">
-              <figure>
-                <img src={item.images[0]} alt="" />
-              </figure>
-              <p>{item.name}</p>
-              <hr />
-              <div className="price_share">
-                <div className="discount_pricw">
-                  <p>{item.price}</p>
-                  <span>{item.discount}</span>
-                </div>
-                <img src={item.share} alt="" />
-                kdsb
-              </div>
-              <div className="sell_basket">
-                <button  onClick={()=>{
-                  navigate('/detail')
-                }}  >Sotib olish</button>
-                <button>Savatga</button>
-              </div>
-            </div>
-          ))}
+          <Slider_double />
         </div>
       </div>
       <div className="section_scale">
