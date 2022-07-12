@@ -27,45 +27,45 @@ export default function App() {
         slidesPerView={4}
         grid={{
           rows: 2,
-          fill: "row"
+          fill: "row",
         }}
         spaceBetween={10}
         pagination={{
-          clickable: true
+          clickable: true,
         }}
         modules={[Grid, Pagination]}
         className="mySwiper"
       >
-        {
-          newProducts.map(item => (
-            <SwiperSlide>
-              <div className="new_Produc_1">
-                <figure>
-                  <img src={item.images[0]} alt="" />
-                </figure>
-                <p>{item.name}</p>
-                <hr />
-                <div className="price_share">
-                  <div className="discount_pricw">
-                    <p>{item.price}</p>
-                    <span>{item.discount}</span>
-                  </div>
-                  <img src={item.share} alt="" />
-                  kdsb
+        {newProducts.map((item) => (
+          <SwiperSlide>
+            <div className="new_Produc_1">
+              <figure>
+                <img src={item.images[0]} alt="" />
+              </figure>
+              <p>{item.name}</p>
+              <hr />
+              <div className="price_share">
+                <div className="discount_pricw">
+                  <p>{item.price}</p>
+                  <span>{item.discount}</span>
                 </div>
-                <div className="sell_basket">
-                  <button onClick={() => {
-                    navigate(`/view/product?id=${item.id}`)
-                  }}  >Sotib olish</button>
-                  <button>Savatga</button>
-                </div>
+                <img src={item.share} alt="" />
+                kdsb
               </div>
-            </SwiperSlide>
-          ))
-        }
+              <div className="sell_basket">
+                <button
+                  onClick={() => {
+                    navigate(`/view/product?id=${item.id}`);
+                  }}
+                >
+                  Sotib olish
+                </button>
+                <button>Savatga</button>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
 }
-
-

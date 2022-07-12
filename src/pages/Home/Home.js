@@ -16,7 +16,7 @@ import Slider from "react-slick";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
-import Slider_double from "../../components/slider_double/Slider_double";
+import { SliderDouble } from "../../components/slider_double/Slider_double";
 
 export function Home() {
   useEffect(() => {
@@ -26,7 +26,7 @@ export function Home() {
   const products = useSelector((state) => state.reProducts);
   const navigate = useNavigate();
 
-  // savatga 
+  // savatga
   // function basket(){
   //   JSON.stringify(localStorage.setItem("product"));
   // }
@@ -90,7 +90,7 @@ export function Home() {
           <span>Eng so‘nggi mahsulotlarimizni ko‘rib chiqing va tanlang</span>
         </div>
         <div className="new_products">
-          <Slider_double />
+          <SliderDouble />
         </div>
       </div>
       <div className="section_scale">
@@ -133,7 +133,7 @@ export function Home() {
                   >
                     Sotib olish
                   </button>
-                  <button >Savatga</button>
+                  <button>Savatga</button>
                 </div>
               </div>
             ))}
