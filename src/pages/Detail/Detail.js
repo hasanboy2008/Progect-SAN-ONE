@@ -5,7 +5,7 @@ import "./Comments/Comment.css";
 import Comments from "./Comments/Comments";
 import { DetailInfo } from "./Info/Info";
 
-import { Images } from "./Images";
+// import { Images } from "./Images";
 import axios from "axios";
 
 export function Detail() {
