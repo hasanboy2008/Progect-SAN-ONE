@@ -4,15 +4,11 @@
     background: #F5F5F5;
     display: flex;
     flex-direction: column;
-    padding: 85px 156px 190px 156px;
+    padding: 200px 156px 190px 156px;
 }
 
 button{
     cursor: pointer;
-}
-
-.basket-all{
-    display: flex;
 }
 
 .basket-text p{
@@ -88,9 +84,6 @@ button{
     display: flex;
     width: 120px;
     height: 38px;
-    left: 664px;
-    top: 423px;
-
     background: #DCBB45;
     border-radius: 8px;
     align-items: center;
@@ -106,7 +99,6 @@ button{
     border-radius: 50%;
     border: 1px solid black;
     background: #DCBB45;
-    font-weight: 400;
     font-weight: 400;
     font-size: 21.92px;
     line-height: 114.8%;
@@ -214,4 +206,230 @@ button{
     margin-top: 45px;
     margin-left: 54px;
     border: none;
+}
+
+/* +++++++++++ Basket Responsive ++++++++++++ */
+
+@media (max-width: 1750px){
+    .basket-all{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .basket-order{
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 1225px){
+    .basket{
+        padding: 200px 0 100px 30px;
+    }
+    .basket-hr hr{
+        width: 910px;
+    }
+}
+
+@media (max-width: 950px){
+    .basket{
+        padding: 200px 0 100px 15px ;
+    }
+
+    .basket-hr hr{
+        width: 700px;
+    }
+
+    .basket-data img{
+        width: 150px;
+        height: 100px;
+        padding-top: 12px;
+    }
+
+    .basket-data p{
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .basket-data span{
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .basket-data .basket-price{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+        text-align: right;
+        color: #C9A95C;
+        padding: 45px 0 0 30px;
+    }
+
+    .basket-data .basket-close{
+        margin: 43.5px 0 0 30px;
+    }
+
+    .basket-button{
+        width: 70px;
+        height: 24px;
+        border-radius: 6px;
+        padding: 0 8px;
+        margin: 45px 0 0 30px;
+    }
+
+    .basket-decrement{
+        width: 15px;
+        height: 15px;
+        font-style: 15px;
+    }
+
+    .basket-increment{
+        width: 15px;
+        height: 15px;
+        font-style: 15px;
+    }
+
+    .basket-count{
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 80%;
+    }
+}
+
+@media (max-width: 720px){
+
+    .basket-hr hr{
+        width: 600px;
+    }
+
+    .basket-order{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 620px){
+    .basket{
+        padding-top: 40px;
+    }
+    .basket-text p{
+        text-align: center;
+        font-weight: 700;
+        font-size: 28px;
+    }
+    .basket-data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .basket-hr hr{
+        width: 100%;
+    }
+
+    .basket-data img{
+        width: 300px;
+        height: 200px;
+    }
+
+    .basket-data p{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: -20px;
+    }
+
+    .basket-data span{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .basket-data .basket-price{
+        font-weight: 700;
+        font-size: 23.8058px;
+        line-height: 29px;
+        padding-top: 40px;
+    }
+
+    .basket-data .basket-close{
+        margin-bottom: 30px;
+    }
+
+    .basket-button{
+        width: 150px;
+        height: 60px;
+        border-radius: 10px;
+        padding: 0 15px;
+        margin-top: -20px;
+    }
+
+    .basket-decrement, .basket-increment{
+        width: 25px;
+        height: 25px;
+        border: 1.5px solid black;
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 114.8%;
+    }
+
+    .basket-count{
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .basket-order{
+        width: 400px;
+        height: 320px;
+        padding: 30px 0 30px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .basket-order img{
+        padding-bottom: 0;
+    }
+
+    .basket-all{
+        display: flex;
+        align-items: center;
+    }
+
+    .basket-order-bold-texts{
+        font-weight: 500;
+        font-size: 20px;
+        padding-right: 20px;
+    }
+
+    .basket-order-thin-texts{
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .basket-order .basket-order-texts .basket-order-texts-1{
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        padding-right: 20px;
+    }
+
+    .basket-order hr{
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .basket-order button{
+        margin: 50px 0 0 0;
+    }
+
+}
+
+@media (max-width: 540px){
+    .basket-order img{
+        display: none;
+    }
 }

@@ -97,16 +97,16 @@ export function Basket(){
             <div className="basket-order">
                     <img src={Logo} alt="" />
                     <div className="basket-order-texts">
-                        <p>Narxi:</p>
-                        <p>1 995 000 so’m</p>
+                        <p className="basket-order-bold-texts">Narxi:</p>
+                        <p className="basket-order-thin-texts">1 995 000 so’m</p>
                     </div>
                     <div className="basket-order-texts">
-                        <p>Chegirma:</p>
-                        <p>- 10 %</p>
+                        <p className="basket-order-bold-texts">Chegirma:</p>
+                        <p className="basket-order-thin-texts">- 10 %</p>
                     </div>
                     <div className="basket-order-texts">
-                        <p>Yetkazib berish:</p>
-                        <p>15 000 so’m</p>
+                        <p className="basket-order-bold-texts">Yetkazib berish:</p>
+                        <p className="basket-order-thin-texts">15 000 so’m</p>
                     </div>
                     <hr />
                     <div className="basket-order-texts">
