@@ -14,6 +14,7 @@ import { Config } from "../../Config/Config";
 import { About } from "../../pages/About/About";
 import { Myacount } from "../../pages/Register/Myacount";
 import { All } from "../../pages/All/All";
+import { Courier } from "../../pages/Courier/Courier";
 
 
 
@@ -33,6 +34,7 @@ export function Main(){
           <Route path="/confirm" element={<Confirm />} />
           <Route path="/view/product" element={<Detail />} />
           <Route path="/basket" element={<Basket />} />
+          <Route path="/courier" element={<Courier />} />
           <Route path="/katalog" element={<Katalog />} />
           <Route path="/about" element={<About />} />
           <Route path="/all" element={<All />} />
