@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import React, { useEffect } from "react";
 import "./Home.css";
 import position_1 from "../../asest/home/position/Group 48.png";
@@ -11,12 +12,13 @@ import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
 // import share from "../../asest/home/section2/share.png";
 // import sec_3 from "../../asest/home/section3/sec_3.png";
 import Slider from "react-slick";
+// import Marquee from "react-fast-marquee";
 // import axios from "axios";
 
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
-import { SliderDouble } from "../../components/slider_double/Slider_double";
+import SliderDouble from "../../components/sliderDouble/SliderDouble"
 
 export function Home() {
   useEffect(() => {
@@ -78,7 +80,7 @@ export function Home() {
           <img src={position_6} alt="" />
         </div>
         <div className="position_7">
-          <marquee behavior="" direction="">
+          <marquee >
             <img src={position_7} alt="" />
           </marquee>
         </div>
@@ -90,7 +92,7 @@ export function Home() {
           <span>Eng so‘nggi mahsulotlarimizni ko‘rib chiqing va tanlang</span>
         </div>
         <div className="new_products">
-          <SliderDouble />
+          <SliderDouble/>
         </div>
       </div>
       <div className="section_scale">
