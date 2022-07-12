@@ -1,0 +1,135 @@
+.Courier{
+    width: 100%;
+    height: auto;
+    width: 800px;
+    height: 531px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin-top: 215px;
+    margin-bottom: 78px;
+    padding: 47px 81px 46px ;
+}
+
+.Courier-top{
+    display: flex;
+}
+
+.Courier-texts{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Courier-texts-p{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.Courier-white-texts{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+
+
+    /* 04 */
+
+    color: #7C7C7C;
+}
+
+.Courier-orange-texts{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+
+    text-align: right;
+
+    /* brandcolor 2 */
+
+    color: #DE821D;
+}
+
+.Courier-img{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Courier-bottom{
+    padding-top: 80px;
+}
+
+.Courier-deliver{
+    padding-bottom: 36px;
+}
+
+.Courier-bottom-p{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+@media (max-width: 900px){
+    .Courier{
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 750px){
+    .Courier{
+        margin-left: 250px;
+    }
+}
+
+@media (max-width: 700px){
+    .Courier{
+        margin-left: 350px;
+    }
+}
+
+@media (max-width: 650px){
+    .Courier{
+        margin-left: 400px;
+    }
+}
+
+@media (max-width: 580px){
+    .Courier{
+        margin-left: 450px;
+    }
+}
+
+@media (max-width: 530px){
+    .Courier{
+        margin-left: 500px;
+    }
+}
+
+@media (max-width: 480px){
+    .Courier{
+        margin-left: 550px;
+    }
+}
+
+@media (max-width: 430px){
+    .Courier{
+        margin-left: 600px;
+    }
+}
+
+@media (max-width: 360px){
+    .Courier{
+        margin-left: 650px;
+    }
+}
+
+@media (max-width: 300px){
+    .Courier{
+        margin-left: 700px;
+    }
+}
