@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 // import {
 //     BrowserRouter as Router,
 //     NavLink
@@ -15,79 +15,77 @@ import image2 from "../../asest/about/image2.png";
 import image3 from "../../asest/about/image3.png";
 
 export function About() {
-      useEffect(() => {
+    useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
     return (
         // <Router>
-            <div className="aboutDiv">
+        <div className="aboutDiv">
 
-                <div className="section1">
-                    <p>Biz haqimizda</p>
-                    <span>Kompaniyamiz haqida batafsil bilib olishingiz mumkin</span>
-                </div>
+            <div className="section1">
+                <p>Biz haqimizda</p>
+                <span>Kompaniyamiz haqida batafsil bilib olishingiz mumkin</span>
+            </div>
 
-                <div className="section2">
+            <div className="section2">
 
-                    <div className="container">
+                <div className="container">
 
-                        <div className="left1">
-                            <p>Korxona tashkil etilishi</p>
-                            <span>Chakana savdo tarmog'i" magnit " 5 mart 1994 yilida Krasnodarda tashkil etilgan. Kompaniyaning tarixi uy kimyoviy moddalarini sotish bilan boshlandi. Birinchi oziq-ovqat do'koni 1998 yilda Krasnodarda ochilgan. 2000 da do'konlar "magnit"brendi bilan birlashtirildi.</span>
-                        </div>
-
-                        <div className="right1">
-                            <div className="line"><span></span></div>
-                            <div className="img">
-                                <img src={image1} alt="" />
-                            </div>
-                        </div>
-
+                    <div className="left1">
+                        <p>Korxona tashkil etilishi</p>
+                        <span>Chakana savdo tarmog'i" magnit " 5 mart 1994 yilida Krasnodarda tashkil etilgan. Kompaniyaning tarixi uy kimyoviy moddalarini sotish bilan boshlandi. Birinchi oziq-ovqat do'koni 1998 yilda Krasnodarda ochilgan. 2000 da do'konlar "magnit"brendi bilan birlashtirildi.</span>
                     </div>
 
-                    <div className="container">
-
-                        <div className="left2">
-                            <div className="img">
-                                <img src={image2} alt="" />
-                            </div>
-                            <div className="line"><span></span></div>
-                        </div>
-
-                        <div className="right2">
-                            <p>Mahsulot ishlab chiqarish</p>
-                            <span>Mahsulotlar haqida ma'lumot - bu mahsulot nomi, ishlab chiqaruvchi (ish ijrochisi) yoki sotuvchi to'g'risidagi ma'lumotlar, sifat ko'rsatkichlari, narx va boshqalarni aks ettiruvchi ma'lumotlar.</span>
-                        </div>
-
-                    </div>
-
-                    <div className="container">
-                        <div className="left1">
-                            <p>Bizning jamoamiz</p>
-                            <span>Jamoa (lot. collectivus — kollektiv)-har qanday umumiy faoliyat, ish, o'qish, muayyan ijtimoiy vazifani hal qilish bilan birlashtirilgan shaxslar guruhi. Keng ma'noda-umumiy g'oyalar, ehtiyojlar, qiziqishlar bilan birlashtirilgan odamlar.</span>
-                        </div>
-
-                        <div className="right1">
-                            <div className="line"><span></span></div>
-                            <div className="img">
-                                <img src={image3} alt="" />
-                            </div>
+                    <div className="right1">
+                        <div className="line"><span></span></div>
+                        <div className="img">
+                            <img src={image1} alt="" />
                         </div>
                     </div>
 
                 </div>
 
-                <div className="section3">
-                    <div className="logo">
-                        <img src={logo} alt="" />
+                <div className="container">
+
+                    <div className="left2">
+                        <div className="img">
+                            <img src={image2} alt="" />
+                        </div>
+                        <div className="line"><span></span></div>
                     </div>
+
+                    <div className="right2">
+                        <p>Mahsulot ishlab chiqarish</p>
+                        <span>Mahsulotlar haqida ma'lumot - bu mahsulot nomi, ishlab chiqaruvchi (ish ijrochisi) yoki sotuvchi to'g'risidagi ma'lumotlar, sifat ko'rsatkichlari, narx va boshqalarni aks ettiruvchi ma'lumotlar.</span>
+                    </div>
+
                 </div>
 
-                <div className="section4">
-                    {/* <NavLink to="#"><i className="pi pi-arrow-left"></i>Bosh sahifa</NavLink> */}
+                <div className="container">
+                    <div className="left1">
+                        <p>Bizning jamoamiz</p>
+                        <span>Jamoa (lot. collectivus — kollektiv)-har qanday umumiy faoliyat, ish, o'qish, muayyan ijtimoiy vazifani hal qilish bilan birlashtirilgan shaxslar guruhi. Keng ma'noda-umumiy g'oyalar, ehtiyojlar, qiziqishlar bilan birlashtirilgan odamlar.</span>
+                    </div>
+
+                    <div className="right1">
+                        <div className="line"><span></span></div>
+                        <div className="img">
+                            <img src={image3} alt="" />
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
+            <div className="section3">
+                <img src={logo} alt="" />
+            </div>
+
+            <div className="section4">
+                {/* <NavLink to="#"><i className="pi pi-arrow-left"></i>Bosh sahifa</NavLink> */}
+            </div>
+
+        </div>
         // </Router>
     )
 }
