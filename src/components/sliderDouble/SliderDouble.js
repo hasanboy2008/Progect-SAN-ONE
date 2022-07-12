@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-
 import "./double_slider.css";
 
 // import required modules
@@ -36,9 +35,9 @@ export default function App() {
         modules={[Grid, Pagination]}
         className="mySwiper"
       >
-        {newProducts.map((item) => (
+        {newProducts.map((item, index) => (
           <SwiperSlide>
-            <div className="new_Produc_1">
+            <div className="new_Produc_1" key={index}>
               <figure>
                 <img src={item.images[0]} alt="" />
               </figure>
