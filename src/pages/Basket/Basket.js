@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Basket/Basket.css"
 import Logo from"../../asest/Basket/san-one-logo.png"
 import shoesBlack from "../../asest/Basket/shoes-black.png"
@@ -10,6 +10,9 @@ import shoesBW from "../../asest/Basket/shoes-b-w.png"
 
 
 export function Basket(){
+
+    const [count, setCount] = useState(1);
+
     const basketData = [
         {
         id: 1,
@@ -71,6 +74,11 @@ export function Basket(){
                                 <div className="basket-texts-2">
                                     <p>{parse.text}</p>
                                     <span>{parse.artikul}</span>
+                                </div>
+                                <div className="basket-button">
+                                    <button className="basket-decrement" onClick={() => setCount(count - 1)} disabled={count === 1}>-</button>
+                                    <div className="basket-count">{count}</div>
+                                    <button className="basket-increment" onClick={() => setCount(count + 1)} >+</button>
                                 </div>
                             <p className="basket-price">{parse.price}</p>
                             <svg className="basket-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">

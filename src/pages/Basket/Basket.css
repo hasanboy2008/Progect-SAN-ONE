@@ -77,11 +77,71 @@ button{
     line-height: 29px;
     text-align: right;
     color: #C9A95C;
-    padding: 60px 0 0 70px;
+    padding: 60px 0 0 50px;
 }
 
 .basket-data .basket-close{
     margin: 60px 0 0 70px;
+}
+
+.basket-button{
+    display: flex;
+    width: 120px;
+    height: 38px;
+    left: 664px;
+    top: 423px;
+
+    background: #DCBB45;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-top: 55px;
+    margin-left: 60px;
+}
+
+.basket-decrement{
+    width: 22.96px;
+    height: 22.96px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: #DCBB45;
+    font-weight: 400;
+    font-weight: 400;
+    font-size: 21.92px;
+    line-height: 114.8%;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    color: #000000;
+}
+
+.basket-increment{
+    width: 22.96px;
+    height: 22.96px;
+    border-radius: 6px black;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: #DCBB45;
+    font-weight: 400;
+    font-size: 21.92px;
+    line-height: 114.8%;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    color: #000000;
+}
+
+.basket-count{
+    font-weight: 400;
+    font-size: 21.92px;
+    line-height: 114.8%;
+    /* or 25px */
+
+
+    color: #000000;
 }
 
 .basket-texts-2{
