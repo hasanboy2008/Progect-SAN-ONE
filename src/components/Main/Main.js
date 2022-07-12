@@ -23,7 +23,7 @@ export function Main(){
 
     return (
       <div className="main">
-        <Navbar />
+        {/* <Navbar /> */}
         {/* // barcha pageslar */}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -40,7 +40,7 @@ export function Main(){
           <Route path="/all" element={<All />} />
         </Routes>
         <Config />
-        <Futter />
+        {/* <Futter /> */}
       </div>
     );
 }
