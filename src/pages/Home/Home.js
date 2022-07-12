@@ -78,10 +78,13 @@ const navigate = useNavigate();
 
           <div className="see_btn">
             <button>KO‘RISH</button>
-            <button  onClick={()=>{
-              navigate("/signup");  
-
-            }} >Ro’yhatdan o’tish</button>
+            <button
+              onClick={() => {
+                navigate("/signup");
+              }}
+            >
+              Ro’yhatdan o’tish
+            </button>
           </div>
         </div>
 
@@ -104,7 +107,9 @@ const navigate = useNavigate();
           <img src={position_6} alt="" />
         </div>
         <div className="position_7">
-          <marquee behavior="" direction=""><img src={position_7} alt="" /></marquee>
+          <marquee behavior="" direction="">
+            <img src={position_7} alt="" />
+          </marquee>
         </div>
       </div>
 
@@ -118,13 +123,15 @@ const navigate = useNavigate();
         </div>
       </div>
       <div className="section_scale">
-          <div className="all_headerText">
-            <p>Eng ko‘p ko‘rilgan mahsulotlar</p>
-            <span>Mijozlarimiz tanlovlariga eng loyiq bo‘lgan mahsulotlarimiz</span>
-          </div>
-          <div className="slider_box">
-            <SliderScale />
-          </div>
+        <div className="all_headerText">
+          <p>Eng ko‘p ko‘rilgan mahsulotlar</p>
+          <span>
+            Mijozlarimiz tanlovlariga eng loyiq bo‘lgan mahsulotlarimiz
+          </span>
+        </div>
+        <div className="slider_box">
+          <SliderScale />
+        </div>
       </div>
       <div className="section_4">
         <div className="all_headerText">
@@ -148,9 +155,13 @@ const navigate = useNavigate();
                   <img src={item.share} alt="" />
                 </div>
                 <div className="sell_basket">
-                  <button onClick={(()=>{
-                    alert(item.id)
-                  })} >Sotib olish</button>
+                  <button
+                    onClick={() => {
+                      navigate(`/view/product?id=${item.id}`);
+                    }}
+                  >
+                    Sotib olish
+                  </button>
                   <button>Savatga</button>
                 </div>
               </div>
