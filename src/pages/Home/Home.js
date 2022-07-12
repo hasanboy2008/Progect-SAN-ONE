@@ -16,9 +16,9 @@ import Slider from "react-slick";
 // import axios from "axios";
 
 import { useSelector } from "react-redux";
-import { Link,  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
-import SliderDouble from "../../components/sliderDouble/SliderDouble"
+import SliderDouble from "../../components/sliderDouble/SliderDouble";
 export function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,12 +26,12 @@ export function Home() {
 
   const products = useSelector((state) => state.reProducts);
   const navigate = useNavigate();
+  // console.log(products[1]);
 
   // savatga
-  // function addBasket(){
-  //   JSON.stringify(localStorage.setItem("salo", products));
-
-  // }
+  function addCart() {
+    localStorage.setItem("produc", JSON.stringify(products[0]));
+  }
 
   return (
     <div className="home">
@@ -135,7 +135,7 @@ export function Home() {
                   >
                     Sotib olish
                   </button>
-                  <button>Savatga</button>
+                  <button onClick={addCart()}>Savatga</button>
                 </div>
               </div>
             ))}
