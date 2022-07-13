@@ -211,13 +211,23 @@ button{
 /* +++++++++++ Basket Responsive ++++++++++++ */
 
 @media (max-width: 1750px){
+
+    .basket{
+        align-items: center;
+    }
+
     .basket-all{
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .basket-order{
         margin-top: 70px;
+    }
+
+    .basket-text{
+        align-items: center;
     }
 }
 
@@ -431,5 +441,21 @@ button{
 @media (max-width: 540px){
     .basket-order img{
         display: none;
+    }
+
+    .basket-order button{
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 470px){
+
+    .basket{
+        margin-top: 110px;
+        margin-bottom: 50px;
+    }
+    .basket-order{
+        width: 80%;
+        margin-left: 0;
     }
 }
