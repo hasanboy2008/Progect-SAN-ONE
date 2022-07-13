@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 import React, { useEffect } from "react";
 import "./Home.css";
-import { useDispatch } from "react-redux";
-import { acUpdateCard } from "../../Redux/UpdateCard";
+// import { acUpdateCard } from "../../Redux/UpdateCard";
 import position_1 from "../../asest/home/position/Group 48.png";
 import position_2 from "../../asest/home/position/p_2.png";
 import position_k from "../../asest/home/position/p_krasofka.png";
@@ -10,38 +9,20 @@ import position_4 from "../../asest/home/position/p_4.png";
 import position_5 from "../../asest/home/position/p_5.png";
 import position_6 from "../../asest/home/position/p_6.png";
 import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
-// import new_p_1 from "../../asest/home/section2/new_P_1.jpg";
-// import share from "../../asest/home/section2/share.png";
-// import sec_3 from "../../asest/home/section3/sec_3.png";
-import Slider from "react-slick";
-// import Marquee from "react-fast-marquee";
-// import axios from "axios";
 
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
+import SimpleSlider from "../../components/slider/simpleSlider/SliderSimple";
+import SliderImg from "../../components/sliderFooter/Slider_img";
 
 import SliderDouble from "../../components/sliderDouble/SliderDouble";
-import axios from "axios";
-
-// import SliderDouble from "../../components/sliderDouble/SliderDouble"
-import Simple_slider from "../../components/slider/simple_slider/Slider_simple";
-import Slider_img from "../../components/slider_footer/Slider_img";
-import SliderDouble from "../../components/sliderDouble/SliderDouble"
-import Simple_slider from "../../components/slider/simpleSlider/Slider_simple";
-import Slider_img from "../../components/sliderFooter/Slider_img";
-
 
 export function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const dispatch = useDispatch();
-
-  const products = useSelector((state) => state.reProducts);
   const navigate = useNavigate();
-  // console.log(products[1]);
 
   return (
     <div className="home">
@@ -122,74 +103,21 @@ export function Home() {
           <span>Eng haridorgir bo'lgan mahsulotlarimizni ko'rib chiqing</span>
         </div>
         <div className="best_seller">
-
-          <div className="new_products">
-            {products.slice(0, 4).map((item, index) => (
-              <div className="new_Produc_1" key={index}>
-                <figure>
-                  <img src={item.images[0]} alt="" />
-                </figure>
-                <p>{item.name}</p>
-                <hr />
-                <div className="price_share">
-                  <div className="discount_pricw">
-                    <p>{item.price}</p>
-                    <span>{item.discount}</span>
-                  </div>
-                  <img src={item.share} alt="" />
-                </div>
-                <div className="sell_basket">
-                  <button
-                    onClick={() => {
-                      navigate(`/view/product?id=${item.id}`);
-                    }}
-                  >
-                    Sotib olish
-                  </button>
-                  <button
-                   onClick={() => {
-                      navigate(`/view/product?id=${item.id}`);
-                    }}
-                    // onClick={() => {
-                    //   axios("https://api.sanone.uz/add_to_card", {
-                    //     method: "POST",
-                    //     headers: {
-                    //       "Content-Type": "application/json",
-                    //     },
-                    //     data: JSON.stringify({ userId: 11, ...item }),
-                    //   })
-                    //     .then((res) => {
-                    //       console.log(res.data);
-                    //       dispatch(acUpdateCard());
-                    //     })
-                    //     .catch((err) => {
-                    //       console.log(err);
-                    //     });
-                    // }}
-                  >
-                    Savatga
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-            <Simple_slider />
-
+          <SimpleSlider />
         </div>
       </div>
 
-      <div className="sectio_5">
-        <Slider />
-      </div>
-          
+      <div className="sectio_5">{/* <Slider /> */}</div>
+
       <div className="section_6_slider">
         <div className="all_headerText">
           <p>Mahsulotlarimiz turlari</p>
-          <span>Kompaniyamiz tomonidan ishlab chiqariladigan poyabzal turlari</span>
+          <span>
+            Kompaniyamiz tomonidan ishlab chiqariladigan poyabzal turlari
+          </span>
         </div>
         <div>
-          <Slider_img />
+          <SliderImg />
         </div>
       </div>
 

@@ -1,25 +1,25 @@
-.card_slider{
+.card_slider {
   padding: 17px;
   height: auto;
   width: 435px !important;
 }
-.best_seller{
+.best_seller {
   overflow: hidden;
   padding: 50px 40px;
   margin-bottom: 50px;
 }
-.best_seller .slick-dots{
+.best_seller .slick-dots {
   position: absolute;
   left: 0%;
   top: auto;
-  bottom: -40px ;
+  bottom: -40px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   padding: 5px;
   transition: 0.1s;
 }
@@ -27,23 +27,23 @@
   background-color: #facb21;
   padding: 8px;
 }
-.simple_btn:hover{
+.simple_btn:hover {
   color: black;
   cursor: pointer;
 }
-.simple_btn1{
+.simple_btn1 {
   top: auto;
   bottom: -49px;
-  color: #D2D2D2;
+  color: #d2d2d2;
   border: none;
   font-size: 40px;
   left: 58%;
 }
-.simple_btn2{
+.simple_btn2 {
   left: 40%;
   top: auto;
   bottom: -49px;
-  color: #D2D2D2;
+  color: #d2d2d2;
   border: none;
   font-size: 40px;
 }
