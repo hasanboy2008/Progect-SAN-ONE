@@ -317,8 +317,8 @@ img {
 /* ======================Detail-Comment===================== */
 
 .Detail-Comment {
-  width: 1606px;
-  height: 1034px;
+  width: 1606px;  
+  height: auto;
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 8px;

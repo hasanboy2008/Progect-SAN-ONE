@@ -43,15 +43,15 @@ export function Detail() {
           <div className="imgContainer">
             {product.images
               ? product.images.map((img, index) => (
-                  <figure onClick={() => setSelectedImg(index)}>
-                    <img src={img} key={index} alt="shoe" />
-                    <span
-                      style={
-                        selectedImg === index ? { background: "none" } : {}
-                      }
-                    ></span>
-                  </figure>
-                ))
+                <figure onClick={() => setSelectedImg(index)}>
+                  <img src={img} key={index} alt="shoe" />
+                  <span
+                    style={
+                      selectedImg === index ? { background: "none" } : {}
+                    }
+                  ></span>
+                </figure>
+              ))
               : ""}
           </div>
           <img
@@ -70,8 +70,8 @@ export function Detail() {
             <div className="color-groups ">
               {product.colors
                 ? product.colors.map((color) => {
-                    return <span style={{ background: color }}></span>;
-                  })
+                  return <span style={{ background: color }}></span>;
+                })
                 : ""}
             </div>
           </div>
@@ -148,10 +148,10 @@ export function Detail() {
           />
         </div>
 
-        <div className={showtab === 1 ? "" : ""}>
+        <div className={showtab === 1 ? "" : "hide"}>
           <DetailInfo />
         </div>
-      </div> 
+      </div>
     </div>
   );
 }
