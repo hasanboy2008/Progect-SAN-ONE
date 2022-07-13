@@ -19,6 +19,8 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
 import SliderDouble from "../../components/sliderDouble/SliderDouble"
+import Simple_slider from "../../components/slider/simple_slider/Slider_simple";
+import Slider_img from "../../components/slider_footer/Slider_img";
 
 export function Home() {
   useEffect(() => {
@@ -112,39 +114,22 @@ export function Home() {
           <span>Eng haridorgir bo‘lgan mahsulotlarimizni ko‘rib chiqing</span>
         </div>
         <div className="best_seller">
-          <div className="new_products">
-            {products.slice(0, 4).map((item) => (
-              <div className="new_Produc_1">
-                <figure>
-                  <img src={item.images[0]} alt="" />
-                </figure>
-                <p>{item.name}</p>
-                <hr />
-                <div className="price_share">
-                  <div className="discount_pricw">
-                    <p>{item.price}</p>
-                    <span>{item.discount}</span>
-                  </div>
-                  <img src={item.share} alt="" />
-                </div>
-                <div className="sell_basket">
-                  <button
-                    onClick={() => {
-                      navigate(`/view/product?id=${item.id}`);
-                    }}
-                  >
-                    Sotib olish
-                  </button>
-                  <button>Savatga</button>
-                </div>
-              </div>
-            ))}
-          </div>
+            <Simple_slider />
         </div>
       </div>
 
       <div className="sectio_5">
         <Slider />
+      </div>
+          
+      <div className="section_6_slider">
+        <div className="all_headerText">
+          <p>Mahsulotlarimiz turlari</p>
+          <span>Kompaniyamiz tomonidan ishlab chiqariladigan poyabzal turlari</span>
+        </div>
+        <div>
+          <Slider_img />
+        </div>
       </div>
 
       <div className="section_6_futter">

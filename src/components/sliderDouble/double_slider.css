@@ -10,8 +10,7 @@
   text-align: center;
   font-size: 15px;
   background: #fff;
-  height: calc((100% - 30px) / 2) !important;
-
+  height: calc((100% - 30px) / 2);
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
