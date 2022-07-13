@@ -37,8 +37,8 @@ export default function SimpleSlider() {
   return (
     <div className="simple_slider">
       <Slider {...settings}>
-        {products.map((item) => (
-          <div className="card_slider new_Produc_1 ">
+        {products.map((item, id) => (
+          <div className="card_slider new_Produc_1 " key={id}>
             <figure>
               <img src={item.images[0]} alt="" />
             </figure>
