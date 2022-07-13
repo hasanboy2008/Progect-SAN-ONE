@@ -1,32 +1,32 @@
-.slider_img{
+.slider_img {
   padding: 50px 150px;
 }
-.slider_boxer{
+.slider_boxer {
   width: 390px;
   height: 324px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
 }
-.slider_boxer img{
+.slider_boxer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.slider_boxer h1{
-  color: #7C7C7C;
+.slider_boxer h1 {
+  color: #7c7c7c;
 }
-.footer_btn2{
+.footer_btn2 {
   left: -100px;
   top: 40%;
-  background-color: #DE821D;
+  background-color: #de821d;
   border: none;
 }
 
-.footer_btn1{
+.footer_btn1 {
   left: auto;
   right: -100px;
   top: 40%;
-  background-color: #DE821D;
+  background-color: #de821d;
   border: none;
 }

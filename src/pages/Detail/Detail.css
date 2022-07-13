@@ -1,19 +1,11 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
 .Detail {
   padding-top: 200px;
-
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px;
 }
 
 img {
@@ -45,16 +37,20 @@ img {
   border-radius: 8px;
 }
 
-.container>.imgContainer {
+.container > .imgContainer {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
-.container .imgContainer>figure {
+.imgContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.container .imgContainer > figure {
   width: 140px;
   height: 140px;
   border-radius: 6px;
@@ -63,11 +59,11 @@ img {
   /* overflow: hidden; */
 }
 
-.container .imgContainer>figure>img {
+.container .imgContainer > figure > img {
   width: 100%;
 }
 
-.container .imgContainer>figure>span {
+.container .imgContainer > figure > span {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -103,7 +99,7 @@ img {
   padding-top: 10px;
 }
 
-.color-groups>span {
+.color-groups > span {
   width: 23px;
   height: 23px;
   border-radius: 50%;
@@ -200,7 +196,7 @@ img {
   flex-direction: column;
 }
 
-.card-about .sizes>p {
+.card-about .sizes > p {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 400;
@@ -317,7 +313,7 @@ img {
 /* ======================Detail-Comment===================== */
 
 .Detail-Comment {
-  width: 1606px;  
+  width: 1606px;
   height: auto;
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
@@ -328,6 +324,7 @@ img {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  /* display: none; */
 }
 
 .btn-comments {
@@ -419,20 +416,17 @@ img {
   }
 
   .card-about .a-name p {
-
     font-size: 40px;
   }
 
-  .color-groups>span {
+  .color-groups > span {
     width: 23px;
     height: 23px;
   }
 
   .card-about .colors p {
     font-size: 18px;
-
   }
-
 
   .card-about .price .price-name {
     font-size: 18px;
@@ -446,8 +440,7 @@ img {
     font-size: 18px;
   }
 
-  .card-about .sizes>p {
-
+  .card-about .sizes > p {
     font-size: 18px;
   }
 
@@ -458,23 +451,18 @@ img {
   }
 
   .card-about .sizes .size-group .size.active-size {
-
     font-size: 18px;
   }
-
 
   .card-about .btns .btn-purchase {
     width: 170px;
     font-size: 19px;
   }
 
-
   .card-about .btns .btn-basket {
     width: 170px;
     font-size: 19px;
-
   }
-
 }
 
 @media only screen and (max-width: 1430px) {
@@ -515,7 +503,7 @@ img {
     margin-right: 60px;
   }
 
-  .container .imgContainer>figure {
+  .container .imgContainer > figure {
     width: 120px;
     height: 120px;
     border-radius: 6px;
@@ -544,11 +532,1071 @@ img {
     margin-right: 60px;
   }
 
-  .container .imgContainer>figure {
+  .container .imgContainer > figure {
     width: 100px;
     height: 100px;
     border-radius: 6px;
     margin: 5px 0;
     position: relative;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .Detail-Card {
+    width: 1000px;
+  }
+
+  .container .selected {
+    width: 380px;
+  }
+
+  .container {
+    width: 52%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 60px;
+  }
+
+  .card-about {
+    padding: 40px 0 45px 0;
+  }
+
+  .card-about .a-name p {
+    font-size: 38px;
+  }
+
+  .color-groups > span {
+    width: 23px;
+    height: 23px;
+  }
+
+  .card-about .colors p {
+    font-size: 18px;
+  }
+
+  .card-about .price .price-name {
+    font-size: 18px;
+  }
+
+  .card-about .price .price-coast {
+    font-size: 30px;
+  }
+
+  .card-about .price .old-coast {
+    font-size: 18px;
+  }
+
+  .card-about .sizes > p {
+    font-size: 18px;
+  }
+
+  .card-about .sizes .size-group .size {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .size-group .size.active-size :hover {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-about .sizes .size-group .size.active-size {
+    font-size: 12px;
+  }
+
+  .card-about .btns .btn-purchase {
+    width: 150px;
+    font-size: 19px;
+  }
+
+  .card-about .btns .btn-basket {
+    width: 150px;
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .Detail-Card {
+    width: 900px;
+  }
+
+  .container .selected {
+    width: 350px;
+  }
+
+  .container {
+    width: 52%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 60px;
+  }
+
+  .card-about {
+    padding: 30px 0 25px 0;
+  }
+
+  .card-about .a-name p {
+    font-size: 30px;
+  }
+
+  .color-groups > span {
+    width: 23px;
+    height: 23px;
+  }
+
+  .card-about .colors p {
+    font-size: 15px;
+  }
+
+  .card-about .price .price-name {
+    font-size: 15px;
+  }
+
+  .card-about .price .price-coast {
+    font-size: 30px;
+  }
+
+  .card-about .price .old-coast {
+    font-size: 18px;
+  }
+
+  .card-about .sizes > p {
+    font-size: 15px;
+  }
+
+  .card-about .sizes .size-group .size {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    margin: 5px 10px 5px 0;
+  }
+
+  .size-group .size.active-size :hover {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-about .sizes .size-group .size.active-size {
+    font-size: 12px;
+  }
+
+  .card-about .btns .btn-purchase {
+    width: 140px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .card-about .btns .btn-basket {
+    width: 140px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .container .imgContainer > figure {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    margin: 5px 0;
+    position: relative;
+  }
+  .container {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .Detail-Card {
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .container .selected {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .card-about {
+    padding: 30px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .card-about .a-name p {
+    font-size: 40px;
+  }
+
+  .color-groups > span {
+    width: 23px;
+    height: 23px;
+  }
+
+  .card-about .colors p {
+    font-size: 18px;
+  }
+
+  .card-about .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px;
+  }
+  .card-about .price .price-name {
+    font-size: 18px;
+  }
+
+  .card-about .price .price-coast {
+    font-size: 30px;
+  }
+
+  .card-about .price .old-coast {
+    font-size: 18px;
+  }
+
+  .card-about .sizes > p {
+    font-size: 18px;
+  }
+
+  .card-about .sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px 0;
+  }
+
+  .card-about .sizes .size-group .size {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin: 5px 10px 5px 0;
+  }
+
+  .size-group .size.active-size :hover {
+    width: 35px;
+    height: 35px;
+  }
+
+  .card-about .sizes .size-group .size.active-size {
+    font-size: 18px;
+  }
+
+  .card-about .btns .btn-purchase {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .card-about .btns .btn-basket {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .container .imgContainer > figure {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    margin: 5px 10px 0 0;
+    position: relative;
+  }
+  .container .selected {
+    width: 700px;
+    height: 700px;
+    border-radius: 8px;
+  }
+
+  .container > .imgContainer {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-x: scroll;
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .Detail-Card {
+    width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .container {
+    width: 100%;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .card-about {
+    padding: 30px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-about .a-name p {
+    font-size: 40px;
+  }
+
+  .color-groups > span {
+    width: 23px;
+    height: 23px;
+  }
+
+  .card-about .colors p {
+    font-size: 18px;
+  }
+
+  .card-about .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px;
+  }
+  .card-about .price .price-name {
+    font-size: 18px;
+  }
+
+  .card-about .price .price-coast {
+    font-size: 30px;
+  }
+
+  .card-about .price .old-coast {
+    font-size: 18px;
+  }
+
+  .card-about .sizes > p {
+    font-size: 18px;
+  }
+
+  .card-about .sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px 0;
+  }
+
+  .card-about .sizes .size-group .size {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin: 5px 10px 5px 0;
+  }
+
+  .size-group .size.active-size :hover {
+    width: 35px;
+    height: 35px;
+  }
+
+  .card-about .sizes .size-group .size.active-size {
+    font-size: 18px;
+  }
+
+  .card-about .btns .btn-purchase {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .card-about .btns .btn-basket {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .container .imgContainer > figure {
+    width: 90px;
+    height: 90px;
+    border-radius: 6px;
+    margin: 5px 10px 0 0;
+    position: relative;
+  }
+  .container .selected {
+    width: 600px;
+    height: 600px;
+    border-radius: 8px;
+  }
+
+  .container > .imgContainer {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-x: scroll;
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .Detail-Card {
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .card-about {
+    padding: 30px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-about .a-name p {
+    font-size: 40px;
+  }
+
+  .color-groups > span {
+    width: 23px;
+    height: 23px;
+  }
+
+  .card-about .colors p {
+    font-size: 18px;
+  }
+
+  .card-about .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px;
+  }
+  .card-about .price .price-name {
+    font-size: 18px;
+  }
+
+  .card-about .price .price-coast {
+    font-size: 30px;
+  }
+
+  .card-about .price .old-coast {
+    font-size: 18px;
+  }
+
+  .card-about .sizes > p {
+    font-size: 18px;
+  }
+
+  .card-about .sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px 0;
+  }
+
+  .card-about .sizes .size-group .size {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin: 5px 10px 5px 0;
+  }
+
+  .size-group .size.active-size :hover {
+    width: 35px;
+    height: 35px;
+  }
+
+  .card-about .sizes .size-group .size.active-size {
+    font-size: 18px;
+  }
+
+  .card-about .btns .btn-purchase {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .card-about .btns .btn-basket {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .container > .imgContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+  .container .imgContainer > figure {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin: 5px 10px 0 0;
+    position: relative;
+  }
+  .container .selected {
+    width: 500px;
+    height: 500px;
+    border-radius: 8px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .Detail-Card {
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .container {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .card-about {
+    padding: 20px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-about .a-name p {
+    font-size: 30px;
+  }
+
+  .color-groups > span {
+    width: 23px;
+    height: 23px;
+  }
+
+  .card-about .colors p {
+    font-size: 18px;
+  }
+
+  .card-about .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px;
+  }
+  .card-about .price .price-name {
+    font-size: 18px;
+  }
+
+  .card-about .price .price-coast {
+    font-size: 30px;
+  }
+
+  .card-about .price .old-coast {
+    font-size: 18px;
+  }
+
+  .card-about .sizes > p {
+    font-size: 18px;
+  }
+
+  .card-about .sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px 0;
+  }
+
+  .card-about .sizes .size-group .size {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+    margin: 5px 10px 5px 0;
+  }
+
+  .size-group .size.active-size :hover {
+    width: 28px;
+    height: 28px;
+  }
+
+  .card-about .sizes .size-group .size.active-size {
+    font-size: 15px;
+  }
+
+  .card-about .btns .btn-purchase {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .card-about .btns .btn-basket {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .container > .imgContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+  .container .imgContainer > figure {
+    width: 65px;
+    height: 65px;
+    border-radius: 6px;
+    margin: 5px 10px 0 0;
+    position: relative;
+  }
+  .container .selected {
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .Detail-Card {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .container {
+    width: 100%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .card-about {
+    padding: 20px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-about .a-name p {
+    font-size: 28px;
+  }
+
+  .color-groups > span {
+    width: 23px;
+    height: 23px;
+  }
+
+  .card-about .colors p {
+    font-size: 15px;
+  }
+
+  .card-about .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px;
+  }
+  .card-about .price .price-name {
+    font-size: 15px;
+  }
+
+  .card-about .price .price-coast {
+    font-size: 20px;
+  }
+
+  .card-about .price .old-coast {
+    font-size: 15px;
+  }
+
+  .card-about .sizes > p {
+    font-size: 15px;
+  }
+
+  .card-about .sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px 0;
+  }
+
+  .card-about .sizes .size-group .size {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    margin: 5px 10px 5px 0;
+  }
+
+  .size-group .size.active-size :hover {
+    width: 25px;
+    height: 25px;
+  }
+
+  .card-about .sizes .size-group .size.active-size {
+    font-size: 15px;
+  }
+
+  .card-about .btns .btn-purchase {
+    width: 140px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .card-about .btns .btn-basket {
+    width: 140px;
+    height: 35px;
+    font-size: 15px;
+  }
+  .container > .imgContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+  .container .imgContainer > figure {
+    width: 55px;
+    height: 55px;
+    border-radius: 6px;
+    margin: 5px 10px 0 0;
+    position: relative;
+  }
+  .container .selected {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .Detail-Card {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .container {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .card-about {
+    padding: 20px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-about .a-name p {
+    font-size: 25px;
+  }
+
+  .color-groups > span {
+    width: 19px;
+    height: 19px;
+  }
+
+  .card-about .colors p {
+    font-size: 13px;
+  }
+
+  .card-about .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px;
+  }
+  .card-about .price .price-name {
+    font-size: 13px;
+  }
+
+  .card-about .price .price-coast {
+    font-size: 18px;
+  }
+
+  .card-about .price .old-coast {
+    font-size: 13px;
+  }
+
+  .card-about .sizes > p {
+    font-size: 13px;
+  }
+
+  .card-about .sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px 0;
+  }
+
+  .card-about .sizes .size-group .size {
+    width: 18px;
+    height: 18px;
+    font-size: 8px;
+    margin: 5px 8px 5px 0;
+  }
+
+  .size-group .size.active-size :hover {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-about .sizes .size-group .size.active-size {
+    font-size: 8px;
+  }
+
+  .card-about .btns .btn-purchase {
+    width: 110px;
+    height: 25px;
+    font-size: 13px;
+  }
+
+  .card-about .btns .btn-basket {
+    width: 110px;
+    height: 25px;
+    font-size: 13px;
+  }
+  .container > .imgContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+  .container .imgContainer > figure {
+    width: 55px;
+    height: 55px;
+    margin: 5px 10px 0 0;
+    position: relative;
+  }
+
+  .container .imgContainer > figure span {
+    height: 40px;
+  }
+  .container .selected {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Responsive of Comment */
+
+@media only screen and (max-width: 1630px) {
+  .Detail-Comment {
+    width: 1500px;
+  }
+}
+@media only screen and (max-width: 1530px) {
+  .Detail-Comment {
+    width: 1400px;
+  }
+}
+@media only screen and (max-width: 1430px) {
+  .Detail-Comment {
+    width: 1300px;
+  }
+}
+@media only screen and (max-width: 1330px) {
+  .Detail-Comment {
+    width: 1200px;
+  }
+}
+@media only screen and (max-width: 1230px) {
+  .Detail-Comment {
+    width: 1100px;
+  }
+}
+@media only screen and (max-width: 1130px) {
+  .Detail-Comment {
+    width: 1000px;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .Detail-Comment {
+    width: 900px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .Detail-Comment {
+    width: 800px;
+  }
+  .btn-comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .info-btn {
+    width: 180px;
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid #dcbb45;
+    border-radius: 16px;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    color: #dcbb45;
+    margin-right: 25px;
+  }
+
+  .comment-btn {
+    width: 180px;
+    height: 45px;
+    background: #ffffff;
+    border: 2px solid #dcbb45;
+    border-radius: 16px;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    color: #dcbb45;
+  }
+  .active {
+    background: #dcbb45;
+    color: #ffffff;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .Detail-Comment {
+    width: 700px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .Detail-Comment {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .info-btn {
+    width: 250px;
+    height: 45px;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+
+  .comment-btn {
+    width: 250px;
+    height: 45px;
+    font-size: 20px;
+  }
+  .active {
+    background: #dcbb45;
+    color: #ffffff;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .Detail-Comment {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info-btn {
+    width: 200px;
+    height: 40px;
+    font-size: 19px;
+    margin: 0 0 10px 0;
+  }
+
+  .comment-btn {
+    width: 200px;
+    height: 40px;
+    font-size: 19px;
+  }
+  .active {
+    background: #dcbb45;
+    color: #ffffff;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .Detail-Comment {
+    width: 400px;
+  }
+  .info-btn {
+    width: 180px;
+    height: 35px;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+  }
+
+  .comment-btn {
+    width: 180px;
+    height: 35px;
+    font-size: 18px;
+  }
+  .active {
+    background: #dcbb45;
+    color: #ffffff;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .Detail-Comment {
+    width: 300px;
+    padding: 65px 50px;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .Detail-Comment {
+    width: 200px;
   }
 }

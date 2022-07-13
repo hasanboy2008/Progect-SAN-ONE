@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-
 import "./double_slider.css";
 
 // import required modules
@@ -35,10 +34,27 @@ export default function App() {
         }}
         modules={[Grid, Pagination]}
         className="mySwiper"
+        breakpoints={{
+          0:{
+            slidesPerView:1
+          },
+          420:{
+            slidesPerView:1
+          },
+          900:{
+            slidesPerView:2
+          },
+          1200:{
+            slidesPerView:3
+          },
+          1920:{
+            slidesPerView:4
+          }
+        }}
       >
-        {newProducts.map((item) => (
+        {newProducts.map((item, index) => (
           <SwiperSlide>
-            <div className="new_Produc_1">
+            <div className="new_Produc_1" key={index}>
               <figure>
                 <img src={item.images[0]} alt="" />
               </figure>
@@ -60,7 +76,13 @@ export default function App() {
                 >
                   Sotib olish
                 </button>
-                <button>Savatga</button>
+                <button
+                  onClick={() => {
+                    navigate(`/view/product?id=${item.id}`);
+                  }}
+                >
+                  Savatga
+                </button>
               </div>
             </div>
           </SwiperSlide>

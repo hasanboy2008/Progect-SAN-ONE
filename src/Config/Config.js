@@ -9,7 +9,7 @@ export function Config() {
   useEffect(() => {
     axios("https://api.sanone.uz/view/products")
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         dispache(acProducts(res.data));
       })
       .catch((err) => {
