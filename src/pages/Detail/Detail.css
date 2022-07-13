@@ -45,28 +45,29 @@ img {
   border-radius: 8px;
 }
 
-.container > .imgContainer {
+.container>.imgContainer {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow-x: scroll;
 }
 
-.container .imgContainer > figure {
+.container .imgContainer>figure {
   width: 140px;
   height: 140px;
   border-radius: 6px;
   margin: 5px 0;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-.container .imgContainer > figure > img {
+.container .imgContainer>figure>img {
   width: 100%;
 }
 
-.container .imgContainer > figure > span {
+.container .imgContainer>figure>span {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -101,7 +102,8 @@ img {
   align-items: center;
   padding-top: 10px;
 }
-.color-groups > span {
+
+.color-groups>span {
   width: 23px;
   height: 23px;
   border-radius: 50%;
@@ -198,7 +200,7 @@ img {
   flex-direction: column;
 }
 
-.card-about .sizes > p {
+.card-about .sizes>p {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 400;
@@ -374,3 +376,179 @@ img {
 }
 
 /* ======================Responsive======================= */
+
+@media only screen and (max-width: 1700px) {
+  .Detail-Card {
+    width: 1500px;
+  }
+
+  .container .selected {
+    width: 580px;
+  }
+
+  .container {
+    width: 52%;
+    height: 610px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 1530px) {
+  .Detail-Card {
+    width: 1400px;
+  }
+
+  .container .selected {
+    width: 530px;
+  }
+
+  .container {
+    width: 52%;
+    height: 580px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 60px;
+  }
+
+  .card-about {
+    padding: 50px 0 65px 0;
+  }
+
+  .card-about .a-name p {
+
+    font-size: 40px;
+  }
+
+  .color-groups>span {
+    width: 23px;
+    height: 23px;
+  }
+
+  .card-about .colors p {
+    font-size: 18px;
+
+  }
+
+
+  .card-about .price .price-name {
+    font-size: 18px;
+  }
+
+  .card-about .price .price-coast {
+    font-size: 30px;
+  }
+
+  .card-about .price .old-coast {
+    font-size: 18px;
+  }
+
+  .card-about .sizes>p {
+
+    font-size: 18px;
+  }
+
+  .card-about .sizes .size-group .size {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .card-about .sizes .size-group .size.active-size {
+
+    font-size: 18px;
+  }
+
+
+  .card-about .btns .btn-purchase {
+    width: 170px;
+    font-size: 19px;
+  }
+
+
+  .card-about .btns .btn-basket {
+    width: 170px;
+    font-size: 19px;
+
+  }
+
+}
+
+@media only screen and (max-width: 1430px) {
+  .Detail-Card {
+    width: 1300px;
+  }
+
+  .container .selected {
+    width: 490px;
+  }
+
+  .container {
+    width: 52%;
+    height: 540px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 1330px) {
+  .Detail-Card {
+    width: 1200px;
+    padding: 20px;
+  }
+
+  .container .selected {
+    width: 460px;
+  }
+
+  .container {
+    width: 52%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 60px;
+  }
+
+  .container .imgContainer>figure {
+    width: 120px;
+    height: 120px;
+    border-radius: 6px;
+    margin: 5px 0;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  .Detail-Card {
+    width: 1100px;
+    padding: 20px;
+    margin-bottom: 150px;
+  }
+
+  .container .selected {
+    width: 440px;
+  }
+
+  .container {
+    width: 52%;
+    height: 490px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 60px;
+  }
+
+  .container .imgContainer>figure {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    margin: 5px 0;
+    position: relative;
+  }
+}

@@ -22,11 +22,20 @@ export function Navbar() {
   // navbar fixed qilingan joyi
 
   function open(){
-    let nav_respons = document.querySelector(".nav_respons");
+    let nav_menu = document.querySelector(".nav_menu");
 
     document.addEventListener('click',function(){
-      nav_respons.style.right='0px'
+      nav_menu.style.transform= 'translateY(0px)';
     })
+    
+
+  }
+  function exit(){
+    let nav_menu = document.querySelector(".nav_menu");
+
+     document.addEventListener("click", function () {
+       nav_menu.style.transform = "translateY(-500px)";
+     });
 
   }
 
@@ -140,18 +149,60 @@ export function Navbar() {
             </button>
           </div>
         </div>
-
-        <div className="nav_respons">
-          <p>salom</p>
-          <p>salom</p>
-          <p>salom</p>
-          <p>salom</p>
-        </div>
-
-        <button onClick={open} id="menu">
-          xxx
+        <button id="menu" onClick={open}>
+          <svg
+            width="24"
+            height="14"
+            viewBox="0 0 24 14"
+            fill="wheat"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.571411 0H23.4285V2.28571H0.571411V0ZM6.2857 5.71429H23.4285V8H6.2857V5.71429ZM13.4286 11.4286H23.4285V13.7143H13.4286V11.4286Z"
+              fill="wheat"
+               />
+          </svg>
         </button>
       </nav>
+
+      <div className="nav_menu">
+        <button
+          onClick={() => {
+            navigate("/katalog");
+            exit();
+          }}
+        >
+          KATALOG
+        </button>
+        <button
+          onClick={() => {
+            navigate("/about");
+            exit();
+          }}
+        >
+          BIZ HAQIMIZDA
+        </button>
+        <div className="search_nav_menu">
+          <input type="text" name="" id="" />
+          <button>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M12.5837 13.733C9.71256 16.0325 5.50984 15.8515 2.84832 13.19C-0.00738412 10.3343 -0.00738412 5.70428 2.84832 2.84857C5.70403 -0.00714028 10.3341 -0.00713974 13.1898 2.84857C15.8513 5.51008 16.0323 9.71279 13.7327 12.5839L19.318 18.1692C19.6353 18.4865 19.6353 19.0009 19.318 19.3182C19.0007 19.6355 18.4863 19.6355 18.169 19.3182L12.5837 13.733ZM3.99737 12.041C1.77627 9.81985 1.77627 6.21872 3.99737 3.99762C6.21848 1.77651 9.8196 1.77651 12.0407 3.99762C14.2602 6.21709 14.2618 9.81456 12.0456 12.0361C12.044 12.0377 12.0423 12.0393 12.0407 12.0409C12.0391 12.0426 12.0374 12.0442 12.0358 12.0458C9.81433 14.2621 6.21685 14.2604 3.99737 12.041Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </div>
+        <button onClick={exit}>xx</button>
+      </div>
     </div>
   );
 }

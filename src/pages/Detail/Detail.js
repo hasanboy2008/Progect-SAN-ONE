@@ -151,7 +151,7 @@ export function Detail() {
         <div className={showtab === 1 ? "" : ""}>
           <DetailInfo />
         </div>
-      </div>
+      </div> 
     </div>
   );
 }
