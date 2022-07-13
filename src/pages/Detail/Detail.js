@@ -124,7 +124,7 @@ export function Detail() {
           </div>
         </div>
       </div>
-{/* 
+
       <div className="Detail-Comment">
         <div className="btn-comments">
           <button
@@ -151,7 +151,7 @@ export function Detail() {
         <div className={showtab === 1 ? "" : ""}>
           <DetailInfo />
         </div>
-      </div> */}
+      </div> 
     </div>
   );
 }
