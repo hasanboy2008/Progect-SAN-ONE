@@ -19,8 +19,8 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
 import SliderDouble from "../../components/sliderDouble/SliderDouble"
-import Simple_slider from "../../components/slider/simple_slider/Slider_simple";
-import Slider_img from "../../components/slider_footer/Slider_img";
+import Simple_slider from "../../components/slider/simpleSlider/Slider_simple";
+import Slider_img from "../../components/sliderFooter/Slider_img";
 
 export function Home() {
   useEffect(() => {
