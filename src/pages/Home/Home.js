@@ -20,7 +20,6 @@ import Slider from "react-slick";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
-<<<<<<< HEAD
 
 import SliderDouble from "../../components/sliderDouble/SliderDouble";
 import axios from "axios";
@@ -28,11 +27,9 @@ import axios from "axios";
 // import SliderDouble from "../../components/sliderDouble/SliderDouble"
 import Simple_slider from "../../components/slider/simple_slider/Slider_simple";
 import Slider_img from "../../components/slider_footer/Slider_img";
-=======
 import SliderDouble from "../../components/sliderDouble/SliderDouble"
 import Simple_slider from "../../components/slider/simpleSlider/Slider_simple";
 import Slider_img from "../../components/sliderFooter/Slider_img";
->>>>>>> 7a6202a929d10053f62acb466694b63452f5bb93
 
 
 export function Home() {
