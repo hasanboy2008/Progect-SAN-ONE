@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 import React, { useEffect } from "react";
 import "./Home.css";
+// import { acUpdateCard } from "../../Redux/UpdateCard";
 import position_1 from "../../asest/home/position/Group 48.png";
 import position_2 from "../../asest/home/position/p_2.png";
 import position_k from "../../asest/home/position/p_krasofka.png";
@@ -8,32 +9,20 @@ import position_4 from "../../asest/home/position/p_4.png";
 import position_5 from "../../asest/home/position/p_5.png";
 import position_6 from "../../asest/home/position/p_6.png";
 import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
-// import new_p_1 from "../../asest/home/section2/new_P_1.jpg";
-// import share from "../../asest/home/section2/share.png";
-// import sec_3 from "../../asest/home/section3/sec_3.png";
-import Slider from "react-slick";
-// import Marquee from "react-fast-marquee";
-// import axios from "axios";
 
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
-import SliderDouble from "../../components/sliderDouble/SliderDouble"
-import Simple_slider from "../../components/slider/simpleSlider/Slider_simple";
-import Slider_img from "../../components/sliderFooter/Slider_img";
+import SimpleSlider from "../../components/slider/simpleSlider/SliderSimple";
+import SliderImg from "../../components/sliderFooter/Slider_img";
+
+import SliderDouble from "../../components/sliderDouble/SliderDouble";
 
 export function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const products = useSelector((state) => state.reProducts);
   const navigate = useNavigate();
-
-  // savatga
-  // function basket(){
-  //   JSON.stringify(localStorage.setItem("product"));
-  // }
 
   return (
     <div className="home">
@@ -82,7 +71,7 @@ export function Home() {
           <img src={position_6} alt="" />
         </div>
         <div className="position_7">
-          <marquee >
+          <marquee>
             <img src={position_7} alt="" />
           </marquee>
         </div>
@@ -91,17 +80,17 @@ export function Home() {
       <div className="home_section_2">
         <div className="all_headerText">
           <p>Yangi mahsulotlar</p>
-          <span>Eng so‘nggi mahsulotlarimizni ko‘rib chiqing va tanlang</span>
+          <span>Eng so'nggi mahsulotlarimizni ko'rib chiqing va tanlang</span>
         </div>
         <div className="new_products">
-          <SliderDouble/>
+          <SliderDouble />
         </div>
       </div>
       <div className="section_scale">
         <div className="all_headerText">
-          <p>Eng ko‘p ko‘rilgan mahsulotlar</p>
+          <p>Eng ko'p ko'rilgan mahsulotlar</p>
           <span>
-            Mijozlarimiz tanlovlariga eng loyiq bo‘lgan mahsulotlarimiz
+            Mijozlarimiz tanlovlariga eng loyiq bo'lgan mahsulotlarimiz
           </span>
         </div>
         <div className="slider_box">
@@ -110,41 +99,41 @@ export function Home() {
       </div>
       <div className="section_4">
         <div className="all_headerText">
-          <p>Eng ko‘p sotilgan</p>
-          <span>Eng haridorgir bo‘lgan mahsulotlarimizni ko‘rib chiqing</span>
+          <p>Eng ko'p sotilgan</p>
+          <span>Eng haridorgir bo'lgan mahsulotlarimizni ko'rib chiqing</span>
         </div>
         <div className="best_seller">
-            <Simple_slider />
+          <SimpleSlider />
         </div>
       </div>
 
-      <div className="sectio_5">
-        <Slider />
-      </div>
-          
+      <div className="sectio_5">{/* <Slider /> */}</div>
+
       <div className="section_6_slider">
         <div className="all_headerText">
           <p>Mahsulotlarimiz turlari</p>
-          <span>Kompaniyamiz tomonidan ishlab chiqariladigan poyabzal turlari</span>
+          <span>
+            Kompaniyamiz tomonidan ishlab chiqariladigan poyabzal turlari
+          </span>
         </div>
         <div>
-          <Slider_img />
+          <SliderImg />
         </div>
       </div>
 
       <div className="section_6_futter">
         <div className="section_f_text">
-          <span>Siz bilan bog‘lanishdan mamnunmiz!</span>
+          <span>Siz bilan bog'lanishdan mamnunmiz!</span>
           <span>
             Manzilimiz:<br></br> Toshkent Shahar, Birnarsa tumani, Birnarsa
-            ko‘cha 12-uy.
+            ko'cha 12-uy.
           </span>
 
           <span>Murojaat uchun telefon:</span>
           <p>+998 (88) 413 00 00</p>
           <span>Ijtimoiy tarmoqlarda bizni toping</span>
-          <div className="contac_i_f_t">
-            <a href="{salom}">
+          <div id="contac_i_f_t">
+            <a href="https://www.instagram.com/sanone.uzbekistan/">
               <svg
                 width="62"
                 height="62"
@@ -170,7 +159,7 @@ export function Home() {
                 />
               </svg>
             </a>
-            <a href="{salom2}">
+            <a href="https://www.facebook.com/san+one/">
               <svg
                 width="38"
                 height="64"
@@ -186,7 +175,7 @@ export function Home() {
                 />
               </svg>
             </a>
-            <a href="{salom}">
+            <a href="https://t.me/SanoneUzbekistan">
               <svg
                 width="67"
                 height="59"

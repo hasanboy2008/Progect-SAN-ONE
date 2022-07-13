@@ -6,20 +6,14 @@ import "./slider_footer.css";
 
 function SampleNextArrow({ onClick }) {
   return (
-    <div
-      className="btn_arrow footer_btn1 "
-      onClick={onClick}
-    >
+    <div className="btn_arrow footer_btn1 " onClick={onClick}>
       <BsArrowRight />
     </div>
   );
 }
 function SamplePrevArrow({ onClick }) {
   return (
-    <div
-      className="btn_arrow footer_btn2"
-      onClick={onClick}
-    >
+    <div className="btn_arrow footer_btn2" onClick={onClick}>
       <BsArrowLeft />
     </div>
   );
@@ -41,19 +35,16 @@ export default function Slider_img() {
   return (
     <div className="slider_img">
       <Slider {...settings}>
-        {
-          products.map(item => (
-            <div>
-              <div className="slider_boxer">
-                <img src={item.images[0]} alt="" />
-              </div>
-              <div>
-                <h1> {item.name} </h1>
-              </div>
+        {products.map((item) => (
+          <div>
+            <div className="slider_boxer">
+              <img src={item.images[0]} alt="" />
             </div>
-
-          ))
-        }
+            <div>
+              <h1> {item.name} </h1>
+            </div>
+          </div>
+        ))}
       </Slider>
     </div>
   );

@@ -1,8 +1,8 @@
 .info {
-    display: flex;
-    flex-direction: column;
-    width: 900px;
-    padding: 60px 0 100px;
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  padding: 60px 0 100px;
 }
 
 .info .product-name,
@@ -11,31 +11,102 @@
 .product-material,
 .product-color,
 .product-period {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 41px 0 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 41px 0 10px 0;
 }
-hr{
-    width: 100%;
+hr {
+  width: 100%;
 }
 .info .names {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    color: #7C7C7C;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #7c7c7c;
 }
 
 .info .answers {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    text-align: right;
-    color: #DE821D;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: right;
+  color: #de821d;
+}
 
+
+@media only screen and (max-width: 1630px) {
+    .info {
+        width: 800px;
+    }
+}
+@media only screen and (max-width: 1230px) {
+    .info {
+        width: 700px;
+    }
+}
+@media only screen and (max-width: 830px) {
+    .info {
+        width: 500px;
+    }
+}
+@media only screen and (max-width: 730px) {
+    .info {
+        width: 450px;
+    }
+}
+@media only screen and (max-width: 630px) {
+    .info {
+        width: 350px;
+    }
+    .info .names {
+        font-size: 18px;
+        line-height: 26px;
+        color: #7c7c7c;
+      }
+      
+      .info .answers {
+        font-size: 18px;
+      }
+}
+@media only screen and (max-width: 530px) {
+    .info {
+        width: 300px;
+    }
+    .info .names {
+        font-size: 17px;
+      }
+      
+      .info .answers {
+        font-size: 17px;
+      }
+}
+@media only screen and (max-width: 430px) {
+    .info {
+        width: 250px;
+    }
+    .info .names {
+        font-size: 15px;
+      }
+      
+      .info .answers {
+        font-size: 15px;
+      }
+}
+@media only screen and (max-width: 330px) {
+    .info {
+        width: 160px;
+    }
+    .info .names {
+        font-size: 10px;
+      }
+      
+      .info .answers {
+        font-size: 10px;
+      }
 }
