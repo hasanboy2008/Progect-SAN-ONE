@@ -59,7 +59,13 @@ export default function App() {
                 >
                   Sotib olish
                 </button>
-                <button>Savatga</button>
+                <button
+                  onClick={() => {
+                    navigate(`/view/product?id=${item.id}`);
+                  }}
+                >
+                  Savatga
+                </button>
               </div>
             </div>
           </SwiperSlide>

@@ -1,57 +1,12 @@
 import React from "react";
 import "../Basket/Basket.css";
 import Logo from "../../asest/Basket/san-one-logo.png";
-// import shoesBlack from "../../asest/Basket/shoes-black.png";
-// import shoesMoccasin from "../../asest/Basket/shoes-moccasin.png";
-// import shoesWhite from "../../asest/Basket/shoes-white.png";
-// import shoesGrey from "../../asest/Basket/shoes-grey.png";
-// import shoesBW from "../../asest/Basket/shoes-b-w.png";
+
+import "../Basket/Basket.css";
 
 export function Basket() {
-//   const basketData = [
-//     {
-//       id: 1,
-//       image: shoesBlack,
-//       text: "lorem ipsum lorem ipsum",
-//       artikul: "12345",
-//       price: "399 000",
-//     },
-//     {
-//       id: 2,
-//       image: shoesMoccasin,
-//       text: "lorem ipsum lorem ipsum",
-//       artikul: "12345",
-//       price: "399 000",
-//     },
-//     {
-//       id: 3,
-//       image: shoesWhite,
-//       text: "lorem ipsum lorem ipsum",
-//       artikul: "12345",
-//       price: "399 000",
-//     },
-//     {
-//       id: 4,
-//       image: shoesGrey,
-//       text: "lorem ipsum lorem ipsum",
-//       artikul: "12345",
-//       price: "399 000",
-//     },
-//     {
-//       id: 5,
-//       image: shoesBW,
-//       text: "lorem ipsum lorem ipsum",
-//       artikul: "12345",
-//       price: "399 000",
-//     },
-
-//     // Domla json kopiya qilganda eniga qarab ketyabt, column qilish kerak
-//   ];
- 
-  const tocatch = localStorage.getItem("produc");
-  const to = JSON.parse(tocatch);
-//   console.log(to);
-
+  const card = JSON.parse(localStorage.getItem("card") || "[]");
+  console.log(card.length);
   return (
     <div className="basket">
       <div className="basket-text">
@@ -59,56 +14,6 @@ export function Basket() {
       </div>
 
       <div className="basket-all">
-        {/* <div className="basket-home">
-          {basketData.map((parse, index) => {
-            return (
-              <div className="basket-json">
-                <div className="basket-hr">
-                  <hr />
-                </div>
-                <div className="basket-data" key={index}>
-                  <img src={parse.image} alt="" />
-                  <div className="basket-texts-2">
-                    <p>{parse.text}</p>
-                    <span>{parse.artikul}</span>
-                  </div>
-                  <p className="basket-price">{parse.price}</p>
-                  <svg
-                    className="basket-close"
-                    width="26"
-                    height="26"
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M19.1004 19.0869L6.85303 6.83957"
-                      stroke="#A4A4A4"
-                      stroke-width="2.04122"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6.85303 19.0869L19.1004 6.83957"
-                      stroke="#A4A4A4"
-                      stroke-width="2.04122"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            );
-          })}
-
-      
-        </div> */}
-
-        <div className="catto">
-          <p>{to.name}</p>
-          <h1>{to.price}</h1>
-          <h1>{to.season}</h1>
-        </div>
         <div className="basket-order">
           <img src={Logo} alt="" />
           <div className="basket-order-texts">

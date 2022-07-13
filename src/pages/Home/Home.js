@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 import React, { useEffect } from "react";
 import "./Home.css";
+import { useDispatch } from "react-redux";
+import { acUpdateCard } from "../../Redux/UpdateCard";
 import position_1 from "../../asest/home/position/Group 48.png";
 import position_2 from "../../asest/home/position/p_2.png";
 import position_k from "../../asest/home/position/p_krasofka.png";
@@ -19,19 +21,17 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
 import SliderDouble from "../../components/sliderDouble/SliderDouble";
+import axios from "axios";
 export function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const dispatch = useDispatch();
+
   const products = useSelector((state) => state.reProducts);
   const navigate = useNavigate();
   // console.log(products[1]);
-
-  // savatga
-  function addCart() {
-    localStorage.setItem("produc", JSON.stringify(products[0]));
-  }
 
   return (
     <div className="home">
@@ -135,7 +135,29 @@ export function Home() {
                   >
                     Sotib olish
                   </button>
-                  <button onClick={addCart()}>Savatga</button>
+                  <button
+                   onClick={() => {
+                      navigate(`/view/product?id=${item.id}`);
+                    }}
+                    // onClick={() => {
+                    //   axios("https://api.sanone.uz/add_to_card", {
+                    //     method: "POST",
+                    //     headers: {
+                    //       "Content-Type": "application/json",
+                    //     },
+                    //     data: JSON.stringify({ userId: 11, ...item }),
+                    //   })
+                    //     .then((res) => {
+                    //       console.log(res.data);
+                    //       dispatch(acUpdateCard());
+                    //     })
+                    //     .catch((err) => {
+                    //       console.log(err);
+                    //     });
+                    // }}
+                  >
+                    Savatga
+                  </button>
                 </div>
               </div>
             ))}
