@@ -35,6 +35,23 @@ export default function App() {
         }}
         modules={[Grid, Pagination]}
         className="mySwiper"
+        breakpoints={{
+          0:{
+            slidesPerView:1
+          },
+          420:{
+            slidesPerView:1
+          },
+          900:{
+            slidesPerView:2
+          },
+          1200:{
+            slidesPerView:3
+          },
+          1920:{
+            slidesPerView:4
+          }
+        }}
       >
         {newProducts.map((item) => (
           <SwiperSlide>

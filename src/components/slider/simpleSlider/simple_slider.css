@@ -1,6 +1,7 @@
 .card_slider{
   padding: 17px;
-  height: auto;
+  height: 480px; 
+  display: flex !important;
   width: 435px !important;
 }
 .best_seller{
