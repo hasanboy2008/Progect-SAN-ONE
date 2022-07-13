@@ -41,7 +41,7 @@ export function Detail() {
     <div className="Detail">
       <div className="Detail-Card">
         <div className="container">
-          <div className="imgContainer">
+          <div className="imgContainer">  
             {Images
               ? Images.map((img, index) => (
                   <figure onClick={() => setSelectedImg(index)}>
