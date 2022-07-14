@@ -18,11 +18,17 @@ export function Navbar() {
   }, [user]);
 
   // navbar fixed qilingan joyi
-  
+
   // navbar open func
   const [navbar, setNavbar] = useState(false);
   const navOpen = () => {
     setNavbar(!navbar)
+  }
+  // input search tozala
+  let [input, setInput] = useState({ input1: "", input2: "" })
+  console.log(input);
+  onchange = (e) => {
+    setInput({ ...input, [e.target.name]: e.target.value })
   }
   return (
     <div className="navbar">
@@ -54,7 +60,13 @@ export function Navbar() {
         </div>
         <div className="basket_nav">
           <div className="search_nav">
-            <input type="text" name="" id="" />
+            <div className="input_Div">
+              <input type="text" id="" name="input1" onChange={onchange} value={input.input1} />
+              <span className={input.input1.length > 0 ? "tozala_span active_span" : "tozala_span"}
+                onClick={() => setInput({ ...input, input1: "" })}
+              >
+                X</span>
+            </div>
             <button>
               <svg
                 width="20"
@@ -161,7 +173,13 @@ export function Navbar() {
           BIZ HAQIMIZDA
         </button>
         <div className="search_nav_menu">
-          <input type="text" name="" id="" />
+          <div className="input_Div">
+            <input type="text" id="" name="input2" onChange={onchange} value={input.input2} />
+            <span className={input.input2.length > 0 ? "tozala_span active_span" : "tozala_span"}
+              onClick={() => setInput({ ...input, input2: "" })}
+            >
+              X</span>
+          </div>
           <button>
             <svg
               width="20"
@@ -179,7 +197,7 @@ export function Navbar() {
             </svg>
           </button>
         </div>
-        <button onClick={ () => setNavbar(!navbar)}>
+        <button onClick={() => setNavbar(!navbar)}>
           <svg
             width="24"
             height="24"
