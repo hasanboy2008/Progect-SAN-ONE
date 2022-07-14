@@ -5,7 +5,7 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import "./main.css"    
 import { Singnin } from "../../pages/Register/Singnin";
 import { Signup } from "../../pages/Register/Singnup";
-import { Futter } from "../Futter/Futer";
+import { Futter } from "../Futter/Futter";
 import { Confirm } from "../../pages/Confirm/Confirm";
 import { Detail } from "../../pages/Detail/Detail";
 import { Basket } from "../../pages/Basket/Basket";
@@ -40,7 +40,7 @@ export function Main(){
           <Route path="/all" element={<All />} />
         </Routes>
         <Config />
-        {/* <Futter /> */}
+        <Futter />
       </div>
     );
 }

@@ -32,8 +32,6 @@
   color: #D3D3D3;
   resize: none;
 
-
-
 }
 
 .comment-form-button {
@@ -161,4 +159,246 @@
 
 .replies {
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 1330px) {
+  .comments {
+    width: 1100px;
+
+  }
+  .comment-text {
+    width: 900px;
+    height: 87px;
+    left: 447px;
+    top: 1268px;
+    background: #ECECEC;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1230px) {
+  .comments {
+    width: 1000px;
+
+  }
+  .comment-text {
+    width: 800px;
+    height: 87px;
+    left: 447px;
+    top: 1268px;
+    background: #ECECEC;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1130px) {
+  .comments {
+    width: 900px;
+
+  }
+  .comment-text {
+    width: 700px;
+    height: 87px;
+    left: 447px;
+    top: 1268px;
+    background: #ECECEC;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .comments {
+    width: 800px;
+
+  }
+  .comment-text {
+    width: 600px;
+    height: 87px;
+    left: 447px;
+    top: 1268px;
+    background: #ECECEC;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .comments {
+    width: 700px;
+
+  }
+  .comment-text {
+    width: 500px;
+    height: auto;
+    left: 447px;
+    top: 1268px;
+    background: #ECECEC;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .comments {
+    width: 600px;
+
+  }
+  .comment-text {
+    width: 400px;
+    height: auto;
+    left: 447px;
+    top: 1268px;
+    background: #ECECEC;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .comments {
+    width: 500px;
+
+  }
+  .comment-text {
+    width: 300px;
+    height: auto;
+    left: 447px;
+    top: 1268px;
+    background: #ECECEC;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+
+}
+@media only screen and (max-width: 630px) {
+  .comments {
+    width: 400px;
+
+  }
+  .comment-text {
+    width: 200px;
+    height: auto;
+    left: 447px;
+    top: 1268px;
+    background: #ECECEC;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .comments {
+    width: 300px;
+
+  }
+  .comment-text {
+    width: 100px;
+    height: auto;
+    left: 447px;
+    top: 1268px;
+    background: #ECECEC;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .comments {
+    width: 200px;
+
+  }
 }

@@ -1,144 +1,273 @@
-.futter{
+.footer
+{
+    padding: 4% 8%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.8rem;
+    background: linear-gradient(201.36deg, #A18C80 -58.09%, #4C3B31 121.52%);
+}
+.footer .footer_sanone
+{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+}
+.footer .footer_sanone .img
+{
     width: 100%;
     height: auto;
-    /* background-color: rebeccapurple; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 37px 151px ;
-    background: linear-gradient(201.36deg, #A18C80 -58.09%, #4C3B31 121.52%);
-    /* display: none; */
+    overflow: hidden;
 }
-
-.futer_sanone{
-    display: flex;
-    flex-direction: column;
-    align-items:inherit;
-    
+.footer .footer_sanone .img img
+{
+    width: 80%;
+    object-fit: cover;
 }
-.futer_sanone > p{
+.footer .footer_sanone p
+{
+    margin-top: 5%;
     font-weight: 400;
-font-size: 26px;
-line-height: 32px;
-/* identical to box height */
-
-
-/* 04 */
-
-color: #D2D2D2;
-padding-top: 22px;
+    font-size: 26px;
+    line-height: 32px;
+    color: #D2D2D2;
 }
-
-
-
-
-/* futter_i_f_t */
-
-
-.futter_i_f_t{
+.footer .footer_follow
+{
+    padding-top: 2%;
+}
+.footer .footer_follow a svg
+{
+    width: 33px;
+    height: 33px;
+    margin: 0 20px;
+}
+.footer .footer_about
+{
     display: flex;
-    align-items: center;
-    justify-content:space-between;
-}
-.futter_i_f_t > a{
-    margin:  0 12px;
-}
-
-
-
-/* futter_about */
-
-.futter_about{
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 12px;
 }
-.futter_about > button{
-    border: none;
+.footer .footer_about > button
+{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #D2D2D2;
     background: none;
-    margin: 12px 0;
-    font-weight: 400;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-
-/* 04 */
-
-color: #D2D2D2;
-text-decoration: none;
 }
-
-
-/* futter_info */
-
-
-.futter_info{
+.footer .footer_info
+{
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
+}
+
+.footer .footer_info a
+{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #D2D2D2;
+}
+.footer .footer_click
+{
+    width: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer .footer_click > button
+{
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .footer_click > button img
+{
+    width: 70%;
+    object-fit: cover;
+}
+
+/* media queries */
+
+@media (max-width: 1400px){
+    .footer .footer_sanone
+    {
+        width: 200px;
+    }
+    .footer .footer_sanone p
+    {
+        margin-top: 2%;
+        font-size: 18px;
+    }
+    .footer .footer_follow a svg
+    {
+        width: 30px;
+        height: 30px;
+        margin: 0 15px;
+    }
+    .footer .footer_about
+    {
+        gap: 10px;
+    }
+    .footer .footer_about > button
+    {
+        font-size: 14px;
+    }
+    .footer .footer_info
+    {
+        gap: 10px;
+    }
+    .footer .footer_info a
+    {
+        font-size: 14px;
+    }
+    .footer .footer_click
+    {
+        width: 150px;
+        gap: 10px;
+    }
+    .footer .footer_click > button
+    {
+        width: 70px;
+        height: 40px;
+        border-radius: 6px;
+    }
+}
+@media (max-width: 1100px){
+    .footer .footer_sanone
+    {
+        width: 140px;
+    }
+    .footer .footer_sanone p
+    {
+        margin-top: 0;
+        font-size: 14px;
+    }
+    .footer .footer_follow a svg
+    {
+        width: 20px;
+        height: 20px;
+        margin: 0 8px;
+    }
+    .footer .footer_about
+    {
+        gap: 8px;
+    }
+    .footer .footer_about > button
+    {
+        font-size: 12px;
+    }
+    .footer .footer_info
+    {
+        gap: 8px;
+    }
+    .footer .footer_info a
+    {
+        font-size: 12px;
+    }
+    .footer .footer_click
+    {
+        width: 130px;
+        gap: 10px;
+    }
+    .footer .footer_click > button
+    {
+        width: 60px;
+        height: 35px;
+        border-radius: 6px;
+    }
+}
+@media (max-width: 900px){
+    .footer .footer_sanone
+    {
+        width: 100px;
+    }
+    .footer .footer_sanone p
+    {
+        font-size: 10px;
+    }
+    .footer .footer_follow a svg
+    {
+        width: 18px;
+        height: 18px;
+        margin: 0 6px;
+    }
+    .footer .footer_about
+    {
+        gap: 6px;
+    }
+    .footer .footer_about > button
+    {
+        font-size: 10px;
+    }
+    .footer .footer_info
+    {
+        gap: 6px;
+    }
+    .footer .footer_info a
+    {
+        font-size: 10px;
+    }
+    .footer .footer_click
+    {
+        width: 108px;
+        gap: 8px;
+    }
+    .footer .footer_click > button
+    {
+        width: 50px;
+        height: 30px;
+        border-radius: 6px;
+    }
+}
+@media (max-width: 630px){
+    .footer
+    {
+        gap: 0.1rem;
+    }
+   .footer .footer_click
+   {
+    width: 75%;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    flex-direction: column;
-
+   }
 }
-.futter_info > a{
-text-decoration: none;
-font-weight: 400;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-
-/* 04 */
-
-color: #D2D2D2;
-margin: 12px 0;
+@media (max-width: 500px){
+    .footer
+    {
+        gap: 0.2rem;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer .footer_sanone,
+    .footer .footer_sanone .img,
+    .footer .footer_about,
+    .footer .footer_info
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .footer_click
+    {
+        width: 60%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .footer .footer_click > button
+    {
+        width: 40px;
+        height: 25px;
+    }
 }
-
-
-.futter_click{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.futer_c_top{
-    display: flex;
-    align-items: center;
-}
-.futer_c_top > button{
-    width: 99.01px;
-height: 54.66px;
-
-
-background: #FFFFFF;
-border-radius: 8px;
-border: none;
- margin: 11px;
- display: flex;
-align-items: center;
-justify-content: center;
-}
-
-
-.futer_c_bootom{
-    display: flex;
-    align-items: center;
-
-   
-}
-
-.futer_c_bootom > button{
-    width: 99.01px;
-height: 54.66px;
-
-
-background: #FFFFFF;
-border-radius: 8px;
-border: none;
-margin:  11px;
-display: flex;
-align-items: center;
-justify-content: center;
-} 

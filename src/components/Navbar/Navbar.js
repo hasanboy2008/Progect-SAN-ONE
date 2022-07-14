@@ -9,7 +9,6 @@ export function Navbar() {
   const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
 
-
   // console.log(user);
   useEffect(() => {
     if (user.id) {
@@ -18,25 +17,21 @@ export function Navbar() {
     }
   }, [user]);
 
-
   // navbar fixed qilingan joyi
 
-  function open(){
+  function open() {
     let nav_menu = document.querySelector(".nav_menu");
 
-    document.addEventListener('click',function(){
-      nav_menu.style.transform= 'translateY(0px)';
-    })
-    
-
+    document.addEventListener("click", function () {
+      nav_menu.style.transform = "translateY(0px)";
+    });
   }
-  function exit(){
+  function exit() {
     let nav_menu = document.querySelector(".nav_menu");
 
-     document.addEventListener("click", function () {
-       nav_menu.style.transform = "translateY(-500px)";
-     });
-
+    document.addEventListener("click", function () {
+      nav_menu.style.transform = "translateY(-500px)";
+    });
   }
 
   return (
@@ -151,16 +146,15 @@ export function Navbar() {
         </div>
         <button id="menu" onClick={open}>
           <svg
-            width="24"
-            height="14"
-            viewBox="0 0 24 14"
-            fill="wheat"
+            width="27"
+            height="19"
+            viewBox="0 0 27 19"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M0.571411 0H23.4285V2.28571H0.571411V0ZM6.2857 5.71429H23.4285V8H6.2857V5.71429ZM13.4286 11.4286H23.4285V13.7143H13.4286V11.4286Z"
-              fill="wheat"
-               />
+            <rect y="8" width="27" height="3" fill="#ffffff" />
+            <rect y="16" width="27" height="3" fill="#ffffff" />
+            <rect width="27" height="3" fill="#ffffff" />
           </svg>
         </button>
       </nav>
@@ -183,7 +177,20 @@ export function Navbar() {
           BIZ HAQIMIZDA
         </button>
         <div className="search_nav_menu">
+
+
+
           <input type="text" name="" id="" />
+
+
+
+   
+
+
+
+
+
+
           <button>
             <svg
               width="20"
@@ -201,7 +208,22 @@ export function Navbar() {
             </svg>
           </button>
         </div>
-        <button onClick={exit}>xx</button>
+        <button onClick={exit}>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M18.7803 15.2803C19.0732 14.9874 19.0732 14.5126 18.7803 14.2197L12.5303 7.96967C12.2374 7.67678 11.7626 7.67678 11.4697 7.96967L5.21967 14.2197C4.92678 14.5126 4.92678 14.9874 5.21967 15.2803C5.51256 15.5732 5.98744 15.5732 6.28033 15.2803L12 9.56066L17.7197 15.2803C18.0126 15.5732 18.4874 15.5732 18.7803 15.2803Z"
+              fill="#ffffff"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );
