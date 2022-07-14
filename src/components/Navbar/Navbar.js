@@ -24,12 +24,6 @@ export function Navbar() {
   const navOpen = () => {
     setNavbar(!navbar)
   }
-  // input search tozala
-  let [input, setInput] = useState({ input1: "", input2: "" })
-  console.log(input);
-  onchange = (e) => {
-    setInput({ ...input, [e.target.name]: e.target.value })
-  }
   return (
     <div className="navbar">
       <nav>
