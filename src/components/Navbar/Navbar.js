@@ -33,7 +33,7 @@ export function Navbar() {
               navigate("/");
             }}
           >
-            <img src={logo_nav} alt="" onClick={() => setNavbar(false)} />
+            <img src={logo_nav} alt="" onClick={() => setNavbar(true)} />
           </button>
         </div>
         <div className="catalog_pages_nav">
@@ -81,7 +81,7 @@ export function Navbar() {
               }}
             >
               <svg
-                width="29"
+                width="31"
                 height="29"
                 viewBox="0 0 31 29"
                 fill="none"
