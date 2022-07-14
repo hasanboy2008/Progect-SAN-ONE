@@ -5,9 +5,9 @@ import "./slickCarousel/slick/slick-theme.css";
 import "./slickCarousel/slick/slick.css";
 
 // import icons
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+// import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { useSelector } from "react-redux";
