@@ -45,15 +45,10 @@ export function Navbar() {
 
   // navbar open func
   const [navbar, setNavbar] = useState(true);
-  const navOpen = () => {
-    setNavbar(!navbar);
-  };
-  // input search tozala
-  let [input, setInput] = useState({ input1: "", input2: "" });
-  console.log(input);
-  onchange = (e) => {
-    setInput({ ...input, [e.target.name]: e.target.value });
-  };
+  const navOpen = () => { 
+    setNavbar(!navbar)
+  }
+
   return (
     <div className="navbar ">
       <nav style={home ? { background: "#BD6F18" } : {}}>
@@ -323,5 +318,5 @@ export function Navbar() {
         </button>
       </div>
     </div>
-  );
+  )
 }
