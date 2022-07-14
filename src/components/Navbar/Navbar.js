@@ -20,7 +20,7 @@ export function Navbar() {
   // navbar fixed qilingan joyi
 
   // navbar open func
-  const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState(true);
   const navOpen = () => {
     setNavbar(!navbar)
   }
@@ -39,7 +39,7 @@ export function Navbar() {
               navigate("/");
             }}
           >
-            <img src={logo_nav} alt="" onClick={() => setNavbar(true)} />
+            <img src={logo_nav} alt="" onClick={() => setNavbar(false)} />
           </button>
         </div>
         <div className="catalog_pages_nav">
@@ -61,11 +61,7 @@ export function Navbar() {
         <div className="basket_nav">
           <div className="search_nav">
             <div className="input_Div">
-              <input type="text" id="" name="input1" onChange={onchange} value={input.input1} />
-              <span className={input.input1.length > 0 ? "tozala_span active_span" : "tozala_span"}
-                onClick={() => setInput({ ...input, input1: "" })}
-              >
-                X</span>
+              <input type="text" id="" />
             </div>
             <button>
               <svg
@@ -174,11 +170,7 @@ export function Navbar() {
         </button>
         <div className="search_nav_menu">
           <div className="input_Div">
-            <input type="text" id="" name="input2" onChange={onchange} value={input.input2} />
-            <span className={input.input2.length > 0 ? "tozala_span active_span" : "tozala_span"}
-              onClick={() => setInput({ ...input, input2: "" })}
-            >
-              X</span>
+            <input type="text" id=""  />
           </div>
           <button>
             <svg
