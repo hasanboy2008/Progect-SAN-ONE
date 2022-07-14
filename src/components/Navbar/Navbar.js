@@ -81,7 +81,7 @@ export function Navbar() {
               }}
             >
               <svg
-                width="31"
+                width="29"
                 height="29"
                 viewBox="0 0 31 29"
                 fill="none"
