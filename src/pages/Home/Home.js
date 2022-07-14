@@ -125,8 +125,7 @@ export function Home() {
         <div className="section_f_text">
           <span>Siz bilan bog'lanishdan mamnunmiz!</span>
           <span>
-            Manzilimiz:<br></br> Toshkent Shahar, Birnarsa tumani, Birnarsa
-            ko'cha 12-uy.
+            Manzilimiz:<br></br> Toshkent Shahar, Yakkasaroy tumani, Farobiy ko'cha 38-uy
           </span>
 
           <span>Murojaat uchun telefon:</span>
@@ -192,7 +191,10 @@ export function Home() {
               </svg>
             </a>
           </div>
-          <button>RO‘YXATDAN O‘TISH</button>
+          <button onClick={() => {
+            navigate('/signup')
+          }}>RO‘YXATDAN O‘TISH</button>
+          <div className="section-6-overlay"></div>
         </div>
       </div>
     </div>

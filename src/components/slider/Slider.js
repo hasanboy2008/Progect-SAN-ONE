@@ -9,6 +9,10 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 import { useSelector } from "react-redux";
 
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { useSelector } from "react-redux";
+
+
 function SampleNextArrow({ onClick }) {
   return (
     <div className="btn_Left btn_arrow" onClick={onClick}>
@@ -38,6 +42,14 @@ const SliderScale = () => {
  
     autoplaySpeed: 2000,
     beforeChange: (current, next) => setSliderIndex(next),
+    responsive:[
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ]
   };
   const images = useSelector((state) => state.reProducts);
 
@@ -56,6 +68,16 @@ const SliderScale = () => {
             <img src={item.images[0]} alt="" />
           </div>
         ))}
+        {
+          images.map((item, index) => (
+            <figure key={index}
+              className={index === sliderIndex ? 
+              "rasm_slider slide_active" : "rasm_slider"} 
+          >
+              <img src={item.images[0]} alt="" />
+            </figure>
+          ))
+        }
       </Slider>
     </div>
   );

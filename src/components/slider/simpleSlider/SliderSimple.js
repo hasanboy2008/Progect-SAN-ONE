@@ -21,7 +21,7 @@ function SamplePrevArrow({ onClick }) {
 }
 
 export default function SimpleSlider() {
-  const settings = {
+    let settings = {
     dots: true,
     infinite: true,
     slidesToShow: 4,
@@ -31,6 +31,26 @@ export default function SimpleSlider() {
     autoplaySpeed: 2000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
   const products = useSelector((state) => state.reProducts);
   const navigate = useNavigate();
