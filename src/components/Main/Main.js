@@ -40,7 +40,7 @@ export function Main(){
           <Route path="/all" element={<All />} />
         </Routes>
         <Config />
-        {/* <Futter /> */}
+        <Futter />
       </div>
     );
 }

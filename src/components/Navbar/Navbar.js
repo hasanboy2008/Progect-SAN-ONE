@@ -177,7 +177,20 @@ export function Navbar() {
           BIZ HAQIMIZDA
         </button>
         <div className="search_nav_menu">
+
+
+
           <input type="text" name="" id="" />
+
+
+
+   
+
+
+
+
+
+
           <button>
             <svg
               width="20"
