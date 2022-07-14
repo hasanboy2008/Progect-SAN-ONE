@@ -11,11 +11,11 @@
 }
 .footer .footer_sanone
 {
-    width: 240px;
+    width: 250px;
     display: flex;
     flex-direction: column;
 }
-.footer .footer_sanone .img
+.footer .footer_sanone .img 
 {
     width: 100%;
     height: auto;

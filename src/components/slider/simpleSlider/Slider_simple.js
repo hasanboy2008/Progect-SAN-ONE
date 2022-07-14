@@ -66,7 +66,7 @@ export default function Simple_slider() {
                 >
                   Sotib olish
                 </button>
-                <button>Savatga</button>
+             
               </div>
             </div>
           ))}
