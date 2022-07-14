@@ -18,22 +18,12 @@ export function Navbar() {
   }, [user]);
 
   // navbar fixed qilingan joyi
-
-  function open() {
-    let nav_menu = document.querySelector(".nav_menu");
-
-    document.addEventListener("click", function () {
-      nav_menu.style.transform = "translateY(0px)";
-    });
+  
+  // navbar open func
+  const [navbar, setNavbar] = useState(false);
+  const navOpen = () => {
+    setNavbar(!navbar)
   }
-  function exit() {
-    let nav_menu = document.querySelector(".nav_menu");
-
-    document.addEventListener("click", function () {
-      nav_menu.style.transform = "translateY(-500px)";
-    });
-  }
-
   return (
     <div className="navbar">
       <nav>
@@ -43,7 +33,7 @@ export function Navbar() {
               navigate("/");
             }}
           >
-            <img src={logo_nav} alt="" />
+            <img src={logo_nav} alt="" onClick={() => setNavbar(true)} />
           </button>
         </div>
         <div className="catalog_pages_nav">
@@ -83,11 +73,6 @@ export function Navbar() {
             </button>
           </div>
           <div id="basket_nav">
-            {/* <select>
-              <option value="">UZ</option>
-              <option value="">RU</option>
-              <option value="">EN</option>
-            </select> */}
             <button
               onClick={() => {
                 navigate("/basket");
@@ -144,7 +129,7 @@ export function Navbar() {
             </button>
           </div>
         </div>
-        <button id="menu" onClick={open}>
+        <button id="menu" onClick={navOpen}>
           <svg
             width="27"
             height="19"
@@ -158,12 +143,11 @@ export function Navbar() {
           </svg>
         </button>
       </nav>
-
-      <div className="nav_menu">
+      <div className={navbar ? "nav_menu" : "nav_menu active_navs"}>
         <button
           onClick={() => {
             navigate("/katalog");
-            exit();
+            navOpen()
           }}
         >
           KATALOG
@@ -171,26 +155,13 @@ export function Navbar() {
         <button
           onClick={() => {
             navigate("/about");
-            exit();
+            navOpen()
           }}
         >
           BIZ HAQIMIZDA
         </button>
         <div className="search_nav_menu">
-
-
-
           <input type="text" name="" id="" />
-
-
-
-   
-
-
-
-
-
-
           <button>
             <svg
               width="20"
@@ -208,7 +179,7 @@ export function Navbar() {
             </svg>
           </button>
         </div>
-        <button onClick={exit}>
+        <button onClick={ () => setNavbar(!navbar)}>
           <svg
             width="24"
             height="24"
