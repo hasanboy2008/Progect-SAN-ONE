@@ -6,10 +6,7 @@ import "./slickCarousel/slick/slick.css";
 
 // import icons
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
-
 import { useSelector } from "react-redux";
-
-
 function SampleNextArrow({ onClick }) {
   return (
     <div
@@ -38,12 +35,20 @@ const SliderScale = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     speed: 1000,
     autoplaySpeed: 2000,
-    beforeChange: (current, next) => setSliderIndex(next)
+    beforeChange: (current, next) => setSliderIndex(next),
+    responsive:[
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ]
   };
   const images = useSelector((state) => state.reProducts);
   return (
@@ -51,12 +56,12 @@ const SliderScale = () => {
       <Slider {...settings}>
         {
           images.map((item, index) => (
-            <div key={index}
+            <figure key={index}
               className={index === sliderIndex ? 
               "rasm_slider slide_active" : "rasm_slider"} 
           >
               <img src={item.images[0]} alt="" />
-            </div>
+            </figure>
           ))
         }
       </Slider>
