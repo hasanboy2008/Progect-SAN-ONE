@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo_nav from "../../asest/navbar/Vector (2).png";
 // import SearchIcon from "@mui/icons-material/Search";
 import "./navbar.css";
@@ -10,6 +10,12 @@ export function Navbar() {
   const location = useLocation();
   const path = location.pathname;
   const navigate = useNavigate();
+
+  // navbar open func
+  const [navbar, setNavbar] = useState(true);
+  const navOpen = () => {
+    setNavbar(!navbar);
+  };
   const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
   const home = path === "/";
@@ -41,14 +47,6 @@ export function Navbar() {
     },
   };
 
-  // navbar fixed qilingan joyi
-
-  // navbar open func
-  const [navbar, setNavbar] = useState(true);
-  const navOpen = () => { 
-    setNavbar(!navbar)
-  }
-
   return (
     <div className="navbar ">
       <nav style={home ? { background: "#BD6F18" } : {}}>
@@ -58,6 +56,14 @@ export function Navbar() {
               navigate("/");
             }}
           >
+<<<<<<< HEAD
+=======
+            <img
+              src={home ? logo_nav : logo2}
+              alt=""
+              onClick={() => setNavbar(false)}
+            />
+>>>>>>> af52409650a8489dbd2f497f1c4ae3b1471f20ac
           </button>
         </div>
         <div className="catalog_pages_nav">
@@ -272,6 +278,7 @@ export function Navbar() {
           style={home ? styleForHome.search_nav : styleForOther.search_nav}
         >
           <div className="input_Div">
+            <input type="text" id="" />
             <input
               type="text"
               id=""
@@ -313,4 +320,9 @@ export function Navbar() {
         </button>
       </div>
     </div>
+<<<<<<< HEAD
   )}
+=======
+  );
+}
+>>>>>>> af52409650a8489dbd2f497f1c4ae3b1471f20ac

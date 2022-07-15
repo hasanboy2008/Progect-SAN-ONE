@@ -4,33 +4,33 @@ import "./Detail.css";
 import "./Comments/Comment.css";
 import Comments from "./Comments/Comments";
 import { DetailInfo } from "./Info/Info";
-
-// import { Images } from "./Images";
 import axios from "axios";
-import { Images } from "./Images";
+import NumberFormat from "react-number-format";
 
 export function Detail() {
+  const [selectedImg, setSelectedImg] = useState(0);
+  const [showtab, setShowtab] = useState(1);
+  const location = useLocation();
+  const product_id = location.search.split("=")[1];
+  const [product, setProduct] = useState({});
+  const [images, setImages] = useState([]);
+  const [indexImg, setIndexImg] = useState(0);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [selectedImg, setSelectedImg] = useState(0);
-
-  const [showtab, setShowtab] = useState(1);
-
   const handletab = (e) => {
     setShowtab(e);
   };
-  const location = useLocation();
-  const product_id = location.search.split("=")[1];
 
-  const [product, setProduct] = useState({});
-  console.log(product);
+  console.log(images);
 
   useEffect(() => {
     axios(` https://api.sanone.uz/view/product/${product_id}`)
       .then((res) => {
         setProduct(res.data[0]);
+        setImages(res.data[0].images ? res.data[0].images : []);
       })
       .catch((err) => {
         console.log(err);
@@ -41,81 +41,81 @@ export function Detail() {
     <div className="Detail">
       <div className="Detail-Card">
         <div className="container">
-          <div className="imgContainer">  
-            {Images
-              ? Images.map((img, index) => (
-                  <figure onClick={() => setSelectedImg(index)}>
-                    <img src={img} key={index} alt="shoe" />
-                    <span
-                      style={
-                        selectedImg === index ? { background: "none" } : {}
-                      }
-                    ></span>
-                  </figure>
-                ))
-              : ""}
+          <div className="imgContainer">
+            {images.map((img, index) => (
+              <figure
+                onClick={() => {
+                  setSelectedImg(index);
+                  setIndexImg(index);
+                }}
+                key={index}
+              >
+                <img src={img} alt="shoe" />
+                <span
+                  style={selectedImg === index ? { background: "none" } : {}}
+                ></span>
+              </figure>
+            ))}
           </div>
-          <img
-            src={Images ? Images[selectedImg] : ""}
-            alt="Selected"
-            className="selected"
-          />
+          <img src={images[indexImg]} alt="" className="selected" />
         </div>
         <div className="card-about">
           <div className="a-name">
-            <p>Maxsulot nomi</p>
+            <p>{product.name}</p>
           </div>
 
-          <div className="colors">
-            <p>Rangi</p>
-            <div className="color-groups ">
-              {product.colors
-                ? product.colors.map((color) => {
-                    return <span style={{ background: color }}></span>;
-                  })
-                : ""}
-            </div>
-          </div>
+          {/* <div className="colors">
+            <p>Chegirma</p>
+            <p>-{product.discount}%</p>
+          </div> */}
 
           <div className="price">
             <p className="price-name">Narxi</p>
-            <p className="price-coast">399 000</p>
-            <p className="old-coast">499 000</p>
+            <p className="price-coast">
+              <NumberFormat
+                value={product.price}
+                displayType={"text"}
+                thousandSeparator={true}
+                suffix={" so'm"}
+                renderText={(value) => (
+                  <>
+                    {product.discount === "0"
+                      ? value
+                      : (
+                          product.price -
+                          (product.price * product.discount) / 100
+                        ).toFixed()}
+                    {product.discount === "0" ? "" : " so'm"}
+                  </>
+                )}
+              />
+            </p>
+            <p className="old-coast">
+              {product.discount === "0" ? (
+                ""
+              ) : (
+                <NumberFormat
+                  value={product.price}
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  suffix={" so'm"}
+                />
+              )}
+            </p>
           </div>
 
           <div className="sizes">
             <p>O`lchamlar</p>
             <div className="size-group">
-              <div className="size">
-                <p>37</p>
-              </div>
-              <div className="size">
-                <p>38</p>
-              </div>
-              <div className="size active-size">
-                <p>39</p>
-              </div>
-              <div className="size active-size">
-                <p>40</p>
-              </div>
-              <div className="size active-size">
-                <p>41</p>
-              </div>
-              <div className="size active-size">
-                <p>42</p>
-              </div>
-              <div className="size active-size">
-                <p>43</p>
-              </div>
-              <div className="size active-size">
-                <p>44</p>
-              </div>
-              <div className="size active-size">
-                <p>45</p>
-              </div>
-              <div className="size">
-                <p>46</p>
-              </div>
+              {product.sizes
+                ? product.sizes.map((size) => {
+                    return (
+                      <div className="size">
+                        <p>{size}</p>
+                      </div>
+                    );
+                  })
+                : ""}
             </div>
           </div>
 
@@ -150,7 +150,7 @@ export function Detail() {
         </div>
 
         <div className={showtab === 1 ? "" : "hide"}>
-          <DetailInfo />
+          <DetailInfo product={product} />
         </div>
       </div>
     </div>

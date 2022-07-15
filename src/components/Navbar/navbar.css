@@ -4,7 +4,6 @@
   height: 100%;
   /* display: none; */
   position: relative;
-  
 }
 
 nav {
@@ -13,9 +12,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-background: white;
+  background: white;
 
-  padding: 40px 156px;
+  padding: 36px 156px;
   position: fixed;
   z-index: 10;
 }
@@ -34,16 +33,15 @@ background: white;
 }
 .catalog_pages_nav > button {
   margin: 0 45px;
-font-weight: 700;
-font-size: 21px;
-line-height: 26px;
-/* identical to box height */
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  /* identical to box height */
 
+  /* 01 */
 
-/* 01 */
-
-color: #A18B7F;
-background: none;
+  color: #a18b7f;
+  background: none;
 }
 
 /* -----------basket_nav------------------ */
@@ -66,7 +64,7 @@ background: none;
   margin-right: 65px;
   padding: 0 10px;
 }
-.search_nav  input {
+.search_nav input {
   padding: 10px;
   width: 95%;
   height: 100%;
@@ -77,16 +75,16 @@ background: none;
   color: white;
 }
 
-.search_nav .input_Div{
+.search_nav .input_Div {
   display: flex;
   width: 100%;
   align-items: center;
   position: relative;
   /* background-color: red; */
 }
-.search_nav .input_Div .tozala_span{
+.search_nav .input_Div .tozala_span {
   margin: 0;
-  margin-right: 3%; 
+  margin-right: 3%;
   font-size: 20px;
 }
 .search_nav > button {
@@ -119,7 +117,7 @@ background: none;
 .nav_menu {
   width: 100%;
   height: 330px;
-  background: #f0ae2b;
+  background: #fffffe;
   position: absolute;
   z-index: 5;
   right: 0;
@@ -128,7 +126,7 @@ background: none;
   align-items: center;
   transform: translateY(-500px);
   justify-content: space-between;
-  transition: 0.3s ;
+  transition: 0.3s;
   padding-top: 80px;
   position: fixed;
 }
@@ -149,13 +147,13 @@ background: none;
   /* border-radius: 8px; */
   padding: 5px;
 }
-.nav_menu .search_nav_menu .input_Div{
+.nav_menu .search_nav_menu .input_Div {
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.nav_menu .search_nav_menu  input {
+.nav_menu .search_nav_menu input {
   color: white;
   width: 100%;
   height: 100%;
@@ -165,14 +163,14 @@ background: none;
   font-size: 20px;
   padding-left: 5px;
 }
-.input_Div .tozala_span{
+.input_Div .tozala_span {
   transition: 0;
   opacity: 0;
   color: red;
   cursor: pointer;
   margin: 0 10px;
 }
-.input_Div .tozala_span.active_span{
+.input_Div .tozala_span.active_span {
   opacity: 1;
 }
 .search_nav_menu > button {
@@ -367,7 +365,7 @@ background: none;
     background: #f0ae2b;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
     /* backdrop-filter: blur(50px); */
-    padding: 20px 25px;
+    padding: 18px 25px;
     position: fixed;
     z-index: 10;
     /* background-color: red; */
@@ -406,7 +404,7 @@ background: none;
 }
 
 @media (max-width: 850px) {
-    /* #menu {
+  /* #menu {
     display: block;
     width: 50px;
     height: 40px;
@@ -428,9 +426,9 @@ background: none;
     background: none;
     border: none;
   }
-    .catalog_pages_nav > button{
-      font-size: 15px;
-    }
+  .catalog_pages_nav > button {
+    font-size: 15px;
+  }
 
   nav {
     width: 100%;
@@ -461,7 +459,7 @@ background: none;
 }
 
 @media (max-width: 768px) {
-  .nav_menu.active_navs{
+  .nav_menu.active_navs {
     transform: translateY(0);
   }
   #menu {
@@ -472,7 +470,6 @@ background: none;
     background: none;
   }
   nav {
-    
     width: 100%;
     height: auto;
     display: flex;
@@ -482,7 +479,7 @@ background: none;
     background: #f0ae2b;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
     /* backdrop-filter: blur(50px); */
-    padding: 20px 20px 20px 36%;
+    padding: 18px 20px 18px 36%;
     position: fixed;
     z-index: 10;
     /* background-color: red; */
@@ -512,9 +509,9 @@ background: none;
     align-items: center;
     justify-content: space-around;
   }
-  #basket_nav >button{
+  #basket_nav > button {
     border-radius: 5px;
-    margin: 9px 10px  ;
+    margin: 9px 10px;
   }
 }
 
@@ -554,9 +551,10 @@ background: none;
   }
 }
 
+
+
 @media (max-width: 497px) {
-
-    nav {
+  nav {
     width: 100%;
     height: auto;
     display: flex;
@@ -566,36 +564,15 @@ background: none;
     background: #f0ae2b;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
     /* backdrop-filter: blur(50px); */
-    padding: 20px 12px 2% 30%;
+    padding: 20px 12px 2% 34%;
     position: fixed;
     z-index: 50;
     /* background-color: red; */
   }
-}
-
-@media (max-width: 497px) { 
-    nav {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background: #f0ae2b;
-    box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
-    /* backdrop-filter: blur(50px); */
-    padding: 20px 12px 2% 26%;
-    position: fixed;
-    z-index: 50;
-    /* background-color: red; */
-  }
-  
-
 }
 
 @media (max-width: 412px) {
-
-    nav {
+  nav {
     width: 100%;
     height: auto;
     display: flex;
@@ -605,24 +582,21 @@ background: none;
     background: #f0ae2b;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
     /* backdrop-filter: blur(50px); */
-    padding: 20px 12px 2% 27%;
+    padding: 20px 12px 2% 36%;
     position: fixed;
     z-index: 50;
     /* background-color: red; */
   }
-  
-.logo_nav > button>img {
-  /* border: none;
+
+  .logo_nav > button > img {
+    /* border: none;
   background: none; */
-  width: 90%;
+    width: 90%;
+  }
 }
-}
-
-
 
 @media (max-width: 390px) {
-
-    nav {
+  nav {
     width: 100%;
     height: auto;
     display: flex;
@@ -632,17 +606,14 @@ background: none;
     background: #f0ae2b;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
     /* backdrop-filter: blur(50px); */
-    padding: 20px 12px 2% 22%;
+    padding: 20px 12px 2% 33%;
     position: fixed;
     z-index: 50;
     /* background-color: red; */
   }
-
-
 }
 @media (max-width: 380px) {
-
-    nav {
+  nav {
     width: 100%;
     height: auto;
     display: flex;
@@ -652,28 +623,23 @@ background: none;
     background: #f0ae2b;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
     /* backdrop-filter: blur(50px); */
-    padding: 20px 12px 2% 24%;
+    padding: 20px 12px 2% 34%;
     position: fixed;
     z-index: 50;
     /* background-color: red; */
   }
 
-.logo_nav > button>img {
-  /* border: none;
+  .logo_nav > button > img {
+    /* border: none;
   background: none; */
-  width: 80%;
+    width: 80%;
+  }
 }
-
-}
-
-
 
 @media (max-width: 360px) {
-
-.logo_nav > button>img {
-  /* border: none;
+  .logo_nav > button > img {
+    /* border: none;
   background: none; */
-  width: 80%;
+    width: 80%;
+  }
 }
-}
-

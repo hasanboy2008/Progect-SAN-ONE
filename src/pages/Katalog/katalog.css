@@ -21,8 +21,7 @@
 }
 .katalog-main
 {   
-    padding: 90px 12%;
-    padding-top: 10rem;
+    padding: 10% 12%;
     width: 100%;
     height: auto;
 
@@ -32,6 +31,7 @@
     justify-content: center; 
     position: absolute;
     top: 2%;
+    gap: 4rem;
 }
 .katalog-main .top p
 {
@@ -51,15 +51,13 @@
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 6rem;
 }
 .katalog-main .container .box-container
 {
-    margin-top: 65px;
-    
     display: flex;
     flex: 1 1 30rem;
     align-items: center;
@@ -88,13 +86,12 @@
     font-weight: 400;
     font-size: 2rem;
     text-align: center;
-    color: #7C7C7C;
+    color: #9F6233;
 }
 .katalog-main .container .box-container:hover p
 {
     color: #000;
     transform: scale(1.2);
-    border-bottom: 1px solid #000;
 }
 
 .katalog .bcgImage
@@ -139,50 +136,42 @@
 
 
 /* media queries */
+@media (max-width:1800px){
+    .katalog-main .container .box-container
+    {
+        flex: 1 1 28rem;
+    }
+}
 
 @media (max-width: 1700px) {
-    .katalog-main
-    {   
-        padding: 90px 8%;
+    .katalog-main .container
+    {
+        gap: 5rem;
     }
     .katalog-main .container .box-container
     {
-        margin-top: 60px;
-        flex: 1 1 29rem;
+        flex: 1 1 26rem;
     }    
 }
 @media (max-width: 1600px) {
-    .katalog-main
-    {   
-        padding: 90px 7%;
+    .katalog-main .top p
+    {
+        font-size: 3rem;
+    }
+    .katalog-main .top span
+    {
+        font-size: 1.5rem;
     }
     .katalog-main .container .box-container
     {
-        margin-top: 55px;
-        flex: 1 1 28rem;
+        flex: 1 1 24rem;
     }    
 }
 @media (max-width: 1500px) {
-    .katalog-main
-    {   
-        padding: 85px 6%;
-    }
-    .katalog-main .container .box-container
+    .katalog-main .container
     {
-        margin-top: 50px;
-        flex: 1 1 27rem;
-    }    
-}
-@media (max-width: 1400px) {
-    .katalog-main
-    {   
-        padding: 80px 5%;
+        gap: 4rem;
     }
-    .katalog-main .container .box-container
-    {
-        margin-top: 50px;
-        flex: 1 1 26rem;
-    }     
 }
 @media (max-width: 1300px) {
     .katalog .bcgImage
@@ -191,73 +180,54 @@
     }
     .katalog-main
     {   
-        padding: 70px 6%;
+        position: relative;
+        padding: 15% 6%;
+        background-image: url(../../asest/katalog/bcImage1.png);
+        background-position: center;
+        background-size: contain;
     }
 }
 @media (max-width: 1200px) {
-    .katalog-main
-    {   
-        padding: 60px 5%;
-    }
-    .katalog-main .container .box-container
-    {
-        margin-top: 45px;
-        flex: 1 1 24rem;
-    }
-    .katalog-main .container .box-container p
-    {
-        margin-top: 35px;
-        font-size: 1.8rem;
-    } 
-}
-@media (max-width: 980px) {
-    .katalog-main
-    {   
-        padding: 50px 5%;
-    }
-    .katalog-main .top p
-    {
-        font-size: 3rem;
-    }
-    .katalog-main .top span
-    {
-        font-size: 1.4rem;
-    }
     .katalog-main .container
     {
-        gap: 2.5rem;
+        gap: 4rem;
     }
     .katalog-main .container .box-container
     {
-        margin-top: 40px;
         flex: 1 1 20rem;
     }
     .katalog-main .container .box-container p
     {
-        margin-top: 30px;
-        font-size: 1.6rem;
-    }     
+        margin-top: 4%;
+        font-size: 1.8rem;
+    } 
 }
-@media (max-width: 765px) {
+@media (max-width: 1100px) {
     .katalog-main
     {   
-        padding: 40px 5%;
+        padding: 16% 6% 10% 6%;
+    }
+    .katalog-main .top p
+    {
+        font-size: 2.5rem;
+    }
+    .katalog-main .top span
+    {
+        font-size: 1.3rem;
     }
     .katalog-main .container .box-container
     {
-        margin-top: 35px;
         flex: 1 1 18rem;
     }
     .katalog-main .container .box-container p
     {
-        margin-top: 25px;
-        font-size: 1.4rem;
-    }    
+        font-size: 1.6rem;
+    }
 }
-@media (max-width: 695px) {
+@media (max-width: 930px) {
     .katalog-main
     {   
-        padding: 0 5%;
+        gap: 2rem;
     }
     .katalog-main .top p
     {
@@ -265,7 +235,29 @@
     }
     .katalog-main .top span
     {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    .katalog-main .container
+    {
+        gap: 3rem;
+    }
+    .katalog-main .container .box-container
+    {
+        flex: 1 1 16rem;
+    }
+    .katalog-main .container .box-container p
+    {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 640px) {
+    .katalog-main .top p
+    {
+        font-size: 2rem;
+    }
+    .katalog-main .top span
+    {
+        font-size: 0.8rem;
     }
     .katalog-main .container
     {
@@ -273,46 +265,45 @@
     }
     .katalog-main .container .box-container
     {
-        margin-top: 30px;
-        flex: 1 1 13rem;
+        flex: 1 1 14rem;
     }
     .katalog-main .container .box-container p
     {
-        margin-top: 20px;
-        font-size: 1.2rem;
-    }     
+        font-size: 1rem;
+    }
 }
-@media (max-width: 520px) {
+@media (max-width: 550px) {
     .katalog-main
     {   
-        padding: auto 5%;
+        gap: 1.6rem;
+        padding-top: 20%;
     }
     .katalog-main .top p
     {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
-    .katalog-main .top span
+    .katalog-main .container
     {
-        font-size: 1rem;
+        gap: 2rem;
     }
     .katalog-main .container .box-container
     {
-        margin-top: 18px;
         flex: 1 1 10rem;
     }
     .katalog-main .container .box-container p
     {
         font-size: 0.8rem;
-    }  
+    }
 }
 @media (max-width: 400px) {
     .katalog-main
     {   
-        padding: auto 5%;
+        gap: 1rem;
+        padding-top: 5rem;
     }
     .katalog-main .top p
     {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
     .katalog-main .top span
     {
@@ -320,15 +311,40 @@
     }
     .katalog-main .container
     {
-        gap: 1.5rem;
+        gap: 1.6rem;
     }
     .katalog-main .container .box-container
     {
-        margin-top: 15px;
         flex: 1 1 8rem;
     }
     .katalog-main .container .box-container p
     {
         font-size: 0.6rem;
-    }  
+    }
+}
+@media (max-width: 320px) {
+    .katalog-main
+    {   
+        gap: 0.8rem;
+    }
+    .katalog-main .top p
+    {
+        font-size: 0.8rem;
+    }
+    .katalog-main .top span
+    {
+        font-size: 0.5rem;
+    }
+    .katalog-main .container
+    {
+        gap: 1.2rem;
+    }
+    .katalog-main .container .box-container
+    {
+        flex: 1 1 6rem;
+    }
+    .katalog-main .container .box-container p
+    {
+        font-size: 0.5rem;
+    }
 }

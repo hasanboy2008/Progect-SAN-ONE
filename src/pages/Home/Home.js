@@ -2,13 +2,6 @@
 import React, { useEffect } from "react";
 import "./Home.css";
 // import { acUpdateCard } from "../../Redux/UpdateCard";
-import position_1 from "../../asest/home/position/Group 48.png";
-import position_2 from "../../asest/home/position/p_2.png";
-import position_k from "../../asest/home/position/p_krasofka.png";
-import position_4 from "../../asest/home/position/p_4.png";
-import position_5 from "../../asest/home/position/p_5.png";
-import position_6 from "../../asest/home/position/p_6.png";
-import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
 
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
@@ -122,7 +115,8 @@ export function Home() {
         <div className="section_f_text">
           <span>Siz bilan bog'lanishdan mamnunmiz!</span>
           <span>
-            Manzilimiz:<br></br> Toshkent Shahar, Yakkasaroy tumani, Farobiy ko'cha 38-uy
+            Manzilimiz:<br></br> Toshkent Shahar, Yakkasaroy tumani, Farobiy
+            ko'cha 38-uy
           </span>
 
           <span>Murojaat uchun telefon:</span>
@@ -188,9 +182,13 @@ export function Home() {
               </svg>
             </a>
           </div>
-          <button onClick={() => {
-            navigate('/signup')
-          }}>RO‘YXATDAN O‘TISH</button>
+          <button
+            onClick={() => {
+              navigate("/signup");
+            }}
+          >
+            RO‘YXATDAN O‘TISH
+          </button>
           <div className="section-6-overlay"></div>
         </div>
       </div>
