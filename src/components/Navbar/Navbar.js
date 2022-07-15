@@ -1,29 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo_nav from "../../asest/navbar/Vector (2).png";
 // import SearchIcon from "@mui/icons-material/Search";
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
-import { useSelector } from "react-redux";
-=======
 import { useLocation } from "react-router-dom";
 import logo2 from "../../asest/navbar/Vector.svg";
->>>>>>> 74b2481ca6373bb74963adaf8750bfc4561a144b
 
 export function Navbar() {
   const location = useLocation();
   const path = location.pathname;
   const navigate = useNavigate();
-<<<<<<< HEAD
-
-  const auth = useSelector((state) => state.reAuth);
 
   // navbar open func
   const [navbar, setNavbar] = useState(true);
   const navOpen = () => {
     setNavbar(!navbar);
   };
-=======
   const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
   const home = path === "/";
@@ -55,15 +47,6 @@ export function Navbar() {
     },
   };
 
-  // navbar fixed qilingan joyi
-
-  // navbar open func
-  const [navbar, setNavbar] = useState(true);
-  const navOpen = () => { 
-    setNavbar(!navbar)
-  }
-
->>>>>>> 74b2481ca6373bb74963adaf8750bfc4561a144b
   return (
     <div className="navbar ">
       <nav style={home ? { background: "#BD6F18" } : {}}>
@@ -292,15 +275,12 @@ export function Navbar() {
           style={home ? styleForHome.search_nav : styleForOther.search_nav}
         >
           <div className="input_Div">
-<<<<<<< HEAD
             <input type="text" id="" />
-=======
             <input
               type="text"
               id=""
               style={home ? { color: "#fff" } : { color: "#333" }}
             />
->>>>>>> 74b2481ca6373bb74963adaf8750bfc4561a144b
           </div>
           <button>
             <svg
@@ -337,4 +317,5 @@ export function Navbar() {
         </button>
       </div>
     </div>
-  );}
+  );
+}
