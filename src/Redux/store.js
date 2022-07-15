@@ -1,11 +1,13 @@
 import { createStore, combineReducers } from "redux";
 
 import { reProducts } from "./Produc";
-import { reUser } from "./User";
-import { reUpdateCard } from "./UpdateCard";
-import { reSearch } from "./Search";
 
-const reducer = combineReducers({ reProducts, reUser, reUpdateCard, reSearch });
+import { reLoading } from "./Loading";
+
+const reducer = combineReducers({
+  reProducts,
+  reLoading,
+});
 
 export const Store = createStore(
   reducer,

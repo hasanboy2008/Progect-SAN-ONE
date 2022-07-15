@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logo_nav from "../../asest/navbar/Vector (2).png";
 // import SearchIcon from "@mui/icons-material/Search";
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import logo2 from "../../asest/navbar/Vector.svg";
 import { acSearch } from "../../Redux/Search";
@@ -12,6 +13,10 @@ export function Navbar() {
   const location = useLocation();
   const path = location.pathname;
   const navigate = useNavigate();
+
+  // const auth = useSelector((state) => state.reAuth);
+
+
   const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
   const home = path === "/";
@@ -288,6 +293,7 @@ export function Navbar() {
           style={home ? styleForHome.search_nav : styleForOther.search_nav}
         >
           <div className="input_Div">
+            <input type="text" id="" />
             <input
               type="text"
               id=""
