@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo_nav from "../../asest/navbar/Vector (2).png";
 // import SearchIcon from "@mui/icons-material/Search";
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import logo2 from "../../asest/navbar/Vector.svg";
 import { acSearch } from "../../Redux/Search";
 import { useDispatch } from "react-redux/es/exports";
+import { useLocation } from "react-router-dom";
+import logo2 from "../../asest/navbar/Vector.svg";
 
 export function Navbar() {
   const location = useLocation();
@@ -17,6 +19,12 @@ export function Navbar() {
   // const auth = useSelector((state) => state.reAuth);
 
 
+
+  // navbar open func
+  const [navbar, setNavbar] = useState(true);
+  const navOpen = () => {
+    setNavbar(!navbar);
+  };
   const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
   const home = path === "/";
@@ -51,13 +59,8 @@ export function Navbar() {
     },
   };
 
-  // navbar fixed qilingan joyi
 
-  // navbar open func
-  const [navbar, setNavbar] = useState(true);
-  const navOpen = () => {
-    setNavbar(!navbar);
-  };
+
 
   return (
     <div className="navbar ">
@@ -68,11 +71,7 @@ export function Navbar() {
               navigate("/");
             }}
           >
-            <img
-              src={home ? logo_nav : logo2}
-              alt=""
-              onClick={() => setNavbar(false)}
-            />
+            <img src={logo2} alt="" />
           </button>
         </div>
         <div className="catalog_pages_nav">
@@ -335,5 +334,9 @@ export function Navbar() {
         </button>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  )}
+>>>>>>> 9cadcccab0169e211e11a5f4f403341c59ae2d2d
