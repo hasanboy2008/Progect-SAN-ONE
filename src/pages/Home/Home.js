@@ -106,9 +106,6 @@ export function Home() {
           <SimpleSlider />
         </div>
       </div>
-
-      <div className="sectio_5">{/* <Slider /> */}</div>
-
       <div className="section_6_slider">
         <div className="all_headerText">
           <p>Mahsulotlarimiz turlari</p>
