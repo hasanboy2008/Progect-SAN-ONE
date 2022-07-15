@@ -26,28 +26,35 @@ export default function SimpleSlider() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     speed: 1000,
     autoplaySpeed: 2000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1820,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1720,
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 1000,
+        breakpoint: 1250,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 1000,
+        breakpoint: 470,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],
@@ -80,7 +87,6 @@ export default function SimpleSlider() {
               >
                 Sotib olish
               </button>
-              <button>Savatga</button>
             </div>
           </div>
         ))}

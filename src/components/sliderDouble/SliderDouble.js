@@ -41,13 +41,13 @@ export default function App() {
           420:{
             slidesPerView:1
           },
-          900:{
+          470:{
             slidesPerView:2
           },
           1200:{
             slidesPerView:3
           },
-          1920:{
+          1720:{
             slidesPerView:4
           }
         }}
@@ -75,13 +75,6 @@ export default function App() {
                   }}
                 >
                   Sotib olish
-                </button>
-                <button
-                  onClick={() => {
-                    navigate(`/view/product?id=${item.id}`);
-                  }}
-                >
-                  Savatga
                 </button>
               </div>
             </div>

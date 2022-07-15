@@ -26,7 +26,7 @@ export function Home() {
 
   return (
     <div className="home">
-      <div className="home_section1">
+      {/* <div className="home_section1">
         <div className="home_text">
           <div className="text_semmer">
             <p>
@@ -75,7 +75,7 @@ export function Home() {
             <img src={position_7} alt="" />
           </marquee>
         </div>
-      </div>
+      </div> */}
 
       <div className="home_section_2">
         <div className="all_headerText">

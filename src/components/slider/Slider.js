@@ -10,9 +10,8 @@ import "./slickCarousel/slick/slick.css";
 // import { useSelector } from "react-redux";
 
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import { useSelector } from "react-redux";
-
-
+import { useEffect } from "react";
+import axios from "axios";
 function SampleNextArrow({ onClick }) {
   return (
     <div className="btn_Left btn_arrow" onClick={onClick}>
@@ -31,6 +30,7 @@ function SamplePrevArrow({ onClick }) {
 
 const SliderScale = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
+  const [images, setImages] = useState([])
   const settings = {
     dots: true,
     infinite: true,
@@ -39,20 +39,23 @@ const SliderScale = () => {
     autoplay: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
- 
     autoplaySpeed: 2000,
     beforeChange: (current, next) => setSliderIndex(next),
     responsive:[
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
         },
       },
     ]
   };
-  const images = useSelector((state) => state.reProducts);
-
+  useEffect(() => {
+    axios({
+      method:"get",
+      url:"https://api.sanone.uz/most/viewed"
+    }).then((res) => setImages(res.data)).catch((err) => console.error(err))
+  }, [])
   // api
 
   return (
@@ -68,16 +71,6 @@ const SliderScale = () => {
             <img src={item.images[0]} alt="" />
           </div>
         ))}
-        {
-          images.map((item, index) => (
-            <figure key={index}
-              className={index === sliderIndex ? 
-              "rasm_slider slide_active" : "rasm_slider"} 
-          >
-              <img src={item.images[0]} alt="" />
-            </figure>
-          ))
-        }
       </Slider>
     </div>
   );
