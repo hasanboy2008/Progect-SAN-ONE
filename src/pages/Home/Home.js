@@ -11,7 +11,6 @@ import "./Home.css";
 // import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
 
 import image1 from "../../asest/home/section1/Image1.png";
-import 'primeicons/primeicons.css';
 
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
