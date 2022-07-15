@@ -39,6 +39,7 @@ const SliderScale = () => {
     autoplay: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    speed: 2000 ,
     autoplaySpeed: 2000,
     beforeChange: (current, next) => setSliderIndex(next),
     responsive:[
