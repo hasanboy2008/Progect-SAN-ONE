@@ -3,6 +3,9 @@ import React, { useEffect } from "react";
 import "./Home.css";
 // import { acUpdateCard } from "../../Redux/UpdateCard";
 
+import image1 from "../../asest/home/section1/Image1.png";
+import 'primeicons/primeicons.css';
+
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
 import SimpleSlider from "../../components/slider/simpleSlider/SliderSimple";
@@ -19,56 +22,38 @@ export function Home() {
 
   return (
     <div className="home">
-      {/* <div className="home_section1">
-        <div className="home_text">
-          <div className="text_semmer">
-            <p>
-              Yozgi mavsum uchun <br></br>
-              <span>yangi ko‘rinish</span>
-            </p>
-            <span>
-              Yangicha uslub va ko’rinishda ishlab chiqilgan, yangi
-              poyabzallarimiz bilan yoz faslini yanada yorqinroq, yanada
-              qulayroq o’tkazasiz!
-            </span>
-          </div>
 
-          <div className="see_btn">
-            <button>KO‘RISH</button>
+      {/* home section 1 start */}
+
+      <div className="section1">
+        <div className="left">
+          <p><i className="pi pi-arrow-left"></i> Barcha mahsulotlar</p>
+        </div>
+        <div className="center">
+          <p>Yozgi mavsum uchun <span>yangi ko'rinish</span></p>
+          <span className="span1">Yangicha uslub va ko'rinishda ishlab chiqilgan, <br /> yangi poyabzallarimiz bilan yoz faslini yanada yorqinroq, <br /> yanada qulayroq o'tkazasiz!</span>
+          <div className="btnDiv">
+            <button className="btn btnColorF">KO'RISH</button>
             <button
               onClick={() => {
                 navigate("/signup");
               }}
-            >
-              Ro’yhatdan o’tish
-            </button>
+              className="btn btnColorN">Ro'yhatdan o'tish <i className="pi pi-arrow-right"></i> </button>
+          </div>
+        </div>
+        <div className="container">
+          <div className="circle1"></div>
+          <div className="circle2"></div>
+          <div className="circle3"></div>
+          <div className="circle4"></div>
+          <div className="img">
+            <img src={image1} alt="" />
           </div>
         </div>
 
-        <div className="position_1">
-          <img src={position_1} alt="" />
-        </div>
-        <div className="position_2">
-          <img src={position_2} alt="" />
-        </div>
-        <div className="position_3">
-          <img src={position_k} alt="" />
-        </div>
-        <div className="position_4">
-          <img src={position_4} alt="" />
-        </div>
-        <div className="position_5">
-          <img src={position_5} alt="" />
-        </div>
-        <div className="position_6">
-          <img src={position_6} alt="" />
-        </div>
-        <div className="position_7">
-          <marquee>
-            <img src={position_7} alt="" />
-          </marquee>
-        </div>
-      </div> */}
+      </div>
+
+      {/* home section 1 end */}
 
       <div className="home_section_2">
         <div className="all_headerText">
