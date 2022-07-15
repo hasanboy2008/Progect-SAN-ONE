@@ -16,8 +16,6 @@ export function Navbar() {
 
   // const auth = useSelector((state) => state.reAuth);
 
-
-
   // navbar open func
   const [navbar, setNavbar] = useState(true);
   const navOpen = () => {

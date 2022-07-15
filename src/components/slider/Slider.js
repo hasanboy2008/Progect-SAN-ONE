@@ -39,12 +39,18 @@ const SliderScale = () => {
     autoplay: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    speed: 2000 ,
+    speed: 2000,
     autoplaySpeed: 2000,
     beforeChange: (current, next) => setSliderIndex(next),
     responsive:[
       {
         breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 400,
         settings: {
           slidesToShow: 1,
         },

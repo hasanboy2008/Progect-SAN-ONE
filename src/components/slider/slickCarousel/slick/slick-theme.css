@@ -115,15 +115,11 @@
 .slick-dots li button {
     font-size: 0;
     line-height: 0;
-
     display: block;
-
     width: 20px;
     height: 20px;
     padding: 5px;
-
     cursor: pointer;
-
     color: transparent;
     border: 0;
     outline: none;
@@ -133,14 +129,12 @@
 .slick-dots li button:hover,
 .slick-dots li button:focus {
     outline: none;
-
 }
 
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before {
     opacity: 1;
 }
-
 .slick-dots li button:before {
     font-family: 'slick';
     font-size: 40px;
