@@ -4,8 +4,6 @@ import logo_nav from "../../asest/navbar/Vector (2).png";
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
-import logo2 from "../../asest/navbar/Vector.svg";
 import { acSearch } from "../../Redux/Search";
 import { useDispatch } from "react-redux/es/exports";
 import { useLocation } from "react-router-dom";

@@ -9,6 +9,7 @@
   height: 800px;
   position: relative;
   width: 100%;
+  transition: all 0.3s ease !important;
 }
 .rasm_slider{
   height: 500px;
