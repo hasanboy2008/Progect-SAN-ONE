@@ -12,11 +12,8 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
-<<<<<<< HEAD
-=======
     "notistack": "^2.0.5",
     "framer-motion": "^6.5.1",
->>>>>>> 9cadcccab0169e211e11a5f4f403341c59ae2d2d
     "react": "^18.2.0",
     "react-carousel": "^4.3.0",
     "react-dom": "^18.2.0",

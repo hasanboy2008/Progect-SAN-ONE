@@ -5,10 +5,8 @@ import "./navbar.css";
 import { useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import logo2 from "../../asest/navbar/Vector.svg";
 import { acSearch } from "../../Redux/Search";
 import { useDispatch } from "react-redux/es/exports";
-import { useLocation } from "react-router-dom";
 import logo2 from "../../asest/navbar/Vector.svg";
 
 export function Navbar() {
@@ -17,8 +15,6 @@ export function Navbar() {
   const navigate = useNavigate();
 
   // const auth = useSelector((state) => state.reAuth);
-
-
 
   // navbar open func
   const [navbar, setNavbar] = useState(true);
@@ -71,7 +67,8 @@ export function Navbar() {
               navigate("/");
             }}
           >
-            <img src={logo2} alt="" />
+            <img src={logo2} alt="" id="navlogo_img" />
+            <img src={home ? logo_nav : logo2} alt="" />
           </button>
         </div>
         <div className="catalog_pages_nav">
@@ -194,20 +191,29 @@ export function Navbar() {
             width="27"
             height="19"
             viewBox="0 0 27 19"
-            fill="none"
+            fill="#BD6F18"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <rect y="8" width="27" height="3" fill="#ffffff" />
-            <rect y="16" width="27" height="3" fill="#ffffff" />
-            <rect width="27" height="3" fill="#ffffff" />
+            <rect
+              y="8"
+              width="27"
+              height="3"
+              fill={home ? "#fff" : "#BD6F18"}
+            />
+            <rect
+              y="16"
+              width="27"
+              height="3"
+              fill={home ? "#fff" : "#BD6F18"}
+            />
+            <rect width="27" height="3" fill={home ? "#fff" : "#BD6F18"} />
           </svg>
         </button>
       </nav>
 
-      <div 
+      <div
         className={navbar ? "nav_menu" : "nav_menu active_navs"}
         style={home ? { background: "#BD6F18" } : {}}
-      
       >
         <button
           onClick={() => {
@@ -292,7 +298,6 @@ export function Navbar() {
           style={home ? styleForHome.search_nav : styleForOther.search_nav}
         >
           <div className="input_Div">
-            <input type="text" id="" />
             <input
               type="text"
               id=""
@@ -334,9 +339,4 @@ export function Navbar() {
         </button>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
-  )}
->>>>>>> 9cadcccab0169e211e11a5f4f403341c59ae2d2d
+  );}
