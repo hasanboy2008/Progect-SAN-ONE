@@ -56,14 +56,6 @@ export function Navbar() {
               navigate("/");
             }}
           >
-<<<<<<< HEAD
-=======
-            <img
-              src={home ? logo_nav : logo2}
-              alt=""
-              onClick={() => setNavbar(false)}
-            />
->>>>>>> af52409650a8489dbd2f497f1c4ae3b1471f20ac
           </button>
         </div>
         <div className="catalog_pages_nav">
@@ -320,9 +312,4 @@ export function Navbar() {
         </button>
       </div>
     </div>
-<<<<<<< HEAD
   )}
-=======
-  );
-}
->>>>>>> af52409650a8489dbd2f497f1c4ae3b1471f20ac
