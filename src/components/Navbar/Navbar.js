@@ -334,9 +334,4 @@ export function Navbar() {
         </button>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
-  )}
->>>>>>> 9cadcccab0169e211e11a5f4f403341c59ae2d2d
+)}
