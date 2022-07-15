@@ -1,29 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logo_nav from "../../asest/navbar/Vector (2).png";
 // import SearchIcon from "@mui/icons-material/Search";
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export function Navbar() {
   const navigate = useNavigate();
-  const [auth, setAuth] = useState(false);
-  const user = JSON.parse(localStorage.getItem("user") || "[]");
 
-  // console.log(user);
-  useEffect(() => {
-    if (user.id) {
-      setAuth(true);
-      // console.log(user);
-    }
-  }, [user]);
-
-  // navbar fixed qilingan joyi
+  const auth = useSelector((state) => state.reAuth);
 
   // navbar open func
   const [navbar, setNavbar] = useState(true);
   const navOpen = () => {
-    setNavbar(!navbar)
-  }
+    setNavbar(!navbar);
+  };
   return (
     <div className="navbar">
       <nav>
@@ -149,7 +140,7 @@ export function Navbar() {
         <button
           onClick={() => {
             navigate("/katalog");
-            navOpen()
+            navOpen();
           }}
         >
           KATALOG
@@ -157,14 +148,14 @@ export function Navbar() {
         <button
           onClick={() => {
             navigate("/about");
-            navOpen()
+            navOpen();
           }}
         >
           BIZ HAQIMIZDA
         </button>
         <div className="search_nav_menu">
           <div className="input_Div">
-            <input type="text" id=""  />
+            <input type="text" id="" />
           </div>
           <button>
             <svg
