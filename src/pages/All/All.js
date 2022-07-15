@@ -1,18 +1,30 @@
-import React,{useEffect} from "react";
-import "./all.css"
+import React, { useEffect } from "react";
+import "./all.css";
+import { useSelector } from "react-redux";
 
-export function All(){
+export function All() {
+  const products = useSelector((state) => state.reProducts);
+  const search = useSelector((state) => state.reSearch);
+  const result = products.filter((product) => {
+    return (
+      product.name.toLowerCase().includes(search.toLowerCase()) ||
+      product.code.toLowerCase().includes(search.toLowerCase())
+    );
+  });
+  console.log(search);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-    return (
-      <div className="all">
-        <div className="alltext">
-          <p>Krossovkalar</p>
-          <span>Barcha mahsulot turlarini ko’rib chiqing</span>
-        </div>
+  return (
+    <div className="all">
+      <div className="alltext">
+        <p>Krossovkalar</p>
+        <span>Barcha mahsulot turlarini ko’rib chiqing</span>
+      </div>
 
+      <div id="allresalut">
         <div className="all_filter">
           <div className="fiter_nav">
             <p>Filter</p>
@@ -173,7 +185,17 @@ export function All(){
           </div>
         </div>
 
-        <div className="allrezalut"></div>
+        <div className="allrezalut_left">
+          {products.map((produc) => {
+            return (
+              <div className="reasalut">
+                <p>{produc.id}</p>
+                <p>{produc.name}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
-    );
+    </div>
+  );
 }

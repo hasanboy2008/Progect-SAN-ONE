@@ -7,7 +7,15 @@
     /* padding-top: 300px; */
     padding: 209px 40px;
     color: rgba(255, 255, 255, 0.1);
+   
 
+}
+#allresalut{
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
 }
 .alltext{
     width: 100%;
@@ -307,4 +315,27 @@ line-height: 34px;
 color: #C9A95C;
 
 
+}
+
+
+/* ////////allrezalut_left//////// */
+
+.allrezalut_left{
+    width: 70%;
+    height: 400px;
+   background-color: rebeccapurple;
+}
+
+
+.reasalut {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.reasalut > p{
+
+    color: white;
+    font-size: 40px;
 }

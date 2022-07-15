@@ -4,28 +4,27 @@
   box-sizing: border-box;
 }
 .slider_scale{
-  padding: 20px;
+  padding: 50px 20px;
   user-select: none;
   height: 800px;
   position: relative;
   width: 100%;
+  transition: all 0.3s ease !important;
 }
 .rasm_slider{
-  width: 95% !important;
-  height: 450px;
-  padding: 5px;
-  transition: 0.5s;
+  height: 500px;
+  transition: 0.5s ease-out;
   margin-top: 120px;
   border-radius: 15px;
-  margin-left: 50px;
-  overflow: hidden;
+  padding-right: 80px;
+  margin-left: 80px;
 }
 .slide_active{
   margin: 0;
-  transform: scaleX(1);
   width: 682px !important;
   height: 740px;
   border-radius: 15px;
+  padding: 0;
 }
 .rasm_slider img {
   width: 100%;
@@ -35,7 +34,7 @@
 }
 .slick-dots{
   position: absolute;
-  top: 560px;
+  top: 680px;
   left: 200px; 
 }
 .slick-dots li button:before  {
@@ -43,7 +42,7 @@
 }
 .btn_arrow{
   position: absolute;
-  top: 550px;
+  top: 670px;
   z-index: 5;
   border: 1px solid #facb21;
   color:  #facb21;

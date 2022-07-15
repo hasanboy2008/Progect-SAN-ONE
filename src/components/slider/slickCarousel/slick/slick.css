@@ -2,7 +2,6 @@
 .slick-slider
 {
     position: relative;
-
     display: block;
     box-sizing: border-box;
 
@@ -21,12 +20,9 @@
 .slick-list
 {
     position: relative;
-
     display: block;
     overflow: hidden;
-
     margin: 0;
-    padding: 0;
 }
 .slick-list:focus
 {

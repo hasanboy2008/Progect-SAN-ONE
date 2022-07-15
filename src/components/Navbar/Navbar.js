@@ -3,6 +3,9 @@ import logo_nav from "../../asest/navbar/Vector (2).png";
 // import SearchIcon from "@mui/icons-material/Search";
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
+// import { useSelector } from "react-redux";
+import { acSearch } from "../../Redux/Search";
+import { useDispatch } from "react-redux/es/exports";
 import { useLocation } from "react-router-dom";
 import logo2 from "../../asest/navbar/Vector.svg";
 
@@ -10,6 +13,10 @@ export function Navbar() {
   const location = useLocation();
   const path = location.pathname;
   const navigate = useNavigate();
+
+  // const auth = useSelector((state) => state.reAuth);
+
+
 
   // navbar open func
   const [navbar, setNavbar] = useState(true);
@@ -19,6 +26,9 @@ export function Navbar() {
   const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
   const home = path === "/";
+  const dispatch = useDispatch();
+  // search
+  // const [search,setSearch]=useState("")
   // console.log(user);
   useEffect(() => {
     if (user.id) {
@@ -47,6 +57,9 @@ export function Navbar() {
     },
   };
 
+
+
+
   return (
     <div className="navbar ">
       <nav style={home ? { background: "#BD6F18" } : {}}>
@@ -56,11 +69,7 @@ export function Navbar() {
               navigate("/");
             }}
           >
-            <img
-              src={home ? logo_nav : logo2}
-              alt=""
-              onClick={() => setNavbar(false)}
-            />
+            <img src={logo2} alt="" />
           </button>
         </div>
         <div className="catalog_pages_nav">
@@ -82,9 +91,14 @@ export function Navbar() {
           </button>
         </div>
         <div className="basket_nav">
-          <div
+          <form
             className="search_nav"
             style={home ? styleForHome.search_nav : styleForOther.search_nav}
+            onSubmit={(e) => {
+              e.preventDefault();
+              navigate("/all");
+              dispatch(acSearch(e.target.value));
+            }}
           >
             <div className="input_Div">
               <input
@@ -93,7 +107,7 @@ export function Navbar() {
                 style={home ? { color: "#fff" } : { color: "#333" }}
               />
             </div>
-            <button>
+            <button type="submit">
               <svg
                 width="20"
                 height="20"
@@ -109,7 +123,7 @@ export function Navbar() {
                 />
               </svg>
             </button>
-          </div>
+          </form>
           <div id="basket_nav">
             <button
               onClick={() => {
@@ -188,9 +202,10 @@ export function Navbar() {
         </button>
       </nav>
 
-      <div
+      <div 
         className={navbar ? "nav_menu" : "nav_menu active_navs"}
         style={home ? { background: "#BD6F18" } : {}}
+      
       >
         <button
           onClick={() => {
@@ -317,5 +332,4 @@ export function Navbar() {
         </button>
       </div>
     </div>
-  );
-}
+)}

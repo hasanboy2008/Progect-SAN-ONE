@@ -7,7 +7,7 @@
 
 /* -----------home_text------- */
 .slider_box {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 /* home section 1 start  */

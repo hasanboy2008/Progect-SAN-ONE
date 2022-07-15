@@ -2,6 +2,13 @@
 import React, { useEffect } from "react";
 import "./Home.css";
 // import { acUpdateCard } from "../../Redux/UpdateCard";
+// import position_1 from "../../asest/home/position/Group 48.png";
+// import position_2 from "../../asest/home/position/p_2.png";
+// import position_k from "../../asest/home/position/p_krasofka.png";
+// import position_4 from "../../asest/home/position/p_4.png";
+// import position_5 from "../../asest/home/position/p_5.png";
+// import position_6 from "../../asest/home/position/p_6.png";
+// import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
 
 import image1 from "../../asest/home/section1/Image1.png";
 import 'primeicons/primeicons.css';
@@ -84,9 +91,6 @@ export function Home() {
           <SimpleSlider />
         </div>
       </div>
-
-      <div className="sectio_5">{/* <Slider /> */}</div>
-
       <div className="section_6_slider">
         <div className="all_headerText">
           <p>Mahsulotlarimiz turlari</p>
