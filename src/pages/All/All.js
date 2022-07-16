@@ -1,17 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./all.css";
 import { useSelector } from "react-redux";
 
 export function All() {
   const products = useSelector((state) => state.reProducts);
   const search = useSelector((state) => state.reSearch);
-  // const result = products.filter((product) => {
-  //   return (
-  //     product.name.toLowerCase().includes(search.toLowerCase()) ||
-  //     product.code.toLowerCase().includes(search.toLowerCase())
-  //   );
-  // });
-  console.log(search);
+  const [type, setType] = useState("");
+
+  const [price, setPrice] = useState({ start: "", end: "" });
+  console.log(price);
+
+  
+
+  // Filter Price
+  const resultFilterPrice = products.filter((product) => {
+    return +product.price >= +price.start && +product.price <= +price.end;
+  });
+
+  // filter product type
+  const resultFilterType = resultFilterPrice.filter((product) => {
+    return product.type.toLowerCase().includes(type.toLowerCase());
+  });
+
+  // filter size
+  const [size, setSize] = useState("");
+
+  const resultFilterSize = resultFilterType.filter((product) => {
+    if (product.sizes.includes(size.trim())) {
+      return product;
+    }
+
+    return product;
+  });
+
+  const result = resultFilterSize;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,116 +70,142 @@ export function All() {
             <form action="">
               <div className="filter_mini">
                 <p>Dan</p>
-                <input type="text" />
+                <input
+                  type="text"
+                  onChange={(e) => {
+                    setPrice({ ...price, start: e.target.value });
+                  }}
+                />
               </div>
 
               <div className="filter_mini">
                 <p>Gacha</p>
-                <input type="text" />
+                <input
+                  type="text"
+                  onChange={(e) => {
+                    setPrice({ ...price, end: e.target.value });
+                  }}
+                />
               </div>
             </form>
           </div>
           <div className="filter_Types">
-            <button>Makasima</button>
-            <button>Krossovka</button>
+            <button
+              onClick={() => {
+                setType("");
+              }}
+            >
+              Barchasi
+            </button>
+            <button
+              onClick={() => {
+                setType("Makasima");
+              }}
+            >
+              Makasima
+            </button>
+            <button
+              onClick={() => {
+                setType("Krossovka");
+              }}
+            >
+              Krossovka
+            </button>
             <button>Klassik krossovka</button>
             <button>Ishlov berilgan teri</button>
             <button>Qochoq poyabzal</button>
             <button>Shpallar</button>
             <button>Ikki rangli</button>
             <button>Klassik</button>
+            <button
+              onClick={() => {
+                setType("Koja nabuk");
+              }}
+            >
+              Koja nabuk
+            </button>
+            <button
+              onClick={() => {
+                setType("Zamsha");
+              }}
+            >
+              Zamsha
+            </button>
           </div>
-          <div className="filter_color">
-            <span>Rangi:</span>
-            <span>
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  r="9.40864"
-                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
-                  fill="#A18B7F"
-                />
-              </svg>
-            </span>
-            <span>
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  r="9.40864"
-                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
-                  fill="#A18B7F"
-                />
-              </svg>
-            </span>
-            <span>
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  r="9.40864"
-                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
-                  fill="#A18B7F"
-                />
-              </svg>
-            </span>
-            <span>
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  r="9.40864"
-                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
-                  fill="#A18B7F"
-                />
-              </svg>
-            </span>
-            <span>
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  r="9.40864"
-                  transform="matrix(1 0 0 -1 9.40864 9.40777)"
-                  fill="#A18B7F"
-                />
-              </svg>
-            </span>
-          </div>
+
           <div className="filter_ratio">
             <p>Razmeri:</p>
             <div className="ratio">
-              <button>37</button>
-              <button>38</button>
-              <button>39</button>
-              <button>40</button>
-              <button>41</button>
-              <button>42</button>
-              <button>43</button>
-              <button>44</button>
-              <button>45</button>
-              <button>46</button>
+              <button
+                onClick={() => {
+                  setSize("36");
+                }}
+              >
+                46
+              </button>
+              <button
+                onClick={() => {
+                  setSize("37");
+                }}
+              >
+                37
+              </button>
+              <button
+                onClick={() => {
+                  setSize("38");
+                }}
+              >
+                38
+              </button>
+              <button
+                onClick={() => {
+                  setSize("39");
+                }}
+              >
+                39
+              </button>
+              <button
+                onClick={() => {
+                  setSize("40");
+                }}
+              >
+                40
+              </button>
+              <button
+                onClick={() => {
+                  setSize("41");
+                }}
+              >
+                41
+              </button>
+              <button
+                onClick={() => {
+                  setSize("42");
+                }}
+              >
+                42
+              </button>
+              <button
+                onClick={() => {
+                  setSize("43");
+                }}
+              >
+                43
+              </button>
+              <button
+                onClick={() => {
+                  setSize("44");
+                }}
+              >
+                44
+              </button>
+              <button
+                onClick={() => {
+                  setSize("45");
+                }}
+              >
+                45
+              </button>
             </div>
           </div>
           <div className="filter_tosend">
@@ -185,15 +233,19 @@ export function All() {
           </div>
         </div>
 
-        <div className="allrezalut_left">
-          {products.map((produc) => {
-            return (
-              <div className="reasalut">
-                <p>{produc.id}</p>
-                <p>{produc.name}</p>
-              </div>
-            );
-          })}
+        <div className="allrezalut_right">
+          <div id="alllllll">
+            {result.map((produc) => {
+              return (
+                <div className="reasalut">
+                  <figure>
+                    <img src={produc.images[0]} alt="" />
+                  </figure>
+                  <p>{produc.id}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
