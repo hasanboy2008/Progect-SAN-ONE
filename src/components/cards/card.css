@@ -10,3 +10,22 @@
 .cardlar > .new_Produc_1 figure{
   width: 100%;
 }
+
+@media (max-width:1300px) {
+  .cardlar .new_Produc_1{
+    padding: 8px;
+    margin-bottom: 1%;
+  }
+  .all{
+    padding: 100px 10px;
+  }
+}
+@media (max-width:1100px) {
+  .cardlar {
+    gap: 1%;
+    padding: 0 1% ;
+  }
+  .cardlar .new_Produc_1{
+    width: 49%;
+  }
+}

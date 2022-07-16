@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import Cardlar from "../../components/cards/Cards";
 
 export function All() {
-<<<<<<< HEAD
   const search = useSelector((state) => state.reSearch);
   // const result = products.filter((product) => {
   //   return (
@@ -13,7 +12,6 @@ export function All() {
   //   );
   // });
   console.log(search);
-=======
   const products = useSelector((state) => state.reProducts);
   // const search = useSelector((state) => state.reSearch);
   const [type, setType] = useState("");
@@ -46,7 +44,6 @@ export function All() {
   });
 
   const result = resultFilterSize;
->>>>>>> 81227c88adb725b06c9ff8132cbdff18856d9dd0
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -245,26 +242,10 @@ export function All() {
             <button>Eng ohirgilari</button>
           </div>
         </div>
-
-<<<<<<< HEAD
-        <div className="allrezalut_left">
-          <Cardlar />
-=======
         <div className="allrezalut_right">
           <div id="alllllll">
-            {result.map((produc) => {
-              return (
-                <div className="reasalut">
-                  <figure>
-                    <img src={produc.images[0]} alt="" />
-                  </figure>
-                  <p>{produc.id}</p>
-                  <p>{produc.name}</p>
-                </div>
-              );
-            })}
+            <Cardlar />
           </div>
->>>>>>> 81227c88adb725b06c9ff8132cbdff18856d9dd0
         </div>
       </div>
     </div>
