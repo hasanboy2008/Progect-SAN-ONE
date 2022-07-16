@@ -1,9 +1,9 @@
 import React from "react"
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import "./card.css";
 export default function Cardlar({props}){
-  const products = useSelector((state) => state.reProducts);
+  // const products = useSelector((state) => state.reProducts);
   const navigate = useNavigate();
   return (
     <div className="cardlar">
