@@ -189,7 +189,9 @@ export function Home() {
           >
             RO‘YXATDAN O‘TISH
           </button>
-          <div className="section-6-overlay"></div>
+          <div className="section-6-overlay">
+            
+          </div>
         </div>
       </div>
     </div>
