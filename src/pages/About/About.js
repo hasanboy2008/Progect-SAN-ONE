@@ -22,7 +22,7 @@ export function About() {
         // <Router>
         <div className="aboutDiv">
 
-            <div className="section1">
+            <div className="about_section1">
                 <p>Biz haqimizda</p>
                 <span>Kompaniyamiz haqida batafsil bilib olishingiz mumkin</span>
             </div>
@@ -45,7 +45,7 @@ export function About() {
 
                 </div>
 
-                <div className="container">
+                <div className="container2">
 
                     <div className="left2">
                         <div className="img">

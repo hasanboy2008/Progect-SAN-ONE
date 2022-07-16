@@ -1,6 +1,6 @@
 .footer
 {
-    padding: 1.7% 8%;
+    padding: 1.8% 8% 1% 8%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +11,7 @@
 }
 .footer .footer_sanone
 {
-    width: 260px;
+    width: 280px;
     display: flex;
     flex-direction: column;
 }

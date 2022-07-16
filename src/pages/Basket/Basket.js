@@ -3,6 +3,7 @@ import "../Basket/Basket.css";
 import Logo from "../../asest/Basket/san-one-logo.png";
 
 import "../Basket/Basket.css";
+import basket_img from "../../asest/katalog/image1.png"
 
 export function Basket() {
   const card = JSON.parse(localStorage.getItem("card") || "[]");
@@ -10,10 +11,33 @@ export function Basket() {
   return (
     <div className="basket">
       <div className="basket-text">
-        <p>Savatda 5 ta tovar bor</p>
+        <p>
+          Savatda <span>5</span> ta tovar bor
+        </p>
       </div>
 
       <div className="basket-all">
+        <div className="basket_count">
+          <hr />
+          <div className="count_basket">
+            <div className="img_basket">
+              <img src={basket_img} alt="" />
+              <div className="bas_name">
+                <p>lorem ipsum lorem ipsum </p>
+                <span>Atrikul: 12345</span>
+              </div>
+            </div>
+            <div className="count_btn">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+            <div className="price">
+              <p>399 000</p>
+            </div>
+            <button>x</button>
+          </div>
+        </div>
         <div className="basket-order">
           <img src={Logo} alt="" />
           <div className="basket-order-texts">

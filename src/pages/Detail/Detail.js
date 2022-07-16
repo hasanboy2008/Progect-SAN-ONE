@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Detail.css";
 import "./Comments/Comment.css";
 import Comments from "./Comments/Comments";
@@ -15,6 +15,7 @@ export function Detail() {
   const [product, setProduct] = useState({});
   const [images, setImages] = useState([]);
   const [indexImg, setIndexImg] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -120,8 +121,10 @@ export function Detail() {
           </div>
 
           <div className="btns">
-            <div className="btn-purchase">Sotib olish</div>
-            <div className="btn-basket">Savatga</div>
+            <button className="btn-purchase" onClick={()=>{
+              navigate("/confirm");
+            }} >Sotib olish</button>
+            <button className="btn-basket"   >Savatga</button>
           </div>
         </div>
       </div>

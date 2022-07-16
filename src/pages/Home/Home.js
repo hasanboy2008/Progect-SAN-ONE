@@ -28,23 +28,33 @@ export function Home() {
 
   return (
     <div className="home">
-
       {/* home section 1 start */}
 
       <div className="section1">
         <div className="left">
-          <p><i className="pi pi-arrow-left"></i> Barcha mahsulotlar</p>
+          <p>
+            <i className="pi pi-arrow-left"></i> Barcha mahsulotlar
+          </p>
         </div>
         <div className="center">
-          <p>Yozgi mavsum uchun <span>yangi ko'rinish</span></p>
-          <span className="span1">Yangicha uslub va ko'rinishda ishlab chiqilgan, <br /> yangi poyabzallarimiz bilan yoz faslini yanada yorqinroq, <br /> yanada qulayroq o'tkazasiz!</span>
+          <p>
+            Yozgi mavsum uchun <span>yangi ko'rinish</span>
+          </p>
+          <span className="span1">
+            Yangicha uslub va ko'rinishda ishlab chiqilgan, <br /> yangi
+            poyabzallarimiz bilan yoz faslini yanada yorqinroq, <br /> yanada
+            qulayroq o'tkazasiz!
+          </span>
           <div className="btnDiv">
             <button className="btn btnColorF">KO'RISH</button>
             <button
               onClick={() => {
                 navigate("/signup");
               }}
-              className="btn btnColorN">Ro'yhatdan o'tish <i className="pi pi-arrow-right"></i> </button>
+              className="btn btnColorN"
+            >
+              Ro'yhatdan o'tish <i className="pi pi-arrow-right"></i>{" "}
+            </button>
           </div>
         </div>
         <div className="container">
@@ -56,7 +66,6 @@ export function Home() {
             <img src={image1} alt="" />
           </div>
         </div>
-
       </div>
 
       {/* home section 1 end */}
@@ -180,7 +189,9 @@ export function Home() {
           >
             RO‘YXATDAN O‘TISH
           </button>
-          <div className="section-6-overlay"></div>
+          <div className="section-6-overlay">
+            
+          </div>
         </div>
       </div>
     </div>
