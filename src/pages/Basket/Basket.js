@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import "../Basket/Basket.css"
 import Logo from"../../asest/Basket/san-one-logo.png"
 import shoesBlack from "../../asest/Basket/shoes-black.png"
@@ -6,7 +6,7 @@ import shoesMoccasin from "../../asest/Basket/shoes-moccasin.png"
 import shoesWhite from "../../asest/Basket/shoes-white.png"
 import shoesGrey from "../../asest/Basket/shoes-grey.png"
 import shoesBW from "../../asest/Basket/shoes-b-w.png"
-import { useState } from "react";
+import { useState } from "react"
 
 export function Basket() {
   const card = JSON.parse(localStorage.getItem("card") || "[]");

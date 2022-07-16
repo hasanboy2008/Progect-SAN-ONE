@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./all.css";
 import { useSelector } from "react-redux";
+import Cardlar from "../../components/cards/Cards";
 
 export function All() {
-  const products = useSelector((state) => state.reProducts);
   const search = useSelector((state) => state.reSearch);
+  // const result = products.filter((product) => {
+  //   return (
+  //     product.name.toLowerCase().includes(search.toLowerCase()) ||
+  //     product.code.toLowerCase().includes(search.toLowerCase())
+  //   );
+  // });
+  console.log(search);
+  const products = useSelector((state) => state.reProducts);
+  // const search = useSelector((state) => state.reSearch);
   const [type, setType] = useState("");
 
   const [price, setPrice] = useState({ start: "", end: "" });
+  console.log(price);
   console.log(price);
 
   
@@ -232,19 +242,9 @@ export function All() {
             <button>Eng ohirgilari</button>
           </div>
         </div>
-
         <div className="allrezalut_right">
           <div id="alllllll">
-            {result.map((produc) => {
-              return (
-                <div className="reasalut">
-                  <figure>
-                    <img src={produc.images[0]} alt="" />
-                  </figure>
-                  <p>{produc.id}</p>
-                </div>
-              );
-            })}
+            <Cardlar props={result} />
           </div>
         </div>
       </div>
