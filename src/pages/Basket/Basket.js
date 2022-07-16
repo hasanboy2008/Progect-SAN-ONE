@@ -3,7 +3,7 @@ import "../Basket/Basket.css";
 import Logo from "../../asest/Basket/san-one-logo.png";
 
 import "../Basket/Basket.css";
-import basket_img from "../../asest/katalog/image1.png"
+import basket_img from "../../asest/katalog/image_1.jpg"
 
 export function Basket() {
   const card = JSON.parse(localStorage.getItem("card") || "[]");

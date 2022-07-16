@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 import "../Katalog/katalog.css";
 // Image import
-import image1 from "../../asest/katalog/image1.png";
-import image2 from "../../asest/katalog/image2.png";
-import image3 from "../../asest/katalog/image3.png";
-import image4 from "../../asest/katalog/image4.png";
-import image5 from "../../asest/katalog/image5.png";
-import image6 from "../../asest/katalog/image6.png";
-import image7 from "../../asest/katalog/image7.png";
-import image8 from "../../asest/katalog/image8.png";
+import image_1 from "../../asest/katalog/image_1.jpg";
+import image_2 from "../../asest/katalog/image_2.jpg";
+import image_3 from "../../asest/katalog/image_3.jpg";
+import image_4 from "../../asest/katalog/image_4.jpg";
+import image_5 from "../../asest/katalog/image_5.jpg";
+import image_6 from "../../asest/katalog/image_6.jpg";
+import image_7 from "../../asest/katalog/image_7.jpg";
+import image_8 from "../../asest/katalog/image_8.jpg";
 import bcImage1 from "../../asest/katalog/bcImage1.png";
 import bcImage2 from "../../asest/katalog/bcImage2.png";
 import bcImage3 from "../../asest/katalog/bcImage3.png";
@@ -27,42 +27,42 @@ export function Katalog() {
   const data = [
     {
       id: 1,
-      image: image1,
+      image: image_1,
       name: "Makasima",
     },
     {
       id: 2,
-      image: image2,
+      image: image_2,
       name: "Krossovka",
     },
     {
       id: 3,
-      image: image3,
+      image: image_3,
       name: "Ishlov berilgan teri",
     },
     {
       id: 4,
-      image: image4,
+      image: image_4,
       name: "Klassik krossovka",
     },
     {
       id: 5,
-      image: image5,
+      image: image_5,
       name: "Qochoq poyabzal",
     },
     {
       id: 6,
-      image: image6,
+      image: image_6,
       name: "Shpallar",
     },
     {
       id: 7,
-      image: image7,
+      image: image_7,
       name: "Ikki rangli",
     },
     {
       id: 8,
-      image: image8,
+      image: image_8,
       name: "Klassicheskiy",
     },
   ];

@@ -244,7 +244,7 @@ export function All() {
         </div>
         <div className="allrezalut_right">
           <div id="alllllll">
-            <Cardlar />
+            <Cardlar props={result} />
           </div>
         </div>
       </div>
