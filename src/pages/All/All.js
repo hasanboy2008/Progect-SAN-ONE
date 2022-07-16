@@ -4,10 +4,11 @@ import { useSelector } from "react-redux";
 
 export function All() {
   const products = useSelector((state) => state.reProducts);
-  const search = useSelector((state) => state.reSearch);
+  // const search = useSelector((state) => state.reSearch);
   const [type, setType] = useState("");
 
   const [price, setPrice] = useState({ start: "", end: "" });
+  console.log(price);
   console.log(price);
 
   
@@ -242,6 +243,7 @@ export function All() {
                     <img src={produc.images[0]} alt="" />
                   </figure>
                   <p>{produc.id}</p>
+                  <p>{produc.name}</p>
                 </div>
               );
             })}
