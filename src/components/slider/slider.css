@@ -61,6 +61,7 @@
   border-radius: 50%;
   cursor: pointer;
   font-weight: bold;
+  z-index: 1;
 }
 
 .btn_Left {
@@ -70,7 +71,9 @@
 .btn_Right {
   left: 46%;
 }
-
+.all_headerText{
+  margin-left: 4%;
+}
 @media(max-width:1900px) {
   .rasm_slider {
     padding-right: 100px;
@@ -226,6 +229,9 @@
   .btn_Right {
     left: 3%;
   }
+  .all_headerText{
+    text-align: center;
+  }
   .all_headerText p{
     font-size: 30px;
     line-height: normal;
@@ -236,6 +242,9 @@
   }
   .rasm_slider{
     padding: 5px;
+  }
+  .all_headerText{
+    text-align: center;
   }
 }
 @media (max-width:400px) {
