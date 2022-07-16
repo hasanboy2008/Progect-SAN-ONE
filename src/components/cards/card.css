@@ -1,0 +1,12 @@
+.cardlar{
+  display: flex !important;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cardlar > .new_Produc_1{
+  width: 32%;
+  height: auto;
+}
+.cardlar > .new_Produc_1 figure{
+  width: 100%;
+}

@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import "./all.css";
 import { useSelector } from "react-redux";
+import Cardlar from "../../components/cards/Cards";
 
 export function All() {
-  const products = useSelector((state) => state.reProducts);
   const search = useSelector((state) => state.reSearch);
-  const result = products.filter((product) => {
-    return (
-      product.name.toLowerCase().includes(search.toLowerCase()) ||
-      product.code.toLowerCase().includes(search.toLowerCase())
-    );
-  });
+  // const result = products.filter((product) => {
+  //   return (
+  //     product.name.toLowerCase().includes(search.toLowerCase()) ||
+  //     product.code.toLowerCase().includes(search.toLowerCase())
+  //   );
+  // });
   console.log(search);
 
   useEffect(() => {
@@ -186,14 +186,7 @@ export function All() {
         </div>
 
         <div className="allrezalut_left">
-          {products.map((produc) => {
-            return (
-              <div className="reasalut">
-                <p>{produc.id}</p>
-                <p>{produc.name}</p>
-              </div>
-            );
-          })}
+          <Cardlar />
         </div>
       </div>
     </div>
