@@ -45,7 +45,7 @@ export function About() {
 
                 </div>
 
-                <div className="container">
+                <div className="container2">
 
                     <div className="left2">
                         <div className="img">

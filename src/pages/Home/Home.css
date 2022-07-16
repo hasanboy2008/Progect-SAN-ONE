@@ -784,7 +784,7 @@ hr {
 .section_6_futter {
   margin-top: 100px;
   width: 100%;
-  height: 909px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -793,6 +793,7 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  padding: 10% 0;
 }
 
 .section-6-overlay {
