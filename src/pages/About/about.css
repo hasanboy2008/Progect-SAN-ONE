@@ -14,7 +14,7 @@
 
 /* section 1 start */
 
-.aboutDiv .section1 {
+.aboutDiv .about_section1 {
   width: 100%;
   height: auto;
   display: flex;
@@ -23,12 +23,12 @@
   justify-content: center;
 }
 
-.aboutDiv .section1 p {
+.aboutDiv .about_section1 p {
   font-size: 3rem;
   text-align: center;
   color: #9f6233;
 }
-.aboutDiv .section1 span {
+.aboutDiv .about_section1 span {
   padding-top: 1%;
   font-size: 1.8rem;
   text-align: center;

@@ -14,7 +14,7 @@ nav {
   justify-content: space-between;
   background: white;
 
-  padding: 36px 156px;
+  padding: 25px 156px;
   position: fixed;
   z-index: 10;
 }
@@ -684,7 +684,7 @@ nav {
     width: 80%;
   }
   #navlogo_img{
-  display: block;
+  display: none;
 }
 .nav_menu > button{
   font-size: 20px;

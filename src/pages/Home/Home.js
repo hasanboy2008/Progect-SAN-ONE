@@ -2,8 +2,6 @@
 import React, { useEffect } from "react";
 import "./Home.css";
 // import { acUpdateCard } from "../../Redux/UpdateCard";
-<<<<<<< HEAD
-=======
 // import position_1 from "../../asest/home/position/Group 48.png";
 // import position_2 from "../../asest/home/position/p_2.png";
 // import position_k from "../../asest/home/position/p_krasofka.png";
@@ -13,8 +11,6 @@ import "./Home.css";
 // import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
 
 import image1 from "../../asest/home/section1/Image1.png";
-import 'primeicons/primeicons.css';
->>>>>>> 0aa3cb879279871fb0150000f58e4e5efd23143d
 
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
@@ -32,23 +28,33 @@ export function Home() {
 
   return (
     <div className="home">
-
       {/* home section 1 start */}
 
       <div className="section1">
         <div className="left">
-          <p><i className="pi pi-arrow-left"></i> Barcha mahsulotlar</p>
+          <p>
+            <i className="pi pi-arrow-left"></i> Barcha mahsulotlar
+          </p>
         </div>
         <div className="center">
-          <p>Yozgi mavsum uchun <span>yangi ko'rinish</span></p>
-          <span className="span1">Yangicha uslub va ko'rinishda ishlab chiqilgan, <br /> yangi poyabzallarimiz bilan yoz faslini yanada yorqinroq, <br /> yanada qulayroq o'tkazasiz!</span>
+          <p>
+            Yozgi mavsum uchun <span>yangi ko'rinish</span>
+          </p>
+          <span className="span1">
+            Yangicha uslub va ko'rinishda ishlab chiqilgan, <br /> yangi
+            poyabzallarimiz bilan yoz faslini yanada yorqinroq, <br /> yanada
+            qulayroq o'tkazasiz!
+          </span>
           <div className="btnDiv">
             <button className="btn btnColorF">KO'RISH</button>
             <button
               onClick={() => {
                 navigate("/signup");
               }}
-              className="btn btnColorN">Ro'yhatdan o'tish <i className="pi pi-arrow-right"></i> </button>
+              className="btn btnColorN"
+            >
+              Ro'yhatdan o'tish <i className="pi pi-arrow-right"></i>{" "}
+            </button>
           </div>
         </div>
         <div className="container">
@@ -60,7 +66,6 @@ export function Home() {
             <img src={image1} alt="" />
           </div>
         </div>
-
       </div>
 
       {/* home section 1 end */}

@@ -1,10 +1,10 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// CSS import 
+// CSS import
 
-import "../Katalog/katalog.css"
-// Image import 
+import "../Katalog/katalog.css";
+// Image import
 import image1 from "../../asest/katalog/image1.png";
 import image2 from "../../asest/katalog/image2.png";
 import image3 from "../../asest/katalog/image3.png";
@@ -18,13 +18,11 @@ import bcImage2 from "../../asest/katalog/bcImage2.png";
 import bcImage3 from "../../asest/katalog/bcImage3.png";
 
 export function Katalog() {
-
-    // database - malumotlar toplami
-const navigate = useNavigate();
+  // database - malumotlar toplami
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
 
   const data = [
     {
@@ -66,10 +64,9 @@ const navigate = useNavigate();
       id: 8,
       image: image8,
       name: "Klassicheskiy",
-    }
+    },
   ];
   console.log(data);
-
 
   return (
     <div className="katalog">
@@ -93,17 +90,17 @@ const navigate = useNavigate();
 
         <div className="container">
           {data.map((item) => (
-
             <div key={item.id} className="box-container">
-              <button onClick={() => {
-                navigate('/all')
-              }} >
+              <button
+                onClick={() => {
+                  navigate("/all");
+                }}
+              >
                 <div className="img">
                   <img src={item.image} alt="" />
                 </div>
                 <p>{item.name}</p>
               </button>
-
             </div>
           ))}
         </div>

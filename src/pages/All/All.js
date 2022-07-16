@@ -5,12 +5,12 @@ import { useSelector } from "react-redux";
 export function All() {
   const products = useSelector((state) => state.reProducts);
   const search = useSelector((state) => state.reSearch);
-  const result = products.filter((product) => {
-    return (
-      product.name.toLowerCase().includes(search.toLowerCase()) ||
-      product.code.toLowerCase().includes(search.toLowerCase())
-    );
-  });
+  // const result = products.filter((product) => {
+  //   return (
+  //     product.name.toLowerCase().includes(search.toLowerCase()) ||
+  //     product.code.toLowerCase().includes(search.toLowerCase())
+  //   );
+  // });
   console.log(search);
 
   useEffect(() => {
