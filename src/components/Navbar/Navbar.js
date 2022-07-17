@@ -59,7 +59,7 @@ export function Navbar() {
 
   return (
     <div className="navbar ">
-      <nav style={home ? { background: "#BD6F18" } : {}}>
+      <nav style={home ? { background: "#C9661A" } : {}}>
         <div className="logo_nav">
           <button
             onClick={() => {
@@ -338,4 +338,4 @@ export function Navbar() {
         </button>
       </div>
     </div>
-  )}
+  );}

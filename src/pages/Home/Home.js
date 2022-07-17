@@ -9,15 +9,13 @@ import "./Home.css";
 // import position_5 from "../../asest/home/position/p_5.png";
 // import position_6 from "../../asest/home/position/p_6.png";
 // import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
-
 import image1 from "../../asest/home/section1/Image1.png";
-
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
 import SimpleSlider from "../../components/slider/simpleSlider/SliderSimple";
 import SliderImg from "../../components/sliderFooter/Slider_img";
-
 import SliderDouble from "../../components/sliderDouble/SliderDouble";
+
 
 export function Home() {
   useEffect(() => {
