@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 import futer_img from "../../asest/navbar/Vector (2).png"
 import "./futer.css"
 import click from "../../asest/Futter/cilik.png"
@@ -9,9 +9,9 @@ import { useNavigate } from "react-router-dom";
 
 export function Futter() {
   const navigate = useNavigate();
-    useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  //   useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
 

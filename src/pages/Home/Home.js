@@ -1,21 +1,13 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 import React, { useEffect } from "react";
 import "./Home.css";
-// import { acUpdateCard } from "../../Redux/UpdateCard";
-// import position_1 from "../../asest/home/position/Group 48.png";
-// import position_2 from "../../asest/home/position/p_2.png";
-// import position_k from "../../asest/home/position/p_krasofka.png";
-// import position_4 from "../../asest/home/position/p_4.png";
-// import position_5 from "../../asest/home/position/p_5.png";
-// import position_6 from "../../asest/home/position/p_6.png";
-// import position_7 from "../../asest/home/position/YANGI KO‘RINISH (1).png";
+
 import image1 from "../../asest/home/section1/Image1.png";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
 import SimpleSlider from "../../components/slider/simpleSlider/SliderSimple";
 import SliderImg from "../../components/sliderFooter/Slider_img";
 import SliderDouble from "../../components/sliderDouble/SliderDouble";
-
 
 export function Home() {
   useEffect(() => {
@@ -44,10 +36,7 @@ export function Home() {
             qulayroq o'tkazasiz!
           </span>
           <div className="btnDiv">
-            <button className="btn btnColorF"
-         
-            
-            >KO'RISH</button>
+            <button className="btn btnColorF">KO'RISH</button>
             <button
               onClick={() => {
                 navigate("/signup");
@@ -190,9 +179,7 @@ export function Home() {
           >
             RO‘YXATDAN O‘TISH
           </button>
-          <div className="section-6-overlay">
-            
-          </div>
+          <div className="section-6-overlay"></div>
         </div>
       </div>
     </div>
