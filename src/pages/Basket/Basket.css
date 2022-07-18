@@ -4,11 +4,21 @@
     background: #F5F5F5;
     display: flex;
     flex-direction: column;
-    padding: 200px 156px 190px 156px;
+    padding: 85px 156px 190px 156px;
 }
 
 button{
     cursor: pointer;
+}
+
+.basket-all{
+    display: flex;
+}
+
+.basket-home{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .basket-text p{
@@ -26,11 +36,71 @@ button{
     display: flex;
 }
 
-/* //basket count */
-
-.count_basket{
+.basket-json{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+
+.basket-data{
+    display: flex;
+}
+
+.basket-hr hr{
+    width: 915px;
+    height: 0px;
+    border: 0.684385px solid #9A9A9A;
+}
+
+.basket-data img{
+    width: 221px;
+    height: 150.12px;
+    padding-top: 20px;
+}
+
+.basket-data p{
+    font-weight: 400;
+    font-size: 19.6296px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.basket-data span{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.basket-data .basket-buttons{
+    background: #DCBB45;
+    border-radius: 8px;
+    width: 150px;
+    height: 46px;
+    margin-left: 56px ;
+    margin-top: 50px;
+}
+
+.basket-data .basket-price{
+    font-weight: 700;
+    font-size: 23.8058px;
+    line-height: 29px;
+    text-align: right;
+    color: #C9A95C;
+    padding: 60px 0 0 60px;
+}
+
+.basket-data .basket-close{
+    margin: 65px 0 0 30px;
+    width: 24.49px;
+    height: 24.49px;
+}
+
+.basket-texts-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    padding-left: 11px;
 }
 
 .basket-order{

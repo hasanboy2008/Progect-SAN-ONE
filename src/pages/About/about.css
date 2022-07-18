@@ -186,8 +186,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../../asest/about/bcimage2.png),
-    url(../../asest/about/bcimage1.png);
+  background-image: url(../../asest/about/bcimage2.png.jpg),
+    url(../../asest/about/bcimage2.png.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -461,6 +461,19 @@
 }
 @media (max-width:550px){
 
+ .aboutDiv .about_section1 p {
+  font-size: 2rem;
+  text-align: center;
+  color: #9f6233;
+}
+.aboutDiv .about_section1 span {
+  padding-top: 1%;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #7c7c7c;
+}
+
+
   .aboutDiv .section1 p {
     font-size: 0.9rem;
   }
@@ -475,7 +488,7 @@
   }
   .aboutDiv .section2 .container .left1 span,
   .aboutDiv .section2 .container .right2 span {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
   /* section 2 end */
   .aboutDiv .section4 {
