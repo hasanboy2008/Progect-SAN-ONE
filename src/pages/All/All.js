@@ -17,10 +17,6 @@ export function All() {
   const [type, setType] = useState("");
 
   const [price, setPrice] = useState({ start: "", end: "" });
-  console.log(price);
-  console.log(price);
-
-  
 
   // Filter Price
   const resultFilterPrice = products.filter((product) => {
@@ -36,14 +32,25 @@ export function All() {
   const [size, setSize] = useState("");
 
   const resultFilterSize = resultFilterType.filter((product) => {
-    if (product.sizes.includes(size.trim())) {
+    if (product.size.includes(size.trim())) {
       return product;
     }
 
     return product;
   });
+  // filter product season
+   const [season,setSeason]=useState('')
+   
+  const resultFilterSeason = resultFilterSize.filter((product) => {
+    return product.season.toLowerCase() === season.toLowerCase();
+  });
 
-  const result = resultFilterSize;
+   console.log(season);
+
+
+
+
+  const result = resultFilterSeason;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -121,12 +128,48 @@ export function All() {
             >
               Krossovka
             </button>
-            <button>Klassik krossovka</button>
-            <button>Ishlov berilgan teri</button>
-            <button>Qochoq poyabzal</button>
-            <button>Shpallar</button>
-            <button>Ikki rangli</button>
-            <button>Klassik</button>
+            <button
+              onClick={() => {
+                setType(" Klassik krossovka");
+              }}
+            >
+              Klassik krossovka
+            </button>
+            <button
+              onClick={() => {
+                setType(" Ishlov berilgan teri");
+              }}
+            >
+              Ishlov berilgan teri
+            </button>
+            <button
+              onClick={() => {
+                setType(" Qochoq poyabzal");
+              }}
+            >
+              Qochoq poyabzal
+            </button>
+            <button
+              onClick={() => {
+                setType("Shpallar");
+              }}
+            >
+              Shpallar
+            </button>
+            <button
+              onClick={() => {
+                setType(" Ikki rangli");
+              }}
+            >
+              Ikki rangli
+            </button>
+            <button
+              onClick={() => {
+                setType(" Klassik");
+              }}
+            >
+              Klassik
+            </button>
             <button
               onClick={() => {
                 setType("Koja nabuk");
@@ -229,10 +272,34 @@ export function All() {
           <div className="filter_season">
             <p>Mavsum:</p>
             <div className="season">
-              <button>Kuzgi</button>
-              <button>Qishgi</button>
-              <button>Bahorgi</button>
-              <button>Yozgi</button>
+              <button
+                onClick={() => {
+                  setSeason("Kuzgi");
+                }}
+              >
+                Kuzgi
+              </button>
+              <button
+                onClick={() => {
+                  setSeason("Qishgi");
+                }}
+              >
+                Qishgi
+              </button>
+              <button
+                onClick={() => {
+                  setSeason("  Bahorgi");
+                }}
+              >
+                Bahorgi
+              </button>
+              <button
+                onClick={() => {
+                  setSeason("Yozgi");
+                }}
+              >
+                Yozgi
+              </button>
             </div>
           </div>
 

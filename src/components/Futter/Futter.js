@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import futer_img from "../../asest/navbar/Vector (2).png"
 import "./futer.css"
 import click from "../../asest/Futter/cilik.png"
@@ -9,6 +9,9 @@ import { useNavigate } from "react-router-dom";
 
 export function Futter() {
   const navigate = useNavigate();
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
 
@@ -18,7 +21,7 @@ export function Futter() {
         <div className="img">
           <img src={futer_img} alt="" />
         </div>
-        <p>+998 (88) 413 00 00</p>
+        <a href="tel:+998884130000" >+998 (88) 413 00 00</a>
       </div>
 
       <div className="footer_follow">

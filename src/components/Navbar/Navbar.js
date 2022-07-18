@@ -59,7 +59,7 @@ export function Navbar() {
 
   return (
     <div className="navbar ">
-      <nav style={home ? { background: "#C9661A" } : {}}>
+      <nav style={home ? { background: "#D5772F" } : {}}>
         <div className="logo_nav">
           <button
             onClick={() => {

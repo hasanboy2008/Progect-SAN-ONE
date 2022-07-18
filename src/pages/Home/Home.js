@@ -44,7 +44,10 @@ export function Home() {
             qulayroq o'tkazasiz!
           </span>
           <div className="btnDiv">
-            <button className="btn btnColorF">KO'RISH</button>
+            <button className="btn btnColorF"
+         
+            
+            >KO'RISH</button>
             <button
               onClick={() => {
                 navigate("/signup");

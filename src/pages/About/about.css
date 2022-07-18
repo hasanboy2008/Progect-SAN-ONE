@@ -186,8 +186,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../../asest/about/bcimage2.png),
-    url(../../asest/about/bcimage1.png);
+  background-image: url(../../asest/about/bcimage2.png.jpg),
+    url(../../asest/about/bcimage2.png.jpg);
   background-size: cover;
   background-position: center;
 }
