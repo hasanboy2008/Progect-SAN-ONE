@@ -9,6 +9,21 @@ import { useDispatch } from "react-redux/es/exports";
 import logo2 from "../../asest/navbar/Vector.svg";
 
 export function Navbar() {
+
+  let scroll1 = window.pageYOffset;
+  window.onscroll = function() {
+    let scroll2 = window.pageYOffset;
+    if(scroll1 > scroll2) {
+      console.log("teng");
+      document.querySelector("nav").style.top="0"
+    }
+    else{
+      console.log("teng emas");
+      document.querySelector("nav").style.top="-200px";
+    }
+    scroll1 = scroll2;
+  }
+
   const location = useLocation();
   const path = location.pathname;
   const navigate = useNavigate();
@@ -58,7 +73,7 @@ export function Navbar() {
 
 
   return (
-    <div className="navbar ">
+    <div className="navbar">
       <nav style={home ? { background: "#BD6F18" } : {}}>
         <div className="logo_nav">
           <button
