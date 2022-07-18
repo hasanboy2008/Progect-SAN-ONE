@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 // CSS style link
 import "./about.css";
 // import Image
-import logo from "../../asest/about/logotext.png.jpg";
+import logo from "../../asest/about/logotext.png";
 import image1 from "../../asest/about/image1.png.jpg";
 import image2 from "../../asest/about/image2.png.jpg";
 import image3 from "../../asest/about/image3.png.jpg";
