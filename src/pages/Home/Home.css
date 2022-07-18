@@ -470,6 +470,7 @@
 }
 @media (max-width: 400px) {
    .section1 {
+   
     height: 520px;
     display: flex;
     align-items: center;
