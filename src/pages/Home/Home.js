@@ -23,7 +23,7 @@ export function Home() {
       <div className="section1">
         <div className="left">
           <p>
-            <i className="pi pi-arrow-left"></i> Barcha mahsulotlar
+            Barcha mahsulotlar
           </p>
         </div>
         <div className="center">
@@ -43,7 +43,7 @@ export function Home() {
               }}
               className="btn btnColorN"
             >
-              Ro'yhatdan o'tish <i className="pi pi-arrow-right"></i>{" "}
+              Ro'yhatdan o'tish{" "}
             </button>
           </div>
         </div>
