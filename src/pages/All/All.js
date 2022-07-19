@@ -4,22 +4,23 @@ import { useSelector } from "react-redux";
 import Cardlar from "../../components/cards/Cards";
 
 export function All() {
-  const search = useSelector((state) => state.reSearch);
-  // const result = products.filter((product) => {
-  //   return (
-  //     product.name.toLowerCase().includes(search.toLowerCase()) ||
-  //     product.code.toLowerCase().includes(search.toLowerCase())
-  //   );
-  // });
-  console.log(search);
   const products = useSelector((state) => state.reProducts);
+  const search = useSelector((state) => state.reSearchProduct);
+
+  const resultSearch = products.filter((product) => {
+    return (
+      product.name.toLowerCase().includes(search.toLowerCase()) ||
+      product.code.toLowerCase().includes(search.toLowerCase())
+    );
+  });
+
   // const search = useSelector((state) => state.reSearch);
   const [type, setType] = useState("");
 
-  const [price, setPrice] = useState({ start: "", end: "" });
+  const [price, setPrice] = useState({ start: "", end: "9999999" });
 
   // Filter Price
-  const resultFilterPrice = products.filter((product) => {
+  const resultFilterPrice = resultSearch.filter((product) => {
     return +product.price >= +price.start && +product.price <= +price.end;
   });
 
@@ -29,26 +30,24 @@ export function All() {
   });
 
   // filter size
-  const [size, setSize] = useState("");
+  // const [size, setSize] = useState("");
+  // const resultFilterSize = resultFilterType.filter((product) => {
+  //   return product.size.toLowerCase().includes(size.toLowerCase());
+  // });
 
-  const resultFilterSize = resultFilterType.filter((product) => {
-    if (product.size.includes(size.trim())) {
-      return product;
-    }
-
-    return product;
-  });
   // filter product season
-   const [season,setSeason]=useState('')
-   
-  const resultFilterSeason = resultFilterSize.filter((product) => {
-    return product.season.toLowerCase() === season.toLowerCase();
+  const [season, setSeason] = useState("");
+  const resultFilterSeason = resultFilterType.filter((product) => {
+    return product.season.toLowerCase().includes(season.toLowerCase());
   });
 
-   console.log(season);
-
-
-
+  // filter most viu
+  const [mostView, setMostView] = useState(false);
+  if (mostView) {
+    products.sort((a, b) => {
+      return a.view - b.view;
+    });
+  }
 
   const result = resultFilterSeason;
 
@@ -191,70 +190,70 @@ export function All() {
             <div className="ratio">
               <button
                 onClick={() => {
-                  setSize("36");
+                  // setSize("36");
                 }}
               >
                 46
               </button>
               <button
                 onClick={() => {
-                  setSize("37");
+                  // setSize("37");
                 }}
               >
                 37
               </button>
               <button
                 onClick={() => {
-                  setSize("38");
+                  // setSize("38");
                 }}
               >
                 38
               </button>
               <button
                 onClick={() => {
-                  setSize("39");
+                  // setSize("39");
                 }}
               >
                 39
               </button>
               <button
                 onClick={() => {
-                  setSize("40");
+                  // setSize("40");
                 }}
               >
                 40
               </button>
               <button
                 onClick={() => {
-                  setSize("41");
+                  // setSize("41");
                 }}
               >
                 41
               </button>
               <button
                 onClick={() => {
-                  setSize("42");
+                  // setSize("42");
                 }}
               >
                 42
               </button>
               <button
                 onClick={() => {
-                  setSize("43");
+                  // setSize("43");
                 }}
               >
                 43
               </button>
               <button
                 onClick={() => {
-                  setSize("44");
+                  // setSize("44");
                 }}
               >
                 44
               </button>
               <button
                 onClick={() => {
-                  setSize("45");
+                  // setSize("45");
                 }}
               >
                 45
@@ -305,7 +304,13 @@ export function All() {
 
           <div className="filter_best">
             <button>Eng ko‘p sotilyotganlari</button>
-            <button>Eng ko‘p ko‘rilyotganlari</button>
+            <button
+              onClick={() => {
+                setMostView(true);
+              }}
+            >
+              Eng ko‘p ko‘rilyotganlari
+            </button>
             <button>Eng ohirgilari</button>
           </div>
         </div>

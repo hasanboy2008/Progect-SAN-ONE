@@ -1,13 +1,11 @@
-export const acSearch = (arr) => {
-  return {
-    type: "SERCH_PRODUCT",
-    payload: arr,
-  };
-};
+export const acSearchProduct = (search) => ({
+  type: "SEARCH_PRODUCT",
+  payload: search,
+});
 
-export const reSearch = (state = "", action) => {
+export const reSearchProduct = (state = "", action) => {
   switch (action.type) {
-    case "SERCH_PRODUCT":
+    case "SEARCH_PRODUCT":
       return action.payload;
     default:
       return state;

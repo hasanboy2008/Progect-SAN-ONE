@@ -124,7 +124,11 @@ export function Detail() {
             <button className="btn-purchase" onClick={()=>{
               navigate("/confirm");
             }} >Sotib olish</button>
-            <button className="btn-basket"   >Savatga</button>
+            <button className="btn-basket" 
+            
+
+            
+            >Savatga</button>
           </div>
         </div>
       </div>
