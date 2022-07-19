@@ -21,7 +21,7 @@ function SamplePrevArrow({ onClick }) {
 }
 
 export default function SimpleSlider() {
-    let settings = {
+  let settings = {
     dots: true,
     infinite: true,
     slidesToShow: 4,
@@ -64,8 +64,8 @@ export default function SimpleSlider() {
   return (
     <div className="simple_slider">
       <Slider {...settings}>
-        {products.map((item, id) => (
-          <div className="card_slider new_Produc_1 " key={id}>
+        {products.map((item, index) => (
+          <div className="card_slider new_Produc_1 " key={index}>
             <figure>
               <img src={item.images[0]} alt="" />
             </figure>

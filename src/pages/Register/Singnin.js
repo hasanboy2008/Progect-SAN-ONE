@@ -9,6 +9,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useSnackbar } from "notistack";
 import { useDispatch } from "react-redux";
 import { acLoading } from "../../Redux/Loading";
+import { acUser } from "../../Redux/User";
 
 export function Singnin() {
   const [login, setLogin] = useState({ login: "", password: "" });
@@ -34,17 +35,7 @@ export function Singnin() {
           enqueueSnackbar(res.data.message, {
             variant: "success",
           });
-          console.log(res.data);
-
-          localStorage.setItem(
-            "auth",
-            JSON.stringify({
-              token: res.data.token,
-              login: login.login,
-            })
-          );
-          localStorage.setItem("user", JSON.stringify(res.data.user));
-          localStorage.setItem("cart", JSON.stringify(res.data.card));
+          dispatch(acUser(res.data.user));
         } else {
           enqueueSnackbar(res.data.message, {
             variant: "error",

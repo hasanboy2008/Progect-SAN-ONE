@@ -66,8 +66,6 @@ export function Katalog() {
       name: "Klassicheskiy",
     },
   ];
-  console.log(data);
-
   return (
     <div className="katalog">
       <div className="bcgImage">
@@ -89,8 +87,8 @@ export function Katalog() {
         </div>
 
         <div className="container">
-          {data.map((item) => (
-            <div key={item.id} className="box-container">
+          {data.map((item, index) => (
+            <div key={index} className="box-container">
               <button
                 onClick={() => {
                   navigate("/all");

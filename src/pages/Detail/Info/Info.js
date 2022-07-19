@@ -32,7 +32,7 @@ export function DetailInfo({ product }) {
         <p className="answers">
           {product.sizes
             ? product.sizes.map((size) => {
-                return <>{size}, </>;
+                return <span key={size}>{size}, </span>;
               })
             : ""}
         </p>

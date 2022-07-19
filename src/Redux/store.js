@@ -1,18 +1,21 @@
-import { createStore, combineReducers } from "redux";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
 import { reProducts } from "./Produc";
 import { reLoading } from "./Loading";
 import { reSearchProduct } from "./Search";
-import { reCart } from "./Carta";
+import { reCart, reReloadCard } from "./Carta";
+import { reUser } from "./User";
 
 const reducer = combineReducers({
   reProducts,
   reLoading,
   reSearchProduct,
-  reCart
+  reCart,
+  reUser,
+  reReloadCard,
 });
 
-export const Store = createStore(
+export const Store = configureStore({
   reducer,
-  window.REDUX_DEVTOOLS_EXTENSION && window.REDUX_DEVTOOLS_EXTENSION()
-);
+  devTools: process.env.NODE_ENV !== "production",
+});
