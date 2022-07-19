@@ -4,7 +4,7 @@ import logo_nav from "../../asest/navbar/Vector (2).png";
 import "./navbar.css";
 import { useLocation, useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
-import { acSearch } from "../../Redux/Search";
+// import { acSearch } from "../../Redux/Search";
 import { useDispatch } from "react-redux/es/exports";
 import logo2 from "../../asest/navbar/Vector.svg";
 
@@ -110,7 +110,7 @@ export function Navbar() {
             onSubmit={(e) => {
               e.preventDefault();
               navigate("/all");
-              dispatch(acSearch(e.target.value));
+              // dispatch(acSearch(e.target.value));
             }}
           >
             <div className="input_Div">
