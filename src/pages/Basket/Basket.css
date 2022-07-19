@@ -4,7 +4,7 @@
     background: #F5F5F5;
     display: flex;
     flex-direction: column;
-    padding: 85px 156px 190px 156px;
+    padding: 130px 156px 190px 156px;
 }
 
 button{
@@ -71,16 +71,38 @@ button{
     color: #000000;
 }
 
-.basket-data .basket-buttons{
+.basket-button{
     background: #DCBB45;
     border-radius: 8px;
     width: 150px;
     height: 46px;
     margin-left: 56px ;
     margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
 }
 
-.basket-data .basket-price{
+.basket-decrement{
+    border: 3px solid #000000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    background: #DCBB45;
+}
+
+.basket-increment{
+    border: 3px solid #000000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    background: #DCBB45;
+}
+
+.basket-price{
     font-weight: 700;
     font-size: 23.8058px;
     line-height: 29px;
@@ -89,7 +111,7 @@ button{
     padding: 60px 0 0 60px;
 }
 
-.basket-data .basket-close{
+.basket-close{
     margin: 65px 0 0 30px;
     width: 24.49px;
     height: 24.49px;
@@ -226,7 +248,7 @@ button{
         line-height: 12px;
     }
 
-    .basket-data .basket-price{
+    .basket-price{
         font-weight: 500;
         font-size: 20px;
         line-height: 22px;
@@ -235,7 +257,7 @@ button{
         padding: 45px 0 0 30px;
     }
 
-    .basket-data .basket-close{
+    .basket-close{
         margin: 43.5px 0 0 30px;
     }
 
@@ -317,14 +339,14 @@ button{
         padding-top: 20px;
     }
 
-    .basket-data .basket-price{
+    .basket-price{
         font-weight: 700;
         font-size: 23.8058px;
         line-height: 29px;
         padding-top: 40px;
     }
 
-    .basket-data .basket-close{
+    .basket-close{
         margin-bottom: 30px;
     }
 

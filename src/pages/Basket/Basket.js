@@ -82,10 +82,10 @@ export function Basket() {
                                     <p>{parse.text}</p>
                                     <span>{parse.artikul}</span>
                                 </div>
-                                <div className="basket-buttons">
+                                <div className="basket-button">
+                                    <button className="basket-decrement" onClick={() => setCount(count - 1)} disabled={count === 1}>-</button>
                                     <h2 className="basket-h2">{count}</h2>
-                                    <button className="button-decrement" onClick={() => setCount(count - 1)} disabled={count === 1}>-</button>
-                                    <button className="button-increment" onClick={() => setCount(count + 1)}>+</button>
+                                    <button className="basket-increment" onClick={() => setCount(count + 1)}>+</button>
                                 </div>
                             <p className="basket-price">{parse.price}</p>
                             <span className="basket-close">x</span>
