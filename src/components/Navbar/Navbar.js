@@ -5,7 +5,7 @@ import "./navbar.css";
 import { useLocation, useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 // import { acSearch } from "../../Redux/Search";
-import { useDispatch } from "react-redux/es/exports";
+// import { useDispatch } from "react-redux/es/exports";
 import logo2 from "../../asest/navbar/Vector.svg";
 
 export function Navbar() {
@@ -36,7 +36,7 @@ export function Navbar() {
   const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
   const home = path === "/";
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // search
   // const [search,setSearch]=useState("")
   // console.log(user);

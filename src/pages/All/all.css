@@ -44,7 +44,7 @@
 }
 
 .all_filter {
-    width: 453px;
+    width: 30%;
     height: auto;
     /* background-color: rosybrown; */
     background: #FFFFFF;
@@ -334,11 +334,9 @@
 
 /* ////////allrezalut_left//////// */
 
-.allrezalut_left {
-    width: 75%;
-    height: 400px;
-}
-
+.allrezalut_right{
+    width: 70%;
+}                                                                                                                                                                 
 
 .reasalut {
     width: 100%;
