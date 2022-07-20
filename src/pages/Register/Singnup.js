@@ -2,31 +2,55 @@ import React, { useState } from "react";
 import "./siginup.css";
 import NumberFormat from "react-number-format";
 import axios from "axios";
+import { useSnackbar } from "notistack";
+import { useDispatch } from "react-redux";
+import { acLoading } from "../../Redux/Loading";
+import { acUser } from "../../Redux/User";
+import { useNavigate } from "react-router-dom";
 
 export function Signup() {
   const [custemer, setCustemer] = useState({});
+  const dispatch = useDispatch();
+  const { enqueueSnackbar } = useSnackbar();
+  const navigate = useNavigate();
 
   function hendelSubmit(e) {
     e.preventDefault();
-    console.log(custemer);
-    axios("https://sanone.herokuapp.com/api/create/new/customer", {
+    dispatch(acLoading(true));
+    axios("https://api.sanone.uz/add/new/customer", {
       method: "POST",
-      data: custemer,
+      data: JSON.stringify(custemer),
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
     })
       .then((res) => {
-        console.log(res.data);
+        if (res.data.status) {
+          enqueueSnackbar(res.data.message, {
+            variant: "success",
+          });
+          dispatch(acUser(res.data.user));
+          dispatch(acLoading(false));
+          navigate("/");
+        } else {
+          enqueueSnackbar(res.data.message, {
+            variant: "error",
+          });
+          dispatch(acLoading(false));
+        }
       })
       .catch((err) => {
         console.log(err);
+        dispatch(acLoading(false));
+        enqueueSnackbar(err.response.data.message, {
+          variant: "error",
+        });
       });
   }
   return (
     <div className="siginup">
-      <form action="" onSubmit={hendelSubmit}>
+      <form id="myProfile" onSubmit={hendelSubmit}>
         <svg
           width="65"
           height="65"
@@ -173,10 +197,10 @@ export function Signup() {
               setCustemer({ ...custemer, region: e.target.value });
             }}
           >
-            <option value="1">Viloyat, tuman</option>
-            <option value="2">Viloyat, tuman</option>
-            <option value="3">Viloyat, tuman</option>
-            <option value="4">Viloyat, tuman</option>
+            <option value="Namangan">Namangan</option>
+            <option value="Andijon">Andijon</option>
+            <option value="Farg'ona">Farg'ona</option>
+            <option value="Tosgkent">Tosgkent</option>
           </select>
         </div>
         <div className="sign_name">

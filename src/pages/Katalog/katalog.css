@@ -5,7 +5,6 @@
     transition: all 0.5s;
 } */
 .katalog {
-  position: relative;
   margin: 0 auto;
   width: 100%;
   height: auto;
@@ -26,8 +25,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 2%;
+  background:  url(../../asest/katalog/bcImage1.png);
+  background-position: center;
+  background-size: contain;
   gap: 4rem;
 }
 .katalog-main .top p {
@@ -78,35 +78,7 @@
   color: #9f6233;
 }
 
-.katalog .bcgImage {
-  padding-top: 12%;
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  z-index: 0;
-}
 
-.katalog .bcgImage .bcgImage1,
-.katalog .bcgImage .bcgImage2,
-.katalog .bcgImage .bcgImage3 {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-}
-.katalog .bcgImage .bcgImage1 {
-  justify-content: center;
-}
-.katalog .bcgImage .bcgImage2 {
-  justify-content: flex-end;
-}
-.katalog .bcgImage .bcgImage3 {
-  justify-content: flex-start;
-}
 .box-container > button {
   border: none;
   outline: none;
@@ -145,15 +117,9 @@
   }
 }
 @media (max-width: 1300px) {
-  .katalog .bcgImage {
-    display: none;
-  }
+  
   .katalog-main {
-    position: relative;
     padding: 15% 6%;
-    background-image: url(../../asest/katalog/bcImage1.png);
-    background-position: center;
-    background-size: contain;
   }
 }
 @media (max-width: 1200px) {

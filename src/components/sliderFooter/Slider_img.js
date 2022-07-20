@@ -62,8 +62,8 @@ export default function Slider_img() {
   return (
     <div className="slider_img">
       <Slider {...settings}>
-        {products.map((item) => (
-          <div>
+        {products.map((item, index) => (
+          <div key={index}>
             <div className="slider_boxer">
               <img src={item.images[0]} alt="" />
             </div>

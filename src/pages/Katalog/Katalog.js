@@ -13,9 +13,7 @@ import image_5 from "../../asest/katalog/image_5.jpg";
 import image_6 from "../../asest/katalog/image_6.jpg";
 import image_7 from "../../asest/katalog/image_7.jpg";
 import image_8 from "../../asest/katalog/image_8.jpg";
-import bcImage1 from "../../asest/katalog/bcImage1.png";
-import bcImage2 from "../../asest/katalog/bcImage2.png";
-import bcImage3 from "../../asest/katalog/bcImage3.png";
+
 
 export function Katalog() {
   // database - malumotlar toplami
@@ -66,22 +64,8 @@ export function Katalog() {
       name: "Klassicheskiy",
     },
   ];
-  console.log(data);
-
   return (
     <div className="katalog">
-      <div className="bcgImage">
-        <div className="bcgImage1">
-          <img src={bcImage1} alt="" />
-        </div>
-        <div className="bcgImage2">
-          <img src={bcImage2} alt="" />
-        </div>
-        <div className="bcgImage3">
-          <img src={bcImage3} alt="" />
-        </div>
-      </div>
-
       <div className="katalog-main">
         <div className="top">
           <p>Katalog</p>
@@ -89,8 +73,8 @@ export function Katalog() {
         </div>
 
         <div className="container">
-          {data.map((item) => (
-            <div key={item.id} className="box-container">
+          {data.map((item, index) => (
+            <div key={index} className="box-container">
               <button
                 onClick={() => {
                   navigate("/all");

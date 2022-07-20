@@ -35,26 +35,26 @@ export default function App() {
         modules={[Grid, Pagination]}
         className="mySwiper"
         breakpoints={{
-          0:{
-            slidesPerView:1
+          0: {
+            slidesPerView: 1,
           },
-          420:{
-            slidesPerView:1
+          420: {
+            slidesPerView: 1,
           },
-          470:{
-            slidesPerView:2
+          470: {
+            slidesPerView: 2,
           },
-          1200:{
-            slidesPerView:3
+          1200: {
+            slidesPerView: 3,
           },
-          1720:{
-            slidesPerView:4
-          }
+          1720: {
+            slidesPerView: 4,
+          },
         }}
       >
         {newProducts.map((item, index) => (
-          <SwiperSlide>
-            <div className="new_Produc_1" key={index}>
+          <SwiperSlide key={index}>
+            <div className="new_Produc_1">
               <figure>
                 <img src={item.images[0]} alt="" />
               </figure>

@@ -8,11 +8,13 @@ import EmailIcon from "@mui/icons-material/Email";
 import PersonPinCircleIcon from "@mui/icons-material/PersonPinCircle";
 import NumberFormat from "react-number-format";
 import { useSnackbar } from "notistack";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { acLoading } from "../../Redux/Loading";
+import { acUser } from "../../Redux/User";
 
 export function Myacount() {
-  const [data, setData] = useState({});
+  const user = useSelector((state) => state.reUser);
+  const [data, setData] = useState(user);
   const [img, setImg] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const dispatch = useDispatch();
@@ -38,6 +40,7 @@ export function Myacount() {
           enqueueSnackbar(res.data.message, {
             variant: "success",
           });
+          dispatch(acUser(res.data.user));
         } else {
           enqueueSnackbar(res.data.message, {
             variant: "error",
@@ -123,9 +126,9 @@ export function Myacount() {
             <PersonPinCircleIcon />
             <input
               type="text"
-              value={data.qodrabod}
+              value={data.mfy}
               onChange={(e) => {
-                setData({ ...data, qodrabod: e.target.value });
+                setData({ ...data, mfy: e.target.value });
               }}
             />
           </div>

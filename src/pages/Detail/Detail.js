@@ -6,6 +6,9 @@ import Comments from "./Comments/Comments";
 import { DetailInfo } from "./Info/Info";
 import axios from "axios";
 import NumberFormat from "react-number-format";
+import { useSelector, useDispatch } from "react-redux";
+import { useSnackbar } from "notistack";
+import { acLoading } from "../../Redux/Loading";
 
 export function Detail() {
   const [selectedImg, setSelectedImg] = useState(0);
@@ -16,6 +19,10 @@ export function Detail() {
   const [images, setImages] = useState([]);
   const [indexImg, setIndexImg] = useState(0);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.reUser);
+
+  const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,8 +31,6 @@ export function Detail() {
   const handletab = (e) => {
     setShowtab(e);
   };
-
-  console.log(images);
 
   useEffect(() => {
     axios(` https://api.sanone.uz/view/product/${product_id}`)
@@ -45,11 +50,11 @@ export function Detail() {
           <div className="imgContainer">
             {images.map((img, index) => (
               <figure
+                key={index}
                 onClick={() => {
                   setSelectedImg(index);
                   setIndexImg(index);
                 }}
-                key={index}
               >
                 <img src={img} alt="shoe" />
                 <span
@@ -111,7 +116,7 @@ export function Detail() {
               {product.sizes
                 ? product.sizes.map((size) => {
                     return (
-                      <div className="size">
+                      <div className="size" key={size}>
                         <p>{size}</p>
                       </div>
                     );
@@ -121,14 +126,55 @@ export function Detail() {
           </div>
 
           <div className="btns">
-            <button className="btn-purchase" onClick={()=>{
-              navigate("/confirm");
-            }} >Sotib olish</button>
-            <button className="btn-basket" 
-            
-
-            
-            >Savatga</button>
+            <button
+              className="btn-purchase"
+              onClick={() => {
+                navigate("/confirm");
+              }}
+            >
+              Sotib olish
+            </button>
+            <button
+              className="btn-basket"
+              onClick={() => {
+                dispatch(acLoading(true));
+                axios(`https://api.sanone.uz/addCard/${user.id}`, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    token: user.token,
+                  },
+                  data: JSON.stringify({
+                    ...product,
+                    img: images[indexImg],
+                    size: product.sizes[0],
+                    userId: user.id,
+                    quantity: 1,
+                  }),
+                })
+                  .then((res) => {
+                    if (res.data.status) {
+                      enqueueSnackbar(res.data.message, {
+                        variant: "success",
+                      });
+                      dispatch(acLoading(false));
+                      dispatch({
+                        type: "RELOAD_CARD",
+                      });
+                    } else {
+                      enqueueSnackbar(res.data.message, {
+                        variant: "error",
+                      });
+                      dispatch(acLoading(false));
+                    }
+                  })
+                  .catch((err) => {
+                    dispatch(acLoading(false));
+                  });
+              }}
+            >
+              Savatga
+            </button>
           </div>
         </div>
       </div>
