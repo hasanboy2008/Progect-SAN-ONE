@@ -26,7 +26,7 @@ export function Myacount() {
     formData.append("img", img);
     formData.append("data", JSON.stringify(data));
 
-    axios("http://api.sanone.uz/update/customer", {
+    axios("https://api.sanone.uz/update/customer", {
       method: "POST",
       headers: {
         "Content-Type": "multipart/form-data",
