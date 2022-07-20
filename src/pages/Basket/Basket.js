@@ -7,23 +7,17 @@ import axios from "axios";
 import { acLoading } from "../../Redux/Loading";
 
 
-
 export function Basket() {
   const carts = useSelector((state) => state.reCart);
   const token = JSON.parse(localStorage.getItem("user") || "{}").token || false;
   const id = JSON.parse(localStorage.getItem("user") || "{}").id || false;
   const dipatch = useDispatch();
   const [count, setCount] = useState(1);
-  //   Button count +1 va -1 uchun
-//   console.log(token);
   return (
     <div className="basket-page">
       <div className="basket">
         <div className="basket-text">
           <p>Savatda 5 ta tovar bor</p>
-
-       
-    
 
         <div className="basket-all">
           <div className="basket-home">
@@ -33,11 +27,7 @@ export function Basket() {
                   <div className="basket-hr">
                     <hr />
                   </div>
-                  {/* brand: "Dambog" colors: "#7C7C7C" country: "Uzbekistan"
-                  discount: "0" id: "1" img:
-                  "https://api.sanone.uz/img/SanOne16574531917290.jpg" name:
-                  "Tufli" price: "150000" quantity: "1" season: "1234" sizes:
-                  "43" type: "Koja" */}
+               
                   <div className="basket-data" key={index}>
                     <img src={parse.img} alt="" />
                     <div className="basket-texts-2">
