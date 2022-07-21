@@ -45,14 +45,14 @@ export function Basket() {
                           onClick={() => setCount(count - 1)}
                           disabled={count === 1}
                         >
-                          -
+                          <p>-</p>
                         </button>
                         <h2 className="basket-h2">{parse.quantity}</h2>
                         <button
                           className="basket-increment"
                           onClick={() => setCount(count + 1)}
                         >
-                          +
+                          <p>+</p>
                         </button>
                       </div>
                       <p className="basket-price">{parse.price}</p>
