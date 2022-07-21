@@ -104,7 +104,7 @@ export function Basket() {
             <div className="basket-order">
               <img src={Logo} alt="" />
               <div className="basket-order-texts">
-                <p></p>
+                <p>narxi:</p>
                 <p>{carts.reduce((a, b) => a + +b.price, 0)}</p>
               </div>
               <div className="basket-order-texts">
