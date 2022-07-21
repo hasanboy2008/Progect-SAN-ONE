@@ -19,9 +19,9 @@ export function Basket() {
       <div className="basket">
         <div className="basket-text">
           {carts.length !== 0 ? (
-            <p>Savatda {carts.length} ta tovar bor</p>
+            <p className="basket-main-text">Savatda {carts.length} ta tovar bor</p>
           ) : (
-            <p>Savatda xechnarsa yo`q</p>
+            <p className="basket-main-text">Savatda xechnarsa yo`q</p>
           )}
 
           <div className="basket-all">
@@ -35,20 +35,21 @@ export function Basket() {
                     <div className="basket-data" key={index}>
                       <img src={parse.img} alt="" />
                       <div className="basket-texts-2">
-                        <p>{parse.name}</p>
-                        <span>{parse.price}</span>
+                        <p className="basket-shoes-name">{parse.name}</p>
+                        <span className="basket-shoes-articul">{parse.price}</span>
                       </div>
-                      <div className="basket-buttons">
-                        <h2 className="basket-h2">{parse.quantity}</h2>
+                      <div className="basket-button">
+                        
                         <button
-                          className="button-decrement"
+                          className="basket-decrement"
                           onClick={() => setCount(count - 1)}
                           disabled={count === 1}
                         >
                           -
                         </button>
+                        <h2 className="basket-h2">{parse.quantity}</h2>
                         <button
-                          className="button-increment"
+                          className="basket-increment"
                           onClick={() => setCount(count + 1)}
                         >
                           +
@@ -104,16 +105,16 @@ export function Basket() {
             <div className="basket-order">
               <img src={Logo} alt="" />
               <div className="basket-order-texts">
-                <p>Narxi:</p>
-                <p>1 995 000 so’m</p>
+                <p className="basket-order-p">Narxi:</p>
+                <p className="basket-order-p">1 995 000 so’m</p>
               </div>
               <div className="basket-order-texts">
-                <p>Chegirma:</p>
-                <p>- 10 %</p>
+                <p className="basket-order-p">Chegirma:</p>
+                <p className="basket-order-p">- 10 %</p>
               </div>
               <div className="basket-order-texts">
-                <p>Yetkazib berish:</p>
-                <p>15 000 so’m</p>
+                <p className="basket-order-p">Yetkazib berish:</p>
+                <p className="basket-order-p">15 000 so’m</p>
               </div>
               <hr />
               <div className="basket-order-texts">

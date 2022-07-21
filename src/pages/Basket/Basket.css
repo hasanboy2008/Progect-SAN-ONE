@@ -4,7 +4,7 @@
     background: #F5F5F5;
     display: flex;
     flex-direction: column;
-    padding: 130px 156px 190px 156px;
+    padding: 130px 156px 140px 156px;
 }
 
 button{
@@ -21,7 +21,7 @@ button{
     flex-direction: column;
 }
 
-.basket-text p{
+.basket-main-text{
     font-weight: 700;
     font-size: 37.8515px;
     line-height: 46px;
@@ -43,6 +43,7 @@ button{
 
 .basket-data{
     display: flex;
+    margin-bottom: 20px;
 }
 
 .basket-hr hr{
@@ -52,21 +53,29 @@ button{
 }
 
 .basket-data img{
-    width: 221px;
-    height: 150.12px;
+    width: 240px;
+    height: 240px;
     padding-top: 20px;
 }
 
-.basket-data p{
+.basket-texts-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    padding-left: 20px;
+}
+
+.basket-shoes-name{
     font-weight: 400;
-    font-size: 19.6296px;
+    font-size: 32px;
     line-height: 24px;
     color: #000000;
 }
 
-.basket-data span{
+.basket-shoes-articul{
     font-weight: 400;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 15px;
     color: #000000;
 }
@@ -77,7 +86,7 @@ button{
     width: 150px;
     height: 46px;
     margin-left: 56px ;
-    margin-top: 50px;
+    margin-top: 95px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,7 +94,7 @@ button{
 }
 
 .basket-decrement{
-    border: 3px solid #000000;
+    border: 2px solid #000000;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -94,7 +103,7 @@ button{
 }
 
 .basket-increment{
-    border: 3px solid #000000;
+    border: 2px solid #000000;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -104,25 +113,18 @@ button{
 
 .basket-price{
     font-weight: 700;
-    font-size: 23.8058px;
-    line-height: 29px;
+    font-size: 34px;
+    line-height: 34px;
     text-align: right;
     color: #C9A95C;
-    padding: 60px 0 0 60px;
+    padding: 100px 0 0 60px;
 }
 
 .basket-close{
-    margin: 65px 0 0 30px;
-    width: 24.49px;
-    height: 24.49px;
-}
-
-.basket-texts-2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 0;
-    padding-left: 11px;
+    margin: 97px 0 0 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
 }
 
 .basket-order{
@@ -130,26 +132,34 @@ button{
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     width: 568px;
-    height: 542px;
+    height: 560px;
     padding: 46px 40px 47px 40px;
     margin-left: 125px;
 }
-
 
 .basket-order img{
     align-items: center;
     padding: 0 139px 40px 139px;
 }
+
+.basket-order-p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
 .basket-order .basket-order-texts{
     display: flex;
     justify-content: space-between;
-    padding-top: 25px;
+    padding-top: 30px;
 }
 
-.basket-order .basket-order-texts .basket-order-texts-1{
+.basket-order-texts .basket-order-texts-1{
     font-weight: 400;
-    font-size: 19px;
-    line-height: 23px;
+    font-size: 28px;
+    line-height: 30px;
 
     color: #000000;
 }
@@ -162,8 +172,8 @@ button{
 
 .basket-order-texts-2{
     font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 28px;
+    line-height: 30px;
     /* identical to box height */
 
     text-align: right;
@@ -184,8 +194,7 @@ button{
     background: #DCBB45;
     border-radius: 8px;
     padding: 10px 54px;
-    margin-top: 45px;
-    margin-left: 54px;
+    margin: 50px;
     border: none;
 }
 
@@ -248,14 +257,14 @@ button{
         line-height: 12px;
     }
 
-    .basket-price{
+    /* .basket-price{
         font-weight: 500;
         font-size: 20px;
         line-height: 22px;
         text-align: right;
         color: #C9A95C;
         padding: 45px 0 0 30px;
-    }
+    } */
 
     .basket-close{
         margin: 43.5px 0 0 30px;
@@ -339,12 +348,12 @@ button{
         padding-top: 20px;
     }
 
-    .basket-price{
+    /* .basket-price{
         font-weight: 700;
         font-size: 23.8058px;
         line-height: 29px;
         padding-top: 40px;
-    }
+    } */
 
     .basket-close{
         margin-bottom: 30px;
