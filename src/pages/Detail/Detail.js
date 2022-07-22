@@ -22,11 +22,14 @@ export function Detail() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.reUser);
 
-  const [size, setSize] = useState([]);
+  const [razmer, setRazmer] = useState(product.sizes? product.sizes[0] :"");
   const { enqueueSnackbar } = useSnackbar();
+
+  console.log(razmer);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
   }, []);
 
   const handletab = (e) => {
@@ -38,15 +41,17 @@ export function Detail() {
       .then((res) => {
         setProduct(res.data[0]);
         setImages(res.data[0].images ? res.data[0].images : []);
+        setRazmer(res.data? res.data[0].sizes[0] :"")
+        
       })
       .catch((err) => {
         console.log(err);
       });
   }, [product_id]);
 
-  const handelSize = (item) => {
-    console.log(item);
-  }
+  const handleSize = (item) => {
+    setRazmer(item);
+  };
 
   return (
     <div className="Detail">
@@ -121,7 +126,7 @@ export function Detail() {
               {product.sizes
                 ? product.sizes.map((size) => {
                     return (
-                      <button className="size" key={size} onClick={() => handelSize(size)} >
+                      <button className={ +size === +razmer ? " size active_size" : "size" } key={size} onClick={() => handleSize(size)} >
                         <p> {size} </p>
                       </button>
                     );
@@ -152,7 +157,7 @@ export function Detail() {
                   data: JSON.stringify({
                     ...product,
                     img: images[indexImg],
-                    size: product.sizes[0],
+                    size: razmer,
                     userId: user.id,
                     quantity: 1,
                   }),

@@ -1,7 +1,7 @@
 .cardlar{
   width: 100%;
   display: flex !important;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
 }
 .cardlar > .new_Produc_1{

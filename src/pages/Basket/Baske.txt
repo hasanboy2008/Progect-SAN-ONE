@@ -14,31 +14,82 @@ export function Basket() {
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
 
+  const [mahsulotlar, setMahsulotlar] = useState({
+    userdId: "",
+    order: [
+      {
+        productId: "",
+        code: "",
+        name: "",
+        price: "",
+        quantity: "",
+        discount: "",
+        sizes: "",
+        img: "",
+      },
+    ]
+  })
+  let mahsulot = {
+    userdId: "",
+    order: [
+      {
+        productId: "",
+        code: "",
+        name: "",
+        price: "",
+        quantity: "",
+        discount: "",
+        sizes: "",
+        img: "",
+      },
+    ]
+  }
+  let keysIn = {
+    productId: "",
+    code: "",
+    name: "",
+    price: "",
+    quantity: "",
+    discount: "",
+    sizes: "",
+    img: "",
+  }
+  // const userId = "";
+  // const productIndex = "";
 
+  const handleBuyurtma = (elements) => {
 
-  const handleBuyurtma = () => {
-    const order = [];
-
-    carts.map((item) => {
-      order.push({
-        productId: item.id,
-        code:item.code,
-        price: item.price,
-        quantity: item.quantity,
-        discount: item.discount,
-        sizes: item.size,
-        img: item.img[0],
-      });
-    });
-
-
-    const sendOrderData = JSON.stringify({
-      userId : user.id,
-      order,
+    elements.map(val => {
+      for (let key in keysIn) {
+        keysIn = {
+          ...keysIn,
+          [key]: val[key]
+        }
+      }
+      console.log(keysIn);
+      mahsulot = {
+        ...mahsulot,
+        userdId:"",
+        order:[
+          ...mahsulot.order,
+          keysIn
+        ]
+      }
+     
+      keysIn = {
+        productId: "",
+        code: "",
+        name: "",
+        price: "",
+        quantity: "",
+        discount: "",
+        sizes: "",
+        img: "",
+      }
     })
-
-    console.log(sendOrderData);
-  };
+ 
+    console.log(mahsulot);
+  }
 
   return (
     <div className="basket-page">
@@ -159,13 +210,7 @@ export function Basket() {
                     )}
                 </p>
               </div>
-              <button
-                onClick={() => {
-                  handleBuyurtma(carts);
-                }}
-              >
-                BUYURTMANI TASDIQLASH
-              </button>
+              <button onClick={() => { handleBuyurtma(carts) }}>BUYURTMANI TASDIQLASH</button>
             </div>
           </div>
         </div>

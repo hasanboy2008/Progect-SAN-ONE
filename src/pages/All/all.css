@@ -336,6 +336,7 @@
 
 .allrezalut_right{
     width: 70%;
+  
 }                                                                                                                                                                 
 
 .reasalut {
@@ -349,4 +350,13 @@
 
     color: white;
     font-size: 40px;
+   
 }
+#filter_btn{
+    display: none;
+}
+
+
+/* // all responsiv//// */
+
+

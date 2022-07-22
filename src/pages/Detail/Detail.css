@@ -231,6 +231,11 @@
   cursor: pointer;
 }
 
+.card-about .sizes .size-group .size.active_size{
+  background-color: red;
+  color: white;
+}
+
 .card-about .sizes .size-group .size.active-size {
   border: 1px solid #dcbb45 !important;
   border-radius: 8px;

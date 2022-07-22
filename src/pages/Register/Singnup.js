@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./siginup.css";
 import NumberFormat from "react-number-format";
 import axios from "axios";
@@ -13,6 +13,9 @@ export function Signup() {
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
   const navigate = useNavigate();
+  const [viloyat, setViloyat] = useState([]);
+  const [tuman, setTuman] = useState([]);
+  const [code, setCode] = useState("toshkent_sh");
 
   function hendelSubmit(e) {
     e.preventDefault();
@@ -48,6 +51,19 @@ export function Signup() {
         });
       });
   }
+
+  useEffect(() => {
+    axios({
+      method: "GET",
+      url: `https://api.sanone.uz/selectRegion/${code}`,
+    })
+      .then((res) => {
+        setViloyat(res.data.regions);
+        setTuman(res.data.districts);
+      })
+      .catch((err) => console.log(err));
+  }, [code]);
+
   return (
     <div className="siginup">
       <form id="myProfile" onSubmit={hendelSubmit}>
@@ -191,16 +207,19 @@ export function Signup() {
               fill="#A4A4A4"
             />
           </svg>
+          {/* -------------------------------------------------------------------------- */}
 
-          <select
-            onChange={(e) => {
-              setCustemer({ ...custemer, region: e.target.value });
-            }}
-          >
-            <option value="Namangan">Namangan</option>
-            <option value="Andijon">Andijon</option>
-            <option value="Farg'ona">Farg'ona</option>
-            <option value="Tosgkent">Tosgkent</option>
+          <select onChange={(e) => setCode(e.target.value)}>
+            {viloyat.map((item) => (
+              <option value={item.code} key={item.code}>
+                {item.name}
+              </option>
+            ))}
+          </select>
+          <select>
+            {tuman.map((item) => (
+              <option key={item.id}>{item.name}</option>
+            ))}
           </select>
         </div>
         <div className="sign_name">
