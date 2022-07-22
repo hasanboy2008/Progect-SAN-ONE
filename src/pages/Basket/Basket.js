@@ -13,6 +13,8 @@ export function Basket() {
   const user = useSelector((state) => state.reUser);
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
+  const userId = "";
+  const productIndex = "";
 
   return (
     <div className="basket-page">
@@ -23,6 +25,7 @@ export function Basket() {
           ) : (
             <p className="basket-main-text">Savatda xechnarsa yo`q</p>
           )}
+
 
           <div className="basket-all">
             <div className="basket-home">
