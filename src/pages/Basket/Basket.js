@@ -9,7 +9,7 @@ import { useSnackbar } from "notistack";
 
 export function Basket() {
   const carts = useSelector((state) => state.reCart);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState();
   const user = useSelector((state) => state.reUser);
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
@@ -19,9 +19,11 @@ export function Basket() {
       <div className="basket">
         <div className="basket-text">
           {carts.length !== 0 ? (
-            <p>Savatda {carts.length} ta tovar bor</p>
+            <p className="basket-main-text">
+              Savatda {carts.length} ta tovar bor
+            </p>
           ) : (
-            <p>Savatda xechnarsa yo`q</p>
+            <p className="basket-main-text">Savatda xechnarsa yo`q</p>
           )}
 
           <div className="basket-all">
@@ -35,21 +37,23 @@ export function Basket() {
                     <div className="basket-data" key={index}>
                       <img src={parse.img} alt="" />
                       <div className="basket-texts-2">
-                        <p>{parse.name}</p>
-                        <span>{parse.price}</span>
+                        <p className="basket-shoes-name">{parse.name}</p>
+                        <span className="basket-shoes-articul">
+                          {parse.price}
+                        </span>
                       </div>
-                      <div className="basket-buttons">
-                        <h2 className="basket-h2">{parse.quantity}</h2>
+                      <div className="basket-button">
                         <button
-                          className="button-decrement"
+                          className="basket-decrement"
                           onClick={() => setCount(count - 1)}
                           disabled={count === 1}
                         >
                           -
                         </button>
+                        <h2 className="basket-h2">{parse.quantity}</h2>
                         <button
-                          className="button-increment"
-                          onClick={() => setCount(count + 1 )}
+                          className="basket-increment"
+                          onClick={() => setCount(parse.quantity + 1)}
                         >
                           +
                         </button>
@@ -104,23 +108,30 @@ export function Basket() {
             <div className="basket-order">
               <img src={Logo} alt="" />
               <div className="basket-order-texts">
-                <p>narxi:</p>
-                <p>{carts.reduce((a, b) => a + +b.price, 0)}</p>
+                <p className="basket-order-p">Narxi:</p>
+                <p className="basket-order-p">
+                  {carts.reduce((a, b) => a + +b.price, 0)}so’m
+                </p>
               </div>
               <div className="basket-order-texts">
-                <p>Chegirma:</p>
-                <p>{carts.reduce((a, b) => a + +b.discount, 0)}%</p>
+                <p className="basket-order-p">Chegirma:</p>
+                <p className="basket-order-p">
+                  {carts.reduce((a, b) => a + +b.discount, 0)} %
+                </p>
               </div>
               <div className="basket-order-texts">
-                <p>Yetkazib berish:</p>
-                <p>15 000 so’m</p>
+                <p className="basket-order-p">Yetkazib berish:</p>
+                <p className="basket-order-p">15 000 so’m</p>
               </div>
               <hr />
               <div className="basket-order-texts">
                 <p className="basket-order-texts-1">Jami:</p>
                 <p className="basket-order-texts-2">
-                  {carts.reduce((a, b) => a + +b.price, 0)-(carts.reduce((a, b) => a + +b.price, 0) / 100) *
-                    carts.reduce((a, b) => a + +b.discount, 0)}
+                  {carts.reduce((a, b) => a + +b.price, 0) -
+                    carts.reduce(
+                      (a, b) => a + +(b.price / 100) * b.discount,
+                      0
+                    )}
                 </p>
               </div>
               <button onClick={() => {}}>BUYURTMANI TASDIQLASH</button>
