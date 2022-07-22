@@ -14,17 +14,20 @@ export function Basket() {
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
 
+
+
   return (
     <div className="basket-page">
       <div className="basket">
         <div className="basket-text">
-          {carts.length !== 0 ? (
+          {/* {carts.length !== 0 ? (
             <p className="basket-main-text">
               Savatda {carts.length} ta tovar bor
             </p>
+            <p className="basket-main-text">Savatda {carts.length} ta tovar bor</p>
           ) : (
             <p className="basket-main-text">Savatda xechnarsa yo`q</p>
-          )}
+          )} */}
 
           <div className="basket-all">
             <div className="basket-home">
@@ -42,20 +45,21 @@ export function Basket() {
                           {parse.price}
                         </span>
                       </div>
+
                       <div className="basket-button">
                         <button
                           className="basket-decrement"
                           onClick={() => setCount(count - 1)}
                           disabled={count === 1}
                         >
-                          -
+                          <p>-</p>
                         </button>
                         <h2 className="basket-h2">{parse.quantity}</h2>
                         <button
                           className="basket-increment"
-                          onClick={() => setCount(parse.quantity + 1)}
+                          onClick={() => setCount(count + 1)}
                         >
-                          +
+                          <p>+</p>
                         </button>
                       </div>
                       <p className="basket-price">{parse.price}</p>
@@ -114,15 +118,16 @@ export function Basket() {
                 </p>
               </div>
               <div className="basket-order-texts">
-                <p className="basket-order-p">Chegirma:</p>
+                {/* <p className="basket-order-p">Chegirma:</p>
                 <p className="basket-order-p">
                   {carts.reduce((a, b) => a + +b.discount, 0)} %
-                </p>
+                </p> */}
               </div>
-              <div className="basket-order-texts">
+
+              {/* <div className="basket-order-texts">
                 <p className="basket-order-p">Yetkazib berish:</p>
                 <p className="basket-order-p">15 000 so’m</p>
-              </div>
+              </div> */}
               <hr />
               <div className="basket-order-texts">
                 <p className="basket-order-texts-1">Jami:</p>

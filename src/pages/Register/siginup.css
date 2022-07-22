@@ -1,4 +1,5 @@
-.singnin {
+.singnin
+{
   width: 100%;
   height: 100vh;
   padding: 3%;
@@ -8,6 +9,7 @@
   overflow: hidden !important;
   padding: 3%;
 }
+
 
 #login-for-user {
   width: 430px;
@@ -21,10 +23,7 @@
   justify-content: center;
   align-items: center;
 }
-/* select {
-  width: 100%;
-  height: 100%;
-} */
+
 #login-for-user > svg {
   width: 70px;
   height: 70px;
@@ -68,20 +67,105 @@
   font-size: 23px;
   margin: 3% 0;
 }
-
-@media (max-width: 435px) {
+@media (max-width: 800px){
   #login-for-user {
-    width: 100%;
-    padding: 4%;
+    width: 360px;
+    padding: 3%;
+    border-radius: 10px;
   }
-
   #login-for-user > div {
     height: 50px;
-    border-radius: 5px;
   }
-
+  
+  #login-for-user > div > input {
+    font-size: 16px;
+  }
   #login-for-user > button {
     height: 50px;
     font-size: 20px;
   }
 }
+@media (max-width: 450px){
+  #login-for-user {
+    width: 75%;
+    padding: 3%;
+    border-radius: 8px;
+  }
+  #login-for-user > div {
+    height: 40px;
+  }
+  
+  #login-for-user > div > input {
+    font-size: 14px;
+  }
+  #login-for-user > button {
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+
+/* sign up start */
+.siginup {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  padding: 3%;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+}
+
+#myProfile
+{
+  width: 75%;
+  height: auto;
+}
+#myProfile .sign_name .sing_i_1
+{
+  width: 48%;
+}
+#myProfile .sign_province
+{
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 7px 20px rgb(0 0 0 / 12%);
+  border-radius: 8px;
+}
+#myProfile .sign_province select
+{
+  width: 160px;
+  background: none;
+  font-size: 18px;
+  color: #dcbb45;
+}
+
+
+
+@media (max-width: 700px){
+    #myProfile .sign_name .sing_i_1
+  {
+    width: 100%;
+  }
+}
+@media (max-width: 430px){
+  .siginup {
+    padding-top: 60px;
+  }
+  #myProfile .sign_province
+  {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 7px 20px rgb(0 0 0 / 12%);
+    border-radius: 8px;
+  }
+  #myProfile .sign_province select
+  {
+    width: 140px;
+    font-size: 14px;
+  }
+}
+
+

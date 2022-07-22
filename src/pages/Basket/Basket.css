@@ -27,8 +27,6 @@ button {
   line-height: 46px;
   padding-bottom: 76px;
 
-  /* 03 */
-
   color: #9f6233;
 }
 
@@ -100,6 +98,20 @@ button {
   height: 20px;
   font-weight: bold;
   background: #dcbb45;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.basket-increment p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.basket-decrement p {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .basket-increment {
@@ -109,6 +121,10 @@ button {
   height: 20px;
   font-weight: bold;
   background: #dcbb45;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .basket-price {
@@ -193,16 +209,18 @@ button {
   flex-grow: 0;
   background: #dcbb45;
   border-radius: 8px;
-  padding: 10px 14px;
-  margin: 60px;
+  padding: 10px 54px;
+  margin: 50px;
   border: none;
 }
 
 /* +++++++++++ Basket Responsive ++++++++++++ */
 
-@media (max-width: 1750px) {
+@media (max-width: 1710px) {
   .basket {
+    width: 100%;
     align-items: center;
+    padding-top: 200px;
   }
 
   .basket-all {
@@ -220,53 +238,43 @@ button {
   }
 }
 
-@media (max-width: 1225px) {
-  .basket {
-    padding: 200px 0 100px 30px;
-  }
-  .basket-hr hr {
-    width: 910px;
-  }
-}
-
 @media (max-width: 950px) {
-  .basket {
-    padding: 200px 0 100px 15px;
-  }
-
   .basket-hr hr {
     width: 700px;
   }
 
   .basket-data img {
     width: 150px;
-    height: 100px;
+    height: 150px;
     padding-top: 12px;
   }
 
-  .basket-data p {
+  .basket-shoes-name {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 20px;
     line-height: 20px;
   }
 
-  .basket-data span {
+  .basket-shoes-articul {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 18px;
     line-height: 12px;
   }
 
-  /* .basket-price{
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 22px;
-        text-align: right;
-        color: #C9A95C;
-        padding: 45px 0 0 30px;
-    } */
+  .basket-price {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: right;
+    color: #c9a95c;
+    padding: 65px 0 0 30px;
+  }
 
   .basket-close {
-    margin: 43.5px 0 0 30px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    margin: 67px 0 0 30px;
   }
 
   .basket-button {
@@ -274,175 +282,72 @@ button {
     height: 24px;
     border-radius: 6px;
     padding: 0 8px;
-    margin: 45px 0 0 30px;
+    margin: 64px 0 0 30px;
+  }
+
+  .basket-button h2 {
+    font-size: 14px;
   }
 
   .basket-decrement {
+    border: 1px solid black;
     width: 15px;
     height: 15px;
-    font-style: 15px;
+    font-size: 15px;
   }
 
-  .basket-increment {
-    width: 15px;
-    height: 15px;
-    font-style: 15px;
-  }
-
-  .basket-count {
-    font-weight: 300;
-    font-size: 17px;
-    line-height: 80%;
-  }
-}
-
-@media (max-width: 720px) {
-  .basket-hr hr {
-    width: 600px;
-  }
-
-  .basket-order {
-    margin-left: 20px;
-  }
-}
-
-@media (max-width: 620px) {
-  .basket {
-    padding-top: 40px;
-  }
-  .basket-text p {
-    text-align: center;
-    font-weight: 700;
-    font-size: 28px;
-  }
-  .basket-data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .basket-hr hr {
-    width: 100%;
-  }
-
-  .basket-data img {
-    width: 300px;
-    height: 200px;
-  }
-
-  .basket-data p {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 28px;
-    margin-top: -20px;
-  }
-
-  .basket-data span {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: center;
-    padding-top: 20px;
-  }
-
-  /* .basket-price{
-        font-weight: 700;
-        font-size: 23.8058px;
-        line-height: 29px;
-        padding-top: 40px;
-    } */
-
-  .basket-close {
-    margin-bottom: 30px;
-  }
-
-  .basket-button {
-    width: 150px;
-    height: 60px;
-    border-radius: 10px;
-    padding: 0 15px;
-    margin-top: -20px;
-  }
-
-  .basket-decrement,
-  .basket-increment {
-    width: 25px;
-    height: 25px;
-    border: 1.5px solid black;
-    font-weight: 600;
-    font-size: 23px;
-    line-height: 114.8%;
-  }
-
-  .basket-count {
-    font-weight: 600;
-    font-size: 24px;
-  }
-
-  .basket-order {
-    width: 400px;
-    height: 320px;
-    padding: 30px 0 30px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .basket-order img {
-    padding-bottom: 0;
-  }
-
-  .basket-all {
-    display: flex;
-    align-items: center;
-  }
-
-  .basket-order-bold-texts {
+  .basket-decrement p {
+    font-size: 15px;
     font-weight: 500;
-    font-size: 20px;
-    padding-right: 20px;
   }
 
-  .basket-order-thin-texts {
-    font-weight: 400;
-    font-size: 20px;
+  .basket-increment p {
+    font-size: 15px;
+    font-weight: 500;
   }
 
-  .basket-order .basket-order-texts .basket-order-texts-1 {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 27px;
-    padding-right: 20px;
+  .basket-increment {
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
   }
 
-  .basket-order hr {
-    width: 80%;
-    margin-top: 30px;
-  }
-
-  .basket-order button {
-    margin: 50px 0 0 0;
-  }
-}
-
-@media (max-width: 540px) {
-  .basket-order img {
-    display: none;
-  }
-
-  .basket-order button {
-    margin-top: 90px;
-  }
-}
-
-@media (max-width: 470px) {
-  .basket {
-    margin-top: 110px;
-    margin-bottom: 50px;
-  }
   .basket-order {
-    width: 80%;
-    margin-left: 0;
+    margin: 70px 0 0 0;
+  }
+}
+
+@media (max-width: 770px) {
+  .basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    padding: 130px 10px 10px 10px;
+  }
+  .basket-text {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 660px) {
+  .basket-text {
+    margin-left: 0px;
+  }
+    .basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 10px 10px 80px;
   }
 }
