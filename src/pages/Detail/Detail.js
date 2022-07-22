@@ -21,7 +21,7 @@ export function Detail() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.reUser);
-
+  const [size, SetSize] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
@@ -42,6 +42,10 @@ export function Detail() {
         console.log(err);
       });
   }, [product_id]);
+
+  const hanleSize = (item) => {
+    SetSize(item);
+  };
 
   return (
     <div className="Detail">
@@ -116,7 +120,11 @@ export function Detail() {
               {product.sizes
                 ? product.sizes.map((size) => {
                     return (
-                      <div className="size" key={size}>
+                      <div
+                        className="size"
+                        key={size}
+                        onClick={() => hanleSize(size)}
+                      >
                         <p>{size}</p>
                       </div>
                     );
@@ -147,7 +155,7 @@ export function Detail() {
                   data: JSON.stringify({
                     ...product,
                     img: images[indexImg],
-                    size: product.sizes[0],
+                    size: size,
                     userId: user.id,
                     quantity: 1,
                   }),

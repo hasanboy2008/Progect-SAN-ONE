@@ -55,13 +55,14 @@ export function All() {
     window.scrollTo(0, 0);
   }, []);
 
+  
   return (
     <div className="all">
       <div className="alltext">
         <p>Krossovkalar</p>
         <span>Barcha mahsulot turlarini ko’rib chiqing</span>
       </div>
-
+   
       <div id="allresalut">
         <div className="all_filter">
           <div className="fiter_nav">

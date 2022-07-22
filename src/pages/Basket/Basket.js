@@ -13,22 +13,16 @@ export function Basket() {
   const user = useSelector((state) => state.reUser);
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
-
-
+  // const userId = "";
+  // const productIndex = "";
 
   return (
     <div className="basket-page">
       <div className="basket">
         <div className="basket-text">
-          {/* {carts.length !== 0 ? (
-            <p className="basket-main-text">
-              Savatda {carts.length} ta tovar bor
-            </p>
-            <p className="basket-main-text">Savatda {carts.length} ta tovar bor</p>
-          ) : (
-            <p className="basket-main-text">Savatda xechnarsa yo`q</p>
-          )} */}
-
+          <p className="basket-main-text">
+            Savatda {carts.length} ta tovar bor
+          </p>
           <div className="basket-all">
             <div className="basket-home">
               {carts.map((parse, index) => {
@@ -41,8 +35,9 @@ export function Basket() {
                       <img src={parse.img} alt="" />
                       <div className="basket-texts-2">
                         <p className="basket-shoes-name">{parse.name}</p>
+
                         <span className="basket-shoes-articul">
-                          {parse.price}
+                          {parse.discount}%
                         </span>
                       </div>
 
@@ -63,6 +58,7 @@ export function Basket() {
                         </button>
                       </div>
                       <p className="basket-price">{parse.price}</p>
+                      <p> {parse.size} </p>
                       <button
                         className="basket-close"
                         onClick={() => {
