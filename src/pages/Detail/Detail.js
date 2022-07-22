@@ -22,6 +22,7 @@ export function Detail() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.reUser);
 
+  const [size, setSize] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
@@ -42,6 +43,10 @@ export function Detail() {
         console.log(err);
       });
   }, [product_id]);
+
+  const handelSize = (item) => {
+    console.log(item);
+  }
 
   return (
     <div className="Detail">
@@ -116,9 +121,9 @@ export function Detail() {
               {product.sizes
                 ? product.sizes.map((size) => {
                     return (
-                      <div className="size" key={size}>
-                        <p>{size}</p>
-                      </div>
+                      <button className="size" key={size} onClick={() => handelSize(size)} >
+                        <p> {size} </p>
+                      </button>
                     );
                   })
                 : ""}
