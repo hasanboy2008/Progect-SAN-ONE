@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MyAccaunt.css";
 import axios from "axios";
 import { Button } from "@mui/material";
@@ -11,6 +11,7 @@ import { useSnackbar } from "notistack";
 import { useDispatch, useSelector } from "react-redux";
 import { acLoading } from "../../Redux/Loading";
 import { acUser } from "../../Redux/User";
+import order_img from "../../asest/Basket/shoes-moccasin.png"
 
 export function Myacount() {
   const user = useSelector((state) => state.reUser);
@@ -18,6 +19,9 @@ export function Myacount() {
   const [img, setImg] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const dispatch = useDispatch();
+  const [order, setOrder] = useState([]);
+  const [orderinfo,setOrderinfo] = useState([]);
+
 
   function hendleSubmit(e) {
     e.preventDefault();
@@ -53,6 +57,27 @@ export function Myacount() {
         dispatch(acLoading(false));
       });
   }
+
+  useEffect(() => {
+    axios("https://api.sanone.uz/api/view/myOrder", {
+      method: "POST",
+      headers: {
+        Accept: "*/*",
+        token: user.token,
+        id: user.id,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        setOrder(res.data);
+        console.log(res.data);
+    
+        
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div id="myAccount">
@@ -138,6 +163,34 @@ export function Myacount() {
           <span>Tahrirlash</span>
         </Button>
       </form>
+      <div className="order_section">
+        <p>Barcha haridlar tarixi</p>
+        {order.map((item, index) => {
+          return (
+            <div className="order_item" key={index}>
+
+              {item.orders.map((item, index) => {
+                return (
+                  <div className="order_rezalut" key={index}>
+                    <div className="order_img">
+
+                      <img src={order_img} alt="" />
+                    </div>
+                    <div className="order_info">
+                      <p>{item.name} </p>
+                      <span>code:{item.code}</span>
+                      <b>12.06.2022</b>
+                    </div>
+                    <div className="order_price">
+                      <p>{item.price}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
