@@ -69,11 +69,11 @@ export function All() {
   return (
     <div className="all">
       <div className="alltext">
-        <p>Krossovkalar</p>
+        {/* <p>Krossovkalar</p> */}
         <span>Barcha mahsulot turlarini ko’rib chiqing</span>
       </div>
       <button id="filter_bnt" onClick={openFilterSection}>
-        filter
+        {openFilter ? "Filtr" : "close "}
       </button>
 
       <div id="allresalut">
@@ -204,7 +204,6 @@ export function All() {
           <div className="filter_ratio">
             <p>Razmeri:</p>
             <div className="ratio">
-         
               <button
                 onClick={() => {
                   // setSize("37");
