@@ -114,6 +114,15 @@
   line-height: 26px;
   color: #000000;
 }
+.discount>hr{
+  width: 100% !important;
+}
+
+#hr{
+  width: 100% !important;
+
+  border-top: 1px solid #000;
+}
 
 @media (max-width: 1840px) {
   .cardlar .new_Produc_1_1 {
@@ -366,6 +375,6 @@
 @media (max-width: 280px) {
   .cardlar .new_Produc_1_1 {
     width: 230px;
-    height: 290px;
+    height: auto;
   }
 }

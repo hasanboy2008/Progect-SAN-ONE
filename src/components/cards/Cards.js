@@ -12,10 +12,10 @@ export default function Cardlar({props}){
           <figure>
             <img src={item.images[0]} alt="" />
           </figure>
-          <p>{item.name}</p>
-          <hr/>
           <div className="price_share_1">
             <div className="discount_pricw_1">
+
+              <p >{item.name}</p>
               <p>{item.price}</p>
               <span>{item.discount}</span>
             </div>
