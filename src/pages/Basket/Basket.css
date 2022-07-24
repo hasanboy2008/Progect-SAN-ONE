@@ -89,7 +89,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000000;
+  /* border: 2px solid #000000; */
 }
 .basket-json .basket-data .basket-button .basket-decrement p
 {
@@ -129,8 +129,11 @@
   border-radius: 50%;
   font-size: 1.8rem;
   color: red;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* basket home end */

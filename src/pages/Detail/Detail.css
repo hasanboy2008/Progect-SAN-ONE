@@ -79,7 +79,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 76px 0 96px 0;
+  padding: 76px  96px ;
 }
 
 .card-about .a-name p {
@@ -232,7 +232,7 @@
 }
 
 .card-about .sizes .size-group .size.active_size{
-  background-color: red;
+  background-color: rgb(235, 202, 15);
   color: white;
 }
 
