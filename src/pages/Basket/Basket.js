@@ -35,7 +35,7 @@ export function Basket() {
       order,
     });
 
-    axios("http://localhost:5000/api/buy", {
+    axios("https://api.sanone.uz/api/buy", {
       method: "POST",
       headers: {
         Accept: "*/*",
@@ -48,6 +48,9 @@ export function Basket() {
         dispatch(acLoading(false));
         enqueueSnackbar(res.data.message, {
           variant: "success",
+        });
+        dispatch({
+          type: "RELOAD_CARD",
         });
       })
       .catch((err) => {
@@ -83,7 +86,7 @@ export function Basket() {
                         dispatch(acLoading(true));
 
                         axios(
-                          `http://localhost:5000/inc_dec_ProductInCard/${user.id}/${index}/dec`,
+                          `https://api.sanone.uz/inc_dec_ProductInCard/${user.id}/${index}/dec`,
                           {
                             method: "POST",
                             headers: {
@@ -115,7 +118,7 @@ export function Basket() {
                       onClick={() => {
                         dispatch(acLoading(true));
                         axios(
-                          `http://localhost:5000/inc_dec_ProductInCard/${user.id}/${index}/inc`,
+                          `https://api.sanone.uz/inc_dec_ProductInCard/${user.id}/${index}/inc`,
                           {
                             method: "POST",
                             headers: {
