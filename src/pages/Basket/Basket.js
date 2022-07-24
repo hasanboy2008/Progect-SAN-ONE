@@ -1,7 +1,6 @@
 import React from "react";
 import "../Basket/Basket.css";
 import Logo from "../../asest/Basket/san-one-logo.png";
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { acLoading } from "../../Redux/Loading";
@@ -9,12 +8,12 @@ import { useSnackbar } from "notistack";
 
 export function Basket() {
   const carts = useSelector((state) => state.reCart);
-  const [count, setCount] = useState();
   const user = useSelector((state) => state.reUser);
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
 
   const handleBuyurtma = () => {
+    dispatch(acLoading(true));
     const order = [];
 
     carts.map((item) => {
@@ -27,6 +26,8 @@ export function Basket() {
         sizes: item.size,
         img: item.img[0],
       });
+
+      return null;
     });
 
     const sendOrderData = JSON.stringify({
@@ -34,19 +35,34 @@ export function Basket() {
       order,
     });
 
-    console.log(sendOrderData);
-  };
+    axios("http://localhost:5000/api/buy", {
+      method: "POST",
+      headers: {
+        Accept: "*/*",
+        "Content-Type": "application/json",
+      },
 
+      data: sendOrderData,
+    })
+      .then((res) => {
+        dispatch(acLoading(false));
+        enqueueSnackbar(res.data.message, {
+          variant: "success",
+        });
+      })
+      .catch((err) => {
+        dispatch(acLoading(false));
+        enqueueSnackbar(err.response.data.message, {
+          variant: "error",
+        });
+      });
+  };
 
   return (
     <div className="basket-page">
-      <p className="basket-main-text">
-        Savatda {carts.length} ta tovar bor
-      </p>
+      <p className="basket-main-text">Savatda {carts.length} ta tovar bor</p>
 
-
-        {/* basket home start */}
-
+      <div className="basket-all">
         <div className="basket-home">
           {carts.map((parse, index) => {
             return (
@@ -63,22 +79,75 @@ export function Basket() {
                   <div className="basket-button">
                     <button
                       className="basket-decrement"
-                      onClick={() => setCount(count - 1)}
-                      disabled={count === 1}
+                      onClick={() => {
+                        dispatch(acLoading(true));
+
+                        axios(
+                          `http://localhost:5000/inc_dec_ProductInCard/${user.id}/${index}/dec`,
+                          {
+                            method: "POST",
+                            headers: {
+                              Accept: "*/*",
+                              method: "POST",
+                              "Content-Type": "application/json",
+                              token: user.token,
+                            },
+                          }
+                        )
+                          .then((res) => {
+                            console.log(res);
+                            dispatch(acLoading(false));
+                            dispatch({
+                              type: "RELOAD_CARD",
+                            });
+                          })
+                          .catch((err) => {
+                            console.log(err);
+                            dispatch(acLoading(false));
+                          });
+                      }}
                     >
                       <p>-</p>
                     </button>
                     <h2 className="basket-h2">{parse.quantity}</h2>
                     <button
                       className="basket-increment"
-                      onClick={() => setCount(count + 1)}
+                      onClick={() => {
+                        dispatch(acLoading(true));
+                        axios(
+                          `http://localhost:5000/inc_dec_ProductInCard/${user.id}/${index}/inc`,
+                          {
+                            method: "POST",
+                            headers: {
+                              Accept: "*/*",
+                              method: "POST",
+                              "Content-Type": "application/json",
+                              token: user.token,
+                            },
+                          }
+                        )
+                          .then((res) => {
+                            console.log(res);
+                            dispatch(acLoading(false));
+                            dispatch({
+                              type: "RELOAD_CARD",
+                            });
+                          })
+                          .catch((err) => {
+                            console.log(err);
+                            dispatch(acLoading(false));
+                          });
+                      }}
                     >
                       <p>+</p>
                     </button>
                   </div>
                   <div className="basketcha">
                     <p className="basket-price"> narxi: {parse.price}</p>
-                    <p className="basket-discount"> chegirma : {parse.discount}% </p>
+                    <p className="basket-discount">
+                      {" "}
+                      chegirma : {parse.discount}%{" "}
+                    </p>
                   </div>
                   <button
                     className="basket-close"
@@ -139,7 +208,7 @@ export function Basket() {
             <div className="basket-order-texts">
               <p className="basket-order-p">Narxi:</p>
               <p className="basket-order-p">
-                {carts.reduce((a, b) => a + +b.price, 0)}so’m
+                {carts.reduce((a, b) => a + +b.price * +b.quantity, 0)}so’m
               </p>
             </div>
             <div className="basket-order-texts">
@@ -157,11 +226,9 @@ export function Basket() {
           <div className="basket-order-texts-total">
             <p className="basket-order-texts-1">Jami:</p>
             <p className="basket-order-texts-2">
-              {carts.reduce((a, b) => a + +b.price, 0) -
-                carts.reduce(
-                  (a, b) => a + +(b.price / 100) * b.discount,
-                  0
-                )} so'm
+              {carts.reduce((a, b) => a + +b.price * +b.quantity, 0) -
+                carts.reduce((a, b) => a + +(b.price / 100) * b.discount, 0)}
+              so'm
             </p>
           </div>
           <button
@@ -174,7 +241,7 @@ export function Basket() {
         </div>
 
         {/* basket order end */}
-
       </div>
+    </div>
   );
 }
