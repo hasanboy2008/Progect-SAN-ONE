@@ -39,8 +39,9 @@ export function Main(){
           <Route path="/about" element={<About />} />
           <Route path="/all" element={<All />} />
         </Routes>
-        <Config />
         <Futter />
+
+        <Config />
       </div>
     );
 }

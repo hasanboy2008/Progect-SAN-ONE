@@ -55,19 +55,34 @@ export function All() {
     window.scrollTo(0, 0);
   }, []);
 
-  
+  // open filter section
+  const [openFilter, setOpenFilter] = useState(true);
+  const openFilterSection = () => {
+    setOpenFilter(!openFilter);
+  };
+  // window.addEventListener("click", function () {
+  //   setOpenFilter(true);
+  // });
+
+  // end open filter section
+
   return (
     <div className="all">
       <div className="alltext">
         <p>Krossovkalar</p>
         <span>Barcha mahsulot turlarini ko’rib chiqing</span>
       </div>
-   
+      <button id="filter_bnt" onClick={openFilterSection}>
+        filter
+      </button>
+
       <div id="allresalut">
-        <div className="all_filter">
+        <div
+          className={openFilter ? "all_filter" : " all_filter active_filter"}
+        >
           <div className="fiter_nav">
-            <p>Filter</p>
-            <button>
+            <p></p>
+            <button onClick={openFilterSection}>
               <svg
                 width="22"
                 height="22"
@@ -189,13 +204,7 @@ export function All() {
           <div className="filter_ratio">
             <p>Razmeri:</p>
             <div className="ratio">
-              <button
-                onClick={() => {
-                  // setSize("36");
-                }}
-              >
-                46
-              </button>
+         
               <button
                 onClick={() => {
                   // setSize("37");
@@ -261,14 +270,14 @@ export function All() {
               </button>
             </div>
           </div>
-          <div className="filter_tosend">
+          {/* <div className="filter_tosend">
             <p>Qayerga yuborish</p>
             <select name="" id="">
               <option value=""></option>
               <option value="">1</option>
               <option value="">2</option>
             </select>
-          </div>
+          </div> */}
           <div className="filter_season">
             <p>Mavsum:</p>
             <div className="season">

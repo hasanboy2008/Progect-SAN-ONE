@@ -309,10 +309,10 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-    background: #f0ae2b;
+    background: #fdfdfb;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
     /* backdrop-filter: blur(50px); */
-    padding: 40px 15px;
+    padding: 20px 15px;
     z-index: 10;
     /* background-color: red; */
   }
@@ -326,7 +326,7 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-    background: #f0ae2b;
+    background: #ffffff;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
     /* backdrop-filter: blur(50px); */
     padding: 40px 15px;
