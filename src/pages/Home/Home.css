@@ -122,6 +122,7 @@ padding: 1rem;
   background-size: cover;
   background-position: center;
   position: relative;
+  background-position-x: right;
 }
 .section1 .container .circle1 {
   width: 339px;
@@ -175,6 +176,7 @@ padding: 1rem;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
   position: relative;
 }
 .section1 .container .img img {

@@ -4,8 +4,8 @@ import logo_nav from "../../asest/navbar/Vector (2).png";
 import "./navbar.css";
 import { useLocation, useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
-// import { acSearch } from "../../Redux/Search";
-// import { useDispatch } from "react-redux/es/exports";
+import { acSearchProduct } from "../../Redux/Search";
+import { useDispatch } from "react-redux/es/exports";
 import logo2 from "../../asest/navbar/Vector.svg";
 
 export function Navbar() {
@@ -19,7 +19,7 @@ export function Navbar() {
     }
     scroll1 = scroll2;
   };
-
+  const dispatch = useDispatch();
   const location = useLocation();
   const path = location.pathname;
   const navigate = useNavigate();
@@ -103,7 +103,7 @@ export function Navbar() {
             onSubmit={(e) => {
               e.preventDefault();
               navigate("/all");
-              // dispatch(acSearch(e.target.value));
+              dispatch(acSearchProduct(e.target.value));
             }}
           >
             <div className="input_Div">
@@ -244,6 +244,7 @@ export function Navbar() {
           <button
             onClick={() => {
               navigate("/basket");
+              navOpen();
             }}
             style={home ? { background: "#D0995E" } : { background: "#C9A95C" }}
           >
@@ -273,6 +274,7 @@ export function Navbar() {
           <button
             onClick={() => {
               navigate(auth ? "/myacount" : "/signin");
+              navOpen();
             }}
             style={
               home ? { background: "#D0995E" } : { background: " #A18B7F" }
@@ -305,13 +307,27 @@ export function Navbar() {
           style={home ? styleForHome.search_nav : styleForOther.search_nav}
         >
           <div className="input_Div">
-            <input
-              type="text"
-              id=""
-              style={home ? { color: "#fff" } : { color: "#333" }}
-            />
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                navigate("/all");
+                dispatch(acSearchProduct(e.target.value));
+              }}
+            >
+              <input
+                type="text"
+                id=""
+                style={home ? { color: "#fff" } : { color: "#333" }}
+              />
+            </form>
           </div>
-          <button>
+          <button
+            onSubmit={(e) => {
+              e.preventDefault();
+              navigate("/all");
+              dispatch(acSearchProduct(e.target.value));
+            }}
+          >
             <svg
               width="20"
               height="20"
