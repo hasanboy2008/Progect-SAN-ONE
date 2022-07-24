@@ -20,7 +20,6 @@ export function Myacount() {
   const { enqueueSnackbar } = useSnackbar();
   const dispatch = useDispatch();
   const [order, setOrder] = useState([]);
-  const [orderinfo,setOrderinfo] = useState([]);
 
 
   function hendleSubmit(e) {
@@ -77,7 +76,7 @@ export function Myacount() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [ user.token, user.id ]);
 
   return (
     <div id="myAccount">
