@@ -354,10 +354,10 @@
     font-size: 14px;
   }
 }
-@media (max-width: 310px) {
+@media (max-width: 320px) {
   .cardlar .new_Produc_1_1 {
-    width: 250px;
-    height: 300px;
+    width: 263px;
+    height: 310px;
   }
   .cardlar {
     padding: 0 0.1%;
