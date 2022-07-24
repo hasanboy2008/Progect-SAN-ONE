@@ -1,5 +1,5 @@
 .Detail {
-  padding-top: 200px;
+  padding-top: 100px;
   width: 100%;
   height: auto;
   display: flex;
@@ -1318,12 +1318,13 @@
   }
 }
 @media only screen and (max-width: 430px) {
+ 
   .Detail-Card {
     width: 300px;
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 20px;
   }
 
   .container {
@@ -1540,7 +1541,7 @@
   }
 
   .info-btn {
-    width: 250px;
+    width: 150px;
     height: 45px;
     font-size: 20px;
     margin: 0 0 10px 0;

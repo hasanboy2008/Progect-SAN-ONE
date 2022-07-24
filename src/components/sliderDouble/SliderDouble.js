@@ -50,6 +50,7 @@ export default function App() {
           1720: {
             slidesPerView: 4,
           },
+       
         }}
       >
         {newProducts.map((item, index) => (
