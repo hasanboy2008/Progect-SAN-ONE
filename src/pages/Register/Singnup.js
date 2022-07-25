@@ -209,18 +209,20 @@ export function Signup() {
           </svg>
           {/* -------------------------------------------------------------------------- */}
 
-          <select onChange={(e) => setCode(e.target.value)}>
-            {viloyat.map((item) => (
-              <option value={item.code} key={item.code}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-          <select>
-            {tuman.map((item) => (
-              <option key={item.id}>{item.name}</option>
-            ))}
-          </select>
+          <div className="select-div">
+            <select onChange={(e) => setCode(e.target.value)}>
+              {viloyat.map((item) => (
+                <option value={item.code} key={item.code}>
+                  {item.name}
+                </option>
+              ))}
+            </select>
+            <select>
+              {tuman.map((item) => (
+                <option key={item.id}>{item.name}</option>
+              ))}
+            </select>
+          </div>
         </div>
         <div className="sign_name">
           <div className="sing_i_1">
