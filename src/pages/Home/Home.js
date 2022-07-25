@@ -8,6 +8,7 @@ import SliderScale from "../../components/slider/Slider";
 import SimpleSlider from "../../components/slider/simpleSlider/SliderSimple";
 import SliderImg from "../../components/sliderFooter/Slider_img";
 import SliderDouble from "../../components/sliderDouble/SliderDouble";
+import Simple_slider from "../../components/slider/simpleSlider/Slider_simple";
 
 export function Home() {
   useEffect(() => {
@@ -86,7 +87,8 @@ export function Home() {
           <span>Eng haridorgir bo'lgan mahsulotlarimizni ko'rib chiqing</span>
         </div>
         <div className="best_seller">
-          <SimpleSlider />
+          {/* <SimpleSlider /> */}
+          <Simple_slider /> 
         </div>
       </div>
       <div className="section_6_slider">

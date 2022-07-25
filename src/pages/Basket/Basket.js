@@ -14,15 +14,13 @@ export function Basket() {
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
 
-
-
   const handleBuyurtma = () => {
     const order = [];
 
     carts.map((item) => {
       order.push({
         productId: item.id,
-        code:item.code,
+        code: item.code,
         price: item.price,
         quantity: item.quantity,
         discount: item.discount,
@@ -31,11 +29,10 @@ export function Basket() {
       });
     });
 
-
     const sendOrderData = JSON.stringify({
-      userId : user.id,
+      userId: user.id,
       order,
-    })
+    });
 
     console.log(sendOrderData);
   };

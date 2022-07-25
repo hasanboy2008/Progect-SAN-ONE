@@ -22,14 +22,13 @@ export function Detail() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.reUser);
 
-  const [razmer, setRazmer] = useState(product.sizes? product.sizes[0] :"");
+  const [razmer, setRazmer] = useState(product.sizes ? product.sizes[0] : "" );
   const { enqueueSnackbar } = useSnackbar();
 
   console.log(razmer);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    
   }, []);
 
   const handletab = (e) => {
@@ -41,8 +40,7 @@ export function Detail() {
       .then((res) => {
         setProduct(res.data[0]);
         setImages(res.data[0].images ? res.data[0].images : []);
-        setRazmer(res.data? res.data[0].sizes[0] :"")
-        
+        setRazmer(res.data ? res.data[0].sizes[0] : "")
       })
       .catch((err) => {
         console.log(err);
