@@ -1,4 +1,3 @@
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -25,7 +24,7 @@
   -webkit-align-items: center;
   align-items: center;
 }
-.swiper-horizontal>.swiper-pagination-bullets{
+.swiper-horizontal > .swiper-pagination-bullets {
   position: relative;
   bottom: -20px;
   left: 0;
@@ -35,7 +34,7 @@
   justify-content: center;
   gap: 10px;
 }
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   padding: 5px;
   transition: 0.1s;
 }

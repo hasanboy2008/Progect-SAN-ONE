@@ -1,3 +1,9 @@
+@font-face {
+  font-family: proxima-nova;
+  src: url(../../Fonts/proximanova_regular.ttf),
+ 
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +13,7 @@
   font-family: sans-serif;
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
+  font-family: proxima-nova !important;
 }
 html {
   scroll-behavior: smooth;
@@ -17,12 +24,14 @@ button {
 body {
   display: flex;
   justify-content: center;
+
 }
 
 #root {
   max-width: 1920px;
   height: 100vh;
   width: 100%;
+
 }
 .main {
   max-width: 1920px;

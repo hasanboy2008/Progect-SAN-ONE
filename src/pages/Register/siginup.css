@@ -1,15 +1,14 @@
-.singnin
-{
+.singnin {
   width: 100%;
-  height: 100vh;
+  height: 65vh;
   padding: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden !important;
   padding: 3%;
+  margin-top: 2%;
 }
-
 
 #login-for-user {
   width: 430px;
@@ -67,7 +66,7 @@
   font-size: 23px;
   margin: 3% 0;
 }
-@media (max-width: 800px){
+@media (max-width: 800px) {
   #login-for-user {
     width: 360px;
     padding: 3%;
@@ -76,7 +75,7 @@
   #login-for-user > div {
     height: 50px;
   }
-  
+
   #login-for-user > div > input {
     font-size: 16px;
   }
@@ -85,7 +84,7 @@
     font-size: 20px;
   }
 }
-@media (max-width: 450px){
+@media (max-width: 450px) {
   #login-for-user {
     width: 75%;
     padding: 3%;
@@ -94,7 +93,7 @@
   #login-for-user > div {
     height: 40px;
   }
-  
+
   #login-for-user > div > input {
     font-size: 14px;
   }
@@ -103,7 +102,6 @@
     font-size: 16px;
   }
 }
-
 
 /* sign up start */
 .siginup {
@@ -118,54 +116,43 @@
   overflow: hidden !important;
 }
 
-#myProfile
-{
+#myProfile {
   width: 75%;
   height: auto;
 }
-#myProfile .sign_name .sing_i_1
-{
+#myProfile .sign_name .sing_i_1 {
   width: 48%;
 }
-#myProfile .sign_province
-{
+#myProfile .sign_province {
   width: 100%;
   padding: 20px;
   box-shadow: 0px 7px 20px rgb(0 0 0 / 12%);
   border-radius: 8px;
 }
-#myProfile .sign_province select
-{
+#myProfile .sign_province select {
   width: 160px;
   background: none;
   font-size: 18px;
   color: #dcbb45;
 }
 
-
-
-@media (max-width: 700px){
-    #myProfile .sign_name .sing_i_1
-  {
+@media (max-width: 700px) {
+  #myProfile .sign_name .sing_i_1 {
     width: 100%;
   }
 }
-@media (max-width: 430px){
+@media (max-width: 430px) {
   .siginup {
     padding-top: 60px;
   }
-  #myProfile .sign_province
-  {
+  #myProfile .sign_province {
     width: 100%;
     padding: 10px;
     box-shadow: 0px 7px 20px rgb(0 0 0 / 12%);
     border-radius: 8px;
   }
-  #myProfile .sign_province select
-  {
+  #myProfile .sign_province select {
     width: 140px;
     font-size: 14px;
   }
 }
-
-

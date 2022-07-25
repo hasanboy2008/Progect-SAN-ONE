@@ -1,645 +1,543 @@
-.basket-page {
+.basket-page
+{
+  padding: 0 9% 10% 9%;
+  padding-top: 10rem;
+  
   width: 100%;
   height: auto;
-  background-color: rebeccapurple;
+  background: #F5F5F5;
 }
-
-.basket {
-  width: 100%;
-  height: auto;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  padding: 8% 10% 10% 8.5%;
-}
-
-button {
-  cursor: pointer;
-}
-
-.basket-all {
-  display: flex;
-}
-
-.basket-main-text {
+.basket-page .basket-main-text
+{
   font-weight: 700;
   font-size: 37.8515px;
   line-height: 46px;
-
-  color: #9f6233;
+  color: #9F6233;
 }
-.basket-home {
+.basket-page .basket-all
+{
+  width: 100%;
+  height: auto;
+  margin-top: 3rem;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  padding-top: 72px;
+  gap: 2rem;
 }
 
-.basket-all {
-  display: flex;
-}
+/* basket home start */
 
-.basket-json {
-  display: flex;
-  flex-direction: column;
+.basket-page .basket-all .basket-home
+{
+  border-top: 0.684385px solid #9A9A9A;
+  width: 60%;
 }
-
-.basket-data {
+.basket-page .basket-all .basket-home .basket-json
+{
+  padding: 1rem 0;
+  border-bottom: 0.684385px solid #9A9A9A;
+  width: 100%;
+}
+.basket-json .basket-data
+{
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  align-items: center;
 }
-
-.basket-hr hr {
-  width: 915px;
-  height: 0px;
-  border: 0.684385px solid #9a9a9a;
+.basket-json .basket-data .img
+{
+  width: 221px;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
 }
-
-.basket-data img {
-  width: 240px;
-  height: 240px;
+.basket-json .basket-data .img img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-.basket-texts-2 {
+.basket-json .basket-data .basket-texts-2 .basket-shoes-name
+{
+  font-size: 1.4rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+.basket-json .basket-data .basket-texts-2 .basket-size
+{
+  font-size: 1rem;
+  color: #000000;
+}
+.basket-json .basket-data .basket-button
+{
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 74px 0;
-}
-
-.basket-shoes-name {
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.basket-shoes-articul {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 15px;
-  color: #000000;
-}
-
-.basket-button {
-  background: #dcbb45;
+  height: 45px;
+  padding: 10px 20px;
+  gap: 20px;
+  background: #DCBB45;
   border-radius: 8px;
-  width: 150px;
-  height: 46px;
-  margin-left: 56px;
-  margin-top: 95px;
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  
 }
-
-.basket-decrement {
-  border: 2px solid #000000;
+.basket-json .basket-data .basket-button button
+{
+  font-size: 1.8rem;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  font-weight: bold;
-  background: #dcbb45;
   display: flex;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid #000000; */
+}
+.basket-json .basket-data .basket-button .basket-decrement p
+{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.basket-json .basket-data .basket-button .basket-increment p
+{
+  width: 100%;
+  height: 100%;
+  padding-left: 2px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.basket-increment p {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.basket-decrement p {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.basket-increment {
-  border: 2px solid #000000;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  font-weight: bold;
-  background: #dcbb45;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.basket-price {
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 34px;
+.basket-json .basket-data .basket-price
+{
+  font-size: 1.6rem;
   text-align: right;
-  color: #c9a95c;
-  padding: 100px 0 0 60px;
+  color: #C9A95C;
+}
+.basket-json .basket-data .basket-discount
+{
+  font-size: 1rem;
+  color: #000000;
+}
+.basket-json .basket-data .basket-close p
+{
+  width: 30px;
+  height: 30px;
+  padding-left: 4px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  color: red;
+  /* border: 1px solid red; */
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.basket-close {
-  margin: 97px 0 0 30px;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  background: none;
-}
+/* basket home end */
 
-.basket-order {
-  background: #ffffff;
+/* basket order start */
+
+.basket-page .basket-all .basket-order
+{
+  width: 35%;
+  height: 568px;
+  padding: 46px 40px;
+  background: #FFFFFF;
   box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
-  width: 568px;
-  height: 560px;
-  padding: 46px 40px 47px 40px;
-  margin-left: 125px;
-  margin-top: 70px;
 }
-
-.basket-order img {
+.basket-page .basket-all .basket-order .img
+{
+  width: 100%;
+  height: auto;
+  display: flex;
   align-items: center;
-  padding: 0 139px 40px 139px;
+  justify-content: center;
 }
-
-.basket-order-p {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 23px;
-
-  color: #000000;
+.basket-page .basket-all .basket-order .img img
+{
+  width: 210px;
+  height: 31px;
 }
-
-.basket-order .basket-order-texts {
+.basket-page .basket-all .basket-order .basket-check-list
+{
+  padding: 68px 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  border-bottom: 0.684385px solid #0D0D0D;
+}
+.basket-page .basket-all .basket-order .basket-check-list .basket-order-texts,
+.basket-page .basket-all .basket-order .basket-order-texts-total
+{
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
 }
-
-.basket-order-texts .basket-order-texts-1 {
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 30px;
-
+.basket-page .basket-all .basket-order .basket-order-texts-total
+{
+  padding: 37px 0 45px 0;
+}
+.basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
+{
+  font-size: 1.4rem;
   color: #000000;
 }
-
-.basket-order hr {
-  border: 0.684385px solid #0d0d0d;
-  width: 488px;
-  margin-top: 74px;
+.basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
+{
+  font-size: 1.6rem;
+  color: #000000;
 }
-
-.basket-order-texts-2 {
+.basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
+{
   font-weight: 700;
-  font-size: 28px;
-  line-height: 30px;
-  /* identical to box height */
-
+  font-size: 1.4rem;
+  line-height: 27px;
   text-align: right;
-
-  /* brandcolor */
-
-  color: #c9a95c;
+  color: #C9A95C;
 }
+.basket-page .basket-all .basket-order button
+{
+  padding: 10px 54px;
+  background: #DCBB45;
+  border-radius: 8px;
 
-.basket-order button {
   font-weight: 400;
-  font-size: 21.92px;
+  font-size: 1.4rem;
   line-height: 114.8%;
   color: #000000;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  background: #dcbb45;
-  border-radius: 8px;
-  padding: 10px 34px;
-  margin: 50px;
-  border: none;
 }
 
-/* +++++++++++ Basket Responsive ++++++++++++ */
+/* basket order end */
 
-@media (max-width: 1780px) {
-  .basket {
+/* media queries */
+
+@media (max-width:1700px){
+  .basket-json .basket-data .img
+  {
+    width: 180px;
+    height: 130px;
+  }
+  .basket-json .basket-data .basket-button
+  {
+    gap: 1rem;
+  }
+  .basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
+  {
+    font-size: 1.2rem;
+  }
+  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
+  {
+    font-size: 1.4rem;
+  }
+  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
+  {
+    font-size: 1.2rem;
+  }
+  .basket-page .basket-all .basket-order button
+  {
     width: 100%;
-    height: auto;
-    background: #351b7c;
-    display: flex;
-    flex-direction: column;
-    padding: 8% 12% 10% 7.5%;
+    padding: 10px auto;
+    font-size: 1.2rem;
   }
 }
-@media (max-width: 1720px) {
-  .basket {
-    width: 100%;
-    height: auto;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 8% 4% 10% 4.5%;
+@media (max-width:1600px){
+  .basket-json .basket-data .basket-button
+  {
+    gap: 0.6rem;
+  }
+  .basket-json .basket-data .basket-texts-2 .basket-shoes-name
+  {
+    font-size: 1.2rem;
+  }
+  .basket-json .basket-data .basket-texts-2 .basket-size
+  {
+    font-size: 1rem;
+  }
+  .basket-json .basket-data .basket-price
+  {
+    font-size: 1.4rem;
   }
 }
-@media (max-width: 1720px) {
-  .basket {
-    width: 100%;
-    height: auto;
-    background: #fefeff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 8% 4% 8% 2.5%;
+@media (max-width:1500px){
+  .basket-json .basket-data .img
+  {
+    width: 160px;
+    height: 100px;
+  }
+  .basket-json .basket-data .basket-price
+  {
+    font-size: 1.2rem;
   }
 }
-@media (max-width: 1600px) {
-  .basket {
-    width: 100%;
-    height: auto;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
+@media (max-width:1320px){
+  .basket-page .basket-all
+  {
     flex-direction: column;
-    padding: 12% 4% 8% 2.5%;
-  }
-  .basket-all {
-    width: 100%;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    gap: 5rem;
   }
-}
-
-@media (max-width: 1080px) {
-  .basket {
+  .basket-page .basket-all .basket-home
+  {
     width: 100%;
+  }
+  .basket-page .basket-all .basket-order
+  {
+    width: 65%;
     height: auto;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 13% 4% 8% 2.5%;
-  }
-}
-
-@media (max-width: 960px) {
-  .basket {
-    width: 100%;
-    height: auto;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 13% 10% 8% 10.5%;
-  }
-}
-
-@media (max-width: 920px) {
-
-  .basket-home {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 52px;
-}
-
-    .basket {
-    width: 100%;
-    height: auto;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 13% 20% 8% 20%;
-  }
-  .basket-json {
-    width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  }
-    .basket-data {
-    width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 2px;
-  margin: 5px;
-}
-hr{
-  display: none;
-}
-.basket-order {
-  background: #ffffff;
-  box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  width: 568px;
-  height: 560px;
-  padding: 46px 40px 47px 40px;
-  margin-left: 25px;
-  margin-top: 15px;
-}
-.basket-data img {
-  width: 200px;
-  height: 200px;
-  margin: 5px;
-}
-.basket-texts-2 {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 24px 8px;
-}
-
-
-
-
-}
-
-@media (max-width: 920px) {
-    .basket-home {
-  display: flex;
-  width: 800px;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 42px;
-}
-
-    .basket {
-    width: 100%;
-    height: auto;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 17% 0% 8% 0%;
-  }
-  .basket-texts-2 {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 24px 2px;
-}
-
-
-}
-
-@media (max-width: 768px) {
-      .basket {
-    width: 100%;
-    height: auto;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 17% 10% 8% 10%;
-  }
-      .basket-home {
-  display: flex;
-  width: 700px;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 42px;
-}
-  .basket-texts-2 {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 24px 2px;
-}
-.basket-texts-2  > p{
-  font-size: 18px;
-}
-
-
-}
-
-
-
-
-/* @media (max-width: 1710px) {
-  .basket {
-    width: 100%;
-    align-items: center;
-    padding-top: 200px;
-  }
-
-  .basket-all {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-  .basket-order {
-    margin-top: 70px;
-  }
-
-  .basket-text {
-    align-items: center;
-  }
 }
-
-@media (max-width: 950px) {
-  .basket-hr hr {
-    width: 700px;
+@media (max-width: 860px){
+  .basket-page .basket-main-text
+  {
+    font-size: 2rem;
   }
-
-  .basket-data img {
-    width: 150px;
-    height: 150px;
-    padding-top: 12px;
+  .basket-json .basket-data .basket-texts-2 .basket-shoes-name
+  {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
   }
-
-  .basket {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .basket-json .basket-data .basket-texts-2 .basket-size
+  {
+    font-size: 0.8rem;
   }
-
-  .basket-hr hr {
-    width: 700px;
-  }
-
-  .basket-shoes-articul {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 12px;
-  }
-
-  .basket-price {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 22px;
-    text-align: right;
-    color: #c9a95c;
-    padding: 65px 0 0 30px;
-  }
-
-  .basket-close {
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-    margin: 67px 0 0 30px;
-  }
-
-  .basket-button {
-    width: 70px;
-    height: 24px;
+  .basket-json .basket-data .basket-button
+  {
+    padding: 10px 10px;
+    gap: 0.6rem;
     border-radius: 6px;
-    padding: 0 8px;
-    margin: 64px 0 0 30px;
+  }
+  .basket-json .basket-data .basket-button .basket-h2
+  {
+    font-size: 1rem;
+  }
+  .basket-json .basket-data .basket-button button
+  {
+    font-size: 1.4rem;
+    border-radius: 25%;
+  }
+  .basket-json .basket-data .basket-price
+  {
+    font-size: 1rem;
+  }
+  .basket-json .basket-data .basket-discount
+  {
+    font-size: 0.8rem;
+  }
+  .basket-page .basket-all .basket-order .img img
+  {
+    width: 150px;
+    height: auto;
+  }
+  .basket-page .basket-all .basket-order .basket-check-list
+  {
+    padding: 3rem 0 2rem 0;
+    gap: 1rem;
+  }
+  .basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
+  {
+    font-size: 1rem;
+  }
+  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
+  {
+    font-size: 1.2rem;
+  }
+  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
+  {
+    font-size: 1rem;
+  }
+  .basket-page .basket-all .basket-order button
+  {
+    padding: 10px;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
+@media (max-width:700px){
+  .basket-page
+  {
+    padding-top: 8rem;
+  }
+  .basket-page .basket-main-text
+  {
+    font-size: 1.4rem;
+  }
+  .basket-json .basket-data .img
+  {
+    width: 100px;
+    height: 60px;
+  }
+  .basket-json .basket-data .basket-texts-2 .basket-shoes-name
+  {
+    font-size: 0.6rem;
+    margin-bottom: 0rem;
+  }
+  .basket-json .basket-data .basket-texts-2 .basket-size
+  {
+    font-size: 0.5rem;
+  }
+  .basket-json .basket-data .basket-button
+  {
+    height: auto;
+    padding: 5px;
+    gap: 0.2rem;
+  }
+  .basket-json .basket-data .basket-button .basket-h2
+  {
+    font-size: 0.8rem;
+  }
+  .basket-json .basket-data .basket-button button
+  {
+    font-size: 1rem;
+    border-radius: 25%;
+    border: 1.4px solid;
+  }
+  .basket-json .basket-data .basket-price
+  {
+    font-size: 0.7rem;
+  }
+  .basket-json .basket-data .basket-discount
+  {
+    font-size: 0.6rem;
+  }
+  .basket-json .basket-data .basket-close p
+  {
+    width: 20px;
+    height: 20px;
+    padding-left: 4px;
+    padding-top: 1px;
+    font-size: 1rem;
+  }
+  .basket-page .basket-all .basket-order
+  {
+    width: 75%;
+    padding: 1.6rem 1rem;
+  }
+  .basket-page .basket-all .basket-order .img img
+  {
+    width: 100px;
+    height: auto;
+  }
+  .basket-page .basket-all .basket-order .basket-check-list
+  {
+    padding: 2rem 0 1.6rem 0;
+    gap: 0.6rem;
+  }
+  .basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
+  {
+    font-size: 0.6rem;
+  }
+  .basket-page .basket-all .basket-order .basket-order-texts-total
+  {
+    padding: 1.6rem 0;
   }
 
-  .basket-button h2 {
-    font-size: 14px;
+  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
+  {
+    font-size: 1rem;
   }
-
-  .basket-decrement {
-    border: 1px solid black;
+  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
+  {
+    font-size: 0.8rem;
+  }
+  .basket-page .basket-all .basket-order button
+  {
+    padding: 10px;
+    font-weight: 400;
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 450px){
+  .basket-page
+  {
+    padding: 0 4% 10% 4%;
+    padding-top: 5rem;
+  }
+  .basket-page .basket-all
+  {
+    margin-top: 1rem;
+    gap: 2rem;
+  }
+  .basket-page .basket-main-text
+  {
+    font-size: 1rem;
+  }
+  .basket-json .basket-data .img
+  {
+    width: 80px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  .basket-json .basket-data .basket-button
+  {
+    padding: 4px;
+    gap: 0.2rem;
+  }
+  .basket-json .basket-data .basket-button .basket-h2
+  {
+    font-size: 0.6rem;
+  }
+  .basket-json .basket-data .basket-button button
+  {
     width: 15px;
     height: 15px;
-    font-size: 15px;
+    font-size: 0.8rem;
+    border: 1px solid;
   }
-
-  .basket-decrement p {
-    font-size: 15px;
-    font-weight: 500;
+  .basket-json .basket-data .basket-price
+  {
+    font-size: 0.6rem;
   }
-
-  .basket-increment p {
-    font-size: 15px;
-    font-weight: 500;
+  .basket-json .basket-data .basket-discount
+  {
+    font-size: 0.5rem;
   }
-
-  .basket-increment {
-    border: 1px solid black;
-    width: 15px;
-    height: 15px;
-    font-size: 15px;
-  }
-
-  .basket-order {
-    margin: 70px 0 0 0;
-  }
-}
-
-@media (max-width: 770px) {
-  .basket {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  .basket-json .basket-data .basket-close p
+  {
+    width: auto;
     height: auto;
-    background: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    padding: 130px 10px 10px 10px;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    font-size: 1.4rem;
   }
-  .basket-text {
-    margin-left: 70px;
-  }
-}
-
-@media (max-width: 660px) {
-  .basket-text {
-    margin-left: 0px;
-  }
-  .basket {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  .basket-page .basket-all .basket-order .img img
+  {
+    width: 100px;
     height: auto;
-    background: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    padding: 80px 10px 10px 80px;
+  }
+  .basket-page .basket-all .basket-order .basket-check-list
+  {
+    padding: 1.6rem 0 1rem 0;
+  }
+  .basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
+  {
+    font-size: 0.6rem;
+  }
+  .basket-page .basket-all .basket-order .basket-order-texts-total
+  {
+    padding: 1rem 0;
+  }
+
+  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
+  {
+    font-size: 0.8rem;
+  }
+  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
+  {
+    font-size: 0.7rem;
+  }
+  .basket-page .basket-all .basket-order button
+  {
+    padding: 5px;
+    font-size: 0.6rem;
   }
 }
-
-@media (max-width: 590px) {
-  .basket {
-    display: flex;
-    justify-content: center;
-    padding-left: 200px;
-  }
-
-  .basket-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .basket-hr hr {
-    width: 350px;
-  }
-  .basket-data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .basket-data img {
-    width: 300px;
-    height: 300px;
-  }
-
-  .basket-shoes-name {
-    padding-bottom: 20px;
-    font-size: 22px;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  .basket-shoes-articul {
-    padding-left: 5px;
-  }
-
-  .basket-button {
-    margin-left: 20px;
-    margin-top: -10px;
-  }
-
-  .basket-price {
-    margin-top: -10px;
-  }
-
-  .basket-close {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 510px) {
-  .basket {
-    margin-left: 100px;
-  }
-}
-
-@media (max-width: 440px) {
-  .basket {
-    margin-left: 80px;
-  }
-}
-
-@media (max-width: 405px) {
-  .basket {
-    margin-left: 100px;
-  }
-}
-
-@media (max-width: 320px) {
-  .basket {
-    margin-left: 200px;
-  }
-} */
