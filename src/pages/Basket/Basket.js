@@ -35,7 +35,7 @@ export function Basket() {
       order,
     });
 
-    axios("https://api.sanone.uz/api/buy", {
+    axios("http://localhost:5000/api/buy", {
       method: "POST",
       headers: {
         Accept: "*/*",

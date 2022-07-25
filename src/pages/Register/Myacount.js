@@ -11,6 +11,7 @@ import { useSnackbar } from "notistack";
 import { useDispatch, useSelector } from "react-redux";
 import { acLoading } from "../../Redux/Loading";
 import { acUser } from "../../Redux/User";
+import { useNavigate } from "react-router-dom";
 
 export function Myacount() {
   const user = useSelector((state) => state.reUser);
@@ -18,6 +19,7 @@ export function Myacount() {
   const [img, setImg] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function hendleSubmit(e) {
     e.preventDefault();
@@ -134,9 +136,29 @@ export function Myacount() {
           </div>
         </div>
 
-        <Button type="submit">
-          <span>Tahrirlash</span>
-        </Button>
+        <div id="myProfileAction">
+          <Button type="submit" variant="contained">
+            <span>Tahrirlash</span>
+          </Button>
+          <Button
+            type="button"
+            variant="contained"
+            color="secondary"
+            sx={{
+              backgroundColor: "#ff6219 !important",
+              color: "#fff !important",
+            }}
+            onClick={() => {
+              window.location.reload();
+              localStorage.clear();
+              navigate("/signup", {
+                replace: true,
+              });
+            }}
+          >
+            <span>Chiqish</span>
+          </Button>
+        </div>
       </form>
     </div>
   );

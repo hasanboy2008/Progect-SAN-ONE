@@ -29,6 +29,8 @@ export function Signup() {
       },
     })
       .then((res) => {
+        console.log(res);
+
         if (res.data.status) {
           enqueueSnackbar(res.data.message, {
             variant: "success",
@@ -46,7 +48,7 @@ export function Signup() {
       .catch((err) => {
         console.log(err);
         dispatch(acLoading(false));
-        enqueueSnackbar(err.response.data.message, {
+        enqueueSnackbar("Oynalarni to'ldiring", {
           variant: "error",
         });
       });
@@ -187,38 +189,29 @@ export function Signup() {
           </div>
         </div>
         <div className="sign_province">
-          <svg
-            width="16"
-            height="20"
-            viewBox="0 0 16 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M3.64602 8.16658C3.64602 5.76185 5.59545 3.81242 8.00019 3.81242C10.4049 3.81242 12.3544 5.76185 12.3544 8.16658C12.3544 10.5713 10.4049 12.5208 8.00019 12.5208C5.59545 12.5208 3.64602 10.5713 3.64602 8.16658ZM8.00019 5.18742C6.35484 5.18742 5.02102 6.52124 5.02102 8.16658C5.02102 9.81193 6.35484 11.1458 8.00019 11.1458C9.64553 11.1458 10.9794 9.81193 10.9794 8.16658C10.9794 6.52124 9.64553 5.18742 8.00019 5.18742Z"
-              fill="#A4A4A4"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M0.230852 7.1187C0.555652 3.17831 3.84846 0.145752 7.80222 0.145752H8.19816C12.1519 0.145752 15.4447 3.17831 15.7695 7.1187C15.944 9.23542 15.2902 11.3372 13.9457 12.9814L9.55208 18.3547C8.75 19.3357 7.25038 19.3357 6.44829 18.3547L2.05465 12.9814C0.710216 11.3372 0.0563746 9.23542 0.230852 7.1187ZM7.80222 1.52075C4.56405 1.52075 1.86722 4.00444 1.6012 7.23166C1.45599 8.99334 2.00017 10.7426 3.11911 12.1111L7.51274 17.4844C7.76467 17.7925 8.2357 17.7925 8.48763 17.4844L12.8813 12.1111C14.0002 10.7426 14.5444 8.99334 14.3992 7.23166C14.1332 4.00444 11.4363 1.52075 8.19816 1.52075H7.80222Z"
-              fill="#A4A4A4"
-            />
-          </svg>
           {/* -------------------------------------------------------------------------- */}
 
-          <select onChange={(e) => setCode(e.target.value)}>
+          <select
+            onChange={(e) => {
+              setCode(e.target.value);
+              setCustemer({ ...custemer, region: e.target.value });
+            }}
+          >
             {viloyat.map((item) => (
               <option value={item.code} key={item.code}>
                 {item.name}
               </option>
             ))}
           </select>
-          <select>
+          <select
+            onChange={(e) => {
+              setCustemer({ ...custemer, district: e.target.value });
+            }}
+          >
             {tuman.map((item) => (
-              <option key={item.id}>{item.name}</option>
+              <option key={item.id} value={item.name}>
+                {item.name}
+              </option>
             ))}
           </select>
         </div>
@@ -295,6 +288,20 @@ export function Signup() {
             />
           </div>
         </div>
+        <p
+          style={{
+            width: "100%",
+            textAlign: "end",
+            textDecoration: "underline",
+            color: "#00bcd4",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            navigate("/signin");
+          }}
+        >
+          Men ro'yxatdan o'tganan
+        </p>
 
         <button type="submit">Kirish</button>
       </form>
