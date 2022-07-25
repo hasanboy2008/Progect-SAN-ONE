@@ -25,7 +25,6 @@ export function Detail() {
   const [razmer, setRazmer] = useState(product.sizes? product.sizes[0] :"");
   const { enqueueSnackbar } = useSnackbar();
 
-  console.log(razmer);
 
   useEffect(() => {
     window.scrollTo(0, 0);

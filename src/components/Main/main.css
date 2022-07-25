@@ -1,3 +1,9 @@
+@font-face {
+  font-family: proxima-nova;
+  src: url(../../Fonts/proximanova_light.otf),
+ 
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +13,7 @@
   font-family: sans-serif;
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
+  font-family: proxima-nova !important;
 }
 html {
   scroll-behavior: smooth;

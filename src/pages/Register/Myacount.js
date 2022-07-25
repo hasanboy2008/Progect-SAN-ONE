@@ -173,7 +173,7 @@ export function Myacount() {
                   <div className="order_rezalut" key={index}>
                     <div className="order_img">
 
-                      <img src={order_img} alt="" />
+                      <img src={item.img} alt="" />
                     </div>
                     <div className="order_info">
                       <p>{item.name} </p>
