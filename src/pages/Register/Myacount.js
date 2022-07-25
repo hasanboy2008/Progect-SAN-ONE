@@ -11,7 +11,6 @@ import { useSnackbar } from "notistack";
 import { useDispatch, useSelector } from "react-redux";
 import { acLoading } from "../../Redux/Loading";
 import { acUser } from "../../Redux/User";
-import order_img from "../../asest/Basket/shoes-moccasin.png"
 
 export function Myacount() {
   const user = useSelector((state) => state.reUser);
@@ -20,7 +19,6 @@ export function Myacount() {
   const { enqueueSnackbar } = useSnackbar();
   const dispatch = useDispatch();
   const [order, setOrder] = useState([]);
-
 
   function hendleSubmit(e) {
     e.preventDefault();
@@ -70,13 +68,11 @@ export function Myacount() {
       .then((res) => {
         setOrder(res.data);
         console.log(res.data);
-    
-        
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [ user.token, user.id ]);
+  }, [user.token, user.id]);
 
   return (
     <div id="myAccount">
@@ -167,12 +163,10 @@ export function Myacount() {
         {order.map((item, index) => {
           return (
             <div className="order_item" key={index}>
-
               {item.orders.map((item, index) => {
                 return (
                   <div className="order_rezalut" key={index}>
                     <div className="order_img">
-
                       <img src={item.img} alt="" />
                     </div>
                     <div className="order_info">
