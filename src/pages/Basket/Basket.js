@@ -27,27 +27,19 @@ export function Basket() {
         img: item.img,
       });
 
-<<<<<<< HEAD
-=======
       return null;
     });
 
->>>>>>> ba2cdb5fd690e1f58e74193cbb2309f752e8a696
     const sendOrderData = JSON.stringify({
       userId: user.id,
       order,
     });
-<<<<<<< HEAD
-=======
-
     axios("https://api.sanone.uz/api/buy", {
       method: "POST",
       headers: {
         Accept: "*/*",
         "Content-Type": "application/json",
       },
->>>>>>> ba2cdb5fd690e1f58e74193cbb2309f752e8a696
-
       data: sendOrderData,
     })
       .then((res) => {

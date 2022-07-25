@@ -680,6 +680,7 @@ padding: 1rem;
   }
   .best_seller .card_slider {
     width: 95% !important;
+    height: auto !important;
   }
   .new_Produc_1 > p {
     font-size: 25px;
