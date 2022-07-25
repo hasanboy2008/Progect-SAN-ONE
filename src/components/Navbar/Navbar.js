@@ -10,16 +10,16 @@ import logo2 from "../../asest/navbar/Vector.svg";
 import Badge from "@mui/material/Badge";
 
 export function Navbar() {
-  // let scroll1 = window.pageYOffset;
-  // window.onscroll = function () {
-  //   let scroll2 = window.pageYOffset;
-  //   if (scroll1 > scroll2) {
-  //     document.querySelector("nav").style.top = "0";
-  //   } else {
-  //     document.querySelector("nav").style.top = "-200px";
-  //   }
-  //   scroll1 = scroll2;
-  // };
+  let scroll1 = window.pageYOffset;
+  window.onscroll = function () {
+    let scroll2 = window.pageYOffset;
+    if (scroll1 > scroll2) {
+      document.querySelector("nav").style.top = "0";
+    } else {
+      document.querySelector("nav").style.top = "-200px";
+    }
+    scroll1 = scroll2;
+  };
   const dispatch = useDispatch();
   const location = useLocation();
   const path = location.pathname;
