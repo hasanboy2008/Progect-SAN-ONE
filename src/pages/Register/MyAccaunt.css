@@ -7,12 +7,12 @@
   align-items: center;
   justify-content: flex-start;
   align-content: flex-start;
-  padding-top: 5%;
+  padding-top: 15%;
 }
 
 #myProfile {
   max-width: 950px;
-  width: 100%;
+  /* width: 100%; */
   height: auto;
   display: flex;
   flex-direction: column;
@@ -21,8 +21,8 @@
 }
 
 #myProfile > figure {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background-color: rgb(9, 12, 80);
   border-radius: 50%;
   display: flex;
@@ -106,33 +106,151 @@
   color: #171717;
 }
 
-#myProfileAction {
+/* //barcha haridlar tarixi */
+.order_section{
   width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly !important;
+  padding: 5%;
+  /* background-color: #dcbb45; */
 }
-
-#myProfileAction > button {
-  width: 190px;
-  height: 46px;
-  background: #dcbb45;
-  border-radius: 8px;
+.order_item{
+  width: 100%;
+  height: auto;
+  /* background-color: aqua; */
+ 
+  padding: 2% 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+.order_rezalut{
+  width: 955px;
+  height: auto;
+  /* background-color: rebeccapurple; */
+  display: flex;
   align-items: center;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 2%;
-  color: #171717;
+  justify-content: space-between;
+  padding: 1% ;
+  margin: 1%;
+  border-top: 1px solid #000;
+}
+.order_info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.order_info >p{
+  font-weight: 400;
+font-size: 19.6296px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.order_info >span{
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #000000;
+padding-top: 19px;
+
+}
+.order_info >b{
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: right;
+
+color: #8A8A8A;
+padding-top:18px ;
+
+}
+.order_price>p{
+  font-weight: 700;
+font-size: 23.8058px;
+line-height: 29px;
+/* identical to box height */
+
+text-align: right;
+
+/* brandcolor */
+
+color: #C9A95C;
+}
+.order_img{
+  width: 221px;
+  height: 150px;
+  border-radius: 10px;
+  padding: 0.1% 0;
+
+}
+.order_img>img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
 }
 
-@media (max-width: 900px) {
+/* order media */
+@media (max-width:950px) {
+  .order_rezalut{
+  width: 855px;
+  height: auto;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% ;
+  margin: 1%;
+  border-top: 1px solid #000;
+}
+
+  
+}
+@media (max-width:768px) {
+  .order_rezalut{
+  width: 655px;
+  height: auto;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% ;
+  margin: 1%;
+  border-top: 1px solid #000;
+}
+}
+@media (max-width:425px) {
+    .order_rezalut{
+  width: 355px;
+  height: auto;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2% ;
+  margin: 1%;
+  border-top: 1px solid #000;
+}
+
+  }
+
+
+
+
+@media (max-width: 900px){
   #myProfile > figure {
-    width: 200px;
-    height: 200px !important;
+    width: 150px;
+    height: 150px !important;
   }
   #myProfile > div > div > input {
     font-size: 14px;

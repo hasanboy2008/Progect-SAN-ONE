@@ -22,9 +22,7 @@ export function Home() {
 
       <div className="section1">
         <div className="left">
-          <p>
-            Barcha mahsulotlar
-          </p>
+          <p>Barcha mahsulotlar</p>
         </div>
         <div className="center">
           <p>
@@ -36,7 +34,9 @@ export function Home() {
             qulayroq o'tkazasiz!
           </span>
           <div className="btnDiv">
-            <button className="btn btnColorF">KO'RISH</button>
+            <button className="btn btnColorF" onClick={() => navigate("/all")}>
+              KO'RISH
+            </button>
             <button
               onClick={() => {
                 navigate("/signup");

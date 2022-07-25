@@ -114,6 +114,15 @@
   line-height: 26px;
   color: #000000;
 }
+.discount>hr{
+  width: 100% !important;
+}
+
+#hr{
+  width: 100% !important;
+
+  border-top: 1px solid #000;
+}
 
 @media (max-width: 1840px) {
   .cardlar .new_Produc_1_1 {
@@ -299,6 +308,7 @@
 }
 @media (max-width: 450px) {
   .cardlar .new_Produc_1_1 {
+    align-items: flex-start;
     width: 350px;
     height: 400px;
   }
@@ -310,12 +320,18 @@
   .all {
     padding: 80px 6%;
   }
+  .discount_pricw_1{
+    text-align: start !important;
+  }
   .discount_pricw_1 p {
+    align-items: flex-start;
     font-size: 18px;
+    padding: 0;
   }
   .sell_basket_1 > :nth-child(1) {
     font-size: 8px;
-    height: 25px;
+    height: 35px;
+    font-size: 18px;
   }
   .discount_pricw_1 span {
     font-size: 14px;
@@ -354,10 +370,10 @@
     font-size: 14px;
   }
 }
-@media (max-width: 310px) {
+@media (max-width: 320px) {
   .cardlar .new_Produc_1_1 {
-    width: 250px;
-    height: 300px;
+    width: 263px;
+    height: 310px;
   }
   .cardlar {
     padding: 0 0.1%;
@@ -366,6 +382,6 @@
 @media (max-width: 280px) {
   .cardlar .new_Produc_1_1 {
     width: 230px;
-    height: 290px;
+    height: auto;
   }
 }

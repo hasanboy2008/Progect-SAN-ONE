@@ -836,6 +836,15 @@ left: 0;
     font-size: 15px;
 
 }
+.filter_best {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 8px 10px;
+
+
+}
+
 
 
 }
