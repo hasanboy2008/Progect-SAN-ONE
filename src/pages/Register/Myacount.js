@@ -170,8 +170,9 @@ export function Myacount() {
             }}
             onClick={() => {
               window.location.reload();
+              window.location.href = "/signin";
               localStorage.clear();
-              navigate("/signup", {
+              navigate("/signin", {
                 replace: true,
               });
             }}

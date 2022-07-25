@@ -27,7 +27,6 @@ export function Navbar() {
   const carts = useSelector((state) => state.reCart);
   // btn active
 
-
   // const auth = useSelector((state) => state.reAuth);
 
   // navbar open func
@@ -35,7 +34,7 @@ export function Navbar() {
   const navOpen = () => {
     setNavbar(!navbar);
   };
-  const [auth, setAuth] = useState(true);
+  const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
   const home = path === "/";
   // const dispatch = useDispatch();
@@ -87,11 +86,7 @@ export function Navbar() {
             onClick={() => {
               navigate("/katalog");
             }}
-            style={
-              home
-                ? styleForHome.text
-                : styleForOther.text 
-            }
+            style={home ? styleForHome.text : styleForOther.text}
           >
             KATALOG
           </button>
