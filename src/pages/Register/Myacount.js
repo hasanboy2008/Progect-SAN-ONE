@@ -19,8 +19,8 @@ export function Myacount() {
   const [img, setImg] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const dispatch = useDispatch();
-  const [order, setOrder] = useState([]);
   const navigate = useNavigate();
+  const [orderData, setOrderData] = useState([]);
 
   function hendleSubmit(e) {
     e.preventDefault();
@@ -68,8 +68,20 @@ export function Myacount() {
       },
     })
       .then((res) => {
-        setOrder(res.data);
-        console.log(res.data);
+        res.data.map((item) => {
+          const MyData = [];
+          let user = item.user;
+          item.orders.map((e) => {
+            MyData.push({
+              ...e,
+              ...user,
+            });
+            return MyData;
+          });
+          setOrderData(MyData);
+
+          return MyData;
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -183,29 +195,25 @@ export function Myacount() {
       </form>
       <div className="order_section">
         <p>Barcha haridlar tarixi</p>
-        {order.map((item, index) => {
-          return (
-            <div className="order_item" key={index}>
-              {item.orders.map((item, index) => {
-                return (
-                  <div className="order_rezalut" key={index}>
-                    <div className="order_img">
-                      <img src={item.img} alt="" />
-                    </div>
-                    <div className="order_info">
-                      <p>{item.name} </p>
-                      <span>code:{item.code}</span>
-                      <b>12.06.2022</b>
-                    </div>
-                    <div className="order_price">
-                      <p>{item.price}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
+        <div className="order_item">
+          {orderData.map((item, index) => {
+            return (
+              <div className="order_rezalut" key={index}>
+                <div className="order_img">
+                  <img src={item.img} alt="" />
+                </div>
+                <div className="order_info">
+                  <p>{item.name} </p>
+                  <span>code:{item.code}</span>
+                  <b>{item.date}</b>
+                </div>
+                <div className="order_price">
+                  <p>{item.price}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -22,9 +22,8 @@ export function Detail() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.reUser);
 
-  const [razmer, setRazmer] = useState(product.sizes ? product.sizes[0] : "" );
+  const [razmer, setRazmer] = useState(product.sizes ? product.sizes[0] : "");
   const { enqueueSnackbar } = useSnackbar();
-
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -39,7 +38,7 @@ export function Detail() {
       .then((res) => {
         setProduct(res.data[0]);
         setImages(res.data[0].images ? res.data[0].images : []);
-        setRazmer(res.data ? res.data[0].sizes[0] : "")
+        setRazmer(res.data ? res.data[0].sizes[0] : "");
       })
       .catch((err) => {
         console.log(err);
@@ -123,7 +122,13 @@ export function Detail() {
               {product.sizes
                 ? product.sizes.map((size) => {
                     return (
-                      <button className={ +size === +razmer ? " size active_size" : "size" } key={size} onClick={() => handleSize(size)} >
+                      <button
+                        className={
+                          +size === +razmer ? " size active_size" : "size"
+                        }
+                        key={size}
+                        onClick={() => handleSize(size)}
+                      >
                         <p> {size} </p>
                       </button>
                     );
@@ -144,40 +149,44 @@ export function Detail() {
             <button
               className="btn-basket"
               onClick={() => {
-                dispatch(acLoading(true));
-                axios(`https://api.sanone.uz/addCard/${user.id}`, {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                    token: user.token,
-                  },
-                  data: JSON.stringify({
-                    ...product,
-                    img: images[indexImg],
-                    size: razmer,
-                    userId: user.id,
-                    quantity: 1,
-                  }),
-                })
-                  .then((res) => {
-                    if (res.data.status) {
-                      enqueueSnackbar(res.data.message, {
-                        variant: "success",
-                      });
-                      dispatch(acLoading(false));
-                      dispatch({
-                        type: "RELOAD_CARD",
-                      });
-                    } else {
-                      enqueueSnackbar(res.data.message, {
-                        variant: "error",
-                      });
-                      dispatch(acLoading(false));
-                    }
+                if (user.id) {
+                  dispatch(acLoading(true));
+                  axios(`https://api.sanone.uz/addCard/${user.id}`, {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                      token: user.token,
+                    },
+                    data: JSON.stringify({
+                      ...product,
+                      img: images[indexImg],
+                      size: razmer,
+                      userId: user.id,
+                      quantity: 1,
+                    }),
                   })
-                  .catch((err) => {
-                    dispatch(acLoading(false));
-                  });
+                    .then((res) => {
+                      if (res.data.status) {
+                        enqueueSnackbar(res.data.message, {
+                          variant: "success",
+                        });
+                        dispatch(acLoading(false));
+                        dispatch({
+                          type: "RELOAD_CARD",
+                        });
+                      } else {
+                        enqueueSnackbar(res.data.message, {
+                          variant: "error",
+                        });
+                        dispatch(acLoading(false));
+                      }
+                    })
+                    .catch((err) => {
+                      dispatch(acLoading(false));
+                    });
+                } else {
+                  navigate("/signin");
+                }
               }}
             >
               Savatga
