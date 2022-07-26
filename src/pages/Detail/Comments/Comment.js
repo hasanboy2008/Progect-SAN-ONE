@@ -46,7 +46,7 @@ const Comment = ({
         {!isEditing && <div className="comment-text"> {comment.body}</div>}
         {isEditing && (
           <CommentForm
-            submitLabel="Update"
+            // submitLabel="Update"
             hasCancelButton
             initialText={comment.body}
             handleSubmit={(text) => updateComment(text, comment.id)}
@@ -66,7 +66,7 @@ const Comment = ({
             <img src={Reply} alt="reply" />   Javob yozish
             </div>
           )}
-          {canEdit && (
+          {canEdit && ( 
             <div
               className="comment-action"
               onClick={() =>
