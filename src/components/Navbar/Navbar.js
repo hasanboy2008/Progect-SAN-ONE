@@ -293,7 +293,7 @@ export function Navbar() {
               home ? { background: "#D0995E" } : { background: " #A18B7F" }
             }
           >
-            {<img src={user.img} alt="" /> ? (
+            {user.img ? (
               <img src={user.img} alt="" />
             ) : (
               <svg
@@ -317,6 +317,7 @@ export function Navbar() {
                 />
               </svg>
             )}
+            
           </button>
         </div>
         <div

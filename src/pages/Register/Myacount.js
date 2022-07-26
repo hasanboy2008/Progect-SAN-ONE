@@ -136,6 +136,7 @@ export function Myacount() {
               }}
             />
           </div>
+        
           <div>
             <EmailIcon />
             <input
@@ -168,12 +169,12 @@ export function Myacount() {
           </div>
         </div>
 
-        <Button type="submit">
+        {/* <Button type="submit">
           <span>Tahrirlash</span>
-        </Button>
-        <Button type="submit">
+        </Button> */}
+        {/* <Button type="submit">
           <p>login-x</p>
-        </Button>
+        </Button> */}
         <div id="myProfileAction">
           <Button type="submit" variant="contained">
             <span>Tahrirlash</span>
