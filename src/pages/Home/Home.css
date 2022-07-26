@@ -358,6 +358,10 @@ padding: 1rem;
     padding: 5px 10px;
     font-size: 0.8rem;
   }
+  .slider_box{
+    height: auto !important;
+    /* background-color: rebeccapurple; */
+  }
 }
 @media (max-width: 750px) {
   .section1 .container .img img {
@@ -823,7 +827,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../../asest//home/section6/bacround_img.png);
+  background-image: url(../../asest/home/section6/bacround_img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

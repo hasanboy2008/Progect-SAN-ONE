@@ -244,8 +244,8 @@ export function Basket() {
             </div>
 
             <div className="basket-order-texts">
-              <p className="basket-order-p">Yetkazib berish:</p>
-              <p className="basket-order-p">15 000 so’m</p>
+              {/* <p className="basket-order-p">Yetkazib berish:</p> */}
+              {/* <p className="basket-order-p">15 000 so’m</p> */}
             </div>
           </div>
           <div className="basket-order-texts-total">

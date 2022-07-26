@@ -157,6 +157,9 @@ export function Myacount() {
         <Button type="submit">
           <span>Tahrirlash</span>
         </Button>
+        <Button type="submit">
+          <p>login-x</p>
+        </Button>
       </form>
       <div className="order_section">
         <p>Barcha haridlar tarixi</p>
