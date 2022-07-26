@@ -75,7 +75,22 @@ export function Singnin() {
             }}
           />
         </div>
+
         <Button type="submit">Kirish</Button>
+        <p
+          style={{
+            width: "100%",
+            textAlign: "end",
+            textDecoration: "underline",
+            color: "#00bcd4",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            navigate("/signup");
+          }}
+        >
+          Ro'yxatdan o'tish
+        </p>
       </form>
     </div>
   );

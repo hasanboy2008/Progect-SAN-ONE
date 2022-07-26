@@ -11,6 +11,7 @@ import { useSnackbar } from "notistack";
 import { useDispatch, useSelector } from "react-redux";
 import { acLoading } from "../../Redux/Loading";
 import { acUser } from "../../Redux/User";
+import { useNavigate } from "react-router-dom";
 
 export function Myacount() {
   const user = useSelector((state) => state.reUser);
@@ -18,7 +19,8 @@ export function Myacount() {
   const [img, setImg] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const dispatch = useDispatch();
-  const [order, setOrder] = useState([]);
+  const navigate = useNavigate();
+  const [orderData, setOrderData] = useState([]);
 
   function hendleSubmit(e) {
     e.preventDefault();
@@ -66,8 +68,20 @@ export function Myacount() {
       },
     })
       .then((res) => {
-        setOrder(res.data);
-        console.log(res.data);
+        res.data.map((item) => {
+          const MyData = [];
+          let user = item.user;
+          item.orders.map((e) => {
+            MyData.push({
+              ...e,
+              ...user,
+            });
+            return MyData;
+          });
+          setOrderData(MyData);
+
+          return MyData;
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -160,32 +174,52 @@ export function Myacount() {
         <Button type="submit">
           <p>login-x</p>
         </Button>
+        <div id="myProfileAction">
+          <Button type="submit" variant="contained">
+            <span>Tahrirlash</span>
+          </Button>
+          <Button
+            type="button"
+            variant="contained"
+            color="secondary"
+            sx={{
+              backgroundColor: "#ff6219 !important",
+              color: "#fff !important",
+            }}
+            onClick={() => {
+              window.location.reload();
+              window.location.href = "/signin";
+              localStorage.clear();
+              navigate("/signin", {
+                replace: true,
+              });
+            }}
+          >
+            <span>Chiqish</span>
+          </Button>
+        </div>
       </form>
       <div className="order_section">
         <p>Barcha haridlar tarixi</p>
-        {order.map((item, index) => {
-          return (
-            <div className="order_item" key={index}>
-              {item.orders.map((item, index) => {
-                return (
-                  <div className="order_rezalut" key={index}>
-                    <div className="order_img">
-                      <img src={item.img} alt="" />
-                    </div>
-                    <div className="order_info">
-                      <p>{item.name} </p>
-                      <span>code:{item.code}</span>
-                      <b>12.06.2022</b>
-                    </div>
-                    <div className="order_price">
-                      <p>{item.price}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
+        <div className="order_item">
+          {orderData.map((item, index) => {
+            return (
+              <div className="order_rezalut" key={index}>
+                <div className="order_img">
+                  <img src={item.img} alt="" />
+                </div>
+                <div className="order_info">
+                  <p>{item.name} </p>
+                  <span>code:{item.code}</span>
+                  <b>{item.date}</b>
+                </div>
+                <div className="order_price">
+                  <p>{item.price}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

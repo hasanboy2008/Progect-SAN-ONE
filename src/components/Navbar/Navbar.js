@@ -34,7 +34,7 @@ export function Navbar() {
   const navOpen = () => {
     setNavbar(!navbar);
   };
-  const [auth, setAuth] = useState(true);
+  const [auth, setAuth] = useState(false);
   const user = JSON.parse(localStorage.getItem("user") || "[]");
   const home = path === "/";
   // const dispatch = useDispatch();

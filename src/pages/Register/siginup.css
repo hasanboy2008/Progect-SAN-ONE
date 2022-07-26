@@ -125,39 +125,34 @@
 }
 #myProfile .sign_province {
   width: 100%;
-  padding: 20px;
-  box-shadow: 0px 7px 20px rgb(0 0 0 / 12%);
-  border-radius: 8px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 }
-#myProfile .sign_province .select-div
-{
-  width: 80%;
-  display: flex;
-  border: none;
-  box-shadow: none;
-}
-#myProfile .sign_province .select-div select{
-  width: 160px;
+#myProfile .sign_province select {
+  /* height: 60px; */
   background: none;
   font-size: 18px;
   color: #dcbb45;
+  box-shadow: 0px 7px 20px rgb(0 0 0 / 12%);
+  border-radius: 8px;
+  width: 48%;
+  padding:  15px;
 }
 
 @media (max-width: 700px) {
-  #myProfile .sign_name .sing_i_1
-  {
+  #myProfile .sign_name .sing_i_1 {
     width: 100%;
   }
-  #myProfile .sign_province .select-div
+  #myProfile .sign_province
   {
     flex-direction: column;
-    align-items: flex-end;
+    gap: 1rem;
   }
-  #myProfile .sign_province .select-div select{
-    width: 200px;
+  #myProfile .sign_province select{
+    width: 100%;
   }
 }
 @media (max-width: 430px) {
@@ -165,13 +160,11 @@
     padding-top: 60px;
   }
   #myProfile .sign_province {
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0px 7px 20px rgb(0 0 0 / 12%);
     border-radius: 8px;
   }
-  #myProfile .sign_province .select-div select {
-    width: 150px;
+  #myProfile .sign_province select {
     font-size: 14px;
+    padding: 10px;
+
   }
 }
