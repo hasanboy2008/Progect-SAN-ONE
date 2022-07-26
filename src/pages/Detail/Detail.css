@@ -1541,16 +1541,16 @@
   }
 
   .info-btn {
-    width: 150px;
+    width: 250px;
     height: 45px;
-    font-size: 20px;
+    font-size: 18px;
     margin: 0 0 10px 0;
   }
 
   .comment-btn {
     width: 250px;
     height: 45px;
-    font-size: 20px;
+    font-size: 18px;
   }
   .active {
     background: #dcbb45;
@@ -1568,14 +1568,14 @@
   .info-btn {
     width: 200px;
     height: 40px;
-    font-size: 19px;
+    font-size: 18px;
     margin: 0 0 10px 0;
   }
 
   .comment-btn {
     width: 200px;
     height: 40px;
-    font-size: 19px;
+    font-size: 18px;
   }
   .active {
     background: #dcbb45;
@@ -1589,14 +1589,14 @@
   .info-btn {
     width: 180px;
     height: 35px;
-    font-size: 18px;
+    font-size: 14px;
     margin: 0 0 10px 0;
   }
 
   .comment-btn {
     width: 180px;
     height: 35px;
-    font-size: 18px;
+    font-size: 14px;
   }
   .active {
     background: #dcbb45;
@@ -1608,9 +1608,21 @@
     width: 300px;
     padding: 65px 50px;
   }
+    .info-btn {
+    width: 150px;
+    height: 35px;
+    font-size: 13px;
+    margin: 0 0 10px 0;
+  }
+
+  .comment-btn {
+    width: 150px;
+    height: 35px;
+    font-size: 13px;
+  }
 }
 @media only screen and (max-width: 330px) {
   .Detail-Comment {
-    width: 200px;
+    width: 250px;
   }
 }
