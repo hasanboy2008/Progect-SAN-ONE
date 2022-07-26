@@ -306,6 +306,7 @@
   }
   .section1 .left {
     bottom: 35%;
+    padding: 2%;
   }
   .section1 .container {
     width: 100%;
@@ -442,7 +443,7 @@
   }
   .section1 .left {
     bottom: 35%;
-    left: -20%;
+    left: -10%;
   }
 }
 @media (max-width: 414px) {
@@ -479,7 +480,7 @@
     bottom: 2rem;
   }
   .section1 .left {
-    left: -25%;
+    left: -15%;
   }
   .section1 .container .img img {
     width: 180%;
@@ -676,6 +677,10 @@
   .discount_pricw p {
     font-size: 27px !important;
   }
+  .left{
+    padding: 10%;
+  }
+
 }
 @media (max-width: 470px) {
   .all_headerText p {
