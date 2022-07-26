@@ -300,7 +300,7 @@ export function Signup() {
             navigate("/signin");
           }}
         >
-          Men ro'yxatdan o'tganan
+          Men ro'yxatdan o'tganman
         </p>
 
         <button type="submit">Kirish</button>
