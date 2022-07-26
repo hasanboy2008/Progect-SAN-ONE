@@ -24,21 +24,19 @@
   margin-top: 50px;
   border: none;
   outline: none;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  color: #D3D3D3;
+  color: #d3d3d3;
   resize: none;
-
 }
 
 .comment-form-button {
   border-radius: 50%;
   border: none;
   background: transparent;
-  
 }
 
 .textArea {
@@ -50,7 +48,6 @@
 .comment-form-button:hover:enabled {
   cursor: pointer;
 }
-
 
 .comment-form-button:disabled {
   opacity: 0.7;
@@ -85,24 +82,24 @@
 }
 
 .comment-author {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 16px;
-  color: #DCBB45;
+  color: #dcbb45;
   flex: none;
   order: 0;
   flex-grow: 0;
 }
 
 .comment-data {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 17px;
-  color: #A4A4A4;
+  color: #a4a4a4;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -110,19 +107,17 @@
 
 .comment-text {
   width: 1016px;
-  height: 87px;
-  left: 447px;
-  top: 1268px;
-  background: #ECECEC;
+  height: auto;
+  background: #ececec;
   border-radius: 10px;
   padding: 10px;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 1px;
-  color: #5A5A5A;
+  color: #5a5a5a;
   flex: none;
   order: 0;
   flex-grow: 1;
@@ -141,15 +136,15 @@
 }
 
 .comment-action {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 17px;
   text-align: center;
-  color: #A4A4A4;
+  color: #a4a4a4;
   margin: 10px;
-  display: flex;  
+  display: flex;
   align-items: center;
 }
 
@@ -164,23 +159,22 @@
 @media only screen and (max-width: 1330px) {
   .comments {
     width: 1100px;
-
   }
   .comment-text {
     width: 900px;
-    height: 87px;
+    height: auto;
     left: 447px;
     top: 1268px;
-    background: #ECECEC;
+    background: #ececec;
     border-radius: 10px;
     padding: 10px;
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
-    color: #5A5A5A;
+    color: #5a5a5a;
     flex: none;
     order: 0;
     flex-grow: 1;
@@ -190,23 +184,22 @@
 @media only screen and (max-width: 1230px) {
   .comments {
     width: 1000px;
-
   }
   .comment-text {
     width: 800px;
-    height: 87px;
+    height: auto;
     left: 447px;
     top: 1268px;
-    background: #ECECEC;
+    background: #ececec;
     border-radius: 10px;
     padding: 10px;
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
-    color: #5A5A5A;
+    color: #5a5a5a;
     flex: none;
     order: 0;
     flex-grow: 1;
@@ -216,23 +209,22 @@
 @media only screen and (max-width: 1130px) {
   .comments {
     width: 900px;
-
   }
   .comment-text {
     width: 700px;
-    height: 87px;
+    height: auto;
     left: 447px;
     top: 1268px;
-    background: #ECECEC;
+    background: #ececec;
     border-radius: 10px;
     padding: 10px;
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
-    color: #5A5A5A;
+    color: #5a5a5a;
     flex: none;
     order: 0;
     flex-grow: 1;
@@ -242,23 +234,22 @@
 @media only screen and (max-width: 1030px) {
   .comments {
     width: 800px;
-
   }
   .comment-text {
     width: 600px;
-    height: 87px;
+    height: auto;
     left: 447px;
     top: 1268px;
-    background: #ECECEC;
+    background: #ececec;
     border-radius: 10px;
     padding: 10px;
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
-    color: #5A5A5A;
+    color: #5a5a5a;
     flex: none;
     order: 0;
     flex-grow: 1;
@@ -268,23 +259,20 @@
 @media only screen and (max-width: 930px) {
   .comments {
     width: 700px;
-
   }
   .comment-text {
     width: 500px;
     height: auto;
-    left: 447px;
-    top: 1268px;
-    background: #ECECEC;
+    background: #ececec;
     border-radius: 10px;
     padding: 10px;
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
-    color: #5A5A5A;
+    color: #5a5a5a;
     flex: none;
     order: 0;
     flex-grow: 1;
@@ -294,23 +282,22 @@
 @media only screen and (max-width: 830px) {
   .comments {
     width: 600px;
-
   }
   .comment-text {
     width: 400px;
     height: auto;
     left: 447px;
     top: 1268px;
-    background: #ECECEC;
+    background: #ececec;
     border-radius: 10px;
     padding: 10px;
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
-    color: #5A5A5A;
+    color: #5a5a5a;
     flex: none;
     order: 0;
     flex-grow: 1;
@@ -320,85 +307,207 @@
 @media only screen and (max-width: 730px) {
   .comments {
     width: 500px;
-
   }
   .comment-text {
     width: 300px;
     height: auto;
     left: 447px;
     top: 1268px;
-    background: #ECECEC;
+    background: #ececec;
     border-radius: 10px;
     padding: 10px;
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 16px;
     letter-spacing: 1px;
-    color: #5A5A5A;
+    color: #5a5a5a;
     flex: none;
     order: 0;
     flex-grow: 1;
     margin-top: 20px;
   }
 
+  .comment-author {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 16px;
+    color: #dcbb45;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .comment-data {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a4a4a4;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .comment-image-container img {
+    border-radius: 50px;
+    width: 40px;
+  }
 }
 @media only screen and (max-width: 630px) {
   .comments {
     width: 400px;
-
   }
   .comment-text {
-    width: 200px;
-    height: auto;
-    left: 447px;
-    top: 1268px;
-    background: #ECECEC;
-    border-radius: 10px;
-    padding: 10px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    color: #5A5A5A;
+    width: 300px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .comment-author {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 15px;
+    color: #dcbb45;
     flex: none;
     order: 0;
-    flex-grow: 1;
-    margin-top: 20px;
+    flex-grow: 0;
+    padding: 0 3%;
+  }
+  .comment-data {
+    font-size: 12px;
+  }
+  .comment-image-container img {
+    width: 40px;
   }
 }
 @media only screen and (max-width: 530px) {
   .comments {
-    width: 300px;
-
+    width: 350px;
   }
   .comment-text {
-    width: 100px;
-    height: auto;
-    left: 447px;
-    top: 1268px;
-    background: #ECECEC;
-    border-radius: 10px;
-    padding: 10px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
+    width: 250px;
+    font-size: 10px;
+    line-height: 15px;
+    margin-top: 3%;
+  }
+  .comment-author {
+    font-weight: 700;
     font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    color: #5A5A5A;
+    line-height: 15px;
+    color: #dcbb45;
     flex: none;
     order: 0;
-    flex-grow: 1;
-    margin-top: 20px;
+    flex-grow: 0;
+    padding: 0 3%;
+  }
+  .comment-data {
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2% 0;
+  }
+  .comment-image-container img {
+    width: 40px;
+  }
+  .comment-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .comment-action {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+    color: #a4a4a4;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+  }
+  .comment-action img {
+    width: 30px;
+  }
+
+  .comment-actions {
+    display: flex;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
 @media only screen and (max-width: 430px) {
   .comments {
-    width: 200px;
-
+    width: 300px;
+    padding: 3%;
+  }
+  .comment-text {
+    width: 180px;
+    font-size: 10px;
+    line-height: 15px;
+    margin-top: 3%;
+  }
+  .comment-author {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 15px;
+    color: #dcbb45;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding: 0 3%;
+  }
+  .comment-data {
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2% 0;
+  }
+  .comment-image-container img {
+    width: 40px;
+  }
+  .comment-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .comments {
+    width: 250px;
+    padding: 3%;
+  }
+  .comment-text {
+    width: 130px;
+    font-size: 8px;
+    line-height: 10px;
+    margin-top: 3%;
+  }
+  .comment-author {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 14px;
+    color: #dcbb45;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding: 0 3%;
+  }
+  .comment-data {
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2% 0;
+  }
+  .comment-image-container img {
+    width: 40px;
+  }
+  .comment-content {
+    display: flex;
+    flex-direction: column;
   }
 }
