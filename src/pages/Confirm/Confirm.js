@@ -1,70 +1,13 @@
 import React , {useState , useEffect , useSelector,useDispatch ,    useSnackbar} from "react";
 import "./Confirm.css"
-import { useLocation, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 
 
 import axios  from "axios"
 export function Confirm() {
 
-    const navigate = useNavigate();
-
-    const [product,setProduct]=useState({})
-    
-    const carts = useSelector((state) => state.reCart);
-    const user = useSelector((state) => state.reUser);
-    const dispatch = useDispatch();
-    const { enqueueSnackbar } = useSnackbar();
-
-      
-
-    const handleBuyurtma = () => {
-
-        dispatch(acLoading(true));
-        const order = [];
-    
-        carts.map((item) => {
-          order.push({
-            productId: item.id,
-            code: item.code,
-            price: item.price,
-            quantity: item.quantity,
-            discount: item.discount,
-            sizes: item.size,
-            img: item.img,
-          });
-    
-          return null;
-        });
-    
-        const sendOrderData = JSON.stringify({
-          userId: user.id,
-          order,
-        });
-        axios("https://api.sanone.uz/api/buy", {
-          method: "POST",
-          headers: {
-            Accept: "*/*",
-            "Content-Type": "application/json",
-          },
-          data: sendOrderData,
-        })
-          .then((res) => {
-            dispatch(acLoading(false));
-            enqueueSnackbar(res.data.message, {
-              variant: "success",
-            });
-            dispatch({
-              type: "RELOAD_CARD",
-            });
-          })
-          .catch((err) => {
-            dispatch(acLoading(false));
-            enqueueSnackbar(err.response.data.message, {
-              variant: "error",
-            });
-          });
-      };
+  const navigate =useNavigate();
 
   return(
     
@@ -73,7 +16,7 @@ export function Confirm() {
                 <div className="payment-texts">
                    
                     <div className="payment-texts-bottom">
-                        <p className="payment-white-text">Narxi:{product.price}</p>
+                        <p className="payment-white-text">Narxi</p>
                       
                     </div>
                     <div className="payment-input-top">
@@ -93,9 +36,7 @@ export function Confirm() {
                             <p>Ortga</p>
 
                         </button>
-                        <button  onClick={() => {
-              handleBuyurtma(carts);
-            }} className="button-confirmation">
+                        <button  className="button-confirmation">
                             Tasdiqlash
                         </button>
                     </div>
