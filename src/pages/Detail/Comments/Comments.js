@@ -72,7 +72,7 @@ const Comments = ({  currentUserId }) => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [product_id]);
 
   return (
     <div className="comments">
