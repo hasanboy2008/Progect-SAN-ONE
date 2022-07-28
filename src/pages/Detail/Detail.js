@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useSnackbar } from "notistack";
 import { acLoading } from "../../Redux/Loading";
 
+
 export function Detail() {
   const [selectedImg, setSelectedImg] = useState(0);
   const [showtab, setShowtab] = useState(1);
@@ -24,6 +25,8 @@ export function Detail() {
 
   const [razmer, setRazmer] = useState(product.sizes ? product.sizes[0] : "");
   const { enqueueSnackbar } = useSnackbar();
+
+ 
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,6 +51,7 @@ export function Detail() {
   const handleSize = (item) => {
     setRazmer(item);
   };
+ 
 
   return (
     <div className="Detail">
@@ -63,6 +67,7 @@ export function Detail() {
                 }}
               >
                 <img src={img} alt="shoe" />
+
                 <span
                   style={selectedImg === index ? { background: "none" } : {}}
                 ></span>
@@ -70,6 +75,7 @@ export function Detail() {
             ))}
           </div>
           <img src={images[indexImg]} alt="" className="selected" />
+         
         </div>
         <div className="card-about">
           <div className="a-name">

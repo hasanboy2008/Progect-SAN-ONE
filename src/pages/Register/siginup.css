@@ -142,6 +142,14 @@
   padding:  15px;
 }
 
+
+#tyupe{
+  background: none;
+}
+
+
+
+
 @media (max-width: 700px) {
   #myProfile .sign_name .sing_i_1 {
     width: 100%;

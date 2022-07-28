@@ -136,7 +136,7 @@ export function Myacount() {
               }}
             />
           </div>
-        
+
           <div>
             <EmailIcon />
             <input
@@ -161,9 +161,29 @@ export function Myacount() {
             <PersonPinCircleIcon />
             <input
               type="text"
+              value={data.district}
+              onChange={(e) => {
+                setData({ ...data, district: e.target.value });
+              }}
+            />
+          </div>
+          <div>
+            <PersonPinCircleIcon />
+            <input
+              type="text"
               value={data.mfy}
               onChange={(e) => {
                 setData({ ...data, mfy: e.target.value });
+              }}
+            />
+          </div>
+          <div>
+            <PersonPinCircleIcon />
+            <input
+              type="text"
+              value={data.street}
+              onChange={(e) => {
+                setData({ ...data, street: e.target.value });
               }}
             />
           </div>
