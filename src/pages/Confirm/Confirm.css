@@ -201,6 +201,15 @@ input{
     cursor: pointer;
     margin-left: 14px;
 }
+.input_pl{
+    margin: 13% 25%;
+}
+.input_pl::placeholder{
+    padding-left: 10px;
+   
+
+
+}
 
 
 @media (max-width: 900px){
