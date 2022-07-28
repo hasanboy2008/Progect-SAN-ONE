@@ -5,6 +5,7 @@ import { reLoading } from "./Loading";
 import { reSearchProduct } from "./Search";
 import { reCart, reReloadCard } from "./Carta";
 import { reUser } from "./User";
+import { reLocalCard } from "./LocalCard";
 
 const reducer = combineReducers({
   reProducts,
@@ -13,6 +14,7 @@ const reducer = combineReducers({
   reCart,
   reUser,
   reReloadCard,
+  reLocalCard,
 });
 
 export const Store = configureStore({
