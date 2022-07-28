@@ -4,7 +4,6 @@ import {  useNavigate } from "react-router-dom";
 
 
 
-import axios  from "axios"
 export function Confirm() {
 
   const navigate =useNavigate();

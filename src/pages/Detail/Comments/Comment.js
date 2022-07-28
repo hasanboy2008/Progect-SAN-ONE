@@ -16,8 +16,6 @@ const Comment = ({
   activeComment,
   updateComment,
   deleteComment,
-  addComment,
-  parentId = null,
   currentUserId,
 }) => {
 
@@ -25,10 +23,10 @@ const Comment = ({
     activeComment &&
     activeComment.id === comment.id &&
     activeComment.type === "editing";
-  const isReplying =
-    activeComment &&
-    activeComment.id === comment.id &&
-    activeComment.type === "replying";
+  // const isReplying =
+  //   activeComment &&
+  //   activeComment.id === comment.id &&
+  //   activeComment.type === "replying";
   const fiveMinutes = 3000;
   const timePassed = new Date() - new Date(comment.createdAt) > fiveMinutes;
   const canDelete =
