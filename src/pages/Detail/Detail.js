@@ -49,6 +49,8 @@ export function Detail() {
     setRazmer(item);
   };
 
+  // zoooom uchun js code start
+
   ".selected".hover(function (e) {
     //Store position & dimension information of image
     let imgPosition = ".magnify".position(),
@@ -78,6 +80,10 @@ export function Detail() {
     //Hide the magnifier when mouse is no longer hovering over image.
     ".zoom".hide();
   });
+
+
+  // zoooom uchun js code end
+
   
 
   return (
