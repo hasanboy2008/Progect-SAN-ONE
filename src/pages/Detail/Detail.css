@@ -36,6 +36,19 @@
   height: auto;
   border-radius: 8px;
 }
+.container .zoom
+{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  z-index: 20;
+  border: 4px solid white;
+  background-size: 1000%;
+  background-repeat: no-repeat;
+  margin-left: -100px !important;
+  margin-top: -100px !important;
+  pointer-events: none;
+}
 
 .container > .imgContainer {
   width: 100%;
