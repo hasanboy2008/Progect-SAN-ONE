@@ -111,15 +111,12 @@ export function Detail() {
               </figure>
             ))}
           </div>
-<<<<<<< HEAD
           <img src={images[indexImg]} alt="" className="selected" />
          
-=======
           <div className="magnify">
             <img src={images[indexImg]} alt="" className="selected" />
             <div className="zoom"></div>
           </div>
->>>>>>> f92a0538178c089fd704ae5dae62902637874006
         </div>
         <div className="card-about">
           <div className="a-name">
