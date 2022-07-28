@@ -53,6 +53,43 @@ export function Detail() {
   };
  
 
+  // zoooom uchun js code start
+
+  ".selected".hover(function (e) {
+    //Store position & dimension information of image
+    let imgPosition = ".magnify".position(),
+      imgHeight = ".selected".height(),
+      imgWidth = ".selected".width();
+
+    //Show mangifier on hover
+    ".zoom".show();
+
+    //While the mouse is moving and over the image move the magnifier and magnified image
+    this.mousemove(function (e) {
+      //Store position of mouse as it moves and calculate its position in percent
+      let posX = e.pageX - imgPosition.left,
+        posY = e.pageY - imgPosition.top,
+        percX = (posX / imgWidth) * 100,
+        percY = (posY / imgHeight) * 100,
+        perc = percX + "% " + percY + "%";
+
+      //Change CSS of magnifier, move it to mouse location and change background position based on the percentages stored.
+      ".zoom".css({
+        top: posY,
+        left: posX,
+        backgroundPosition: perc
+      });
+    });
+  }, function () {
+    //Hide the magnifier when mouse is no longer hovering over image.
+    ".zoom".hide();
+  });
+
+
+  // zoooom uchun js code end
+
+  
+
   return (
     <div className="Detail">
       <div className="Detail-Card">
@@ -74,8 +111,15 @@ export function Detail() {
               </figure>
             ))}
           </div>
+<<<<<<< HEAD
           <img src={images[indexImg]} alt="" className="selected" />
          
+=======
+          <div className="magnify">
+            <img src={images[indexImg]} alt="" className="selected" />
+            <div className="zoom"></div>
+          </div>
+>>>>>>> f92a0538178c089fd704ae5dae62902637874006
         </div>
         <div className="card-about">
           <div className="a-name">
@@ -100,9 +144,9 @@ export function Detail() {
                     {product.discount === "0"
                       ? value
                       : (
-                          product.price -
-                          (product.price * product.discount) / 100
-                        ).toFixed()}
+                        product.price -
+                        (product.price * product.discount) / 100
+                      ).toFixed()}
                     {product.discount === "0" ? "" : " so'm"}
                   </>
                 )}
@@ -127,18 +171,18 @@ export function Detail() {
             <div className="size-group">
               {product.sizes
                 ? product.sizes.map((size) => {
-                    return (
-                      <button
-                        className={
-                          +size === +razmer ? " size active_size" : "size"
-                        }
-                        key={size}
-                        onClick={() => handleSize(size)}
-                      >
-                        <p> {size} </p>
-                      </button>
-                    );
-                  })
+                  return (
+                    <button
+                      className={
+                        +size === +razmer ? " size active_size" : "size"
+                      }
+                      key={size}
+                      onClick={() => handleSize(size)}
+                    >
+                      <p> {size} </p>
+                    </button>
+                  );
+                })
                 : ""}
             </div>
           </div>

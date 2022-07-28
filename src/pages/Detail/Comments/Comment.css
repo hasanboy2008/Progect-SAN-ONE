@@ -1,4 +1,5 @@
 .comments {
+  width: 1000px;
   margin-top: 20px;
 }
 
@@ -10,6 +11,7 @@
 .comments-container {
   margin-top: 40px;
 }
+
 
 /* .comment-form-title {
   font-size: 22px;
@@ -31,6 +33,7 @@
   line-height: 26px;
   color: #d3d3d3;
   resize: none;
+  overflow: hidden;
 }
 
 .comment-form-button {
@@ -68,6 +71,7 @@
 }
 
 .comment-image-container img {
+  width: 70px;
   border-radius: 50px;
 }
 
@@ -106,7 +110,7 @@
 }
 
 .comment-text {
-  width: 1016px;
+  width: auto !important;
   height: auto;
   background: #ececec;
   border-radius: 10px;
@@ -118,10 +122,11 @@
   line-height: 20px;
   letter-spacing: 1px;
   color: #5a5a5a;
-  flex: none;
-  order: 0;
-  flex-grow: 1;
+      /* flex: none;
+      order: 0;
+      flex-grow: 1; */
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .comment-actions {
@@ -163,8 +168,7 @@
   .comment-text {
     width: 900px;
     height: auto;
-    left: 447px;
-    top: 1268px;
+
     background: #ececec;
     border-radius: 10px;
     padding: 10px;
@@ -188,8 +192,7 @@
   .comment-text {
     width: 800px;
     height: auto;
-    left: 447px;
-    top: 1268px;
+
     background: #ececec;
     border-radius: 10px;
     padding: 10px;
@@ -213,8 +216,7 @@
   .comment-text {
     width: 700px;
     height: auto;
-    left: 447px;
-    top: 1268px;
+
     background: #ececec;
     border-radius: 10px;
     padding: 10px;
@@ -238,8 +240,7 @@
   .comment-text {
     width: 600px;
     height: auto;
-    left: 447px;
-    top: 1268px;
+
     background: #ececec;
     border-radius: 10px;
     padding: 10px;
@@ -286,8 +287,7 @@
   .comment-text {
     width: 400px;
     height: auto;
-    left: 447px;
-    top: 1268px;
+
     background: #ececec;
     border-radius: 10px;
     padding: 10px;
@@ -311,8 +311,7 @@
   .comment-text {
     width: 300px;
     height: auto;
-    left: 447px;
-    top: 1268px;
+
     background: #ececec;
     border-radius: 10px;
     padding: 10px;
@@ -367,10 +366,10 @@
   }
   .textArea {
     position: relative;
-}
-.comment-form-textarea {
+  }
+  .comment-form-textarea {
     font-size: 18px;
-}
+  }
 }
 @media only screen and (max-width: 630px) {
   .comments {
@@ -401,6 +400,7 @@
 @media only screen and (max-width: 530px) {
   .comments {
     width: 350px;
+    padding: 0 5%;
   }
   .comment-text {
     width: 250px;
@@ -460,7 +460,7 @@
 @media only screen and (max-width: 430px) {
   .comments {
     width: 300px;
-    padding: 3%;
+    padding: 0 5%;
   }
   .comment-text {
     width: 180px;
@@ -495,7 +495,7 @@
 @media only screen and (max-width: 330px) {
   .comments {
     width: 250px;
-    padding: 3%;
+    padding: 0 5%;
   }
   .comment-text {
     width: 130px;
