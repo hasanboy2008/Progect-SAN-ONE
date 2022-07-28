@@ -16,7 +16,7 @@ export function Confirm() {
                 <div className="payment-texts">
                    
                     <div className="payment-texts-bottom">
-                        <p className="payment-white-text">Narxi</p>
+                        <p className="payment-white-text">Narxi:</p>
                       
                     </div>
                     <div className="payment-input-top">
