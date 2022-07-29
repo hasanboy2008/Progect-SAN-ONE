@@ -1,0 +1,91 @@
+#addComment {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#form-addCommet {
+  width: 100%;
+  height: 70px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#form-addCommet > input {
+  width: "calc(100% - 100px)";
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0 3%;
+  font-size: 20px;
+}
+#form-addCommet > button {
+  width: 100px;
+  height: 100%;
+}
+
+#viewCommet {
+  width: 100%;
+  height: auto;
+}
+
+#viewCommet > ol {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#sendComment {
+  width: 100%;
+  min-height: 70px;
+  background-color: aliceblue;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sendComment > figure {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  background: red;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#sendComment > figure > img {
+  width: 100%;
+}
+
+#sendComment > div {
+  width: "calc(100% - 30px)";
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sendComment > div > span {
+  width: 100%;
+  text-align: end;
+}
+#sendComment > div > p {
+  width: 100%;
+  text-align: start;
+}
