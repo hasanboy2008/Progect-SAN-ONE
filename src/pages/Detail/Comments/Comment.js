@@ -2,9 +2,12 @@ import CommentForm from "./CommentForm";
 import User from "../../../asest/Detail/User 10.png";
 import Trash from "../../../asest/Detail/Trash 4.png";
 import Pencil from "../../../asest/Detail/Pencil.png";
-import Reply from "../../../asest/Detail/Left Arrow Alt.png";
+
+// import Reply from "../../../asest/Detail/Left Arrow Alt.png";
 
 const user = JSON.parse(localStorage.getItem("user") || "[]");
+
+
 
 const Comment = ({
   comment,
@@ -13,18 +16,17 @@ const Comment = ({
   activeComment,
   updateComment,
   deleteComment,
-  addComment,
-  parentId = null,
   currentUserId,
 }) => {
+
   const isEditing =
     activeComment &&
     activeComment.id === comment.id &&
     activeComment.type === "editing";
-  const isReplying =
-    activeComment &&
-    activeComment.id === comment.id &&
-    activeComment.type === "replying";
+  // const isReplying =
+  //   activeComment &&
+  //   activeComment.id === comment.id &&
+  //   activeComment.type === "replying";
   const fiveMinutes = 3000;
   const timePassed = new Date() - new Date(comment.createdAt) > fiveMinutes;
   const canDelete =
@@ -33,6 +35,7 @@ const Comment = ({
   const canEdit = currentUserId === comment.userId && !timePassed;
   // const replyId = parentId ? parentId : comment.id;
   const createdAt = new Date(comment.createdAt).toLocaleDateString();
+    
   return (
     <div key={comment.id} className="comment">
       <div className="comment-image-container">
@@ -44,7 +47,9 @@ const Comment = ({
       </div>
       <div className="comment-right-part">
         <div className="comment-content">
-          <div className="comment-author">{user.name} {user.surname}</div>
+          <div className="comment-author">
+            {user.name} {user.surname}
+          </div>
           <div className="comment-data">{createdAt}</div>
         </div>
         {!isEditing && <div className="comment-text"> {comment.body}</div>}

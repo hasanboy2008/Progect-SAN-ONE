@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import CommentForm from "./CommentForm";
+import { useLocation } from "react-router-dom";
+
 import Comment from "./Comment";
 import {
   getComments as getCommentsApi,
@@ -7,13 +9,15 @@ import {
   updateComment as updateCommentApi,
   deleteComment as deleteCommentApi,
 } from "./Api";
+import axios from "axios";
 
-const Comments = ({ commentsUrl, currentUserId }) => {
+const Comments = ({  currentUserId }) => {
+  const [comments, setComments] = useState([]);
   const [backendComments, setBackendComments] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
-  const rootComments = backendComments.filter(
-    (backendComment) => backendComment.parentId === null
-  );
+  // const rootComments = backendComments.filter(
+  //   (backendComment) => backendComment.parentId === null
+  // );
   const getReplies = (commentId) =>
     backendComments
       .filter((backendComment) => backendComment.parentId === commentId)
@@ -41,7 +45,9 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     });
   };
   const deleteComment = (commentId) => {
-    if (window.confirm("Haqiqatdan ham commentariyangizni o'chirmoqchimisiz?")) {
+    if (
+      window.confirm("Haqiqatdan ham commentariyangizni o'chirmoqchimisiz?")
+    ) {
       deleteCommentApi().then(() => {
         const updatedBackendComments = backendComments.filter(
           (backendComment) => backendComment.id !== commentId
@@ -56,12 +62,23 @@ const Comments = ({ commentsUrl, currentUserId }) => {
       setBackendComments(data);
     });
   }, []);
+  const location = useLocation();
+  const product_id = location.search.split("=")[1];
+  useEffect(() => {
+    axios(`https://api.sanone.uz/viewComments/${product_id}`)
+      .then((res) => {
+        setComments(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [product_id]);
 
   return (
     <div className="comments">
-      <CommentForm submitLabel="" handleSubmit={addComment}  />
+      <CommentForm submitLabel="" handleSubmit={addComment} />
       <div className="comments-container">
-        {rootComments.map((rootComment) => (
+        {comments.map((rootComment) => (
           <Comment
             key={rootComment.id}
             comment={rootComment}
