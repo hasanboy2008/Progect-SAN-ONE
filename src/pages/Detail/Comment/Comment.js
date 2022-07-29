@@ -8,7 +8,6 @@ import { acLoading } from "../../../Redux/Loading";
 import { useSnackbar } from "notistack";
 
 import tg from "../../../asest/Detail/Group 8557.png";
-import edit from "../../../asest/Detail/Pencil.png";
 import trash from "../../../asest/Detail/Trash 4.png";
 
 export function Comment() {
