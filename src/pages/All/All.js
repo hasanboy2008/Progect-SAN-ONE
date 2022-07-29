@@ -3,6 +3,7 @@ import "./all.css";
 import { useSelector } from "react-redux";
 import Cardlar from "../../components/cards/Cards";
 
+
 export function All() {
   const products = useSelector((state) => state.reProducts);
   const search = useSelector((state) => state.reSearchProduct);

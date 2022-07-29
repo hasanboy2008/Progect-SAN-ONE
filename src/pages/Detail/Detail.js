@@ -10,6 +10,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useSnackbar } from "notistack";
 import { acLoading } from "../../Redux/Loading";
 // sotib olishconst carts = useSelector((state) => state.reCart);
+
+
   
 
 export function Detail() {
@@ -25,6 +27,10 @@ export function Detail() {
   const user = useSelector((state) => state.reUser);
   const [razmer, setRazmer] = useState(product.sizes ? product.sizes[0] : "");
   const { enqueueSnackbar } = useSnackbar();
+  
+  // buyurtma
+
+  const carts = useSelector((state) => state.reCart);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -50,7 +56,52 @@ export function Detail() {
     setRazmer(item);
   };
 
-  
+  const handleBuyurtma = () => {
+    dispatch(acLoading(true));
+    const order = [];
+
+    carts.map((item) => {
+      order.push({
+        productId: item.id,
+        code: item.code,
+        price: item.price,
+        quantity: item.quantity,
+        discount: item.discount,
+        sizes: item.size,
+        img: item.img,
+      });
+
+      return null;
+    });
+
+    const sendOrderData = JSON.stringify({
+      userId: user.id,
+      order,
+    });
+    axios("https://api.sanone.uz/api/buy", {
+      method: "POST",
+      headers: {
+        Accept: "*/*",
+        "Content-Type": "application/json",
+      },
+      data: sendOrderData,
+    })
+      .then((res) => {
+        dispatch(acLoading(false));
+        enqueueSnackbar(res.data.message, {
+          variant: "success",
+        });
+        dispatch({
+          type: "RELOAD_CARD",
+        });
+      })
+      .catch((err) => {
+        dispatch(acLoading(false));
+        enqueueSnackbar(err.response.data.message, {
+          variant: "error",
+        });
+      });
+  };
 
   return (
     <div className="Detail">
@@ -74,8 +125,6 @@ export function Detail() {
             ))}
           </div>
           <img src={images[indexImg]} alt="" className="selected" />
-
-        
         </div>
         <div className="card-about">
           <div className="a-name">
@@ -147,7 +196,8 @@ export function Detail() {
             <button
               className="btn-purchase"
               onClick={() => {
-                navigate("/confirm");
+                // navigate("/confirm");
+                handleBuyurtma(carts);
               }}
             >
               Sotib olish

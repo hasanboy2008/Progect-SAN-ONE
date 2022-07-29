@@ -2,7 +2,13 @@ import React from "react"
 import { useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import "./card.css";
+import { acLoading } from "../../Redux/Loading";
+import {  useDispatch } from "react-redux";
+
+
 export default function Cardlar({props}){
+  const dispatch = useDispatch();
+
   // const products = useSelector((state) => state.reProducts);
   const navigate = useNavigate();
   return (
@@ -26,6 +32,8 @@ export default function Cardlar({props}){
             <button
               onClick={() => {
                 navigate(`/view/product?id=${item.id}`);
+                                      dispatch(acLoading(false));
+
               }}
             >
               Sotib olish
