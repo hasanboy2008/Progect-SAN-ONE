@@ -11,9 +11,6 @@ import { useSnackbar } from "notistack";
 import { acLoading } from "../../Redux/Loading";
 // sotib olishconst carts = useSelector((state) => state.reCart);
 
-
-  
-
 export function Detail() {
   const [selectedImg, setSelectedImg] = useState(0);
   const [showtab, setShowtab] = useState(1);
