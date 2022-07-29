@@ -1,23 +1,22 @@
 import { useState, useEffect } from "react";
 import CommentForm from "./CommentForm";
-import { useLocation } from "react-router-dom";
-
 import Comment from "./Comment";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
 import {
   getComments as getCommentsApi,
   createComment as createCommentApi,
   updateComment as updateCommentApi,
   deleteComment as deleteCommentApi,
-} from "./Api";
-import axios from "axios";
+} from "../Comments/Api";
 
-const Comments = ({  currentUserId }) => {
+const Comments = ({ commentsUrl, currentUserId }) => {
   const [comments, setComments] = useState([]);
   const [backendComments, setBackendComments] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
-  // const rootComments = backendComments.filter(
-  //   (backendComment) => backendComment.parentId === null
-  // );
+  const rootComments = backendComments.filter(
+    (backendComment) => backendComment.parentId === null
+  );
   const getReplies = (commentId) =>
     backendComments
       .filter((backendComment) => backendComment.parentId === commentId)
@@ -45,9 +44,7 @@ const Comments = ({  currentUserId }) => {
     });
   };
   const deleteComment = (commentId) => {
-    if (
-      window.confirm("Haqiqatdan ham commentariyangizni o'chirmoqchimisiz?")
-    ) {
+    if (window.confirm("Are you sure you want to remove comment?")) {
       deleteCommentApi().then(() => {
         const updatedBackendComments = backendComments.filter(
           (backendComment) => backendComment.id !== commentId
@@ -62,6 +59,7 @@ const Comments = ({  currentUserId }) => {
       setBackendComments(data);
     });
   }, []);
+
   const location = useLocation();
   const product_id = location.search.split("=")[1];
   useEffect(() => {
@@ -76,7 +74,7 @@ const Comments = ({  currentUserId }) => {
 
   return (
     <div className="comments">
-      <CommentForm submitLabel="" handleSubmit={addComment} />
+      <CommentForm handleSubmit={addComment} />
       <div className="comments-container">
         {comments.map((rootComment) => (
           <Comment
