@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Detail.css";
-import "./Comments/Comment.css";
-import Comments from "./Comments/Comments";
 import { DetailInfo } from "./Info/Info";
 import axios from "axios";
 import NumberFormat from "react-number-format";
 import { useSelector, useDispatch } from "react-redux";
 import { useSnackbar } from "notistack";
 import { acLoading } from "../../Redux/Loading";
-// sotib olishconst carts = useSelector((state) => state.reCart);
+import { Comment } from "./Comment/Comment";
 
 export function Detail() {
   const [selectedImg, setSelectedImg] = useState(0);
@@ -265,10 +263,7 @@ export function Detail() {
         </div>
 
         <div className={showtab === 2 ? "" : "hide"}>
-          <Comments
-            commentsUrl="http://localhost:3004/comments"
-            currentUserId="1"
-          />
+          <Comment />
         </div>
 
         <div className={showtab === 1 ? "" : "hide"}>
