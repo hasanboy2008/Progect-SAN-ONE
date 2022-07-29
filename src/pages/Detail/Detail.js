@@ -27,8 +27,8 @@ export function Detail() {
   const user = useSelector((state) => state.reUser);
   const [razmer, setRazmer] = useState(product.sizes ? product.sizes[0] : "");
   const { enqueueSnackbar } = useSnackbar();
-  
-  // buyurtma
+
+  // buyurtm
 
   const carts = useSelector((state) => state.reCart);
 
