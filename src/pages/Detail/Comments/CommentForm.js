@@ -2,15 +2,19 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-
 import tg from "../../../asest/Detail/Group 8557.png";
 
-const CommentForm = ({ handleSubmit, submitLabel, initialText = "" }) => {
+const CommentForm = ({
+  handleSubmit,
+  submitLabel,
+  hasCancelButton = false,
+  handleCancel,
+  initialText = "",
+}) => {
+  const user = useSelector((state) => state.reUser);
   const location = useLocation();
   const product_id = location.search.split("=")[1];
-
   const [text, setText] = useState(initialText);
-  const user = useSelector((state) => state.reUser);
   const isTextareaDisabled = text.length === 0;
   const onSubmit = (event) => {
     event.preventDefault();
@@ -23,8 +27,8 @@ const CommentForm = ({ handleSubmit, submitLabel, initialText = "" }) => {
       },
       data: {
         product_id: product_id,
-        userId: user.id,
-        comment: text,
+        userId: user,
+        comment: "lorem ipsum",
       },
     })
       .then((res) => {
@@ -34,7 +38,6 @@ const CommentForm = ({ handleSubmit, submitLabel, initialText = "" }) => {
         console.log(err);
       });
   };
-
   return (
     <form onSubmit={onSubmit}>
       <div className="textArea">
@@ -51,16 +54,6 @@ const CommentForm = ({ handleSubmit, submitLabel, initialText = "" }) => {
       </div>
 
       <hr />
-
-      {/* {hasCancelButton && (
-        <button
-          type="button"
-          className="comment-form-button comment-form-cancel-button"
-          onClick={handleCancel}
-        >
-          Cancel
-        </button>
-      )} */}
     </form>
   );
 };
