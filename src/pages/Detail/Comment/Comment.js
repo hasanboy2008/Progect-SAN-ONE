@@ -7,6 +7,10 @@ import { useDispatch } from "react-redux";
 import { acLoading } from "../../../Redux/Loading";
 import { useSnackbar } from "notistack";
 
+import tg from "../../../asest/Detail/Group 8557.png";
+import edit from "../../../asest/Detail/Pencil.png";
+import trash from "../../../asest/Detail/Trash 4.png";
+
 export function Comment() {
   const [comments, setComments] = useState([]);
   const [relodComments, setReloadComments] = useState(false);
@@ -64,16 +68,19 @@ export function Comment() {
           }
         }}
       >
-        <input type="text" name="comment" id="" />
-        <button type="submit">Send</button>
+        <input type="text" name="comment" placeholder="Izoh yozing" />
+        <button type="submit">
+          <img src={tg} alt="" />
+        </button>
       </form>
+      <hr />
 
       <div id="viewCommet">
         <ol>
           {comments.map((item) => {
             return (
               <li id="sendComment" key={item.id}>
-                <figure>
+                <figure id="figure1">
                   <img src={item.userImg} alt="" />
                 </figure>
                 <div>
@@ -82,6 +89,30 @@ export function Comment() {
                     <i>{item.date}</i>
                   </span>
                   <p>{item.comment}</p>
+                  <div id="trash">
+                    <div
+                      style={item.userId !== user.id ? { display: "none" } : {}}
+                      onClick={() => {
+                        dispatch(acLoading(true));
+                        axios
+                          .delete(
+                            `https://api.sanone.uz/deleteComment/${item.id}`
+                          )
+                          .then((res) => {
+                            console.log(res.data);
+                            setReloadComments(!relodComments);
+                            dispatch(acLoading(false));
+                          })
+                          .catch((err) => {
+                            console.log(err);
+                            dispatch(acLoading(false));
+                          });
+                      }}
+                    >
+                      <img src={trash} alt="" />
+                      <p>O‘chirish</p>
+                    </div>
+                  </div>
                 </div>
               </li>
             );

@@ -1,5 +1,5 @@
 #addComment {
-  width: 100%;
+  width: 1200px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -10,30 +10,32 @@
 #form-addCommet {
   width: 100%;
   height: 70px;
-  background-color: aliceblue;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: 1% 0;
 }
 
 #form-addCommet > input {
-  width: "calc(100% - 100px)";
+  width: 95%;
   height: 100%;
   background: none;
   border: none;
   outline: none;
-  padding: 0 3%;
   font-size: 20px;
 }
 #form-addCommet > button {
-  width: 100px;
-  height: 100%;
+  width: auto;
+  height: auto;
+  background: none;
+  border-radius: 50%;
 }
 
 #viewCommet {
   width: 100%;
   height: auto;
+  padding-top: 3%;
 }
 
 #viewCommet > ol {
@@ -48,32 +50,32 @@
 #sendComment {
   width: 100%;
   min-height: 70px;
-  background-color: aliceblue;
   margin: 10px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-#sendComment > figure {
-  width: 40px;
-  height: 40px;
+#sendComment > #figure1 {
+  min-width: 70px !important;
+  height: 60px !important;
   display: flex;
   justify-content: center;
   align-items: center;
   object-fit: cover;
-  background: red;
-  border-radius: 50%;
   overflow: hidden;
+  border-radius: 50%;
+  margin-right: 1%;
 }
 
-#sendComment > figure > img {
+#sendComment > #figure1 > img {
   width: 100%;
+  height: 100%;
 }
 
 #sendComment > div {
-  width: "calc(100% - 30px)";
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -83,9 +85,222 @@
 
 #sendComment > div > span {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: end;
 }
+#sendComment > div > span :nth-child(1) {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #dcbb45;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+#sendComment > div > span :nth-child(2) {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a4a4a4;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 #sendComment > div > p {
   width: 100%;
-  text-align: start;
+  min-height: 57px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5a5a5a;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  background: #ececec;
+  padding: 1%;
+  border-radius: 10px;
+  margin-top: 1%;
+  overflow-wrap: anywhere;
+}
+
+#trash {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#trash > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1%;
+  cursor: pointer;
+}
+#trash > div > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #a4a4a4;
+  padding-left: 1%;
+}
+
+@media only screen and (max-width: 1330px) {
+  #addComment {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  #addComment {
+    width: 900px;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  #addComment {
+    width: 800px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  #addComment {
+    width: 700px;
+  }
+}
+@media only screen and (max-width: 830px) {
+  #addComment {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  #addComment {
+    width: 500px;
+  }
+  #sendComment > #figure1 {
+    width: 60px;
+    height: 50px;
+  }
+  #form-addCommet > input {
+    font-size: 15px;
+  }
+  #form-addCommet > button {
+    width: 50px;
+    height: 50px;
+    background: none;
+    border-radius: 50%;
+  }
+  #form-addCommet > button img {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  #addComment {
+    width: 400px;
+  }
+  #sendComment > div > p {
+    min-height: 47px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  #addComment {
+    width: 300px;
+  }
+  #sendComment > #figure1 {
+    width: 50px;
+    height: 40px;
+  }
+  #sendComment > div > p {
+    min-height: 37px;
+    font-size: 10px;
+    line-height: 10px;
+    padding: 2%;
+  }
+  #trash > div img {
+    width: 20px;
+  }
+  #trash > div p {
+    font-size: 10px;
+  }
+
+  #sendComment > div > span :nth-child(1) {
+    font-size: 11px;
+  }
+
+  #sendComment > div > span :nth-child(2) {
+    font-size: 10px;
+  }
+  #form-addCommet {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3% 0;
+  }
+}
+@media only screen and (max-width: 430px) {
+  #addComment {
+    width: 200px;
+  }
+  #sendComment > #figure1 {
+    width: 40px !important;
+    height: 30px !important;
+  }
+
+  #sendComment > div > span :nth-child(1) {
+    font-size: 8px;
+  }
+
+  #sendComment > div > span :nth-child(2) {
+    font-size: 4px;
+  }
+  #sendComment > div > p {
+    min-height: 27px;
+    font-size: 5px;
+    line-height: 10px;
+    padding: 2%;
+  }
+  #form-addCommet > input {
+    font-size: 10px;
+  }
+  #form-addCommet > button {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border-radius: 50%;
+  }
+  #form-addCommet > button img {
+    width: 40px;
+    height: 40px;
+  }
+  #form-addCommet {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1% 0;
+  }
+  #trash > div img {
+    width: 15px;
+  }
+  #trash > div p {
+    font-size: 8px;
+  }
 }
