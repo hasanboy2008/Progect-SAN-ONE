@@ -58,7 +58,7 @@
 }
 
 #sendComment > #figure1 {
-  min-width: 70px !important;
+  width: 70px !important;
   height: 70px !important;
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@
 
 #sendComment > #figure1 > img {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 #sendComment > div {
@@ -214,14 +214,19 @@
     font-size: 12px;
     line-height: 14px;
   }
+    #sendComment > #figure1 {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
 }
 @media only screen and (max-width: 530px) {
   #addComment {
     width: 300px;
   }
   #sendComment > #figure1 {
-    width: 50px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   #sendComment > div > p {
     min-height: 37px;
@@ -257,10 +262,10 @@
   #addComment {
     width: 200px;
   }
-  #sendComment > #figure1 {
-    width: 40px !important;
+  /* #sendComment > #figure1 {
+    width: 30px !important;
     height: 30px !important;
-  }
+  } */
 
   #sendComment > div > span :nth-child(1) {
     font-size: 8px;
