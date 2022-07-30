@@ -110,7 +110,7 @@ export function Home() {
           </span>
 
           <span>Murojaat uchun telefon:</span>
-          <p>+998 (88) 413 00 00</p>
+          <a href="tel:+998884130000">+998 (88) 413 00 00</a>
           <span>Ijtimoiy tarmoqlarda bizni toping</span>
           <div id="contac_i_f_t">
             <a href="https://www.instagram.com/sanone.uzbekistan/">

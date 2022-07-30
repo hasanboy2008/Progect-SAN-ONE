@@ -293,7 +293,7 @@ export function Signup() {
                 setCustemer({ ...custemer, password: e.target.value });
               }}
             />
-            <button onClick={parol} id="tyupe">
+            <button type="button" onClick={parol} id="tyupe">
               {password ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -349,7 +349,7 @@ export function Signup() {
                 setCustemer({ ...custemer, password: e.target.value });
               }}
             />
-            <button onClick={parol} id="tyupe">
+            <button type="button" onClick={parol} id="tyupe">
               {password ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

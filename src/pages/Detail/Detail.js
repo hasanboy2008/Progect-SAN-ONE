@@ -25,8 +25,6 @@ export function Detail() {
 
   // buyurtm
 
-  const carts = useSelector((state) => state.reCart);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -41,61 +39,16 @@ export function Detail() {
         setProduct(res.data[0]);
         setImages(res.data[0].images ? res.data[0].images : []);
         setRazmer(res.data ? res.data[0].sizes[0] : "");
+        
       })
       .catch((err) => {
         console.log(err);
+       
       });
-  }, [product_id]);
+  }, [product_id] ,);
 
   const handleSize = (item) => {
     setRazmer(item);
-  };
-
-  const handleBuyurtma = () => {
-    dispatch(acLoading(true));
-    const order = [];
-
-    carts.map((item) => {
-      order.push({
-        productId: item.id,
-        code: item.code,
-        price: item.price,
-        quantity: item.quantity,
-        discount: item.discount,
-        sizes: item.size,
-        img: item.img,
-      });
-
-      return null;
-    });
-
-    const sendOrderData = JSON.stringify({
-      userId: user.id,
-      order,
-    });
-    axios("https://api.sanone.uz/api/buy", {
-      method: "POST",
-      headers: {
-        Accept: "*/*",
-        "Content-Type": "application/json",
-      },
-      data: sendOrderData,
-    })
-      .then((res) => {
-        dispatch(acLoading(false));
-        enqueueSnackbar(res.data.message, {
-          variant: "success",
-        });
-        dispatch({
-          type: "RELOAD_CARD",
-        });
-      })
-      .catch((err) => {
-        dispatch(acLoading(false));
-        enqueueSnackbar(err.response.data.message, {
-          variant: "error",
-        });
-      });
   };
 
   return (
@@ -177,7 +130,9 @@ export function Detail() {
                           +size === +razmer ? " size active_size" : "size"
                         }
                         key={size}
-                        onClick={() => handleSize(size)}
+                        onClick={() => handleSize(size) }
+                               
+
                       >
                         <p> {size} </p>
                       </button>
@@ -191,8 +146,8 @@ export function Detail() {
             <button
               className="btn-purchase"
               onClick={() => {
-                // navigate("/confirm");
-                handleBuyurtma(carts);
+                navigate("/basket");
+                dispatch(acLoading(false));
               }}
             >
               Sotib olish

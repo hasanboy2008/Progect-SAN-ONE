@@ -79,7 +79,7 @@ export function Singnin() {
               setLogin({ ...login, password: e.target.value });
             }}
           />
-          <button onClick={korsat} id="tyupe">
+          <button type="button" onClick={korsat} id="tyupe">
             {ochish ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
