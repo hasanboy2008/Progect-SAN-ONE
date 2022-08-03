@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 
-import image1 from "../../asest/home/section1/Image1.png";
+// import image1 from "../../asest/home/section1/Image1.png";
 import { useNavigate } from "react-router-dom";
 import SliderScale from "../../components/slider/Slider";
 import SimpleSlider from "../../components/slider/simpleSlider/SliderSimple";
