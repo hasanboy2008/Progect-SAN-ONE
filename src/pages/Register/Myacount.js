@@ -214,6 +214,8 @@ export function Myacount() {
               navigate("/signin", {
                 replace: true,
               });
+
+              
             }}
           >
             <span>Chiqish</span>

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 
 import image1 from "../../asest/home/section1/Image1.png";
@@ -8,13 +8,28 @@ import SliderScale from "../../components/slider/Slider";
 import SimpleSlider from "../../components/slider/simpleSlider/SliderSimple";
 import SliderImg from "../../components/sliderFooter/Slider_img";
 import SliderDouble from "../../components/sliderDouble/SliderDouble";
+import axios from "axios";
 
 export function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const [data, setData] = useState("");
+  console.log(data);
+
   const navigate = useNavigate();
+  useEffect(() => {
+    axios
+      .get("https://api.sanone.uz/api/advertising/active")
+      .then((res) => {
+        // console.log(res.data);
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div className="home">
@@ -26,13 +41,9 @@ export function Home() {
         </div>
         <div className="center">
           <p>
-            Yozgi mavsum uchun <span>yangi ko'rinish</span>
+            <span> {data.topic}</span>
           </p>
-          <span className="span1">
-            Yangicha uslub va ko'rinishda ishlab chiqilgan, <br /> yangi
-            poyabzallarimiz bilan yoz faslini yanada yorqinroq, <br /> yanada
-            qulayroq o'tkazasiz!
-          </span>
+          <span className="span1">{data.description}</span>
           <div className="btnDiv">
             <button className="btn btnColorF" onClick={() => navigate("/all")}>
               KO'RISH
@@ -53,7 +64,7 @@ export function Home() {
           <div className="circle3"></div>
           <div className="circle4"></div>
           <div className="img">
-            <img src={image1} alt="" />
+            <img src={data.img} alt="" />
           </div>
         </div>
       </div>
