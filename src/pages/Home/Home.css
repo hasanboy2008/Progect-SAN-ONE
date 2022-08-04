@@ -177,7 +177,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid red;
 }
 .section1 .container .img img {
   width: 100%;
