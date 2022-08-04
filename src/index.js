@@ -1,4 +1,5 @@
 import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
@@ -12,7 +13,9 @@ root.render(
     <BrowserRouter>
       <Provider store={Store}>
         <SnackbarProvider maxSnack={3} autoHideDuration={4000}>
+          <StrictMode>
           <App />
+          </StrictMode>
         </SnackbarProvider>
       </Provider>
     </BrowserRouter>
