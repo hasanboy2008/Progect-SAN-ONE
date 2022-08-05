@@ -12,6 +12,7 @@ root.render(
     <BrowserRouter>
       <Provider store={Store}>
         <SnackbarProvider maxSnack={3} autoHideDuration={4000}>
+          
           <App />
         </SnackbarProvider>
       </Provider>

@@ -22,6 +22,7 @@
   flex-direction: row;
 }
 
+
 .container {
   width: 52%;
   height: 650px;
@@ -36,8 +37,8 @@
   height: auto;
   border-radius: 8px;
 }
-.container .zoom
-{
+
+.container .zoom {
   height: 150px;
   width: 150px;
   position: absolute;
@@ -51,7 +52,7 @@
 }
 
 .container > .imgContainer {
-  width: 100%;
+  width: 20%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -92,7 +93,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 76px  96px ;
+  padding: 76px 96px;
 }
 
 .card-about .a-name p {
@@ -103,7 +104,6 @@
   line-height: 61px;
   color: #a18b7f;
 }
-
 
 .color-groups {
   width: auto;
@@ -244,7 +244,7 @@
   cursor: pointer;
 }
 
-.card-about .sizes .size-group .size.active_size{
+.card-about .sizes .size-group .size.active_size {
   background-color: rgb(235, 202, 15);
   color: white;
 }
@@ -1331,7 +1331,6 @@
   }
 }
 @media only screen and (max-width: 430px) {
- 
   .Detail-Card {
     width: 300px;
     height: auto;
@@ -1621,7 +1620,7 @@
     width: 300px;
     padding: 65px 50px;
   }
-    .info-btn {
+  .info-btn {
     width: 150px;
     height: 35px;
     font-size: 13px;
