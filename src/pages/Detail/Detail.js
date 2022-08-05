@@ -14,6 +14,9 @@ import InnerImageZoom from "react-inner-image-zoom";
 import "./sylee.css";
 import "./minizoom.css";
 
+// import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
+// import InnerImageZoom from "react-inner-image-zoom";
+
 export function Detail() {
   const [selectedImg, setSelectedImg] = useState(0);
   const [showtab, setShowtab] = useState(1);
@@ -77,8 +80,9 @@ export function Detail() {
               </figure>
             ))}
           </div>
-          {/* <img src={images[indexImg]} alt="" className="selected" /> */}
           <InnerImageZoom src={images[indexImg]} zoomSrc={images[indexImg]} />
+          
+         
         </div>
         <div className="card-about">
           <div className="a-name">
