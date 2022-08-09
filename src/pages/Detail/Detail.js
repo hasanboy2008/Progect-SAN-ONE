@@ -9,10 +9,10 @@ import { useSnackbar } from "notistack";
 import { acLoading } from "../../Redux/Loading";
 import { Comment } from "./Comment/Comment";
 // zoom import
-import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
-import InnerImageZoom from "react-inner-image-zoom";
-import "./sylee.css";
-import "./minizoom.css";
+// import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
+// import InnerImageZoom from "react-inner-image-zoom";
+// import "./sylee.css";
+// import "./minizoom.css";
 
 // import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 // import InnerImageZoom from "react-inner-image-zoom";
@@ -59,6 +59,27 @@ export function Detail() {
 
   // zoom
 
+  const [zom, setZom] = useState({
+    tranformorign: "center",
+    scale: 1,
+  });
+
+  function selectede(e) {
+    const x = e.clientX - e.target.offsetLeft;
+    const y = e.clientY - e.target.offsetTop;
+    console.log(x, y);
+    setZom({
+      tranformorign: `${x}px ${y}px`,
+      scale: 2,
+    });
+  }
+  function unselectede(e) {
+    setZom({
+      tranformorign: "center",
+      scale: 1,
+    });
+  }
+
   return (
     <div className="Detail">
       <div className="Detail-Card">
@@ -80,9 +101,21 @@ export function Detail() {
               </figure>
             ))}
           </div>
-          <InnerImageZoom src={images[indexImg]} zoomSrc={images[indexImg]} />
-          
-         
+          <div
+            onMouseMove={selectede ? selectede : ""}
+            onMouseLeave={unselectede ? unselectede : ""}
+            className="zooom"
+          >
+            <img
+              src={images[indexImg]}
+              alt=""
+              style={{
+                transformOrigin: zom.tranformorign,
+                transform: `scale(${zom.scale})`,
+              }}
+            />
+          </div>
+          <img src={images[indexImg]} alt="" className="selected" />
         </div>
         <div className="card-about">
           <div className="a-name">
