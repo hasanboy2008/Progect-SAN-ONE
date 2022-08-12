@@ -1,0 +1,38 @@
+.section1 .container .circle1, .circle2, .circle3, .circle4 {
+    animation-name: harakat;
+    animation-duration: 15s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    
+}
+.section1 .container .circle2{
+    animation-direction: alternate;
+}
+
+.section1 .container  .circle3, .circle4 {
+    animation-name: harakat2;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function:ease;
+}
+.section1 .container  .circle3{
+    animation-delay: 2s;
+}
+@keyframes harakat {
+    0% {
+        left: 0%;
+    }
+    100%{
+        left: 70%;
+    }
+}
+
+@keyframes harakat2 {
+    0% {
+        bottom: 10%;
+    }
+    100%{
+        bottom: 20%;
+    }
+}

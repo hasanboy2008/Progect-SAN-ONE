@@ -15,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function App() {
   const products = useSelector((state) => state.reProducts);
-  const newProducts = [...products, ...products];
   const navigate = useNavigate();
   return (
     <>
@@ -52,7 +51,7 @@ export default function App() {
           },
         }}
       >
-        {newProducts.map((item, index) => (
+        {products.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="new_Produc_1">
               <figure>

@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 import React, { useEffect, useState } from "react";
 import "./Home.css";
+import "./animation.css";
 
 // import image1 from "../../asest/home/section1/Image1.png";
 import { useNavigate } from "react-router-dom";
