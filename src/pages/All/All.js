@@ -3,7 +3,6 @@ import "./all.css";
 import { useSelector } from "react-redux";
 import Cardlar from "../../components/cards/Cards";
 
-
 export function All() {
   const products = useSelector((state) => state.reProducts);
   const search = useSelector((state) => state.reSearchProduct);
@@ -139,66 +138,60 @@ export function All() {
             </button>
             <button
               onClick={() => {
-                setType("Krossovka");
+                setType("Barsofka");
+              }}
+            >
+              Barsofka
+            </button>
+            <button
+              onClick={() => {
+                setType("  Krossovka");
               }}
             >
               Krossovka
             </button>
             <button
               onClick={() => {
-                setType(" Klassik krossovka");
+                setType("   Pol Classica");
               }}
             >
-              Klassik krossovka
+              Pol Classica
             </button>
             <button
               onClick={() => {
-                setType(" Ishlov berilgan teri");
+                setType(" Classica");
               }}
             >
-              Ishlov berilgan teri
+              Classica
             </button>
             <button
               onClick={() => {
-                setType(" Qochoq poyabzal");
+                setType("Loro Piano");
               }}
+              
             >
-              Qochoq poyabzal
+              Loro Piano
             </button>
             <button
               onClick={() => {
-                setType("Shpallar");
+                setType("  Loro Piano Lux");
               }}
             >
-              Shpallar
+              Loro Piano Lux
             </button>
             <button
               onClick={() => {
-                setType(" Ikki rangli");
+                setType("  Loro Piano Pol Classica");
               }}
             >
-              Ikki rangli
+              Loro Piano Pol Classica
             </button>
             <button
               onClick={() => {
-                setType(" Klassik");
+                setType("keta");
               }}
             >
-              Klassik
-            </button>
-            <button
-              onClick={() => {
-                setType("Koja nabuk");
-              }}
-            >
-              Koja nabuk
-            </button>
-            <button
-              onClick={() => {
-                setType("Zamsha");
-              }}
-            >
-              Zamsha
+              keta
             </button>
           </div>
 

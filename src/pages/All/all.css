@@ -187,6 +187,9 @@
     padding: 3px;
     /* background-color: rebeccapurple; */
 }
+.filter_Types>button:focus{
+    color: #C9A95C;
+}
 
 .filter_color {
     display: flex;
@@ -247,6 +250,7 @@
     outline: none;
     margin-top: 10px;
 }
+.ratio>button:focus{background-color: #C9A95C;}
 
 
 /* filter_tosend yuborish */
