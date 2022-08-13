@@ -67,7 +67,7 @@
   position: absolute;
   top: 298px;
   left: 156px;
-  z-index: 1000;
+  z-index: 10;
 }
 .section1 .center p {
   margin-top: 0;

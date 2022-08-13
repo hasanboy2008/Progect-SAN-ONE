@@ -117,13 +117,19 @@ export function Home() {
         <div className="section_f_text">
           <span>Siz bilan bog'lanishdan mamnunmiz!</span>
           <span>
-            Manzilimiz:<br></br> Toshkent Shahar, Yakkasaroy tumani, Farobiy
-            ko'cha 38-uy
+            Manzilimiz:<br></br> Toshkent Farobiy ko'cha 37-a uy
+            mo'ljal: Makro (TashMI) Ro'parasi
+            
+          </span>
+          <span>
+            Manzilimiz:<br></br>Ul.Bobura 7 
+            mo'ljal: Next
+            
           </span>
 
           <span>Murojaat uchun telefon:</span>
           <a href="tel:+998884130000">+998 (88) 413 00 00</a>
-          <span>Ijtimoiy tarmoqlarda bizni toping</span>
+          {/* <span>Ijtimoiy tarmoqlarda bizni toping</span> */}
           <div id="contac_i_f_t">
             <a href="https://www.instagram.com/sanone.uzbekistan/">
               <svg
