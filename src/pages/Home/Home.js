@@ -127,7 +127,7 @@ export function Home() {
             
           </span>
 
-          <span>Murojaat uchun telefon:</span>
+          <span className="murojat">Murojaat uchun telefon:</span>
           <a href="tel:+998884130000">+998 (88) 413 00 00</a>
           {/* <span>Ijtimoiy tarmoqlarda bizni toping</span> */}
           <div id="contac_i_f_t">
