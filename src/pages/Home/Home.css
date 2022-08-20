@@ -841,7 +841,7 @@ hr {
 .section_f_text :nth-child(1) {
   font-weight: 700;
   font-size: 47px;
-  line-height: 61px;
+  line-height: 2;
   /* identical to box height */
 
   text-align: center;
@@ -853,8 +853,8 @@ hr {
 
 .section_f_text :nth-child(2) {
   font-weight: 400;
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 2rem;
+  line-height: 50px;
   text-align: center;
 
   /* 04 */
@@ -867,8 +867,8 @@ hr {
 
 .section_f_text :nth-child(3) {
   font-weight: 400;
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 2rem;
+  line-height: 50px;
   /* identical to box height */
 
   text-align: center;
@@ -895,7 +895,7 @@ hr {
 
 .section_f_text :nth-child(5) {
   font-weight: 400;
-  font-size: 21px;
+  font-size: 2rem;
   line-height: 26px;
   /* identical to box height */
 
@@ -904,7 +904,7 @@ hr {
   /* 04 */
 
   color: #d2d2d2;
-  padding-top: 57px;
+  padding-top: 20px;
   z-index: 1;
 }
 
@@ -985,21 +985,26 @@ hr {
   }
   .section_f_text :nth-child(1) {
     font-size: 30px;
+    line-height: 2;
   }
   .section_f_text :nth-child(2) {
+    width: 75%;
     font-size: 15px;
     padding-top: 28px;
+    line-height: 2;
   }
   .section_f_text :nth-child(3) {
     font-size: 15px;
     padding-top: 28px;
+    line-height: 2;
   }
   .section_f_text :nth-child(4) {
-    font-size: 30px;
+    font-size: 20px;
+    line-height: 2;
   }
   .section_f_text :nth-child(5) {
     font-size: 15px;
-    padding-top: 28px;
+    padding-top: 10px;
   }
 
   #contac_i_f_t :nth-child(1) {
@@ -1027,7 +1032,7 @@ hr {
     justify-content: center;
   }
   .section_f_text :nth-child(1) {
-    font-size: 25px;
+    font-size: 20px;
   }
   .section_f_text :nth-child(2) {
     font-size: 12px;
@@ -1036,7 +1041,7 @@ hr {
     font-size: 12px;
   }
   .section_f_text :nth-child(4) {
-    font-size: 25px;
+    font-size: 20px;
   }
   .section_f_text :nth-child(5) {
     font-size: 12px;
@@ -1082,7 +1087,7 @@ hr {
     font-size: 12px;
   }
   .section_f_text :nth-child(4) {
-    font-size: 25px;
+    font-size: 18px;
   }
   .section_f_text :nth-child(5) {
     font-size: 12px;
