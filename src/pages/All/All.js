@@ -64,6 +64,7 @@ export function All() {
   //   setOpenFilter(true);
   // });
 
+
   // end open filter section
 
   return (
@@ -73,7 +74,7 @@ export function All() {
         <span>Barcha mahsulot turlarini ko’rib chiqing</span>
       </div>
       <button id="filter_bnt" onClick={openFilterSection}>
-        {openFilter ? "Filtr" : "close "}
+        {openFilter ? "Filtr" : "yopish "}
       </button>
 
       <div id="allresalut">

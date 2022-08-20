@@ -39,11 +39,21 @@ export function Home() {
       <div className="section1">
         <div className="left">
           <p>Barcha mahsulotlar</p>
+          <svg
+            width="8"
+            height="47"
+            viewBox="0 0 8 47"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.5 1C4.5 0.723858 4.27614 0.5 4 0.5C3.72386 0.5 3.5 0.723858 3.5 1L4.5 1ZM3.64645 46.3536C3.84171 46.5488 4.15829 46.5488 4.35356 46.3536L7.53554 43.1716C7.7308 42.9763 7.7308 42.6597 7.53554 42.4645C7.34027 42.2692 7.02369 42.2692 6.82843 42.4645L4 45.2929L1.17157 42.4645C0.976313 42.2692 0.65973 42.2692 0.464468 42.4645C0.269206 42.6597 0.269206 42.9763 0.464468 43.1716L3.64645 46.3536ZM3.5 1L3.5 46L4.5 46L4.5 1L3.5 1Z"
+              fill="white"
+            />
+          </svg>
         </div>
         <div className="center">
-          <p>
-            <span> {data.topic}</span>
-          </p>
+          <span> {data.topic}</span>
           <span className="span1">{data.description}</span>
           <div className="btnDiv">
             <button className="btn btnColorF" onClick={() => navigate("/all")}>
@@ -117,14 +127,11 @@ export function Home() {
         <div className="section_f_text">
           <span>Siz bilan bog'lanishdan mamnunmiz!</span>
           <span>
-            Manzilimiz:<br></br> Toshkent Farobiy ko'cha 37-a uy
-            mo'ljal: Makro (TashMI) Ro'parasi
-            
+            Manzilimiz:<br></br> Toshkent Farobiy ko'cha 37-a uy mo'ljal: Makro
+            (TashMI) Ro'parasi
           </span>
           <span>
-            Manzilimiz:<br></br>Ul.Bobura 7 
-            mo'ljal: Next
-            
+            Manzilimiz:<br></br>Ul.Bobura 7 mo'ljal: Next
           </span>
 
           <span>Murojaat uchun telefon:</span>

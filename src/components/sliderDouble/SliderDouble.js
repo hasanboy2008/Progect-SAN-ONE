@@ -62,11 +62,17 @@ export default function App() {
               <div className="price_share">
                 <div className="discount_pricw">
                   <p>{item.price}</p>
-                  <span>{item.discount === 0 ? '' :item.discount}</span>
+                  <span>{   
+                  item.discount <= 0 ? null : item.discount
+                  }</span>
+
+
+                
+
                   
                 </div>
-                <img src={item.share} alt="" />
-                kdsb
+                {/* <img src={item.share} alt="" /> */}
+           
               </div>
               <div className="sell_basket">
                 <button

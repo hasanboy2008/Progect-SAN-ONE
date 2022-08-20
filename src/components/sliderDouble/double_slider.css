@@ -7,7 +7,7 @@
 }
 
 .swiper-slide {
-  text-align: center;
+  text-align: start;
   font-size: 15px;
   background: #fff;
   height: calc((100% - 30px) / 2);
@@ -26,7 +26,7 @@
 }
 .swiper-horizontal > .swiper-pagination-bullets {
   position: relative;
-  bottom: -20px;
+  bottom: -50px;
   left: 0;
   width: 100%;
   display: flex;
@@ -41,4 +41,16 @@
 .swiper-pagination-bullet-active {
   background-color: #facb21;
   padding: 8px;
+}
+
+.new_Produc_1 > figure > img {
+  border-radius: 6px;
+}
+.discount_pricw > span{
+  margin: 0;
+  text-align: start !important;
+}
+
+.new_Produc_1 > hr{
+  border: 0.01px solid #d9d8d6;
 }

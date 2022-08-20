@@ -76,29 +76,26 @@
   margin: 6.8px;
 }
 .discount_pricw_1 p {
-font-weight: 400;
-font-size: 31.1px;
-line-height: 38px;
-/* identical to box height */
+  font-weight: 400;
+  font-size: 31.1px;
+  line-height: 38px;
+  /* identical to box height */
 
+  /* 04 */
 
-/* 04 */
-
-color: #7C7C7C;
+  color: #7c7c7c;
 }
 
-.discount_pricw_1 :nth-child(2){
+.discount_pricw_1 :nth-child(2) {
   text-align: start;
   font-weight: 700;
-font-size: 31.1px;
-line-height: 38px;
-/* identical to box height */
+  font-size: 31.1px;
+  line-height: 38px;
+  /* identical to box height */
 
+  /* brandcolor */
 
-/* brandcolor */
-
-color: #C9A95C;
-
+  color: #c9a95c;
 }
 .discount_pricw_1 span {
   font-weight: 400;
@@ -132,11 +129,11 @@ color: #C9A95C;
   line-height: 26px;
   color: #000000;
 }
-.discount>hr{
+.discount > hr {
   width: 100% !important;
 }
 
-#hr{
+#hr {
   width: 100% !important;
 
   border-top: 1px solid #000;
@@ -338,7 +335,7 @@ color: #C9A95C;
   .all {
     padding: 80px 6%;
   }
-  .discount_pricw_1{
+  .discount_pricw_1 {
     text-align: start !important;
   }
   .discount_pricw_1 p {

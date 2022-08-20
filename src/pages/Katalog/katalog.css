@@ -1,20 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
-
-/* *
+@font-face {
+  font-family: regular;
+  src: url(../../Fonts/proximanova_regular.ttf);
+}
+*
 {
     transition: all 0.5s;
-} */
+}
 .katalog {
   margin: 0 auto;
   width: 100%;
   height: auto;
   background: #f5f5f5;
-
+  font-family: regular;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
 }
 .katalog-main {
   padding: 10% 12%;
@@ -25,20 +26,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background:  url(../../asest/katalog/bcImage1.png);
-  background-position: center;
+  background: url(../../asest/katalog/bcImage1.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-y: 290px;
   background-size: contain;
   gap: 4rem;
 }
 .katalog-main .top p {
-  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 61px;
+  /* identical to box height */
+  font-family: regular;
   text-align: center;
+
   color: #9f6233;
 }
 .katalog-main .top span {
   font-size: 1.7rem;
   text-align: center;
   color: #7c7c7c;
+  font-family: regular;
 }
 .katalog-main .container {
   margin: 0;
@@ -56,9 +66,9 @@
   align-items: center;
   justify-content: center;
 }
-.katalog-main .container .box-container:hover img  {
-    transform: scale(1.06);
-    color: black;
+.katalog-main .container .box-container:hover img {
+  transform: scale(1.06);
+  color: black;
 }
 .katalog-main .container .box-container .img {
   width: 100%;
@@ -77,7 +87,6 @@
   text-align: center;
   color: #9f6233;
 }
-
 
 .box-container > button {
   border: none;
@@ -117,7 +126,6 @@
   }
 }
 @media (max-width: 1300px) {
-  
   .katalog-main {
     padding: 15% 6%;
   }
