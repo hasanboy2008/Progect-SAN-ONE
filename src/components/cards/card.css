@@ -38,12 +38,17 @@
   }
 } */
 
+@font-face {
+  font-family: reagular;
+  src: url(../../Fonts//proximanova_regular.ttf);
+}
 .cardlar {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(var(--grid), calc(100% / var(--grid)));
   padding: 0 0.5%;
+  font-family: reagular;
 }
 
 .new_Produc_1_1 > figure {
