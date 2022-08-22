@@ -1,3 +1,8 @@
+
+@font-face {
+  font-family:regular ;
+  src: url(../../Fonts/proximanova_regular.ttf);
+}
 .iiz {
   max-width: 70%;
   margin: 0;

@@ -61,7 +61,7 @@
   left: 0;
 }
 #filter_bnt {
-  width: 50px;
+  width: 70px;
   height: 40px;
   background-color: #d0b470;
   border-top-right-radius: 10px;
@@ -70,6 +70,7 @@
   color: white;
   font-size: 17px;
   position: fixed;
+  top: 10rem;
 }
 .close1 {
   color: red;

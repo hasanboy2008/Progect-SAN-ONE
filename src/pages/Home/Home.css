@@ -55,13 +55,13 @@
   border-radius: 8px;
 }
 
-.section1 .left > svg {
+.section1 .left > img {
   position: absolute;
-  left: -3%;
-  bottom: 22%;
+  left: 3%;
+  bottom: 10%;
   padding: auto;
 
-  transform: rotate(-90deg);
+  transform: rotate(0deg);
   padding: 1rem;
   font-style: normal;
   font-weight: 300;

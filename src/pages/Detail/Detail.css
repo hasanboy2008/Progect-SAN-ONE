@@ -1,5 +1,10 @@
+@font-face {
+  font-family: regular;
+  src: url(../../Fonts/proximanova_regular.ttf);
+}
+
 .Detail {
-  padding-top: 100px;
+  padding-top: 170px;
   width: 100%;
   height: auto;
   display: flex;
@@ -111,10 +116,11 @@
 }
 
 .card-about .a-name p {
-  font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
+  font-family: regular;
+
   line-height: 61px;
   color: #a18b7f;
 }
@@ -133,15 +139,20 @@
   height: 23px;
   border-radius: 50%;
   margin-right: 5px;
+  font-family: "Proxima Nova";
+
 }
 
 .card-about .colors p {
-  font-family: "Proxima Nova";
+  
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
   color: #d2d2d2;
+    font-family: regular;
+
+
 }
 
 .color {
@@ -226,11 +237,12 @@
 }
 
 .card-about .sizes > p {
-  font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
+  font-family: regular;
+
   color: #d2d2d2;
 }
 
@@ -295,7 +307,8 @@
   height: 46px;
   background: #dcbb45;
   border-radius: 8px;
-  font-family: "Proxima Nova";
+   font-family: regular;
+
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
@@ -356,6 +369,8 @@
   padding: 65px 200px;
   display: flex;
   flex-direction: column;
+  font-family: regular;
+
   align-items: center;
   overflow: hidden;
   /* display: none; */
@@ -365,6 +380,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  font-family: regular;
+
   width: 100%;
 }
 
@@ -374,7 +391,8 @@
   background: #ffffff;
   border: 1px solid #dcbb45;
   border-radius: 16px;
-  font-family: "Proxima Nova";
+  font-family: regular;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -389,7 +407,8 @@
   background: #ffffff;
   border: 2px solid #dcbb45;
   border-radius: 16px;
-  font-family: "Proxima Nova";
+   font-family: regular;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -1526,7 +1545,8 @@
     background: #ffffff;
     border: 1px solid #dcbb45;
     border-radius: 16px;
-    font-family: "Proxima Nova";
+     font-family: regular;
+
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -1541,7 +1561,8 @@
     background: #ffffff;
     border: 2px solid #dcbb45;
     border-radius: 16px;
-    font-family: "Proxima Nova";
+     font-family: regular;
+
     font-style: normal;
     font-weight: 400;
     font-size: 20px;

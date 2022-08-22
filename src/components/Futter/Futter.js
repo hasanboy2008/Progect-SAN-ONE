@@ -16,6 +16,7 @@ export function Futter() {
   return (
 
     <div className="footer">
+    
 
       <div className="footer_sanone">
         <div className="img">
@@ -93,6 +94,8 @@ export function Futter() {
         >
           BIZ HAQIMIZDA
         </button>
+
+        
         <button
           onClick={() => {
             navigate("/katalog");

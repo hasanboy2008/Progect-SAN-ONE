@@ -1,3 +1,9 @@
+@font-face {
+  font-family: regular;
+  src: url(../../Fonts/proximanova_regular.ttf);
+  
+}
+
 .slider_img {
   padding: 50px 100px;
   background-image: url(../../asest//bacraound//Group\ 8580.png);
@@ -5,6 +11,7 @@
   background-position-y: 39%;
 }
 .slider_boxer {
+  font-family: regular !important;
   width: 390px;
   height: 324px;
   border-radius: 10px;
@@ -37,6 +44,8 @@
   font-weight: 400;
   font-size: 31.1px;
   line-height: 38px;
+    font-family: regular;
+
   /* identical to box height */
 
   /* 04 */

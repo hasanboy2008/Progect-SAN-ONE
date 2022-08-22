@@ -60,6 +60,8 @@ export function All() {
   const openFilterSection = () => {
     setOpenFilter(!openFilter);
   };
+  
+
   // window.addEventListener("click", function () {
   //   setOpenFilter(true);
   // });

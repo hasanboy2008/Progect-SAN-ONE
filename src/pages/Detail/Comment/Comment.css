@@ -1,3 +1,9 @@
+@font-face {
+  font-family: regular;
+  src: url(../../../Fonts/proximanova_regular.ttf);
+ 
+}
+
 #addComment {
   width: 1200px;
   height: auto;
@@ -30,6 +36,8 @@
   height: auto;
   background: none;
   border-radius: 50%;
+  font-family: regular;
+
 }
 
 #viewCommet {
@@ -88,10 +96,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: regular;
+
   text-align: end;
 }
 #sendComment > div > span :nth-child(1) {
-  font-family: "Raleway";
+   font-family: regular;
+
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -102,7 +113,8 @@
   flex-grow: 0;
 }
 #sendComment > div > span :nth-child(2) {
-  font-family: "Montserrat";
+  font-family: regular;
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -116,7 +128,8 @@
 #sendComment > div > p {
   width: 100%;
   min-height: 57px;
-  font-family: "Raleway";
+   font-family: regular;
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -146,7 +159,8 @@
   cursor: pointer;
 }
 #trash > div > p {
-  font-family: "Montserrat";
+  font-family: regular;
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

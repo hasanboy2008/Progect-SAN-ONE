@@ -1,8 +1,15 @@
+@font-face {
+  font-family: regular;
+  src: url(../../../Fonts//proximanova_regular.ttf);
+  
+}
+
 .card_slider {
   padding: 17px;
   height: 480px; 
   display: flex !important;
   width: 435px !important;
+  font-family: regular;
 }
 .best_seller {
   overflow: hidden;
