@@ -76,12 +76,12 @@ export function Home() {
           <p>Yangi mahsulotlar</p>
           <span>Eng so'nggi mahsulotlarimizni ko'rib chiqing va tanlang</span>
         </div>
-        <div className="new_products">
+        <div className="new_products" id="new_products">
           <SliderDouble />
         </div>
       </div>
       <div className="section_scale">
-        <div className="all_headerText">
+        <div className="all_headerText" id="most-popular">
           <p>Eng ko'p ko'rilgan mahsulotlar</p>
           <span>
             Mijozlarimiz tanlovlariga eng loyiq bo'lgan mahsulotlarimiz
@@ -92,7 +92,7 @@ export function Home() {
         </div>
       </div>
       <div className="section_4">
-        <div className="all_headerText">
+        <div className="all_headerText" id="best-seller">
           <p>Eng ko'p sotilgan</p>
           <span>Eng haridorgir bo'lgan mahsulotlarimizni ko'rib chiqing</span>
         </div>
@@ -101,7 +101,7 @@ export function Home() {
         </div>
       </div>
       <div className="section_6_slider">
-        <div className="all_headerText">
+        <div className="all_headerText" id="news">
           <p>Mahsulotlarimiz turlari</p>
           <span>
             Kompaniyamiz tomonidan ishlab chiqariladigan poyabzal turlari

@@ -106,9 +106,9 @@ export function Futter() {
       </div>
 
       <div className="footer_info">
-        <a href="{info}">ENG KO'P SOTILGAN</a>
-        <a href="{info}">ENG KO'P KORILGAN</a>
-        <a href="{info}">YANGILIKLAR</a>
+        <a href="#best-seller">ENG KO'P SOTILGAN</a>
+        <a href="#most-popular">ENG KO'P KORILGAN</a>
+        <a href="#news">YANGILIKLAR</a>
       </div>
 
       <div className="footer_click">
