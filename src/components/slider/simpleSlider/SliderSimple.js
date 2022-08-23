@@ -77,7 +77,6 @@ export default function SimpleSlider() {
                 <span>{item.discount <= 0 ? null : item.discount}</span>
               </div>
               <img src={item.share} alt="" />
-              kdsb
             </div>
             <div className="sell_basket">
               <button

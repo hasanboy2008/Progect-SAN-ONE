@@ -67,7 +67,6 @@ export function Detail() {
   function selectede(e) {
     const x = e.clientX - e.target.offsetLeft;
     const y = e.clientY - e.target.offsetTop;
-    console.log(x, y);
     setZom({
       tranformorign: `${x}px ${y}px`,
       scale: 2,

@@ -1,19 +1,18 @@
 @font-face {
   font-family: regular;
   src: url(../../../Fonts//proximanova_regular.ttf);
-  
 }
 
 .card_slider {
   padding: 17px;
-  height: 480px; 
+  height: 480px;
   display: flex !important;
   width: 435px !important;
   font-family: regular;
 }
 .best_seller {
   overflow: hidden;
-  padding: 50px 40px;
+  padding: 100px 40px;
   margin-bottom: 50px;
 }
 .best_seller .slick-dots {
@@ -41,8 +40,8 @@
 }
 .simple_btn1 {
   top: auto;
-  bottom: -49px;
-  color: #d2d2d2;
+  bottom: -80px;
+  color: black;
   border: none;
   font-size: 40px;
   left: 58%;
@@ -50,51 +49,51 @@
 .simple_btn2 {
   left: 40%;
   top: auto;
-  bottom: -49px;
-  color: #d2d2d2;
+  bottom: -80px;
+  color: black;
   border: none;
   font-size: 40px;
 }
-@media(max-width:1500px) {
-  .simple_btn1{
+@media (max-width: 1500px) {
+  .simple_btn1 {
     left: 64%;
   }
-  .simple_btn2{
+  .simple_btn2 {
     left: 35%;
   }
 }
-@media(max-width:1200px) {
-  .simple_btn1{
+@media (max-width: 1200px) {
+  .simple_btn1 {
     left: 67%;
   }
-  .simple_btn2{
+  .simple_btn2 {
     left: 30%;
   }
 }
-@media(max-width: 900px) {
-  .simple_btn1{
+@media (max-width: 900px) {
+  .simple_btn1 {
     left: 67%;
   }
-  .simple_btn2{
+  .simple_btn2 {
     left: 30%;
   }
-  .best_seller{
+  .best_seller {
     padding-bottom: 70px !important;
   }
 }
-@media(max-width: 760px) {
-  .simple_btn1{
+@media (max-width: 760px) {
+  .simple_btn1 {
     left: 80%;
   }
-  .simple_btn2{
+  .simple_btn2 {
     left: 20%;
   }
 }
-@media(max-width: 500px) {
-  .simple_btn1{
+@media (max-width: 500px) {
+  .simple_btn1 {
     left: 85%;
   }
-  .simple_btn2{
+  .simple_btn2 {
     left: 10%;
   }
 }
