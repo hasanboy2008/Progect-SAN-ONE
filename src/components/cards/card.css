@@ -38,12 +38,17 @@
   }
 } */
 
+@font-face {
+  font-family: reagular;
+  src: url(../../Fonts//proximanova_regular.ttf);
+}
 .cardlar {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(var(--grid), calc(100% / var(--grid)));
   padding: 0 0.5%;
+  font-family: reagular;
 }
 
 .new_Produc_1_1 > figure {
@@ -76,10 +81,26 @@
   margin: 6.8px;
 }
 .discount_pricw_1 p {
+  font-weight: 400;
+  font-size: 31.1px;
+  line-height: 38px;
+  /* identical to box height */
+  font-family: reagular;
+
+  /* 04 */
+
+  color: #7c7c7c;
+}
+
+.discount_pricw_1 :nth-child(2) {
+  text-align: start;
   font-weight: 700;
   font-size: 31.1px;
   line-height: 38px;
-  text-align: right;
+  /* identical to box height */
+
+  /* brandcolor */
+
   color: #c9a95c;
 }
 .discount_pricw_1 span {
@@ -114,11 +135,11 @@
   line-height: 26px;
   color: #000000;
 }
-.discount>hr{
+.discount > hr {
   width: 100% !important;
 }
 
-#hr{
+#hr {
   width: 100% !important;
 
   border-top: 1px solid #000;
@@ -320,7 +341,7 @@
   .all {
     padding: 80px 6%;
   }
-  .discount_pricw_1{
+  .discount_pricw_1 {
     text-align: start !important;
   }
   .discount_pricw_1 p {

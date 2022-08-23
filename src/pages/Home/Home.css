@@ -1,3 +1,20 @@
+@font-face {
+  font-family: extrabold;
+  src: url(../../Fonts/proximanova_extrabold.otf);
+}
+@font-face {
+  font-family: regular;
+  src: url(../../Fonts/proximanova_regular.ttf);
+}
+@font-face {
+  font-family: light;
+  src: url(../../Fonts/proximanova_light.otf);
+}
+@font-face {
+  font-family: bold;
+  src: url(../../Fonts//proximanova_bold.otf);
+}
+
 .home {
   width: 100%;
   height: auto;
@@ -38,21 +55,55 @@
   border-radius: 8px;
 }
 
-.section1 .left {
+.section1 .left > img {
+  position: absolute;
+  left: 3%;
+  bottom: 10%;
+  padding: auto;
+
+  transform: rotate(0deg);
+  padding: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 15px;
+  font-family: light;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.37em;
+
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.section1 .left > p {
   position: absolute;
   left: -3%;
   bottom: 22%;
   padding: auto;
+
   transform: rotate(-90deg);
   padding: 1rem;
-}
-.section1 .left p {
+  font-style: normal;
   font-weight: 300;
   font-size: 15px;
   line-height: 15px;
+  font-family: light;
+  /* identical to box height */
+
   text-align: center;
   letter-spacing: 0.37em;
+
   color: #ffffff;
+  font-weight: 300;
+}
+
+#korinish{
+  position: absolute;
+  bottom: 5%;
+  font-size: 55px;
+  z-index: 50;
 }
 
 .section1 .center {
@@ -67,40 +118,48 @@
   position: absolute;
   top: 298px;
   left: 156px;
-  z-index: 1000;
+  z-index: 10;
 }
-.section1 .center p {
+.section1 .center span {
+  font-family: extrabold;
   margin-top: 0;
+  font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 
   color: #f3f3f3;
 }
-.section1 .center p span {
-  color: #dcbb45;
-}
+
 .section1 .center .span1 {
+  padding-top: 30px;
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+
+  font-family: regular;
 
   color: #d2d2d2;
 }
 .section1 .center .btnDiv {
   margin-top: 6%;
 }
-.section1 .center .btnDiv button:hover {
+.section1 .center .btnDiv button {
   border: 1px solid #ffffff;
   background: #ffffff;
   color: #de821d;
+  margin-right: 17px;
 }
 
-.section1 .center .btnDiv .btnColorF {
-  margin-right: 17px;
+.section1 .center .btnDiv .btnColorF > button {
   background: none;
   border: 1px solid #ffffff;
   color: #ffffff;
+}
+.section1 .center .btnDiv > button:hover {
+  background-color: #fac570;
+  color: black;
 }
 .section1 .center .btnDiv .btnColorN {
   background: none;
@@ -222,29 +281,25 @@
     width: 250px;
     height: 250px;
   }
-  .section1 .container .img
-  {
+  .section1 .container .img {
     width: 25rem;
     height: 25rem;
   }
 }
 @media (max-width: 1300px) {
   /* container */
-  .section1 .container
-  {
+  .section1 .container {
     justify-content: flex-end;
   }
-  .section1 .container .img
-  {
+  .section1 .container .img {
     margin-right: 25%;
   }
-
 }
 @media (max-width: 1200px) {
   .section1 .center {
     width: 580px;
   }
-  .section1 .center p {
+  .section1 .center span {
     font-size: 40px;
   }
   .section1 .center .span1 {
@@ -289,8 +344,7 @@
   }
 }
 @media (max-width: 930px) {
-  .section1 .container .img
-  {
+  .section1 .container .img {
     width: 20rem;
     height: 20rem;
     margin-right: 0;
@@ -335,7 +389,7 @@
     width: 360px;
   }
 
-  .section1 .center p {
+  .section1 .center span {
     font-size: 1.6rem;
     line-height: 2rem;
   }
@@ -363,8 +417,7 @@
     right: 12%;
     bottom: -10px;
   }
-  .section1 .container .img
-  {
+  .section1 .container .img {
     width: 15rem;
     height: 15rem;
   }
@@ -390,8 +443,7 @@
     right: 12%;
     bottom: -10px;
   }
-  .section1 .container .img
-  {
+  .section1 .container .img {
     margin-bottom: 30%;
     margin-left: 20%;
   }
@@ -400,7 +452,7 @@
   .section1 .center {
     width: 270px;
   }
-  .section1 .center p {
+  .section1 .center span {
     font-size: 1.2rem;
     line-height: 1.6rem;
   }
@@ -423,8 +475,7 @@
     right: 12%;
     bottom: -10px;
   }
-  .section1 .container .img
-  {
+  .section1 .container .img {
     width: 15rem;
     height: 15rem;
     margin-bottom: 25%;
@@ -440,8 +491,7 @@
     height: 120px;
     bottom: 5rem;
   }
-  .section1 .container .img
-  {
+  .section1 .container .img {
     width: 10rem;
     height: 10rem;
     margin-bottom: 35%;
@@ -466,8 +516,7 @@
     height: 120px;
     bottom: 2rem;
   }
-  .section1 .container .img
-  {
+  .section1 .container .img {
     margin-bottom: 15%;
   }
   .section1 .left {
@@ -481,8 +530,7 @@
     bottom: 2rem;
     right: 10px;
   }
-  .section1 .container .img
-  {
+  .section1 .container .img {
     width: 8rem;
     height: 8rem;
     margin-bottom: 22%;
@@ -508,7 +556,6 @@
   }
 }
 
-
 /* home section 1 end  */
 
 /* -------------------home section2----------- */
@@ -531,12 +578,16 @@
 }
 
 .all_headerText > p {
+  font-style: normal;
   font-weight: 700;
   font-size: 50px;
   line-height: 61px;
   /* identical to box height */
 
-  color: #9f4a33;
+  text-align: center;
+
+  color: #9f6233;
+  font-family: bold;
 }
 
 .all_headerText > span {
@@ -586,9 +637,7 @@
   font-weight: 400;
   font-size: 31.1px;
   line-height: 38px;
-  /* identical to box height */
-
-  /* media section 1 */
+  color: #7c7c7c;
 }
 .sell_basket {
   width: 100%;
@@ -641,10 +690,9 @@
   .discount_pricw p {
     font-size: 27px !important;
   }
-  .left{
+  .left {
     padding: 10%;
   }
-
 }
 @media (max-width: 470px) {
   .all_headerText p {
@@ -778,6 +826,7 @@ hr {
   background-position: center;
   position: relative;
   padding: 10% 0;
+  font-family: regular;
 }
 
 .section-6-overlay {
@@ -800,7 +849,7 @@ hr {
 .section_f_text :nth-child(1) {
   font-weight: 700;
   font-size: 47px;
-  line-height: 61px;
+  line-height: 2;
   /* identical to box height */
 
   text-align: center;
@@ -812,8 +861,8 @@ hr {
 
 .section_f_text :nth-child(2) {
   font-weight: 400;
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 2rem;
+  line-height: 50px;
   text-align: center;
 
   /* 04 */
@@ -826,8 +875,8 @@ hr {
 
 .section_f_text :nth-child(3) {
   font-weight: 400;
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 2rem;
+  line-height: 50px;
   /* identical to box height */
 
   text-align: center;
@@ -854,7 +903,7 @@ hr {
 
 .section_f_text :nth-child(5) {
   font-weight: 400;
-  font-size: 21px;
+  font-size: 2rem;
   line-height: 26px;
   /* identical to box height */
 
@@ -863,7 +912,7 @@ hr {
   /* 04 */
 
   color: #d2d2d2;
-  padding-top: 57px;
+  padding-top: 20px;
   z-index: 1;
 }
 
@@ -944,21 +993,26 @@ hr {
   }
   .section_f_text :nth-child(1) {
     font-size: 30px;
+    line-height: 2;
   }
   .section_f_text :nth-child(2) {
+    width: 75%;
     font-size: 15px;
     padding-top: 28px;
+    line-height: 2;
   }
   .section_f_text :nth-child(3) {
     font-size: 15px;
     padding-top: 28px;
+    line-height: 2;
   }
   .section_f_text :nth-child(4) {
-    font-size: 30px;
+    font-size: 20px;
+    line-height: 2;
   }
   .section_f_text :nth-child(5) {
     font-size: 15px;
-    padding-top: 28px;
+    padding-top: 10px;
   }
 
   #contac_i_f_t :nth-child(1) {
@@ -986,7 +1040,7 @@ hr {
     justify-content: center;
   }
   .section_f_text :nth-child(1) {
-    font-size: 25px;
+    font-size: 20px;
   }
   .section_f_text :nth-child(2) {
     font-size: 12px;
@@ -995,7 +1049,7 @@ hr {
     font-size: 12px;
   }
   .section_f_text :nth-child(4) {
-    font-size: 25px;
+    font-size: 20px;
   }
   .section_f_text :nth-child(5) {
     font-size: 12px;
@@ -1041,7 +1095,7 @@ hr {
     font-size: 12px;
   }
   .section_f_text :nth-child(4) {
-    font-size: 25px;
+    font-size: 18px;
   }
   .section_f_text :nth-child(5) {
     font-size: 12px;

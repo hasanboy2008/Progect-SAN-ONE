@@ -1,9 +1,10 @@
 .footer
 {
-    padding: 3% 8% 2% 8%;
+    padding: 4% 6% 2% 8%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    font-family: sans-serif;
     align-items: flex-start;
     justify-content: space-between;
     gap: 0.8rem;
@@ -23,12 +24,12 @@
 }
 .footer .footer_sanone .img img
 {
-    width: 80%;
+    width: 90%;
     object-fit: cover;
 }
 .footer .footer_sanone a
 {
-    margin-top: 5%;
+    margin-top: 7%;
     font-weight: 400;
     font-size: 26px;
     line-height: 32px;
@@ -50,6 +51,7 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 12px;
+padding-top: 3px;
 }
 .footer .footer_about > button
 {
@@ -60,11 +62,11 @@
     background: none;
     transition: all 0.5s;
 }
-.footer .footer_about > button:hover
+/* .footer .footer_about > button:hover
 {
     transform: translateX(5px) scale(1.1);
     text-shadow: 2px 2px 2px #f0ae2b;
-}
+} */
 
 .footer .footer_info
 {
@@ -82,11 +84,11 @@
     color: #D2D2D2;
     transition: all 0.5s;
 }
-.footer .footer_info a:hover
+/* .footer .footer_info a:hover
 {
     transform: translateX(5px) scale(1.1);
     text-shadow: 2px 2px 2px #f0ae2b;
-}
+} */
 
 .footer .footer_click
 {

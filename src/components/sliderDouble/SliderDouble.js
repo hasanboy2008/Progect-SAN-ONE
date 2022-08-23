@@ -15,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function App() {
   const products = useSelector((state) => state.reProducts);
-  const newProducts = [...products, ...products];
   const navigate = useNavigate();
   return (
     <>
@@ -50,10 +49,9 @@ export default function App() {
           1720: {
             slidesPerView: 4,
           },
-       
         }}
       >
-        {newProducts.map((item, index) => (
+        {products.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="new_Produc_1">
               <figure>
@@ -64,10 +62,17 @@ export default function App() {
               <div className="price_share">
                 <div className="discount_pricw">
                   <p>{item.price}</p>
-                  <span>{item.discount}</span>
+                  <span>{   
+                  item.discount <= 0 ? null : item.discount
+                  }</span>
+
+
+                
+
+                  
                 </div>
-                <img src={item.share} alt="" />
-                kdsb
+                {/* <img src={item.share} alt="" /> */}
+           
               </div>
               <div className="sell_basket">
                 <button

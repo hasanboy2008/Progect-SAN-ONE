@@ -1,7 +1,17 @@
+@font-face {
+  font-family: regular;
+  src: url(../../Fonts/proximanova_regular.ttf);
+  
+}
+
 .slider_img {
-  padding: 50px 150px;
+  padding: 50px 100px;
+  background-image: url(../../asest//bacraound//Group\ 8580.png);
+  background-repeat: no-repeat;
+  background-position-y: 39%;
 }
 .slider_boxer {
+  font-family: regular !important;
   width: 390px;
   height: 324px;
   border-radius: 10px;
@@ -13,7 +23,33 @@
   height: 100%;
   object-fit: cover;
 }
-.slider_boxer h1 {
+.sleder_btn {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sleder_btn > button {
+  width: 301px;
+  height: 46px;
+
+  /* 06 */
+
+  background: #dcbb45;
+  border-radius: 8px;
+  margin-top: 45px;
+}
+.slider_name > h1 {
+  font-weight: 400;
+  font-size: 31.1px;
+  line-height: 38px;
+    font-family: regular;
+
+  /* identical to box height */
+
+  /* 04 */
+
   color: #7c7c7c;
 }
 .footer_btn2 {
@@ -30,56 +66,55 @@
   background-color: #de821d;
   border: none;
 }
-@media(max-width:1370px){
-  .slider_img{
+@media (max-width: 1370px) {
+  .slider_img {
     padding: 50px 100px;
   }
-  .footer_btn2{
+  .footer_btn2 {
     left: -70px;
   }
-  .footer_btn1{
+  .footer_btn1 {
     right: -70px;
   }
-  .slider_boxer{
+  .slider_boxer {
     width: 350px;
     margin: 0 auto;
   }
 }
-@media(max-width:1200px){
-  .slider_boxer{
+@media (max-width: 1200px) {
+  .slider_boxer {
     width: 98%;
   }
 }
-@media(max-width:768px){
-  .slider_img{
+@media (max-width: 768px) {
+  .slider_img {
     padding: 50px;
   }
-  .footer_btn2{
+  .footer_btn2 {
     left: -45px;
   }
-  .footer_btn1{
+  .footer_btn1 {
     right: -45px;
   }
 }
 
-@media(max-width:450px){
-  .slider_img{
+@media (max-width: 450px) {
+  .slider_img {
     padding: 0px;
   }
-  .slider_img h1{
+  .slider_img h1 {
     margin-left: 20px;
   }
-  .slider_boxer{
+  .slider_boxer {
     width: 95%;
     margin-left: 20px;
   }
-  .footer_btn2{
+  .footer_btn2 {
     left: 35%;
     top: 100%;
   }
-  .footer_btn1{
+  .footer_btn1 {
     right: 35%;
     top: 100%;
   }
-  
 }

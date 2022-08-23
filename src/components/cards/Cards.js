@@ -1,12 +1,11 @@
-import React from "react"
+import React from "react";
 import { useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import "./card.css";
 import { acLoading } from "../../Redux/Loading";
-import {  useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
-
-export default function Cardlar({props}){
+export default function Cardlar({ props }) {
   const dispatch = useDispatch();
 
   // const products = useSelector((state) => state.reProducts);
@@ -20,10 +19,9 @@ export default function Cardlar({props}){
           </figure>
           <div className="price_share_1">
             <div className="discount_pricw_1">
-
-              <p >{item.name}</p>
+              <p>{item.name}</p>
               <p>{item.price}</p>
-              <span>{item.discount}</span>
+              <span>{item.discount <= 0 ? null : item.discount}</span>
             </div>
             <img src={item.share} alt="" />
             kdsb
@@ -32,8 +30,7 @@ export default function Cardlar({props}){
             <button
               onClick={() => {
                 navigate(`/view/product?id=${item.id}`);
-                                      dispatch(acLoading(false));
-
+                dispatch(acLoading(false));
               }}
             >
               Sotib olish

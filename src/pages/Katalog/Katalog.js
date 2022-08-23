@@ -14,7 +14,6 @@ import image_6 from "../../asest/katalog/image_6.jpg";
 import image_7 from "../../asest/katalog/image_7.jpg";
 import image_8 from "../../asest/katalog/image_8.jpg";
 
-
 export function Katalog() {
   // database - malumotlar toplami
   const navigate = useNavigate();
@@ -31,37 +30,37 @@ export function Katalog() {
     {
       id: 2,
       image: image_2,
-      name: "Krossovka",
+      name: "Barsofka",
     },
     {
       id: 3,
       image: image_3,
-      name: "Ishlov berilgan teri",
+      name: "Krasovka",
     },
     {
       id: 4,
       image: image_4,
-      name: "Klassik krossovka",
+      name: "Pol Classica",
     },
     {
       id: 5,
       image: image_5,
-      name: "Qochoq poyabzal",
+      name: "Classica",
     },
     {
       id: 6,
       image: image_6,
-      name: "Shpallar",
+      name: "Lora Piano",
     },
     {
       id: 7,
       image: image_7,
-      name: "Ikki rangli",
+      name: "Lora Piano Lux",
     },
     {
       id: 8,
       image: image_8,
-      name: "Klassicheskiy",
+      name: "Lora Piano Pol Classica ",
     },
   ];
   return (
