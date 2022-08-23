@@ -74,7 +74,7 @@ export default function SimpleSlider() {
             <div className="price_share">
               <div className="discount_pricw">
                 <p>{item.price}</p>
-                <span>{item.discount}</span>
+                <span>{item.discount <= 0 ? null : item.discount}</span>
               </div>
               <img src={item.share} alt="" />
               kdsb

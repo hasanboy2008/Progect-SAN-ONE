@@ -21,7 +21,7 @@ export default function Cardlar({ props }) {
             <div className="discount_pricw_1">
               <p>{item.name}</p>
               <p>{item.price}</p>
-              <span>{item.discount === 0 ? '' :item.discount}</span>
+              <span>{item.discount <= 0 ? null : item.discount}</span>
             </div>
             <img src={item.share} alt="" />
             kdsb

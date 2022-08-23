@@ -22,6 +22,8 @@ export function Signup() {
   };
 
   function hendelSubmit(e) {
+    console.log();
+
     e.preventDefault();
     dispatch(acLoading(true));
     axios("https://api.sanone.uz/add/new/customer", {
@@ -35,7 +37,7 @@ export function Signup() {
       .then((res) => {
         console.log(res);
 
-        if (res.data.status) {
+        if (res.data.status && custemer.password === custemer.password1) {
           enqueueSnackbar(res.data.message, {
             variant: "success",
           });
@@ -346,7 +348,7 @@ export function Signup() {
               type={password ? "password" : "text"}
               placeholder="qayta parol"
               onChange={(e) => {
-                setCustemer({ ...custemer, password: e.target.value });
+                setCustemer({ ...custemer, password1: e.target.value });
               }}
             />
             <button type="button" onClick={parol} id="tyupe">

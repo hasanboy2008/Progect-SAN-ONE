@@ -1,21 +1,24 @@
-.basket-page
-{
+@font-face {
+  font-family: regular;
+  src: url(../../Fonts/proximanova_regular.ttf);
+}
+
+.basket-page {
   padding: 0 9% 10% 9%;
   padding-top: 10rem;
-  
+  font-family: regular;
   width: 100%;
   height: auto;
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
-.basket-page .basket-main-text
-{
+.basket-page .basket-main-text {
   font-weight: 700;
   font-size: 37.8515px;
   line-height: 46px;
-  color: #9F6233;
+  color: #9f6233;
+  font-family: regular;
 }
-.basket-page .basket-all
-{
+.basket-page .basket-all {
   width: 100%;
   height: auto;
   margin-top: 3rem;
@@ -26,62 +29,53 @@
 
 /* basket home start */
 
-.basket-page .basket-all .basket-home
-{
-  border-top: 0.684385px solid #9A9A9A;
+.basket-page .basket-all .basket-home {
+  border-top: 0.684385px solid #9a9a9a;
   width: 60%;
 }
-.basket-page .basket-all .basket-home .basket-json
-{
+.basket-page .basket-all .basket-home .basket-json {
   padding: 1rem 0;
-  border-bottom: 0.684385px solid #9A9A9A;
+  border-bottom: 0.684385px solid #9a9a9a;
   width: 100%;
 }
-.basket-json .basket-data
-{
+.basket-json .basket-data {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.basket-json .basket-data .img
-{
+.basket-json .basket-data .img {
   width: 221px;
   height: 170px;
   border-radius: 10px;
   overflow: hidden;
 }
-.basket-json .basket-data .img img
-{
+.basket-json .basket-data .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.basket-json .basket-data .basket-texts-2 .basket-shoes-name
-{
+.basket-json .basket-data .basket-texts-2 .basket-shoes-name {
   font-size: 1.4rem;
   color: #000000;
   margin-bottom: 1rem;
 }
-.basket-json .basket-data .basket-texts-2 .basket-size
-{
+.basket-json .basket-data .basket-texts-2 .basket-size {
   font-size: 1rem;
   color: #000000;
 }
-.basket-json .basket-data .basket-button
-{
+.basket-json .basket-data .basket-button {
   display: flex;
   height: 45px;
   padding: 10px 20px;
   gap: 20px;
-  background: #DCBB45;
+  background: #dcbb45;
+  font-family: regular;
   border-radius: 8px;
   align-items: center;
   justify-content: space-between;
-  
 }
-.basket-json .basket-data .basket-button button
-{
+.basket-json .basket-data .basket-button button {
   font-size: 1.8rem;
   width: 22px;
   height: 22px;
@@ -89,19 +83,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: regular;
   /* border: 2px solid #000000; */
 }
-.basket-json .basket-data .basket-button .basket-decrement p
-{
+.basket-json .basket-data .basket-button .basket-decrement p {
   width: 100%;
   height: 100%;
   padding-bottom: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: regular;
 }
-.basket-json .basket-data .basket-button .basket-increment p
-{
+.basket-json .basket-data .basket-button .basket-increment p {
   width: 100%;
   height: 100%;
   padding-left: 2px;
@@ -110,19 +104,16 @@
   justify-content: center;
 }
 
-.basket-json .basket-data .basket-price
-{
+.basket-json .basket-data .basket-price {
   font-size: 1.6rem;
   text-align: right;
-  color: #C9A95C;
+  color: #c9a95c;
 }
-.basket-json .basket-data .basket-discount
-{
+.basket-json .basket-data .basket-discount {
   font-size: 1rem;
   color: #000000;
 }
-.basket-json .basket-data .basket-close p
-{
+.basket-json .basket-data .basket-close p {
   width: 30px;
   height: 30px;
   padding-left: 4px;
@@ -132,6 +123,7 @@
   /* border: 1px solid red; */
   transform: rotate(45deg);
   display: flex;
+  font-family: regular;
   align-items: center;
   justify-content: center;
 }
@@ -140,71 +132,75 @@
 
 /* basket order start */
 
-.basket-page .basket-all .basket-order
-{
+.basket-page .basket-all .basket-order {
   width: 35%;
   height: 568px;
   padding: 46px 40px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
 }
-.basket-page .basket-all .basket-order .img
-{
+.basket-page .basket-all .basket-order .img {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.basket-page .basket-all .basket-order .img img
-{
+.basket-page .basket-all .basket-order .img img {
   width: 210px;
   height: 31px;
 }
-.basket-page .basket-all .basket-order .basket-check-list
-{
+.basket-page .basket-all .basket-order .basket-check-list {
   padding: 68px 0;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 22px;
-  border-bottom: 0.684385px solid #0D0D0D;
+  border-bottom: 0.684385px solid #0d0d0d;
 }
 .basket-page .basket-all .basket-order .basket-check-list .basket-order-texts,
-.basket-page .basket-all .basket-order .basket-order-texts-total
-{
+.basket-page .basket-all .basket-order .basket-order-texts-total {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.basket-page .basket-all .basket-order .basket-order-texts-total
-{
+.basket-page .basket-all .basket-order .basket-order-texts-total {
   padding: 37px 0 45px 0;
 }
-.basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
-{
+.basket-page
+  .basket-all
+  .basket-order
+  .basket-check-list
+  .basket-order-texts
+  p {
   font-size: 1.4rem;
   color: #000000;
 }
-.basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
-{
+.basket-page
+  .basket-all
+  .basket-order
+  .basket-order-texts-total
+  .basket-order-texts-1 {
   font-size: 1.6rem;
   color: #000000;
 }
-.basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
-{
+.basket-page
+  .basket-all
+  .basket-order
+  .basket-order-texts-total
+  .basket-order-texts-2 {
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 27px;
   text-align: right;
-  color: #C9A95C;
+    font-family: regular;
+  color: #c9a95c;
 }
-.basket-page .basket-all .basket-order button
-{
+.basket-page .basket-all .basket-order button {
   padding: 10px 54px;
-  background: #DCBB45;
+  background: #dcbb45;
   border-radius: 8px;
 
   font-weight: 400;
@@ -217,77 +213,75 @@
 
 /* media queries */
 
-@media (max-width:1700px){
-  .basket-json .basket-data .img
-  {
+@media (max-width: 1700px) {
+  .basket-json .basket-data .img {
     width: 180px;
     height: 130px;
   }
-  .basket-json .basket-data .basket-button
-  {
+  .basket-json .basket-data .basket-button {
     gap: 1rem;
   }
-  .basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-check-list
+    .basket-order-texts
+    p {
     font-size: 1.2rem;
   }
-  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-order-texts-total
+    .basket-order-texts-1 {
     font-size: 1.4rem;
   }
-  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-order-texts-total
+    .basket-order-texts-2 {
     font-size: 1.2rem;
   }
-  .basket-page .basket-all .basket-order button
-  {
+  .basket-page .basket-all .basket-order button {
     width: 100%;
     padding: 10px auto;
     font-size: 1.2rem;
   }
 }
-@media (max-width:1600px){
-  .basket-json .basket-data .basket-button
-  {
+@media (max-width: 1600px) {
+  .basket-json .basket-data .basket-button {
     gap: 0.6rem;
   }
-  .basket-json .basket-data .basket-texts-2 .basket-shoes-name
-  {
+  .basket-json .basket-data .basket-texts-2 .basket-shoes-name {
     font-size: 1.2rem;
   }
-  .basket-json .basket-data .basket-texts-2 .basket-size
-  {
+  .basket-json .basket-data .basket-texts-2 .basket-size {
     font-size: 1rem;
   }
-  .basket-json .basket-data .basket-price
-  {
+  .basket-json .basket-data .basket-price {
     font-size: 1.4rem;
   }
 }
-@media (max-width:1500px){
-  .basket-json .basket-data .img
-  {
+@media (max-width: 1500px) {
+  .basket-json .basket-data .img {
     width: 160px;
     height: 100px;
   }
-  .basket-json .basket-data .basket-price
-  {
+  .basket-json .basket-data .basket-price {
     font-size: 1.2rem;
   }
 }
-@media (max-width:1320px){
-  .basket-page .basket-all
-  {
+@media (max-width: 1320px) {
+  .basket-page .basket-all {
     flex-direction: column;
     align-items: center;
     gap: 5rem;
   }
-  .basket-page .basket-all .basket-home
-  {
+  .basket-page .basket-all .basket-home {
     width: 100%;
   }
-  .basket-page .basket-all .basket-order
-  {
+  .basket-page .basket-all .basket-order {
     width: 65%;
     height: auto;
     display: flex;
@@ -295,213 +289,196 @@
     align-items: center;
   }
 }
-@media (max-width: 860px){
-  .basket-page .basket-main-text
-  {
+@media (max-width: 860px) {
+  .basket-page .basket-main-text {
     font-size: 2rem;
   }
-  .basket-json .basket-data .basket-texts-2 .basket-shoes-name
-  {
+  .basket-json .basket-data .basket-texts-2 .basket-shoes-name {
     font-size: 1rem;
     margin-bottom: 0.4rem;
   }
-  .basket-json .basket-data .basket-texts-2 .basket-size
-  {
+  .basket-json .basket-data .basket-texts-2 .basket-size {
     font-size: 0.8rem;
   }
-  .basket-json .basket-data .basket-button
-  {
+  .basket-json .basket-data .basket-button {
     padding: 10px 10px;
     gap: 0.6rem;
     border-radius: 6px;
   }
-  .basket-json .basket-data .basket-button .basket-h2
-  {
+  .basket-json .basket-data .basket-button .basket-h2 {
     font-size: 1rem;
   }
-  .basket-json .basket-data .basket-button button
-  {
+  .basket-json .basket-data .basket-button button {
     font-size: 1.4rem;
     border-radius: 25%;
   }
-  .basket-json .basket-data .basket-price
-  {
+  .basket-json .basket-data .basket-price {
     font-size: 1rem;
   }
-  .basket-json .basket-data .basket-discount
-  {
+  .basket-json .basket-data .basket-discount {
     font-size: 0.8rem;
   }
-  .basket-page .basket-all .basket-order .img img
-  {
+  .basket-page .basket-all .basket-order .img img {
     width: 150px;
     height: auto;
   }
-  .basket-page .basket-all .basket-order .basket-check-list
-  {
+  .basket-page .basket-all .basket-order .basket-check-list {
     padding: 3rem 0 2rem 0;
     gap: 1rem;
   }
-  .basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-check-list
+    .basket-order-texts
+    p {
     font-size: 1rem;
   }
-  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-order-texts-total
+    .basket-order-texts-1 {
     font-size: 1.2rem;
   }
-  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-order-texts-total
+    .basket-order-texts-2 {
     font-size: 1rem;
   }
-  .basket-page .basket-all .basket-order button
-  {
+  .basket-page .basket-all .basket-order button {
     padding: 10px;
     font-weight: 400;
     font-size: 1rem;
   }
 }
-@media (max-width:700px){
-  .basket-page
-  {
+@media (max-width: 700px) {
+  .basket-page {
     padding-top: 8rem;
   }
-  .basket-page .basket-main-text
-  {
+  .basket-page .basket-main-text {
     font-size: 1.4rem;
   }
-  .basket-json .basket-data .img
-  {
+  .basket-json .basket-data .img {
     width: 100px;
     height: 60px;
   }
-  .basket-json .basket-data .basket-texts-2 .basket-shoes-name
-  {
+  .basket-json .basket-data .basket-texts-2 .basket-shoes-name {
     font-size: 0.6rem;
     margin-bottom: 0rem;
   }
-  .basket-json .basket-data .basket-texts-2 .basket-size
-  {
+  .basket-json .basket-data .basket-texts-2 .basket-size {
     font-size: 0.5rem;
   }
-  .basket-json .basket-data .basket-button
-  {
+  .basket-json .basket-data .basket-button {
     height: auto;
     padding: 5px;
     gap: 0.2rem;
   }
-  .basket-json .basket-data .basket-button .basket-h2
-  {
+  .basket-json .basket-data .basket-button .basket-h2 {
     font-size: 0.8rem;
   }
-  .basket-json .basket-data .basket-button button
-  {
+  .basket-json .basket-data .basket-button button {
     font-size: 1rem;
     border-radius: 25%;
     border: 1.4px solid;
   }
-  .basket-json .basket-data .basket-price
-  {
+  .basket-json .basket-data .basket-price {
     font-size: 0.7rem;
   }
-  .basket-json .basket-data .basket-discount
-  {
+  .basket-json .basket-data .basket-discount {
     font-size: 0.6rem;
   }
-  .basket-json .basket-data .basket-close p
-  {
+  .basket-json .basket-data .basket-close p {
     width: 20px;
     height: 20px;
     padding-left: 4px;
     padding-top: 1px;
     font-size: 1rem;
   }
-  .basket-page .basket-all .basket-order
-  {
+  .basket-page .basket-all .basket-order {
     width: 75%;
     padding: 1.6rem 1rem;
   }
-  .basket-page .basket-all .basket-order .img img
-  {
+  .basket-page .basket-all .basket-order .img img {
     width: 100px;
     height: auto;
   }
-  .basket-page .basket-all .basket-order .basket-check-list
-  {
+  .basket-page .basket-all .basket-order .basket-check-list {
     padding: 2rem 0 1.6rem 0;
     gap: 0.6rem;
   }
-  .basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-check-list
+    .basket-order-texts
+    p {
     font-size: 0.6rem;
   }
-  .basket-page .basket-all .basket-order .basket-order-texts-total
-  {
+  .basket-page .basket-all .basket-order .basket-order-texts-total {
     padding: 1.6rem 0;
   }
 
-  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-order-texts-total
+    .basket-order-texts-1 {
     font-size: 1rem;
   }
-  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-order-texts-total
+    .basket-order-texts-2 {
     font-size: 0.8rem;
   }
-  .basket-page .basket-all .basket-order button
-  {
+  .basket-page .basket-all .basket-order button {
     padding: 10px;
     font-weight: 400;
     font-size: 0.6rem;
   }
 }
-@media (max-width: 450px){
-  .basket-page
-  {
+@media (max-width: 450px) {
+  .basket-page {
     padding: 0 4% 10% 4%;
     padding-top: 5rem;
   }
-  .basket-page .basket-all
-  {
+  .basket-page .basket-all {
     margin-top: 1rem;
     gap: 2rem;
   }
-  .basket-page .basket-main-text
-  {
+  .basket-page .basket-main-text {
     font-size: 1rem;
   }
-  .basket-json .basket-data .img
-  {
+  .basket-json .basket-data .img {
     width: 80px;
     height: 50px;
     border-radius: 4px;
   }
-  .basket-json .basket-data .basket-button
-  {
+  .basket-json .basket-data .basket-button {
     padding: 4px;
     gap: 0.2rem;
   }
-  .basket-json .basket-data .basket-button .basket-h2
-  {
+  .basket-json .basket-data .basket-button .basket-h2 {
     font-size: 0.6rem;
   }
-  .basket-json .basket-data .basket-button button
-  {
+  .basket-json .basket-data .basket-button button {
     width: 15px;
     height: 15px;
     font-size: 0.8rem;
     border: 1px solid;
   }
-  .basket-json .basket-data .basket-price
-  {
+  .basket-json .basket-data .basket-price {
     font-size: 0.6rem;
   }
-  .basket-json .basket-data .basket-discount
-  {
+  .basket-json .basket-data .basket-discount {
     font-size: 0.5rem;
   }
-  .basket-json .basket-data .basket-close p
-  {
+  .basket-json .basket-data .basket-close p {
     width: auto;
     height: auto;
     border-radius: 0;
@@ -509,34 +486,40 @@
     padding: 0;
     font-size: 1.4rem;
   }
-  .basket-page .basket-all .basket-order .img img
-  {
+  .basket-page .basket-all .basket-order .img img {
     width: 100px;
     height: auto;
   }
-  .basket-page .basket-all .basket-order .basket-check-list
-  {
+  .basket-page .basket-all .basket-order .basket-check-list {
     padding: 1.6rem 0 1rem 0;
   }
-  .basket-page .basket-all .basket-order .basket-check-list .basket-order-texts p
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-check-list
+    .basket-order-texts
+    p {
     font-size: 0.6rem;
   }
-  .basket-page .basket-all .basket-order .basket-order-texts-total
-  {
+  .basket-page .basket-all .basket-order .basket-order-texts-total {
     padding: 1rem 0;
   }
 
-  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-1
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-order-texts-total
+    .basket-order-texts-1 {
     font-size: 0.8rem;
   }
-  .basket-page .basket-all .basket-order .basket-order-texts-total .basket-order-texts-2
-  {
+  .basket-page
+    .basket-all
+    .basket-order
+    .basket-order-texts-total
+    .basket-order-texts-2 {
     font-size: 0.7rem;
   }
-  .basket-page .basket-all .basket-order button
-  {
+  .basket-page .basket-all .basket-order button {
     padding: 5px;
     font-size: 0.6rem;
   }

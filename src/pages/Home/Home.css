@@ -99,6 +99,13 @@
   font-weight: 300;
 }
 
+#korinish{
+  position: absolute;
+  bottom: 5%;
+  font-size: 55px;
+  z-index: 50;
+}
+
 .section1 .center {
   padding: 0;
   width: 580px;
