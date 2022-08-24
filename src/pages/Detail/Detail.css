@@ -336,7 +336,8 @@
   height: 46px;
   border: 1px solid #dcbb45;
   border-radius: 8px;
-  font-family: "Proxima Nova";
+   font-family: regular;
+
   font-style: normal;
   font-weight: 400;
   font-size: 21px;

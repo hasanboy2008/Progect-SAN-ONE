@@ -19,14 +19,12 @@ export function Home() {
   }, []);
 
   const [data, setData] = useState("");
-  console.log(data);
 
   const navigate = useNavigate();
   useEffect(() => {
     axios
       .get("https://api.sanone.uz/api/advertising/active")
       .then((res) => {
-        // console.log(res.data);
         setData(res.data);
       })
       .catch((err) => {

@@ -1,3 +1,9 @@
+@font-face {
+  font-family: regular;
+  src: url(../../../Fonts/proximanova_regular.ttf);
+
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -21,7 +27,8 @@ hr {
   width: 100%;
 }
 .info .names {
-  font-family: "Raleway";
+  font-family: regular;
+
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -30,7 +37,8 @@ hr {
 }
 
 .info .answers {
-  font-family: "Raleway";
+  font-family: regular;
+
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
