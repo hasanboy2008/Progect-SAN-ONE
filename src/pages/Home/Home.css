@@ -99,12 +99,20 @@
   font-weight: 300;
 }
 
-#korinish{
+#marqure{
   position: absolute;
-  bottom: 5%;
+  bottom: 15%;
   font-size: 55px;
-  z-index: 50;
+  width: 100%;
 }
+
+.overlay::after{
+  display: none;
+}
+.overlay::before{
+  display: none;
+}
+
 
 .section1 .center {
   padding: 0;

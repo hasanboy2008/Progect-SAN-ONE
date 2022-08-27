@@ -96,14 +96,12 @@ export function Basket() {
                           }
                         )
                           .then((res) => {
-                            console.log(res);
                             dispatch(acLoading(false));
                             dispatch({
                               type: "RELOAD_CARD",
                             });
                           })
                           .catch((err) => {
-                            console.log(err);
                             dispatch(acLoading(false));
                           });
                       }}
@@ -128,14 +126,12 @@ export function Basket() {
                           }
                         )
                           .then((res) => {
-                            console.log(res);
                             dispatch(acLoading(false));
                             dispatch({
                               type: "RELOAD_CARD",
                             });
                           })
                           .catch((err) => {
-                            console.log(err);
                             dispatch(acLoading(false));
                           });
                       }}
@@ -185,7 +181,6 @@ export function Basket() {
                           dispatch(acLoading(false));
                         })
                         .catch((err) => {
-                          console.log(err);
                           dispatch(acLoading(false));
                         });
                     }}

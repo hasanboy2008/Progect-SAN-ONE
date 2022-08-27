@@ -19,14 +19,12 @@ export function Home() {
   }, []);
 
   const [data, setData] = useState("");
-  console.log(data);
 
   const navigate = useNavigate();
   useEffect(() => {
     axios
       .get("https://api.sanone.uz/api/advertising/active")
       .then((res) => {
-        // console.log(res.data);
         setData(res.data);
       })
       .catch((err) => {
@@ -59,8 +57,9 @@ export function Home() {
             </button>
           </div>
         </div>
-        <Marquee >
-          
+        <p id="marqure">
+         
+          <Marquee>
             <svg
               width="1233"
               height="104"
@@ -74,7 +73,8 @@ export function Home() {
                 fillOpacity="0.3"
               />
             </svg>
-        </Marquee>
+          </Marquee>
+        </p>
         <div className="container">
           <div className="circle1"></div>
           <div className="circle2"></div>
