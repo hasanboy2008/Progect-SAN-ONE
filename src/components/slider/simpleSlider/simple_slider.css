@@ -41,7 +41,7 @@
 .simple_btn1 {
   top: auto;
   bottom: -80px;
-  color: black;
+  color: #facb21;
   border: none;
   font-size: 40px;
   left: 58%;
@@ -50,7 +50,7 @@
   left: 40%;
   top: auto;
   bottom: -80px;
-  color: black;
+  color: #facb21;
   border: none;
   font-size: 40px;
 }
@@ -96,4 +96,9 @@
   .simple_btn2 {
     left: 10%;
   }
+}
+
+
+.flexCoruss{
+  display: flex;
 }

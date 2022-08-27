@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -21,6 +21,7 @@ function SamplePrevArrow({ onClick }) {
 }
 
 export default function SimpleSlider() {
+  const [dotstate, SetDot] = useState(5);
   let settings = {
     dots: true,
     infinite: true,
@@ -58,7 +59,16 @@ export default function SimpleSlider() {
         },
       },
     ],
+    appendDots: (dots) => (
+      <div className="flexCoruss">
+        <ul style={{ margin: "0px" }} onClick={e => dotsFunc(e)}> {dots.slice((parseInt(dotstate)-5), (parseInt(dotstate)+5))} </ul>
+      </div>
+    ),
   };
+  let dotsFunc = (e) => {
+    SetDot(e.target.textContent);
+  }
+
   const products = useSelector((state) => state.reProducts);
   const navigate = useNavigate();
   return (
