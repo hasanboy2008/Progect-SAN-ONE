@@ -1,7 +1,7 @@
 .section1 .container .circle1, .circle2, .circle3, .circle4 {
     animation-name: harakat;
     animation-duration: 15s;
-    animation-timing-function:linear;
+    animation-timing-function:ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     
