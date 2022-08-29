@@ -500,9 +500,9 @@
     bottom: 5rem;
   }
   .section1 .container .img {
-    width: 10rem;
-    height: 10rem;
-    margin-bottom: 35%;
+    width: 18rem;
+    height: 18rem;
+    margin-bottom: 30%;
     margin-left: 0;
   }
 }
@@ -525,7 +525,7 @@
     bottom: 2rem;
   }
   .section1 .container .img {
-    margin-bottom: 15%;
+    margin-bottom: 10%;
   }
   .section1 .left {
     left: -15%;
@@ -539,9 +539,9 @@
     right: 10px;
   }
   .section1 .container .img {
-    width: 8rem;
-    height: 8rem;
-    margin-bottom: 22%;
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 20%;
   }
 }
 
@@ -844,7 +844,6 @@ hr {
   background: #000000;
   opacity: 0.6;
 }
-
 .section_f_text {
   width: 827px;
   height: auto;

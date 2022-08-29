@@ -133,6 +133,7 @@ export function Singnin() {
             textDecoration: "underline",
             color: "#00bcd4",
             cursor: "pointer",
+            fontFamily: 'sans-serif'
           }}
           onClick={() => {
             navigate("/signup");

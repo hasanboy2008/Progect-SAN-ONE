@@ -225,7 +225,7 @@ export function Signup() {
           </select>
         </div>
         <div className="sign_name mfy2 ">
-          <div className="sing_i_1">
+          {/* <div className="sing_i_1">
             <input
               type="text"
               placeholder="MFY"
@@ -242,7 +242,7 @@ export function Signup() {
                 setCustemer({ ...custemer, street: e.target.value });
               }}
             />
-          </div>
+          </div> */}
         </div>
         <div className="sign_name">
           <div className="sing_i_1">
@@ -390,6 +390,7 @@ export function Signup() {
             textDecoration: "underline",
             color: "#00bcd4",
             cursor: "pointer",
+            fontFamily: 'sans-serif'
           }}
           onClick={() => {
             navigate("/signin");
