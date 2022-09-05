@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
-import PersonPinCircleIcon from "@mui/icons-material/PersonPinCircle";
+// import PersonPinCircleIcon from "@mui/icons-material/PersonPinCircle";
 import NumberFormat from "react-number-format";
 import { useSnackbar } from "notistack";
 import { useDispatch, useSelector } from "react-redux";
@@ -147,7 +147,7 @@ export function Myacount() {
               }}
             />
           </div>
-          <div>
+          {/* <div>
             <PersonPinCircleIcon />
             <input
               type="text"
@@ -156,8 +156,8 @@ export function Myacount() {
                 setData({ ...data, region: e.target.value });
               }}
             />
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <PersonPinCircleIcon />
             <input
               type="text"
@@ -166,8 +166,8 @@ export function Myacount() {
                 setData({ ...data, district: e.target.value });
               }}
             />
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <PersonPinCircleIcon />
             <input
               type="text"
@@ -176,8 +176,8 @@ export function Myacount() {
                 setData({ ...data, mfy: e.target.value });
               }}
             />
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <PersonPinCircleIcon />
             <input
               type="text"
@@ -186,7 +186,7 @@ export function Myacount() {
                 setData({ ...data, street: e.target.value });
               }}
             />
-          </div>
+          </div> */}
         </div>
 
         {/* <Button type="submit">

@@ -194,56 +194,7 @@ export function Signup() {
             />
           </div>
         </div>
-        <div className="sign_province">
-          {/* -------------------------------------------------------------------------- */}
-
-          <select
-            onChange={(e) => {
-              setCode(e.target.value);
-              setCustemer({ ...custemer, region: e.target.value });
-            }}
-          >
-            <option value="">Viloyatni tanlang</option>
-            {viloyat.map((item) => (
-              <option value={item.code} key={item.code}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-          <select
-            onChange={(e) => {
-              setCustemer({ ...custemer, district: e.target.value });
-            }}
-          >
-            <option value="">tumani tanlang</option>
-
-            {tuman.map((item) => (
-              <option key={item.id} value={item.name}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="sign_name mfy2 ">
-          {/* <div className="sing_i_1">
-            <input
-              type="text"
-              placeholder="MFY"
-              onChange={(e) => {
-                setCustemer({ ...custemer, mfy: e.target.value });
-              }}
-            />
-          </div>
-          <div className="sing_i_1">
-            <input
-              type="text"
-              placeholder="Ko’cha"
-              onChange={(e) => {
-                setCustemer({ ...custemer, street: e.target.value });
-              }}
-            />
-          </div> */}
-        </div>
+      
         <div className="sign_name">
           <div className="sing_i_1">
             <svg

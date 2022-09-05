@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 
-
 // CSS style link
 import "./about.css";
 // import Image
@@ -26,11 +25,13 @@ export function About() {
           <div className="left1">
             <p>Korxona tashkil etilishi</p>
             <span>
-              Chakana savdo tarmog'i" magnit " 5 mart 1994 yilida Krasnodarda
-              tashkil etilgan. Kompaniyaning tarixi uy kimyoviy moddalarini
-              sotish bilan boshlandi. Birinchi oziq-ovqat do'koni 1998 yilda
-              Krasnodarda ochilgan. 2000 da do'konlar "magnit"brendi bilan
-              birlashtirildi.
+              SAN ONE brendi ostida faoliyat yurutuvchi oyoq kiyim savdosi bilan
+              shug’ullanib kelayotgan SAN ONE MCHJ 2017-yil Toshkent shaxar
+              Farobiy ko’chasi 38-uyda juda ham kichik 40kv metr joyda o’z
+              faoliyatimizni boshlaganmiz. 2022-yil holatiga ko’ra “SAN+ONE”
+              MCHJ ning 4 ta filiali mavjud bo’lib 70 nafardan ziyod fuqaro ish
+              bilan ta’minlangan! Hozirda umumiy 2500 kv metr joyda faoliyat
+              yuritmoqdamiz!
             </span>
           </div>
 
@@ -57,9 +58,11 @@ export function About() {
           <div className="right2">
             <p>Mahsulot ishlab chiqarish</p>
             <span>
-              Mahsulotlar haqida ma'lumot - bu mahsulot nomi, ishlab chiqaruvchi
-              (ish ijrochisi) yoki sotuvchi to'g'risidagi ma'lumotlar, sifat
-              ko'rsatkichlari, narx va boshqalarni aks ettiruvchi ma'lumotlar.
+              Biz odamlarning kundalik hayotiga ko'proq go'zallik va qulaylik,
+              ko'proq moda va yuqori sifatli oyoq kiyimlar olib kelamiz. Biz o'z
+              oilasini, yaqinlarini, uylarini sevadigan har bir kishiga yuqori
+              sifatli oy kiyim mahsulotlarini ishlab chiqarishni
+              ta'minlamoqchimiz.
             </span>
           </div>
         </div>
@@ -68,10 +71,8 @@ export function About() {
           <div className="left1">
             <p>Bizning jamoamiz</p>
             <span>
-              Jamoa (lot. collectivus — kollektiv)-har qanday umumiy faoliyat,
-              ish, o'qish, muayyan ijtimoiy vazifani hal qilish bilan
-              birlashtirilgan shaxslar guruhi. Keng ma'noda-umumiy g'oyalar,
-              ehtiyojlar, qiziqishlar bilan birlashtirilgan odamlar.
+              Mahsulotlarimiz har doim qulaylik, sifat va modaning ilg'or
+              tushunchalariga mos kelishi uchun biz doimo rivojlanamiz.
             </span>
           </div>
 
